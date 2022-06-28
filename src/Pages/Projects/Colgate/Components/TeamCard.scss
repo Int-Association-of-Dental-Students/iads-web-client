@@ -1,0 +1,32 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent !important;
+  color: white;
+  border: none !important;
+
+  .pic {
+    border-radius: 100%;
+  }
+
+  .name {
+    margin-top: 20px;
+    font-family: POPPINS regular;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .role {
+    font-family: POPPINS regular;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: -20px;
+  }
+}

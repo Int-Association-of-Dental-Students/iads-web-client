@@ -1,0 +1,437 @@
+.colgate-page {
+  background-color: #1a112f;
+  margin-top: -127px;
+  color: white;
+
+  .vlogo {
+    height: 110px;
+  }
+
+  .sec-text {
+    margin-top: 33px;
+    font-family: POPPINS regular;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ba9efb;
+    border-bottom: solid 3px #564f67;
+    padding-bottom: 15px;
+  }
+
+  .overlay {
+    padding-top: 200px;
+    padding-bottom: 150px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .overlay {
+      padding-top: 200px;
+    }
+    .vlogo {
+      //   margin: auto;
+      margin-left: 40px;
+      height: 110px;
+    }
+    .line {
+      border: none !important;
+    }
+  }
+
+  .hero {
+    background-image: url("../../../Assets/Projects/Colgate/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+
+    Button {
+      background-color: #ba9efb;
+      color: black;
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+
+      font-family: POPPINS medium;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: center;
+
+      height: 37px;
+      width: 159px;
+      left: 0px;
+      top: 54px;
+      border-radius: 100px;
+      padding: 7px, 20px, 7px, 20px;
+    }
+    Button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .btn2 {
+      background: none;
+      color: white;
+      border: 2px solid white !important;
+      font-family: POPPINS medium;
+    }
+  }
+
+  .overlay {
+    background: rgb(155, 120, 237);
+    background: radial-gradient(
+      at top left,
+      rgba(155, 120, 237, 0.7) 0%,
+      rgba(51, 34, 88, 0.9) 42%
+    );
+    // height: 130vh;
+    // width: 100vw;
+  }
+
+  .header-txt {
+    font-family: LEMON MILK regular;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 68px;
+    letter-spacing: 0em;
+    @media only screen and (max-width: 900px) {
+      width: 90%;
+    }
+  }
+  .title-text {
+    font-family: LEMON MILK regular;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 68px;
+    letter-spacing: 0em;
+    text-align: center;
+    @media only screen and (max-width: 900px) {
+      width: 90%;
+      margin: auto;
+    }
+  }
+  .sec-txt {
+    color: white;
+    font-family: POPPINS regular regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.2em;
+    // text-transform: uppercase;
+  }
+
+  iframe {
+    display: block;
+    margin: auto;
+    width: 80%;
+  }
+
+  .about-section {
+    margin-top: 150px;
+    // margin-top: 200px;
+    margin-bottom: 200px;
+    .about-title {
+      margin-bottom: 70px;
+      color: white;
+      font-family: LEMON MILK regular;
+      font-size: 50px;
+      font-weight: 400;
+      line-height: 68px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+    .about-details {
+      color: white;
+      font-family: POPPINS regular;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 25px;
+      letter-spacing: 0em;
+      text-align: center;
+      width: 80%;
+      margin: auto;
+    }
+  }
+
+  .get2know-section {
+    margin-top: 200px;
+    .title-text {
+      margin-bottom: 50px;
+    }
+  }
+
+  .submit-section {
+    .flags {
+      width: 80%;
+    }
+
+    .flags-row {
+      margin-bottom: 80px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    .submit-button {
+    }
+    .plus {
+      width: 50%;
+    }
+    .submit-circle {
+      height: 160px;
+      width: 160px;
+      border: 2px dashed #ba9efb;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    margin-top: 180px;
+    Button {
+      background-color: #ba9efb;
+      color: black;
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+
+      font-family: POPPINS regular;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: center;
+
+      height: 37px;
+      width: 159px;
+      left: 0px;
+      top: 54px;
+      border-radius: 100px;
+      padding: 7px, 20px, 7px, 20px;
+    }
+    Button:hover {
+      background-color: white;
+      color: black;
+    }
+
+    @media only screen and (max-width: 900px) {
+      .submit-circle {
+        height: 75px;
+        width: 75px;
+      }
+    }
+  }
+
+  .prizes-section {
+    margin-top: 170px;
+    .title-text {
+      margin-bottom: 10px;
+    }
+    .description {
+      font-family: POPPINS regular;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #d7d7d7;
+    }
+    .remaining-teams {
+      font-family: LEMON MILK regular !important;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #ba9efb;
+      margin-top: 25px;
+      margin-bottom: 150px;
+    }
+    .big-winner {
+      margin-bottom: 60px;
+    }
+    .secondary-winners {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 0 196px;
+    }
+  }
+
+  .meet-team-section {
+    background-color: #332258;
+    padding-top: 75px;
+    padding-bottom: 100px;
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60px;
+
+      .horiz {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: 900px) {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  .PB {
+    font-family: POPPINS bold;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+  }
+
+  .PR {
+    font-family: POPPINS regular;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+  }
+
+  .project-section {
+    color: black !important;
+    .criteria {
+      background-color: white;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .nav-tabs {
+      border: none;
+      justify-content: center;
+      margin-bottom: 50px;
+      gap: 20px;
+    }
+    .details {
+      //   padding: 40px 200px;
+      width: 80%;
+      margin: auto;
+      text-align: left;
+      margin-top: -15px;
+      h5 {
+        color: black;
+        font-family: POPPINS regular;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 23px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+
+      p li {
+        font-family: POPPINS regular;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+    }
+    .p-timeline {
+      background-color: white;
+      //   width: 90%;
+      padding-top: 100px;
+    }
+
+    Button {
+      background-color: #ba9efb;
+      color: #14183d;
+      font-size: 20px;
+      // margin: 10px 0px;
+      cursor: pointer;
+
+      font-family: POPPINS regular;
+
+      font-weight: 700;
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: center;
+
+      height: 65px;
+      width: 288px;
+      left: 0px;
+      top: 54px;
+      border-radius: 100px;
+      padding: 7px, 20px, 7px, 20px;
+    }
+    Button:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+
+  .FAQS {
+    padding-top: 70px;
+    background-color: white;
+    color: black;
+    text-align: left;
+    h1 {
+      color: black;
+      margin-bottom: 70px;
+    }
+  }
+  .info-section {
+    margin-top: 170px;
+    background-color: #1a112f;
+    .line {
+      border-left: 1px solid #9e8cc8;
+    }
+    .row {
+      width: 90%;
+      margin: auto;
+    }
+    .touch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding-bottom: 130px;
+    }
+    .text {
+      font-family: POPPINS regular;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: white;
+      margin-bottom: 30px;
+    }
+    Button {
+      background-color: #ba9efb;
+      color: #14183d;
+      font-size: 20px;
+      // margin: 10px 0px;
+      cursor: pointer;
+
+      font-family: POPPINS regular;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: center;
+
+      height: 37px;
+      width: 159px;
+      left: 0px;
+      top: 54px;
+      border-radius: 100px;
+      padding: 7px, 20px, 7px, 20px;
+    }
+    Button:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}

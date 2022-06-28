@@ -1,0 +1,163 @@
+.zhermackPage {
+  padding-top: -130px;
+  margin-bottom: 100px;
+  font-family: "LEMON MILK regular";
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+  }
+
+  @media only screen and (max-width: 840px) {
+    .zevnt {
+      margin: 0px;
+      opacity: 50%;
+    }
+    .info {
+      flex-direction: column;
+    }
+    .zher-logo {
+      width: 80%;
+    }
+    .main {
+      font-size: 18px !important;
+    }
+  }
+
+  .hero {
+    background-image: url("../../../Assets/Projects/Zhermack/teathBg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-position: right;
+    font-family: "LEMON MILK regular";
+  }
+
+  .overlay {
+    margin-top: -130px;
+    padding-top: 130px;
+    padding-bottom: 130px;
+    font-family: "LEMON MILK regular";
+
+    background: linear-gradient(
+      89.95deg,
+      #d20512 19.18%,
+      rgba(210, 5, 18, 0) 86.91%
+    );
+
+    .home {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: row;
+      // height: 100%;
+      padding-top: 48px;
+
+      .homeLeft {
+        display: flex;
+        color: #fff;
+        flex-direction: column;
+
+        .webinarImg {
+          // width: 137px;
+          margin-bottom: 12px;
+        }
+        .main {
+          font-size: 30px;
+          // line-height: 41px;
+
+          color: #ffffff;
+        }
+
+        .homeLeftSub {
+          font-size: 17px;
+          line-height: 26px;
+          margin-top: 22px;
+          margin-bottom: 22px;
+          color: #ffffff;
+
+          div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+
+            p {
+              margin-top: auto;
+              margin-bottom: auto;
+            }
+          }
+        }
+
+        .homeLeftCTA {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 7px 20px;
+
+          font-family: "LEMON MILK bold";
+
+          width: 155px;
+          // height: 32px;
+
+          background: #ffffff;
+          border-radius: 100px;
+
+          text-align: center;
+          text-transform: uppercase;
+
+          color: #5e0c20;
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+
+  .info {
+    // padding: 0 228px;
+    display: flex;
+    justify-content: space-between;
+    .title {
+      color: #000;
+      margin-top: 50px;
+      font-size: 30px;
+      line-height: 41px;
+    }
+    .zevnt {
+      margin-top: -70px;
+    }
+  }
+
+  .description {
+    // text-align: justify;
+  }
+  .event-details {
+    // padding: 0 200px;
+    .red-thing {
+      //styleName: Sub header 1 ;
+      // font-family: Poppins;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 26px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #d20512;
+    }
+
+    .register-btn {
+      border-radius: 20px;
+      margin-top: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .zhermackPage {
+    .hero {
+      background-color: black;
+      width: 100%;
+    }
+  }
+}

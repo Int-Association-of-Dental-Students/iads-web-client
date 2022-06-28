@@ -1,0 +1,76 @@
+.navbar {
+  z-index: 100;
+  color: white;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-items {
+    justify-content: center;
+  }
+  .iads-logo {
+    height: 20px;
+    margin-left: 0px !important;
+  }
+  .navv {
+    background-color: #1d015c;
+  }
+  .navbar-collapse {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 120px !important;
+  }
+  .navbar-scroll {
+    padding-bottom: 120px !important;
+  }
+  .navbar {
+    margin-top: 0px;
+  }
+}
+.nav-items {
+  color: white;
+  margin-left: 100px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  align-self: flex-start;
+}
+
+.nav-item {
+  font-family: POPPINS regular;
+  color: red !important;
+}
+
+a {
+  color: white;
+}
+
+.iads-logo {
+  height: 60px;
+  margin-left: 50px;
+}
+
+#navbarScrollingDropdown {
+  color: white !important;
+  color: red !important;
+}
+
+.signup-btn {
+  width: 100px;
+  border-radius: 100px !important;
+  background-color: #75c3ff4d !important;
+  border: none !important;
+}
+
+.login-btn {
+  background: none !important;
+  border: none !important;
+}

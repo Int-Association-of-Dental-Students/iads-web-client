@@ -1,0 +1,71 @@
+@font-face {
+  font-family: POPPINS regular;
+  src: url(../src/Assets/Fonts/poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: POPPINS bold;
+  src: url(../src/Assets/Fonts/poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: POPPINS semibold;
+  src: url(../src/Assets/Fonts/poppins/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: POPPINS medium;
+  src: url(../src/Assets/Fonts/poppins/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: POPPINS light;
+  src: url(../src/Assets/Fonts/poppins/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: LEMON MILK regular;
+  src: url(../src/Assets/Fonts/lemon_milk/LEMONMILK-Regular.otf);
+}
+
+@font-face {
+  font-family: "LEMON MILK bold";
+  src: url(../src/Assets/Fonts/lemon_milk/LEMONMILK-Bold.otf);
+}
+
+@font-face {
+  font-family: "LEMON MILK bold italic";
+  src: url(../src/Assets/Fonts/lemon_milk/LEMONMILK-BoldItalic.otf);
+}
+
+@font-face {
+  font-family: "LEMON MILK light";
+  src: url(../src/Assets/Fonts/lemon_milk/LEMONMILK-Light.otf);
+}
+
+@font-face {
+  font-family: "LEMON MILK light italic";
+  src: url(../src/Assets/Fonts/lemon_milk/LEMONMILK-LightItalic.otf);
+}
+
+@font-face {
+  font-family: "LEMON MILK medium";
+  src: url(../src/Assets/Fonts/lemon_milk/LEMONMILK-Medium.otf);
+}
+
+@font-face {
+  font-family: "LEMON MILK medium italic";
+  src: url(../src/Assets/Fonts/lemon_milk/LEMONMILK-MediumItalic.otf);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
