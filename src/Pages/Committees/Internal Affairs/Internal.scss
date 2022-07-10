@@ -1,0 +1,61 @@
+.internal-page {
+  $page-primary-color: rgba(198, 14, 60, 1);
+
+  .title {
+    font-family: "LEMON MILK regular";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: $page-primary-color;
+    margin-bottom: 48px;
+    margin-top: 90px;
+  }
+
+  .subtitle {
+    font-family: LEMON MILK regular;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #c60e3c;
+  }
+
+  .description {
+    width: 80%;
+    margin: auto;
+    font-family: Poppins regular;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 84px;
+  }
+
+  .workforce {
+    background-color: #f5f5f5;
+    p {
+      font-family: Poppins regular;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+  }
+
+  .regulations {
+    background-color: $page-primary-color;
+    .title {
+      color: white;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .description {
+      color: white;
+    }
+  }
+}

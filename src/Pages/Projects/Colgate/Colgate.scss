@@ -1,33 +1,58 @@
+.navbar {
+  background: none;
+}
+
 .colgate-page {
-  background-color: #1a112f;
+  background-color: #03070f;
   margin-top: -127px;
   color: white;
+
+  .btn {
+    background-color: rgba(235, 41, 51, 1);
+
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+
+    font-family: POPPINS medium;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    height: 37px;
+    width: 159px;
+    left: 0px;
+    top: 54px;
+    // margin-right: 30px;
+    border-radius: 100px;
+    padding: 7px, 20px, 7px, 20px;
+  }
+  .btn:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .part-countries {
+    padding-top: 50px;
+    height: 400px;
+  }
 
   .vlogo {
     height: 110px;
   }
 
-  .sec-text {
-    margin-top: 33px;
-    font-family: POPPINS regular;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 30px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #ba9efb;
-    border-bottom: solid 3px #564f67;
-    padding-bottom: 15px;
-  }
-
   .overlay {
     padding-top: 200px;
-    padding-bottom: 150px;
   }
 
   @media only screen and (max-width: 900px) {
     .overlay {
-      padding-top: 200px;
+      // padding-top: 200px;
+      padding-bottom: 0;
+      height: 100vh;
     }
     .vlogo {
       //   margin: auto;
@@ -40,14 +65,15 @@
   }
 
   .hero {
-    background-image: url("../../../Assets/Projects/Colgate/bg.png");
+    background-image: url("../../../Assets/Projects/Colgate/bg2.png");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: left;
 
     Button {
-      background-color: #ba9efb;
-      color: black;
+      background-color: rgba(235, 41, 51, 1);
+
+      color: white;
       font-size: 20px;
       border: none;
       cursor: pointer;
@@ -63,6 +89,7 @@
       width: 159px;
       left: 0px;
       top: 54px;
+      // margin-right: 30px;
       border-radius: 100px;
       padding: 7px, 20px, 7px, 20px;
     }
@@ -80,14 +107,14 @@
   }
 
   .overlay {
-    background: rgb(155, 120, 237);
+    background: #03070f;
     background: radial-gradient(
       at top left,
-      rgba(155, 120, 237, 0.7) 0%,
-      rgba(51, 34, 88, 0.9) 42%
+      rgba(41, 57, 68, 0.7) 0%,
+      rgba(3, 7, 15, 1) 70%
     );
-    // height: 130vh;
-    // width: 100vw;
+    height: 130vh;
+    width: 100vw;
   }
 
   .header-txt {
@@ -101,6 +128,7 @@
     }
   }
   .title-text {
+    color: #eb2933;
     font-family: LEMON MILK regular;
     font-size: 50px;
     font-weight: 400;
@@ -114,12 +142,12 @@
   }
   .sec-txt {
     color: white;
-    font-family: POPPINS regular regular;
+    font-family: POPPINS regular;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 22px;
-    letter-spacing: 0.2em;
+    // letter-spacing: 0.2em;
     // text-transform: uppercase;
   }
 
@@ -130,18 +158,11 @@
   }
 
   .about-section {
-    margin-top: 150px;
+    // margin-top: 150px;
     // margin-top: 200px;
     margin-bottom: 200px;
     .about-title {
       margin-bottom: 70px;
-      color: white;
-      font-family: LEMON MILK regular;
-      font-size: 50px;
-      font-weight: 400;
-      line-height: 68px;
-      letter-spacing: 0em;
-      text-align: center;
     }
     .about-details {
       color: white;
@@ -182,15 +203,15 @@
     .submit-circle {
       height: 160px;
       width: 160px;
-      border: 2px dashed #ba9efb;
+      border: 2px dashed #eb2933;
       border-radius: 100%;
       display: flex;
       justify-content: center;
     }
-    margin-top: 180px;
+    margin-top: 100px;
     Button {
-      background-color: #ba9efb;
-      color: black;
+      background-color: #eb2933;
+      color: white;
       font-size: 20px;
       border: none;
       cursor: pointer;
@@ -243,7 +264,7 @@
       line-height: 27px;
       letter-spacing: 0em;
       text-align: center;
-      color: #ba9efb;
+      color: #eb2933;
       margin-top: 25px;
       margin-bottom: 150px;
     }
@@ -260,16 +281,15 @@
   }
 
   .meet-team-section {
-    background-color: #332258;
-    padding-top: 75px;
-    padding-bottom: 100px;
+    background-color: #eb2933;
+    padding-bottom: 70px;
 
     .cards {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: 60px;
+      row-gap: 40px;
 
       .horiz {
         display: flex;
@@ -341,12 +361,18 @@
     .p-timeline {
       background-color: white;
       //   width: 90%;
-      padding-top: 100px;
+      // padding-top: 100px;
+    }
+
+    @media only screen and (max-width: 900px) {
+      .p-timeline {
+        overflow-x: scroll;
+      }
     }
 
     Button {
-      background-color: #ba9efb;
-      color: #14183d;
+      background-color: #eb2933;
+      color: white;
       font-size: 20px;
       // margin: 10px 0px;
       cursor: pointer;
@@ -382,10 +408,10 @@
     }
   }
   .info-section {
-    margin-top: 170px;
-    background-color: #1a112f;
+    margin-top: 100px;
+    // background-color: #1a112f;
     .line {
-      border-left: 1px solid #9e8cc8;
+      border-left: 1px solid #eb2933;
     }
     .row {
       width: 90%;
@@ -396,7 +422,8 @@
       flex-direction: column;
       align-items: center;
       gap: 20px;
-      padding-bottom: 130px;
+      padding-bottom: 100px;
+      margin-bottom: 70px;
     }
     .text {
       font-family: POPPINS regular;
@@ -409,8 +436,9 @@
       margin-bottom: 30px;
     }
     Button {
-      background-color: #ba9efb;
-      color: #14183d;
+      border: none;
+      background-color: #eb2933;
+      color: white;
       font-size: 20px;
       // margin: 10px 0px;
       cursor: pointer;

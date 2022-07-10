@@ -7,7 +7,7 @@ import logo from "../../Assets/IADS Horizontal 1.svg";
 
 const NavBar = () => {
   return (
-    <div className="navv container-fluid">
+    <div className="navv container-fluid" style={{ padding: 0 }}>
       <Navbar className="navbar" bg="none" expand="lg">
         <Container fluid>
           <Navbar.Brand href="/home">

@@ -2,9 +2,15 @@ import React from "react";
 import "./Colgate.scss";
 import { Button, Accordion, Tabs, Tab, Nav } from "react-bootstrap";
 import { Timeline, TimelineEvent } from "@mailtop/horizontal-timeline";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import logo from "../../../Assets/Projects/Colgate/Colgate_Logo.svg";
 import vlogo from "../../../Assets/Projects/Colgate/vlogo.svg";
+import logo1 from "../../../Assets/Projects/Colgate/logo1.svg";
+import logo2 from "../../../Assets/Projects/Colgate/logo2.svg";
+
+import tl from "../../../Assets/Projects/Colgate/tl.svg";
+
 import WinnerCard from "./Components/WinnerCard";
 
 import flag1 from "../../../Assets/Projects/Colgate/Flags/finland 1.png";
@@ -30,6 +36,7 @@ import huth from "../../../Assets/Projects/Colgate/huth.png";
 import lamis from "../../../Assets/Projects/Colgate/Lamis.png";
 import silvi from "../../../Assets/Projects/Colgate/silvi.png";
 import konst from "../../../Assets/Projects/Colgate/konst.png";
+import ouiza from "../../../Assets/Projects/Colgate/Ouiza.png";
 import TeamCard from "./Components/TeamCard";
 import Circle from "./Components/Circle";
 
@@ -40,12 +47,14 @@ function Colgate() {
         <div className="overlay">
           <div className="landing container">
             <div className="row icons">
-              <div className="col-sm-12 col-md-6 col-lg-4">
+              <div className="col">
+                <img className="logo1" src={logo1} />
+                <img className="logo2" src={logo2} />
                 <img className="vlogo" src={vlogo} />
                 <img
                   className="logo"
                   src={logo}
-                  style={{ marginLeft: "60px" }}
+                  style={{ marginTop: "50px" }}
                 />
 
                 <div className="row mt-5">
@@ -65,13 +74,21 @@ function Colgate() {
                 </div>
                 <div className="row">
                   <div className="header-txt col offset-1 mb-5">
-                    <h2>(İBSBF+)</h2>
+                    <h2>Contest</h2>
                   </div>
                 </div>
 
                 <div className="row">
-                  <Button className="btn col-1 offset-1">APPLY HERE</Button>
-                  <Button className="btn2 col-1">WHAT IS BSBF?</Button>
+                  <AnchorLink
+                    className="btn col-1 offset-1"
+                    href="#submit"
+                    offset="100"
+                  >
+                    APPLY HERE
+                  </AnchorLink>
+                  <Button className="btn2 col-1" style={{ marginLeft: "30px" }}>
+                    WHAT IS BSBF?
+                  </Button>
                 </div>
               </div>
             </div>
@@ -79,7 +96,7 @@ function Colgate() {
         </div>
       </div>
       <div className="about-section container-fluid">
-        <h1 className="about-title">ABOUT THE PROJECT</h1>
+        <h1 className="about-title title-text">ABOUT THE PROJECT</h1>
         <p className="row about-details sec-txt">
           The International BSBF Contest (iBSBF+) is a challenge-based framework
           which aims to accelerate the progress of Colgate Bright Smiles, Bright
@@ -100,7 +117,7 @@ function Colgate() {
         <div className="videowrapper">
           <iframe
             height="500"
-            src="https://www.youtube.com/embed/7XeGZtKWnXY"
+            src="https://www.youtube.com/embed/7XeWnXY"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -115,7 +132,7 @@ function Colgate() {
           <WinnerCard place="1st"></WinnerCard>
         </div>
         <div className="secondary-winners">
-          <WinnerCard place="2nd"></WinnerCard>
+          <WinnerCard place={`2nd`}></WinnerCard>
           <WinnerCard place="3rd"></WinnerCard>
           <WinnerCard place="4th"></WinnerCard>
           <WinnerCard place="5th"></WinnerCard>
@@ -135,26 +152,13 @@ function Colgate() {
               <Nav.Link eventKey="eval-criteria">EVALUATION CRITERIA</Nav.Link>
             </Nav.Item>
           </Nav> */}
-          <Tabs defaultActiveKey="eval-criteria" id="uncontrolled-tab-example">
+          <Tabs
+            defaultActiveKey="project-timeline"
+            id="uncontrolled-tab-example"
+          >
             <Tab eventKey="project-timeline" title="PROJECT TIMELINE">
               <div className="container-fluid p-timeline">
-                <Timeline minEvents={7} placeholder>
-                  <TimelineEvent
-                    color="#34314F"
-                    title="Orientation Session"
-                    subtitle="Registration Opens: July 1st"
-                  />
-                  <TimelineEvent
-                    color="#595959"
-                    title="Expression of Interests"
-                    subtitle="Pre-Proposal"
-                  />
-                  <TimelineEvent
-                    color="#692DB7"
-                    title="Grand Idea Submission"
-                    subtitle="Full Proposal, Deadline October 15th"
-                  />
-                </Timeline>
+                <img src={tl} />
               </div>
             </Tab>
             <Tab eventKey="eval-criteria" title="EVALUATION CRITERIA">
@@ -201,7 +205,7 @@ function Colgate() {
         </div>
       </div>
 
-      <div className="submit-section">
+      <div className="submit-section" id="submit">
         <h1 className="title-text">SUBMIT YOUR IDEA</h1>
         <p>
           Does your country have a unique idea that has the potential to impact
@@ -263,8 +267,21 @@ function Colgate() {
               name="Konstantin Schrader"
               role="Finances"
             ></TeamCard>
+            <TeamCard
+              src={ouiza}
+              name="Dr. Ouiza Belkadi"
+              role="Designer"
+            ></TeamCard>
           </div>
         </div>
+      </div>
+
+      <div className="part-countries">
+        <h1 className="title-text">Participating Countries</h1>
+        <br />
+        <p className="sec-txt" style={{ fontSize: "50px" }}>
+          Coming soon
+        </p>
       </div>
 
       <div className="FAQS container-fluid">
@@ -384,23 +401,31 @@ function Colgate() {
         <div className="row">
           <div className="touch col-lg-6 col-md-12 col-xs-12">
             <h1 className="title-text">GET IN TOUCH</h1>
-            <p className="sec-text">vpia@iads-web.org</p>
+            <p className="sec-txt" href="mailto:vpia@iads-web.org">
+              vpia@iads-web.org
+            </p>
             <p className="text">
               Couldn’t find the answer to your questions on the FAQs? Contact us
               for all your concerns regarding your project submission, the
               competition process and any other inquiries.
             </p>
-            <Button>EMAIL THE VPIA</Button>
+            <a className="btn" href="mailto:vpia@iads-web.org">
+              EMAIL THE VPIA
+            </a>
           </div>
           <div className="touch line col">
             <h1 className="title-text">PRESS</h1>
-            <p className="sec-text">vppr@iads-web.org</p>
+            <p className="sec-txt" href="mailto:vppr@iads-web.org">
+              vppr@iads-web.org
+            </p>
             <p className="text">
               Contact our Vice President of Public Relations for any press or
               social media inquiries, concerns regarding any visuals or any
               necessary media resources.
             </p>
-            <Button>EMAIL THE VPPR</Button>
+            <a className="btn" href="mailto:vppr@iads-web.org">
+              EMAIL THE VPPR
+            </a>
           </div>
         </div>
       </div>

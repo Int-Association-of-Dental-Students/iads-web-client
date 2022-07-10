@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import "./Home.scss";
-import { Image, Button } from "react-bootstrap";
+import { Image, Button, Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import mainPic from "../../Assets/Main_photo.png";
 import verticalLogo from "../../Assets/logo vertical.svg";
+
+import photo1 from "../../Assets/Home/Carousel/photo1.png";
+import photo2 from "../../Assets/Home/Carousel/photo2.png";
+import photo3 from "../../Assets/Home/Carousel/photo3.png";
+import photo4 from "../../Assets/Home/Carousel/photo4.png";
 
 function Home() {
   return (
@@ -12,16 +17,41 @@ function Home() {
       <div className="body container-fluid">
         <div className="home-main">
           <div className="titles">
-            <h1>International Association of Dental Students</h1>
+            <Carousel className="carousel" fade>
+              <Carousel.Item>
+                <img className="d-block w-100" src={photo1} alt="First slide" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={photo2}
+                  alt="Second slide"
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img className="d-block w-100" src={photo3} alt="Third slide" />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className="d-block w-100"
+                  src={photo4}
+                  alt="Fourth slide"
+                />
+              </Carousel.Item>
+            </Carousel>
+            <h1>
+              International <br /> Association of <br /> Dental Students
+            </h1>
             <p className="home-txt scale-up-center">
               The International Association of Dental Students (IADS) was
-              founded in 1951 in Copenhagen 🇩🇰 in order to serve the educational
-              needs of dental students throughout the world. Representing the
-              interests of more than 200,000 dental students in around 60
-              countries worldwide and having its central office at the FDI World
-              Dental Federation headquarters in Geneva 🇨🇭 the association
-              strives for educational and scientific excellence throughout the
-              international projects and initiatives it manages.
+              founded in 1951 in <br /> Copenhagen 🇩🇰 in order to serve the
+              educational needs of dental students throughout <br /> the world.
+              Representing the interests of more than 200,000 dental students in
+              around 60 <br /> countries worldwide and having its central office
+              at the FDI World Dental Federation <br /> headquarters in Geneva
+              🇨🇭 the association strives for educational and scientific <br />{" "}
+              excellence throughout the international projects and initiatives
+              it manages.
             </p>
           </div>
           <div className="logo">
@@ -48,6 +78,7 @@ function Home() {
                 </Button>
               </div> */}
         </div>
+        <div className="upcoming-brief"></div>
       </div>
     </>
   );

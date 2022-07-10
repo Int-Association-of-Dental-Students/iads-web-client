@@ -1,14 +1,14 @@
 import React from "react";
-import Card from "./Card";
+import CardComponent from "./CardComponent";
 
-const CardList = () => {
+const CardList = ({ data }) => {
   return (
     <div>
       <div className="container">
         <div className="row">
           {data.map((data) => (
             <div className="col">
-              <Card
+              <CardComponent
                 t={data.title}
                 d={data.description}
                 i={data.image}
