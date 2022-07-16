@@ -4,7 +4,7 @@ import CardComponent from "./CardComponent";
 const CardList = ({ data }) => {
   return (
     <div>
-      <div className="container">
+      <div className="container cardlist">
         <div className="row">
           {data.map((data) => (
             <div className="col">

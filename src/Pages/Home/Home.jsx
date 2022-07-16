@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import mainPic from "../../Assets/Main_photo.png";
 import verticalLogo from "../../Assets/logo vertical.svg";
 
+import CongressBg from "../../Assets/Home/Congress_bg.png";
+
 import photo1 from "../../Assets/Home/Carousel/photo1.png";
 import photo2 from "../../Assets/Home/Carousel/photo2.png";
 import photo3 from "../../Assets/Home/Carousel/photo3.png";
@@ -17,7 +19,7 @@ function Home() {
       <div className="body container-fluid">
         <div className="home-main">
           <div className="titles">
-            <Carousel className="carousel" fade>
+            <Carousel className="carousel" fade interval={2000}>
               <Carousel.Item>
                 <img className="d-block w-100" src={photo1} alt="First slide" />
               </Carousel.Item>
@@ -39,7 +41,7 @@ function Home() {
                 />
               </Carousel.Item>
             </Carousel>
-            <h1>
+            <h1 style={{}}>
               International <br /> Association of <br /> Dental Students
             </h1>
             <p className="home-txt scale-up-center">
@@ -78,6 +80,7 @@ function Home() {
                 </Button>
               </div> */}
         </div>
+        <div className="container-fluid congress"></div>
         <div className="upcoming-brief"></div>
       </div>
     </>

@@ -2,6 +2,7 @@ import "./App.scss";
 import Footer from "./Components/Footer";
 import NavBar from "./Components/NavBar/NavBar";
 import Colgate from "./Pages/Projects/Colgate/Colgate";
+import ColgateForm from "./Pages/Projects/Colgate/RegistrationForm";
 import Zhermack from "./Pages/Projects/Zhermack/Zhermack";
 import Home from "./Pages/Home/Home";
 
@@ -19,6 +20,10 @@ function App() {
         <Route path="/projects">
           <Route path="/projects/zhermack" element={<Zhermack />} />
           <Route path="/projects/colgate" element={<Colgate />} />
+          <Route
+            path="/projects/colgate/registration"
+            element={<ColgateForm />}
+          ></Route>
         </Route>
         <Route path="/committees">
           <Route path="/committees/internal" element={<Internal />} />

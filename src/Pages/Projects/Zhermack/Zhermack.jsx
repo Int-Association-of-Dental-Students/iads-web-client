@@ -13,6 +13,10 @@ import { Button } from "react-bootstrap";
 const Zhermack = () => {
   return (
     <div className="zhermackPage">
+      <style>
+        {`
+          .navbar {background: transparent;}`}
+      </style>
       {/* <div className="header">
         <img src={logo} alt="Zhermack Logo" />
         <img src={webinar} alt="Webinar Logo" />

@@ -4,6 +4,8 @@ import { Button, Accordion, Tabs, Tab, Nav } from "react-bootstrap";
 import { Timeline, TimelineEvent } from "@mailtop/horizontal-timeline";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
+import { Link } from "react-router-dom";
+
 import logo from "../../../Assets/Projects/Colgate/Colgate_Logo.svg";
 import vlogo from "../../../Assets/Projects/Colgate/vlogo.svg";
 import logo1 from "../../../Assets/Projects/Colgate/logo1.svg";
@@ -43,6 +45,10 @@ import Circle from "./Components/Circle";
 function Colgate() {
   return (
     <div className="colgate-page">
+      <style>
+        {`
+          .navbar {background: transparent;}`}
+      </style>
       <div className="hero">
         <div className="overlay">
           <div className="landing container">
@@ -211,9 +217,11 @@ function Colgate() {
           Does your country have a unique idea that has the potential to impact
           future smiles?
         </p>
-        <Button className="submit-button" style={{ marginBottom: "60px" }}>
-          Submit Here
-        </Button>
+        <a href="/projects/colgate/registration">
+          <Button className="submit-button" style={{ marginBottom: "60px" }}>
+            Submit Here
+          </Button>
+        </a>
         <div className="container flags">
           <div className="flags-row">
             <Circle flag={flag1}></Circle>

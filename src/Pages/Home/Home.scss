@@ -4,16 +4,11 @@
 
 .body {
   //   transform: matrix(-1, 0, 0, 1, 0, 0);
-}
-
-@media only screen and (max-width: 600px) {
-  .vlogo {
-    display: none;
-  }
+  padding: 0px !important;
 }
 
 .title-txt {
-  font-family: "Poppins";
+  font-family: "Poppins regular";
   font-style: normal;
   font-weight: 700;
   font-size: 50px;
@@ -21,18 +16,43 @@
   display: flex;
   flex-direction: column;
   align-items: left;
-  text-decoration-line: underline;
+  // text-decoration-line: underline;
   color: #fff;
 }
 
 .home-main {
   display: flex;
-
+  // opacity: 60%;
   // border: 10px solid red;
+
+  @media only screen and (max-width: 600px) {
+    .vlogo {
+      // display: none;
+    }
+    .logo {
+      display: none;
+      visibility: hidden;
+    }
+
+    p {
+      margin-left: 0px;
+    }
+
+    h1 {
+      width: 100%;
+      margin-top: 0px !important;
+    }
+    .home-main {
+    }
+    .titles {
+      // border: 5px solid green;
+      width: 100%;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+  }
 
   .titles {
     width: 70%;
-    // padding-left: 150px;
     display: flex;
     // border: 10px solid green;
     justify-content: flex-start;
@@ -42,9 +62,9 @@
       z-index: -1;
       // margin-left: 0 !important;
       opacity: 30%;
-      margin-top: 0 !important;
-      display: flex;
-      flex-direction: column;
+      // margin-top: 0 !important;
+      // display: flex;
+      // flex-direction: column;
     }
 
     h1 {
@@ -100,6 +120,22 @@
   }
 }
 
+.congress {
+  background-image: url("../../Assets/Home/Congress_bg.png");
+  background-size: fill;
+  // height: 180vh;
+  /* margin-right: 500px; */
+  // font-family: "Poppins";
+  // font-style: normal;
+  // font-weight: 400;
+  // font-size: 29px;
+  // line-height: 44px;
+  // display: flex;
+  // align-items: center;
+  // text-align: center;
+  // color: #000000;
+}
+
 .news-title {
   /* position: relative; */
   /* margin-top: 250px; */
@@ -121,12 +157,6 @@
   } */
 
 .home-txt {
-  /* position: absolute;
-    width: 759px;
-    height: 260px;
-    left: 574px;
-    top: 315px; */
-
   font-family: Poppins regular;
   font-size: 12px;
   font-weight: 400;
@@ -139,21 +169,6 @@
   text-align: justify;
 
   color: #ffffff;
-}
-
-.upcoming-brief {
-  background-image: url("../../Assets/Home/Congress\ bg\ 2.png");
-  // background-size: cover;
-  /* margin-right: 500px; */
-  // font-family: "Poppins";
-  // font-style: normal;
-  // font-weight: 400;
-  // font-size: 29px;
-  // line-height: 44px;
-  // display: flex;
-  // align-items: center;
-  // text-align: center;
-  // color: #000000;
 }
 
 .meeting-btn {

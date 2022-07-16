@@ -1,13 +1,14 @@
 import React from "react";
 import "./Internal.scss";
 import { useState } from "react";
+import { Tab, Tabs } from "react-bootstrap";
 
 import delegate from "../../../Assets/Committees/Ellipse 18.png";
 
 import CardList from "../../../Components/Cards/CardList";
 
 const Internal = () => {
-  const [data, setData] = useState(
+  const [data, setData] = useState([
     {
       title: "Title",
       description: "Description",
@@ -19,8 +20,14 @@ const Internal = () => {
       description: "Description",
       image: "image-url",
       link: "link-url",
-    }
-  );
+    },
+    {
+      title: "Title",
+      description: "Description",
+      image: "image-url",
+      link: "link-url",
+    },
+  ]);
 
   return (
     <div className="internal-page">
@@ -34,7 +41,7 @@ const Internal = () => {
         enim neque at sed. Ullamcorper sit tincidunt neque ac felis a. Auctor
         quam scelerisque augue malesuada consequat, sit ac ut quam.
       </p>
-      <div className="container workforce">
+      <div className="container pt-5 workforce">
         <div className="row">
           <div className="col-3">
             <img src={delegate} />
@@ -46,6 +53,7 @@ const Internal = () => {
           </div>
         </div>
       </div>
+
       <div className="regulations">
         <h1 className="title">Regulations</h1>
         <p className="description">
@@ -56,7 +64,10 @@ const Internal = () => {
           pretium. Eu eget gravida turpis adipiscing. Volutpat placerat mattis
           enim neque at sed. Ullamcorper sit{" "}
         </p>
-        {/* <CardList data={data}></CardList> */}
+      </div>
+      <div className="press">
+        <h1 className="title">Press Release</h1>
+        <CardList className="card-list" data={data}></CardList>
       </div>
     </div>
   );

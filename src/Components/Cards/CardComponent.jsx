@@ -1,6 +1,9 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 import { useState } from "react";
+import "./Card.scss";
+
+import card from "./card.png";
 
 const CardComponent = (props) => {
   const [data, setData] = useState({
@@ -12,12 +15,15 @@ const CardComponent = (props) => {
 
   return (
     <div>
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={data.image} />
+      <Card className="card" bg="white" style={{ width: "18rem" }}>
+        <Card.Img className="card-img" variant="top" src={card} />
         <Card.Body>
-          <Card.Title>{data.title}</Card.Title>
-          <Card.Text>{data.description}</Card.Text>
-          <Button href={data.link} variant="primary">
+          <Card.Title className="card-title" style={{ color: "#C60E3C" }}>
+            {data.title}
+          </Card.Title>
+          <Card.Text>12/5/2022</Card.Text>
+          <Card.Text className="card-text">{data.description}</Card.Text>
+          <Button className="card-button" href={data.link} variant="primary">
             Go somewhere
           </Button>
         </Card.Body>
