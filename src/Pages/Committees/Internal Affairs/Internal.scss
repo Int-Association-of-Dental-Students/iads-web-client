@@ -23,6 +23,7 @@
     letter-spacing: 0em;
     text-align: center;
     color: #c60e3c;
+    margin-top: 15px;
   }
 
   .description {
@@ -39,6 +40,8 @@
 
   .workforce {
     background-color: #f5f5f5;
+    padding-bottom: 50px;
+    padding-top: 50px;
     p {
       font-family: Poppins regular;
       font-size: 15px;
@@ -46,6 +49,35 @@
       line-height: 23px;
       letter-spacing: 0em;
       text-align: center;
+    }
+    Button {
+      border-radius: 20px;
+    }
+    .editWorkforce {
+      margin-top: 20px;
+    }
+    .WF_memberList {
+      justify-content: left;
+      display: grid;
+      // grid-template-rows: auto;
+
+      .name {
+        font-family: Poppins bold;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 23px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+
+      .country {
+        font-family: Poppins regular;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
     }
   }
 

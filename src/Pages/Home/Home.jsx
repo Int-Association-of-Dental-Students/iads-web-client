@@ -17,6 +17,32 @@ function Home() {
   return (
     <>
       <div className="body container-fluid">
+        <h1 className="title-txt" style={{ color: "blue", marginTop: "70px" }}>
+          The Website is Currently Under Development You can visit the current
+          projects in the projects tab
+        </h1>
+        <div
+          className="links"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "30px",
+            marginLeft: "10px",
+            marginRight: "10px",
+          }}
+        >
+          <Button
+            style={{ marginBottom: "50px" }}
+            href="https://congress.iads-web.com"
+          >
+            View Our Current Congress
+          </Button>
+          <Button style={{ marginBottom: "50px" }} href="/projects/colgate">
+            Colgate BSBF Project
+          </Button>
+        </div>
+
+        {/* <div className="dev"> */}
         <div className="home-main">
           <div className="titles">
             <Carousel className="carousel" fade interval={2000}>
@@ -59,30 +85,11 @@ function Home() {
           <div className="logo">
             <img className="vlogo" src={verticalLogo} />
           </div>
-          {/* <h2>The website is currently under development.</h2>
-              <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-                <Button
-                  className="btn"
-                  style={{ marginRight: "10px" }}
-                  href="https://iads-web.com/projects/zhermack"
-                >
-                  Zhermack Project
-                </Button>
-                <Button
-                  className="btn"
-                  style={{ marginRight: "10px" }}
-                  href="https://iads-web.com/projects/colgate"
-                >
-                  Colgate Project
-                </Button>
-                <Button className="btn" href="https://congress.iads-web.com/">
-                  Our upcoming congress.
-                </Button>
-              </div> */}
         </div>
         <div className="container-fluid congress"></div>
         <div className="upcoming-brief"></div>
       </div>
+      {/* </div> */}
     </>
   );
 }

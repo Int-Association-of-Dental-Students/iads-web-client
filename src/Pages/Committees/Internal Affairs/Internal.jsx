@@ -1,7 +1,8 @@
 import React from "react";
 import "./Internal.scss";
 import { useState } from "react";
-import { Tab, Tabs } from "react-bootstrap";
+import { Button, Tab, Tabs } from "react-bootstrap";
+import WorkforceCard from "../WorkforceCard";
 
 import delegate from "../../../Assets/Committees/Ellipse 18.png";
 
@@ -41,15 +42,48 @@ const Internal = () => {
         enim neque at sed. Ullamcorper sit tincidunt neque ac felis a. Auctor
         quam scelerisque augue malesuada consequat, sit ac ut quam.
       </p>
-      <div className="container pt-5 workforce">
+      <div className="container workforce" style={{ borderRadius: "20px" }}>
         <div className="row">
-          <div className="col-3">
+          <div
+            className="col-lg-3 col-sm-12"
+            style={{ borderRight: "1px solid #1D015C" }}
+          >
             <img src={delegate} />
             <h3 className="subtitle">Name Surname</h3>
             <p className="position">Position Name</p>
+            <Button className="photoUpload">Upload Photo</Button>
+            <br />
+            <Button className="editWorkforce">Edit Workforce</Button>
           </div>
-          <div className="col">
+          <div className="col offset-1">
             <div className="row subtitle">Workforce Members</div>{" "}
+            <div className="row WF_memberList">
+              <h4 className="name">Name Here</h4>
+              <p className="country">Country</p>
+
+              <h4 className="name">Name Here</h4>
+              <p className="country">Country</p>
+              <h4 className="name">Name Here</h4>
+              <p className="country">Country</p>
+              <h4 className="name">Name Here</h4>
+              <p className="country">Country</p>
+              <h4 className="name">Name Here</h4>
+              <p className="country">Country</p>
+              <h4 className="name">Name Here</h4>
+              <p className="country">Country</p>
+              <h4 className="name">Name Here</h4>
+              <p className="country">Country</p>
+              <h4 className="name">Name Here</h4>
+              <p className="country">Country</p>
+              <h4 className="name">Name Here</h4>
+              <p className="country">Country</p>
+              <h4 className="name">Name Here</h4>
+              <p className="country">Country</p>
+              <h4 className="name">Name Here</h4>
+              <p className="country">Country</p>
+              <h4 className="name">Name Here</h4>
+              <p className="country">Country</p>
+            </div>
           </div>
         </div>
       </div>

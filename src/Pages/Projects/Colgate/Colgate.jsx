@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 import logo from "../../../Assets/Projects/Colgate/Colgate_Logo.svg";
 import vlogo from "../../../Assets/Projects/Colgate/vlogo.svg";
-import logo1 from "../../../Assets/Projects/Colgate/logo1.svg";
+// import logo1 from "../../../Assets/Projects/Colgate/logo1.svg";
 import logo2 from "../../../Assets/Projects/Colgate/logo2.svg";
 
 import tl from "../../../Assets/Projects/Colgate/tl.svg";
@@ -54,7 +54,7 @@ function Colgate() {
           <div className="landing container">
             <div className="row icons">
               <div className="col">
-                <img className="logo1" src={logo1} />
+                {/* <img className="logo1" src={logo1} /> */}
                 <img className="logo2" src={logo2} />
                 <img className="vlogo" src={vlogo} />
                 <img
@@ -92,7 +92,11 @@ function Colgate() {
                   >
                     APPLY HERE
                   </AnchorLink>
-                  <Button className="btn2 col-1" style={{ marginLeft: "30px" }}>
+                  <Button
+                    href="https://www.colgate.com/en-us/oral-health-education/our-commitment"
+                    className="btn2 col-1"
+                    style={{ marginLeft: "30px" }}
+                  >
                     WHAT IS BSBF?
                   </Button>
                 </div>
@@ -101,6 +105,7 @@ function Colgate() {
           </div>
         </div>
       </div>
+
       <div className="about-section container-fluid">
         <h1 className="about-title title-text">ABOUT THE PROJECT</h1>
         <p className="row about-details sec-txt">
@@ -135,16 +140,16 @@ function Colgate() {
         <h1 className="title-text">PRIZES TO WIN</h1>
         <p className="description">Big cash prizes to win and more!</p>
         <div className="big-winner">
-          <WinnerCard place="1st"></WinnerCard>
+          <WinnerCard place="1st" price="$5,000"></WinnerCard>
         </div>
         <div className="secondary-winners">
-          <WinnerCard place={`2nd`}></WinnerCard>
-          <WinnerCard place="3rd"></WinnerCard>
-          <WinnerCard place="4th"></WinnerCard>
-          <WinnerCard place="5th"></WinnerCard>
+          <WinnerCard place={`2nd`} price="$3,500"></WinnerCard>
+          <WinnerCard place="3rd" price="$2,500"></WinnerCard>
+          <WinnerCard place="4th" price="$1,500"></WinnerCard>
+          <WinnerCard place="5th" price="$1,000"></WinnerCard>
         </div>
         <p className="description remaining-teams">
-          &gt; Last 15 Participating teams:{" "}
+          &gt; Last 5 Finalist Teams:{" "}
           <span style={{ color: "white" }}>$700</span>
         </p>
       </div>
@@ -203,6 +208,25 @@ function Colgate() {
                       Scoring according to attained likes on social media will
                       be as follows:
                     </p>
+                    <div
+                      className="likeslist"
+                      style={{ display: "grid", gridAutoFlow: "column" }}
+                    >
+                      <ul style={{ listStyleType: "none" }}>
+                        <li>20-30 likes = 1 point</li>
+                        <li>30-50 likes = 2 points</li>
+                        <li>50-150 likes = 3 points</li>
+                        <li>150 -450 likes = 4 points</li>
+                        <li>450 - 550 likes = 5 points</li>
+                      </ul>
+                      <ul style={{ listStyleType: "none" }}>
+                        <li>550 - 750 = 6 points</li>
+                        <li>750 - 950 = 7 points</li>
+                        <li>950 - 2K = 8 points</li>
+                        <li>2K - 2.5K = 9 points</li>
+                        <li>2.5K - 3.5K = 10 points</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -234,9 +258,9 @@ function Colgate() {
           <div className="flags-row">
             <Circle flag={flag7}></Circle>
             <Circle flag={flag8}></Circle>
-            <div className="submit-circle">
+            <a href="/projects/colgate/registration" className="submit-circle">
               <img className="plus" src={plus} />
-            </div>
+            </a>
             <Circle flag={flag9}></Circle>
             <Circle flag={flag10}></Circle>
           </div>

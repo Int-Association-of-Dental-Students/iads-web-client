@@ -9,6 +9,7 @@ import Home from "./Pages/Home/Home";
 import Internal from "./Pages/Committees/Internal Affairs/Internal";
 
 import { Routes, Route, Link } from "react-router-dom";
+import SCORE from "./Pages/Committees/SCORE/SCORE";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         </Route>
         <Route path="/committees">
           <Route path="/committees/internal" element={<Internal />} />
+          <Route path="/committees/SCORE" element={<SCORE />} />
           {/* <Route path="/committees/colgate" element={<Colgate />} />
           <Route path="/committees/colgate" element={<Colgate />} /> */}
           {/* <Route path="/committees/colgate" element={<Colgate />} />

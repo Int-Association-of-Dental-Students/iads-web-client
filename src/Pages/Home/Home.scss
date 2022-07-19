@@ -7,6 +7,18 @@
   padding: 0px !important;
 }
 
+@media only screen and (max-width: 900px) {
+  h1 {
+    font-size: 30px !important;
+    // font-weight: 15px;
+    // background-color: red;
+  }
+
+  .vlogo {
+    display: none;
+  }
+}
+
 .title-txt {
   font-family: "Poppins regular";
   font-style: normal;
@@ -118,6 +130,10 @@
     border-radius: 10px !important ;
     margin-right: 10px;
   }
+}
+
+.dev {
+  opacity: 70%;
 }
 
 .congress {

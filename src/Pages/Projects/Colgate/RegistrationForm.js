@@ -101,7 +101,9 @@ const ColgateForm = () => {
       });
 
     // console.log(data);
-    alert("Your Response Has Been Recorded!");
+    alert(
+      "Your EOI submission has been successfully completed. Kindly check your email inbox for confirmation mail."
+    );
   };
   //   console.log(error);
 
@@ -243,13 +245,6 @@ const ColgateForm = () => {
             </div>
 
             <div className="file-upload flexx" style={{ alignItems: "center" }}>
-              <input
-                style={{ display: "none" }}
-                id="custom-file"
-                name="logoFile"
-                type="file"
-                ref={hiddenFileInput}
-              />
               <label
                 className="flexx"
                 style={{ flexDirection: "column", alignItems: "center" }}
@@ -262,6 +257,13 @@ const ColgateForm = () => {
               </label>
               <p>Upload your Association Logo</p>
             </div>
+            <input
+              style={{ marginBottom: "20px" }}
+              id="custom-file"
+              name="logoFile"
+              type="file"
+              ref={hiddenFileInput}
+            />
 
             {/* <div className="file-upload">
               <label className="flexx">Upload your Association Logo</label>
@@ -731,7 +733,7 @@ const ColgateForm = () => {
                 placeholder="Type Here..."
                 {...register("disclosure", { required: true })}
               />
-              <label htmlFor="disclosure">
+              <label htmlFor="disclosure" style={{ marginLeft: "0px" }}>
                 I shall not disclose any confidential information related to
                 this project until further notice.
               </label>
@@ -746,7 +748,10 @@ const ColgateForm = () => {
                 placeholder="Type Here..."
                 {...register("permission", { required: true })}
               />
-              <label htmlFor="permission">
+              <label
+                style={{ marginLeft: "0px", textAlign: "left" }}
+                htmlFor="permission"
+              >
                 I understand that it is not permissible to use Logos or Elements
                 pertaining to this project elsewhere unless a prior permission
                 is granted.
@@ -762,7 +767,10 @@ const ColgateForm = () => {
                 placeholder="Type Here..."
                 {...register("expOfInterest", { required: true })}
               />
-              <label htmlFor="expOfInterest">
+              <label
+                htmlFor="expOfInterest"
+                style={{ marginLeft: "0px", textAlign: "left" }}
+              >
                 I declare my association’s expression of interest to officially
                 participate in IADS international grand idea competition in
                 partnership with Colgate-Palmolive®.

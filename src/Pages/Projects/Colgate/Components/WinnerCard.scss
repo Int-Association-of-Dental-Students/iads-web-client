@@ -16,8 +16,8 @@
     outline: 10px solid rgba(235, 41, 51, 0.25);
     // outline: 10px solid rgb(235, 41, 51);
 
-    -webkit-background-clip: padding-box; /* for Safari */
-    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+    -webkit-background-clip: padding-box !important; /* for Safari */
+    background-clip: padding-box !important; /* for IE9+, Firefox 4+, Opera, Chrome */
   }
 
   .place {

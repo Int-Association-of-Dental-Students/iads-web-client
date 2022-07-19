@@ -23,9 +23,11 @@ label {
   margin-left: -12px;
 }
 
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .coll {
-    margin-left: 0px;
+    width: 80%;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 

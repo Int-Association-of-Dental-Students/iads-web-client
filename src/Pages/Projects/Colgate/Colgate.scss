@@ -100,6 +100,10 @@
       border: 2px solid white !important;
       font-family: POPPINS medium;
     }
+    .btn2:hover {
+      background-color: white;
+      color: black;
+    }
   }
 
   .overlay {
@@ -154,6 +158,7 @@
   }
 
   .about-section {
+    // position: fixed;
     // margin-top: 150px;
     // margin-top: 200px;
     margin-bottom: 200px;
@@ -280,6 +285,10 @@
     background-color: #eb2933;
     padding-bottom: 70px;
 
+    .card {
+      border: none !important;
+    }
+
     .cards {
       display: flex;
       flex-direction: column;
@@ -291,6 +300,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
 
         @media only screen and (max-width: 900px) {
           flex-direction: column;
