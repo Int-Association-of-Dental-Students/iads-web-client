@@ -1,22 +1,20 @@
 import React from "react";
 import CardComponent from "./CardComponent";
+import "./CardList.scss";
 
 const CardList = ({ data }) => {
   return (
     <div>
       <div className="container cardlist">
-        <div className="row">
-          {data.map((data) => (
-            <div className="col">
-              <CardComponent
-                t={data.title}
-                d={data.description}
-                i={data.image}
-                l={data.link}
-              />
-            </div>
-          ))}
-        </div>
+        {data.map((data) => (
+          <CardComponent
+            t={data.title}
+            date={data.date}
+            d={data.description}
+            i={data.image}
+            l={data.link}
+          />
+        ))}
       </div>
     </div>
   );

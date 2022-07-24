@@ -11,6 +11,7 @@ const CardComponent = (props) => {
     description: props.d,
     image: props.i,
     link: props.l,
+    date: props.date,
   });
 
   return (
@@ -21,10 +22,10 @@ const CardComponent = (props) => {
           <Card.Title className="card-title" style={{ color: "#C60E3C" }}>
             {data.title}
           </Card.Title>
-          <Card.Text>12/5/2022</Card.Text>
+          <Card.Text className="card-date">{data.date}</Card.Text>
           <Card.Text className="card-text">{data.description}</Card.Text>
           <Button className="card-button" href={data.link} variant="primary">
-            Go somewhere
+            Find out more
           </Button>
         </Card.Body>
       </Card>

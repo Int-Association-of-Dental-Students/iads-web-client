@@ -1,8 +1,17 @@
 .card {
   //   justify-content: left;
   width: 380px !important;
+  height: 510px !important;
   border-radius: 20px !important;
   border: 1px solid #7695ad !important;
+
+  margin-right: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  position: relative;
 
   .card-img {
     border-radius: 20px 20px 0 0;
@@ -21,6 +30,12 @@
     color: #c60e3c;
     background: none;
     border: none;
-    justify-self: right;
+    position: absolute;
+    bottom: 20px;
+    // display: flex;
+    justify-self: flex-end;
+    // margin-top: auto;
+    // margin-bottom: 20px;
+    // align-self: right;
   }
 }

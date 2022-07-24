@@ -38,48 +38,48 @@
     margin-bottom: 84px;
   }
 
-  .workforce {
-    background-color: #f5f5f5;
-    padding-bottom: 50px;
-    padding-top: 50px;
-    p {
-      font-family: Poppins regular;
-      font-size: 15px;
-      font-weight: 400;
-      line-height: 23px;
-      letter-spacing: 0em;
-      text-align: center;
-    }
-    Button {
-      border-radius: 20px;
-    }
-    .editWorkforce {
-      margin-top: 20px;
-    }
-    .WF_memberList {
-      justify-content: left;
-      display: grid;
-      // grid-template-rows: auto;
+  // .workforce {
+  //   background-color: #f5f5f5;
+  //   padding-bottom: 50px;
+  //   padding-top: 50px;
+  //   p {
+  //     font-family: Poppins regular;
+  //     font-size: 15px;
+  //     font-weight: 400;
+  //     line-height: 23px;
+  //     letter-spacing: 0em;
+  //     text-align: center;
+  //   }
+  //   Button {
+  //     border-radius: 20px;
+  //   }
+  //   .editWorkforce {
+  //     margin-top: 20px;
+  //   }
+  //   .WF_memberList {
+  //     justify-content: left;
+  //     display: grid;
+  //     // grid-template-rows: auto;
 
-      .name {
-        font-family: Poppins bold;
-        font-size: 15px;
-        font-weight: 700;
-        line-height: 23px;
-        letter-spacing: 0em;
-        text-align: left;
-      }
+  //     .name {
+  //       font-family: Poppins bold;
+  //       font-size: 15px;
+  //       font-weight: 700;
+  //       line-height: 23px;
+  //       letter-spacing: 0em;
+  //       text-align: left;
+  //     }
 
-      .country {
-        font-family: Poppins regular;
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 23px;
-        letter-spacing: 0em;
-        text-align: left;
-      }
-    }
-  }
+  //     .country {
+  //       font-family: Poppins regular;
+  //       font-size: 15px;
+  //       font-weight: 400;
+  //       line-height: 23px;
+  //       letter-spacing: 0em;
+  //       text-align: left;
+  //     }
+  //   }
+  // }
 
   .regulations {
     background-color: $page-primary-color;
@@ -90,6 +90,51 @@
     }
     .description {
       color: white;
+    }
+    .cardList {
+      .cardd {
+        background-color: white;
+        width: 262px;
+        height: 272px;
+        padding-top: 25px;
+        position: relative;
+        border-radius: 20px;
+
+        .regtitle {
+          font-family: Poppins regular;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 27px;
+          letter-spacing: 0em;
+          text-align: center;
+          margin-top: 18px;
+          margin-bottom: 4px;
+        }
+
+        .reg-desc {
+          font-family: Poppins;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: 0em;
+          text-align: center;
+          width: 90%;
+          margin: auto;
+        }
+        .dload {
+          font-family: Poppins;
+          font-size: 15px;
+          font-weight: 700;
+          line-height: 23px;
+          letter-spacing: 0em;
+          text-align: center;
+          color: #c60e3c;
+
+          position: absolute;
+          bottom: 17px;
+          // align-self: flex-end;
+        }
+      }
     }
   }
 

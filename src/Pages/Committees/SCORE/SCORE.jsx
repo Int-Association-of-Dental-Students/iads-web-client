@@ -24,6 +24,7 @@ const SCORE = () => {
         delegateImage={delegate}
         delegateName="Irem Türkan"
         delegatePosition="Vice President of Science & Research"
+        WFList={[{ name: "name", country: "country" }]}
       />
 
       <h1 className="title" style={{ marginTop: "50px", marginBottom: "55px" }}>

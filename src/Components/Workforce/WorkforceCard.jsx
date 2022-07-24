@@ -28,31 +28,15 @@ const WorkforceCard = (props) => {
             Workforce Members
           </div>{" "}
           <div className="row WF_memberList">
-            <h4 className="name">Name Here</h4>
-            <p className="country">Country</p>
-
-            <h4 className="name">Name Here</h4>
-            <p className="country">Country</p>
-            <h4 className="name">Name Here</h4>
-            <p className="country">Country</p>
-            <h4 className="name">Name Here</h4>
-            <p className="country">Country</p>
-            <h4 className="name">Name Here</h4>
-            <p className="country">Country</p>
-            <h4 className="name">Name Here</h4>
-            <p className="country">Country</p>
-            {/* <h4 className="name">Name Here</h4>
-            <p className="country">Country</p>
-            <h4 className="name">Name Here</h4>
-            <p className="country">Country</p>
-            <h4 className="name">Name Here</h4>
-            <p className="country">Country</p>
-            <h4 className="name">Name Here</h4>
-            <p className="country">Country</p>
-            <h4 className="name">Name Here</h4>
-            <p className="country">Country</p>
-            <h4 className="name">Name Here</h4>
-            <p className="country">Country</p> */}
+            {props.WFList.map((member) => {
+              <div className="col-4">
+                {/* <h4 className="role" style={{}}>
+                  Name Here
+                </h4> */}
+                <h4 className="name">{member.name}</h4>
+                <p className="country">{member.country}</p>
+              </div>;
+            })}
           </div>
         </div>
       </div>

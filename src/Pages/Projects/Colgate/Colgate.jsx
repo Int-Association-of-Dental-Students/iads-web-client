@@ -127,8 +127,9 @@ function Colgate() {
         <h1 className="title-text">GET TO KNOW BSBF®</h1>
         <div className="videowrapper">
           <iframe
-            height="500"
-            src="https://www.youtube.com/embed/7XeWnXY"
+            width="560"
+            height="600"
+            src="https://www.youtube.com/embed/7-TZCUGeqQY"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

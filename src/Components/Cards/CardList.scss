@@ -1,4 +1,8 @@
-// .cardlist {
-//   display: flex;
-//   overflow-x: auto;
-// }
+.cardlist {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  // overflow-x: auto;
+  // border: 5px solid red;
+  // flex-wrap: nowrap;
+}

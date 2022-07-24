@@ -18,10 +18,18 @@
   }
   .WF_memberList {
     justify-content: left;
-    display: grid;
+    // display: grid;
     // grid-template-rows: auto;
 
     .name {
+      font-family: Poppins bold;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+    .role {
       font-family: Poppins bold;
       font-size: 15px;
       font-weight: 700;
