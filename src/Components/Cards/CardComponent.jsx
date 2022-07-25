@@ -18,7 +18,7 @@ const CardComponent = (props) => {
 
   return (
     <div>
-      <Card className="card" bg="white" style={{ width: "18rem" }}>
+      <Card className="card" id="card" bg="white" style={{ width: "18rem" }}>
         <Card.Img className="card-img" variant="top" src={data.image} />
         <Card.Body>
           <Card.Title className="card-title">{data.title}</Card.Title>

@@ -7,6 +7,7 @@ import CardList from "../../../Components/Cards/CardList";
 import WFList from "./WFList";
 import axios from "axios";
 import publications from "./publications";
+import courses from "./courses";
 
 import colgate from "../../../Assets/Committees/SCORE/projectColgate.svg";
 import zhermack from "../../../Assets/Committees/SCORE/projectZhermack.svg";
@@ -32,7 +33,7 @@ const SCORE = () => {
   // }, []);
 
   return (
-    <div className="container scorePage">
+    <div className="container-fluid scorePage">
       <img className="logo" src={logo} />
       <p className="description">
         The Standing Committee on Research and Education (SCORE) stresses the
@@ -49,10 +50,7 @@ const SCORE = () => {
 
       <div className="container workforce" style={{ borderRadius: "20px" }}>
         <div className="row">
-          <div
-            className="col-lg-3 col-sm-12"
-            style={{ borderRight: "1px solid #1D015C" }}
-          >
+          <div className="delegatee col-lg-3 col-sm-12">
             <img style={{ borderRadius: "100%" }} src={delegate} />
             <h3 className="subtitle">Dr. İrem Türkan</h3>
             <p className="position" style={{ marginBottom: "0px" }}>
@@ -63,7 +61,7 @@ const SCORE = () => {
             <br />
             <Button className="editWorkforce">Edit Workforce</Button> */}
           </div>
-          <div className="col offset-1">
+          <div className="members col offset-lg-1">
             <div className="row subtitle">Workforce Members</div>
             <div className="row">
               <div className="col-3 WF_memberList">
@@ -124,7 +122,7 @@ const SCORE = () => {
         Projects
       </h1>
 
-      <div className="projectsCards">
+      <div className=" container projectsCards">
         <div className="projectCard colgate">
           <div className="ellipse">
             <img src={colgate} />
@@ -187,11 +185,8 @@ const SCORE = () => {
         </div>
       </div>
 
-      <div className="publications">
-        <h1
-          className="title"
-          style={{ marginTop: "50px", marginBottom: "55px" }}
-        >
+      <div className="publications container-fluid">
+        <h1 className="title" style={{ marginBottom: "55px" }}>
           Publications
         </h1>
         <CardList
@@ -199,8 +194,17 @@ const SCORE = () => {
           data={publications}
           textColor="blue"
         ></CardList>
-        <br />
-        <br />
+      </div>
+
+      <div className="courses container-fluid">
+        <h1 className="title" style={{ marginBottom: "55px" }}>
+          Dental & Scientific Courses
+        </h1>
+        <CardList
+          className="card-list"
+          data={courses}
+          textColor="blue"
+        ></CardList>
       </div>
     </div>
   );
