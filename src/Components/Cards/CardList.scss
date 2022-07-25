@@ -5,4 +5,35 @@
   // overflow-x: auto;
   // border: 5px solid red;
   // flex-wrap: nowrap;
+  @media only screen and (max-width: 900px) {
+    .addNew {
+      width: 280px !important;
+    }
+  }
+  .addNew {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 140px;
+    // width: 380px !important;
+    height: 510px !important;
+    border: 2.5px dashed #00467c;
+    border-radius: 20px;
+    margin-right: 20px;
+    background-color: white;
+  }
+  h5 {
+    font-family: Poppins regular;
+    // font-size: 30px;
+    font-weight: 700;
+    // line-height: 45px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 10px;
+    color: #00467c;
+  }
+  .plusIcon {
+    background-color: #00467c;
+  }
 }

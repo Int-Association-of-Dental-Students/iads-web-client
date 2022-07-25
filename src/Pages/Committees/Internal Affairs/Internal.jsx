@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button, Tab, Tabs } from "react-bootstrap";
 import WorkforceCard from "../../../Components/Workforce/WorkforceCard";
 
-import delegate from "../../../Assets/Committees/Internal/Lamis.png";
+import delegate from "../../../Assets/Committees/Internal/Lamis.svg";
 import pdfIcon from "../../../Assets/Committees/Internal/Pdf Icon.svg";
 
 import CardList from "../../../Components/Cards/CardList";
