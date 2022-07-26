@@ -19,7 +19,7 @@ function Home() {
       <div className="body container-fluid">
         <h1 className="title-txt" style={{ color: "blue", marginTop: "70px" }}>
           The Website is Currently Under Development You can visit the current
-          projects in the projects tab
+          projects in the projects tab.
         </h1>
         <div
           className="links"
@@ -42,54 +42,62 @@ function Home() {
           </Button>
         </div>
 
-        {/* <div className="dev"> */}
-        <div className="home-main">
-          <div className="titles">
-            <Carousel className="carousel" fade interval={2000}>
-              <Carousel.Item>
-                <img className="d-block w-100" src={photo1} alt="First slide" />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={photo2}
-                  alt="Second slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img className="d-block w-100" src={photo3} alt="Third slide" />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={photo4}
-                  alt="Fourth slide"
-                />
-              </Carousel.Item>
-            </Carousel>
-            <h1 style={{}}>
-              International <br /> Association of <br /> Dental Students
-            </h1>
-            <p className="home-txt scale-up-center">
-              The International Association of Dental Students (IADS) was
-              founded in 1951 in <br /> Copenhagen 🇩🇰 in order to serve the
-              educational needs of dental students throughout <br /> the world.
-              Representing the interests of more than 200,000 dental students in
-              around 60 <br /> countries worldwide and having its central office
-              at the FDI World Dental Federation <br /> headquarters in Geneva
-              🇨🇭 the association strives for educational and scientific <br />{" "}
-              excellence throughout the international projects and initiatives
-              it manages.
-            </p>
+        <div className="dev">
+          <div className="home-main">
+            <div className="titles">
+              <Carousel className="carousel" fade interval={2000}>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={photo1}
+                    alt="First slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={photo2}
+                    alt="Second slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={photo3}
+                    alt="Third slide"
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100"
+                    src={photo4}
+                    alt="Fourth slide"
+                  />
+                </Carousel.Item>
+              </Carousel>
+              <h1 style={{}}>
+                International <br /> Association of <br /> Dental Students
+              </h1>
+              <p className="home-txt scale-up-center">
+                The International Association of Dental Students (IADS) was
+                founded in 1951 in <br /> Copenhagen 🇩🇰 in order to serve the
+                educational needs of dental students throughout <br /> the
+                world. Representing the interests of more than 200,000 dental
+                students in around 60 <br /> countries worldwide and having its
+                central office at the FDI World Dental Federation <br />{" "}
+                headquarters in Geneva 🇨🇭 the association strives for
+                educational and scientific <br /> excellence throughout the
+                international projects and initiatives it manages.
+              </p>
+            </div>
+            <div className="logo">
+              <img className="vlogo" src={verticalLogo} />
+            </div>
           </div>
-          <div className="logo">
-            <img className="vlogo" src={verticalLogo} />
-          </div>
+          <div className="container-fluid congress"></div>
+          <div className="upcoming-brief"></div>
         </div>
-        <div className="container-fluid congress"></div>
-        <div className="upcoming-brief"></div>
       </div>
-      {/* </div> */}
     </>
   );
 }

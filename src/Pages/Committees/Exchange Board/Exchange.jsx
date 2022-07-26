@@ -10,7 +10,7 @@ import CardList from "../../../Components/Cards/CardList";
 const Exchange = () => {
   return (
     <div className="exchange-page">
-      <img src={logo} />
+      <img className="logo" src={logo} />
       <p className="description">
         Exchange Board has produced a stellar opportunity for Dental Students to
         broaden their horizons and make their mark in this fast-pacing,
@@ -44,7 +44,7 @@ const Exchange = () => {
           <div className="members col offset-lg-1">
             <div className="row subtitle">Workforce Members</div>
             <div className="row">
-              <div className="col-3 WF_memberList">
+              <div className="col-4 WF_memberList">
                 <h4 className="role">Secretary:</h4>
                 <h4 className="name">Mian Aneeq Majid</h4>
                 <p className="country">Pakistan</p>
@@ -58,7 +58,7 @@ const Exchange = () => {
                 <p className="country">Japan</p>
               </div>
 
-              <div className="col-3 WF_memberList">
+              <div className="col-4 WF_memberList">
                 <h4 className="name">Raghad Saleh</h4>
                 <p className="country">Palestine</p>
 
@@ -75,7 +75,7 @@ const Exchange = () => {
                 <p className="country">Sudan</p>
               </div>
 
-              <div className="col-3 WF_memberList">
+              <div className="col-4 WF_memberList">
                 <h4 className="name"> Ruba Mazin</h4>
                 <p className="country">Palestine</p>
 
