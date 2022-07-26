@@ -61,7 +61,7 @@ const SCORE = () => {
             <br />
             <Button className="editWorkforce">Edit Workforce</Button> */}
           </div>
-          <div className="members col offset-lg-1">
+          <div className="members col offset-lg-1 offset-sm-1">
             <div className="row subtitle">Workforce Members</div>
             <div className="row">
               <div className="col-3 WF_memberList">
