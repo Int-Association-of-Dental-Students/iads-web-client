@@ -1,0 +1,52 @@
+.exchange-page {
+  padding-top: 70px;
+  @media only screen and (max-width: 900px) {
+    .logo {
+      width: 80%;
+    }
+  }
+  .description {
+    // border: 2px solid red;
+    margin-top: 60px;
+    width: 70%;
+    margin: 20px auto 40px auto;
+
+    font-family: Poppins regular;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-family: LEMON MILK regular;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #ed8e00;
+
+    margin-top: 15px;
+  }
+
+  .title {
+    font-family: LEMON MILK regular;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 68px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #ed8e00;
+  }
+
+  .btn2 {
+    justify-content: center;
+    align-items: center;
+    padding: 7px 35px;
+    gap: 10px;
+    background: #fed207;
+    border-radius: 20px;
+  }
+}

@@ -10,6 +10,8 @@ import Internal from "./Pages/Committees/Internal Affairs/Internal";
 
 import { Routes, Route, Link } from "react-router-dom";
 import SCORE from "./Pages/Committees/SCORE/SCORE";
+import Training from "./Pages/Committees/Training/Training";
+import Exchange from "./Pages/Committees/Exchange Board/Exchange";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
         <Route path="/committees">
           <Route path="/committees/internal" element={<Internal />} />
           <Route path="/committees/SCORE" element={<SCORE />} />
+          <Route path="/committees/training" element={<Training />} />
+          <Route path="/committees/exchange" element={<Exchange />} />
           {/* <Route path="/committees/colgate" element={<Colgate />} />
           <Route path="/committees/colgate" element={<Colgate />} /> */}
           {/* <Route path="/committees/colgate" element={<Colgate />} />

@@ -23,7 +23,7 @@ const CardList = ({ data, textColor }) => {
         </button>
         {data.map((data) => (
           <CardComponent
-            style={{ color: textColor }}
+            style={textColor}
             t={data.title}
             date={data.date}
             d={data.description}
