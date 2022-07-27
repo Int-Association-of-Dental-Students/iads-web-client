@@ -192,7 +192,7 @@ const SCORE = () => {
         <CardList
           className="card-list"
           data={publications}
-          textColor="blue"
+          textColor="#00467c"
         ></CardList>
       </div>
 
@@ -203,7 +203,7 @@ const SCORE = () => {
         <CardList
           className="card-list"
           data={courses}
-          textColor="blue"
+          textColor="#00467c"
         ></CardList>
       </div>
     </div>

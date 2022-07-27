@@ -17,6 +17,7 @@ const CardList = ({ data, textColor }) => {
             setShow(!show);
           }}
           className="addNew"
+          style={{ border: `2.5px dashed ${textColor}` }}
         >
           <img className="plus-icon" src={plus} />
           <h5>Add New</h5>

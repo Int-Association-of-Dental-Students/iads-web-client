@@ -80,7 +80,11 @@ const Internal = () => {
       </div>
       <div className="press">
         <h1 className="title">Press Release</h1>
-        <CardList className="card-list" data={pressRelease}></CardList>
+        <CardList
+          className="card-list"
+          data={pressRelease}
+          textColor="#C60E3C"
+        ></CardList>
         <br />
         <br />
       </div>

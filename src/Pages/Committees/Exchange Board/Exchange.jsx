@@ -94,7 +94,7 @@ const Exchange = () => {
       <CardList
         className="card-list"
         data={programs}
-        textColor="#0D7B7D"
+        textColor="#ED8E00"
       ></CardList>
     </div>
   );
