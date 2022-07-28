@@ -277,8 +277,13 @@ function Colgate() {
       </div>
 
       <div className="meet-team-section">
-        <h1 className="title-text">MEET OUR TEAM</h1>
-        <div className="cards">
+        <h1
+          className="title-text"
+          style={{ color: "white", marginTop: "60px", marginBottom: "50px" }}
+        >
+          MEET OUR TEAM
+        </h1>
+        <div className="cardss">
           <TeamCard
             src={huth}
             name="Dr. Huthaifa Abdul Qader"
