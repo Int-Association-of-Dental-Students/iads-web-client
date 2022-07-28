@@ -491,6 +491,7 @@ const ColgateForm = () => {
                 <option value=" Oman"> Oman</option>
                 <option value=" Pakistan"> Pakistan</option>
                 <option value=" Palau"> Palau</option>
+                <option value=" Palau"> Palestine</option>
                 <option value=" Panama"> Panama</option>
                 <option value=" Papua New Guinea"> Papua New Guinea</option>
                 <option value=" Paraguay"> Paraguay</option>
