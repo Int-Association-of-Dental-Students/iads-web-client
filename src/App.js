@@ -8,16 +8,19 @@ import Home from "./Pages/Home/Home";
 
 import Internal from "./Pages/Committees/Internal Affairs/Internal";
 
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import SCORE from "./Pages/Committees/SCORE/SCORE";
+import Register from "./Pages/Auth/Register";
+
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <NavBar path={window.location.pathname} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/projects">
           <Route path="/projects/zhermack" element={<Zhermack />} />
           <Route path="/projects/colgate" element={<Colgate />} />

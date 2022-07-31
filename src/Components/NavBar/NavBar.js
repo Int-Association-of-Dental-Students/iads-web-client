@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 // import logo from "../../Assets/IADS logo horizontal.png";
 import logo from "../../Assets/IADS Horizontal 1.svg";
 
-const NavBar = () => {
+const NavBar = (props) => {
+  console.log(props.path)
   return (
-    <div className="navv container-fluid" style={{ padding: 0 }}>
-      <Navbar className="navbar" bg="none" expand="lg">
+      <Navbar className={props.path=='/' || props.path=='/home' ? "navbar" : "navbar navbarWithBg"} bg="none"  expand="xl">
         <Container fluid>
           <Navbar.Brand href="/home">
             <img className="iads-logo" src={logo} />
@@ -43,7 +43,6 @@ const NavBar = () => {
                 <NavDropdown.Item className="" href="/workforce">
                   Workforce
                 </NavDropdown.Item>
-                <NavDropdown.Divider />
                 <NavDropdown.Item className="" href="/committees/internal">
                   Internal Affairs
                 </NavDropdown.Item>
@@ -73,7 +72,6 @@ const NavBar = () => {
                 <NavDropdown.Item href="/projects/colgate">
                   Colgate
                 </NavDropdown.Item>
-                <NavDropdown.Divider />
                 {/* <NavDropdown.Item href="#action5">
                   Something else here
                 </NavDropdown.Item> */}
@@ -92,7 +90,6 @@ const NavBar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </div>
   );
 };
 
