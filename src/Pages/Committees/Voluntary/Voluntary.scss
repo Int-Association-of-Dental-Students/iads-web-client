@@ -1,0 +1,51 @@
+.voluntary-page {
+  padding-top: 70px;
+
+  @media only screen and (max-width: 900px) {
+    .logo {
+      width: 80%;
+    }
+  }
+
+  .description {
+    margin-top: 60px;
+    width: 70%;
+    margin: 60px auto 40px auto;
+
+    font-family: Poppins regular;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-family: LEMON MILK regular;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #7eaf0d;
+
+    margin-top: 15px;
+  }
+
+  .title {
+    font-family: LEMON MILK regular;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 68px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #7eaf0d;
+  }
+  .events {
+    // background-color: #f5f5f5;
+    padding-top: 70px;
+    padding-bottom: 150px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+}
