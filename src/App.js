@@ -8,8 +8,10 @@ import Home from "./Pages/Home/Home";
 
 import Internal from "./Pages/Committees/Internal Affairs/Internal";
 
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import SCORE from "./Pages/Committees/SCORE/SCORE";
+import Register from "./Pages/Auth/Register";
+
 import Training from "./Pages/Committees/Training/Training";
 import Exchange from "./Pages/Committees/Exchange Board/Exchange";
 import Voluntary from "./Pages/Committees/Voluntary/Voluntary";
@@ -19,10 +21,11 @@ import Prophylaxis from "./Pages/Committees/Prophylaxis/Prophylaxis";
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <NavBar path={window.location.pathname} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/projects">
           <Route path="/projects/zhermack" element={<Zhermack />} />
           <Route path="/projects/colgate" element={<Colgate />} />
