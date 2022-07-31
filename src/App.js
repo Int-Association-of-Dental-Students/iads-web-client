@@ -12,6 +12,9 @@ import { Routes, Route, Link } from "react-router-dom";
 import SCORE from "./Pages/Committees/SCORE/SCORE";
 import Training from "./Pages/Committees/Training/Training";
 import Exchange from "./Pages/Committees/Exchange Board/Exchange";
+import Voluntary from "./Pages/Committees/Voluntary/Voluntary";
+import Editorial from "./Pages/Committees/Editorial/Editorial";
+import Prophylaxis from "./Pages/Committees/Prophylaxis/Prophylaxis";
 
 function App() {
   return (
@@ -33,6 +36,9 @@ function App() {
           <Route path="/committees/SCORE" element={<SCORE />} />
           <Route path="/committees/training" element={<Training />} />
           <Route path="/committees/exchange" element={<Exchange />} />
+          <Route path="/committees/voluntary" element={<Voluntary />} />
+          <Route path="/committees/editorial" element={<Editorial />} />
+          <Route path="/committees/prophylaxis" element={<Prophylaxis />} />
           {/* <Route path="/committees/colgate" element={<Colgate />} />
           <Route path="/committees/colgate" element={<Colgate />} /> */}
           {/* <Route path="/committees/colgate" element={<Colgate />} />

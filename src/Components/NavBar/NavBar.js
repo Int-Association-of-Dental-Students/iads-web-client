@@ -64,7 +64,9 @@ const NavBar = () => {
                 <NavDropdown.Item href="/committees/training">
                   Training
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/voluntary">Voluntary</NavDropdown.Item>
+                <NavDropdown.Item href="/committees/voluntary">
+                  Voluntary
+                </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Projects" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="/projects/zhermack">
