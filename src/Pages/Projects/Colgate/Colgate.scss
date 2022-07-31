@@ -283,13 +283,14 @@
 
   .meet-team-section {
     background-color: #eb2933;
+    padding-top: 1px;
     padding-bottom: 70px;
 
     .card {
       border: none !important;
     }
 
-    .cards {
+    .cardss {
       display: flex;
       flex-direction: column;
       justify-content: center;

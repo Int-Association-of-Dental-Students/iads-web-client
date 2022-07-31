@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button, Tab, Tabs } from "react-bootstrap";
 import WorkforceCard from "../../../Components/Workforce/WorkforceCard";
 
-import delegate from "../../../Assets/Committees/Internal/Lamis.png";
+import delegate from "../../../Assets/Committees/Internal/Lamis.svg";
 import pdfIcon from "../../../Assets/Committees/Internal/Pdf Icon.svg";
 
 import CardList from "../../../Components/Cards/CardList";
@@ -80,7 +80,11 @@ const Internal = () => {
       </div>
       <div className="press">
         <h1 className="title">Press Release</h1>
-        <CardList className="card-list" data={pressRelease}></CardList>
+        <CardList
+          className="card-list"
+          data={pressRelease}
+          textColor="#C60E3C"
+        ></CardList>
         <br />
         <br />
       </div>

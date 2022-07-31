@@ -1,5 +1,12 @@
+@media only screen and (max-width: 900px) {
+  #card {
+    width: 280px !important;
+  }
+}
+
 .card {
   //   justify-content: left;
+  // width: 0px !important;
   width: 380px !important;
   height: 510px !important;
   border-radius: 20px !important;
@@ -18,7 +25,7 @@
   }
 
   .card-title {
-    color: #c60e3c;
+    // color: #00467c;
     font-family: "POPPINS bold";
   }
 
@@ -27,15 +34,22 @@
   }
 
   .card-button {
-    color: #c60e3c;
+    color: #00467c;
     background: none;
     border: none;
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
+    right: 20px;
     // display: flex;
     justify-self: flex-end;
     // margin-top: auto;
     // margin-bottom: 20px;
     // align-self: right;
+  }
+
+  .card-button:hover {
+    // display: none;
+    background-color: transparent;
+    color: black;
   }
 }
