@@ -21,6 +21,10 @@
   color: #fff;
 }
 
+.dev {
+  opacity: 60%;
+}
+
 .home-main {
   display: flex;
   position: relative;
@@ -89,7 +93,7 @@
     margin-right: auto;
     right: 0;
 
-    clip-path: polygon(0 0, 100% 0, 100% 100%,20% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
   }
 
   .btn {

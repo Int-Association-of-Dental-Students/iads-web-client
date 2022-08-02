@@ -1,0 +1,14 @@
+.regs2 {
+  margin-top: 75px;
+  .col {
+    display: flex;
+    flex-direction: column;
+
+    // border: solid red 1px;
+  }
+
+  label {
+    align-self: flex-start;
+    margin-left: 1px;
+  }
+}

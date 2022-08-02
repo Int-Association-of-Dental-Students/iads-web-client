@@ -3,6 +3,7 @@ import Footer from "./Components/Footer";
 import NavBar from "./Components/NavBar/NavBar";
 import Colgate from "./Pages/Projects/Colgate/Colgate";
 import ColgateForm from "./Pages/Projects/Colgate/RegistrationForm";
+import Registration2 from "./Pages/Projects/Colgate/Registration2";
 import Zhermack from "./Pages/Projects/Zhermack/Zhermack";
 import Home from "./Pages/Home/Home";
 
@@ -32,6 +33,14 @@ function App() {
           <Route
             path="/projects/colgate/registration"
             element={<ColgateForm />}
+          ></Route>
+          <Route
+            path="/projects/colgate/registration"
+            element={<ColgateForm />}
+          ></Route>
+          <Route
+            path="/projects/colgate/registration2"
+            element={<Registration2 />}
           ></Route>
         </Route>
         <Route path="/committees">

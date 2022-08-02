@@ -85,7 +85,7 @@ const Prophylaxis = () => {
         <CardList
           className="card-list"
           data={toolkits}
-          textColor="#E85B0D"
+          textColor="#6D3591"
         ></CardList>
       </div>
     </div>
