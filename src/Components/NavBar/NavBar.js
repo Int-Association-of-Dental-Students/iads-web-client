@@ -4,11 +4,13 @@ import "./Navbar.scss";
 import { Link } from "react-router-dom";
 // import logo from "../../Assets/IADS logo horizontal.png";
 import logo from "../../Assets/IADS Horizontal 1.svg";
+import lock from "../../Assets/lock.svg";
+import lock1 from "../../Assets/lock1.svg";
 
 const NavBar = (props) => {
   console.log(props.path)
   return (
-      <Navbar className={props.path=='/' || props.path=='/home' ? "navbar" : "navbar navbarWithBg"} bg="none"  expand="xl">
+      <Navbar className={props.path=='/' || props.path=='/home' ? "navbar navbarWithOutBg" : "navbar navbarWithBg"} bg="none"  expand="xl">
         <Container fluid>
           <Navbar.Brand href="/home">
             <img className="iads-logo" src={logo} />
@@ -20,25 +22,25 @@ const NavBar = (props) => {
               style={{ maxHeight: "1000px" }}
               navbarScroll
             >
-              <Nav.Link className="nav-item home" href="/home">
+              <Nav.Link className="nav-item nav-item-White home" href="/home">
                 Home
               </Nav.Link>
-              <Nav.Link className="nav-item" href="/about">
+              <Nav.Link className="nav-item nav-item-White" href="/about">
                 About
               </Nav.Link>
-              <Nav.Link className="nav-item" href="/governance">
+              <Nav.Link className="nav-item nav-item-White" href="/governance">
                 Governance
               </Nav.Link>
-              <Nav.Link className="nav-item meetings" href="/meetings">
+              <Nav.Link className="nav-item nav-item-White" href="/meetings">
                 Meetings
               </Nav.Link>
-              <Nav.Link className="nav-item mambership" href="/membership">
+              <Nav.Link className="nav-item nav-item-White" href="/membership">
                 Membership
               </Nav.Link>
               <NavDropdown
-                className="committees"
+                className="nav-item nav-item-White"
                 title="Committees"
-                id="navbarScrollingDropdown"
+                id="navbarScrollingDropdownWhite"
               >
                 <NavDropdown.Item className="" href="/workforce">
                   Workforce
@@ -65,7 +67,7 @@ const NavBar = (props) => {
                 </NavDropdown.Item>
                 <NavDropdown.Item href="/voluntary">Voluntary</NavDropdown.Item>
               </NavDropdown>
-              <NavDropdown title="Projects" id="navbarScrollingDropdown">
+              <NavDropdown title="Projects" className="nav-item-Blue" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="/projects/zhermack">
                   Zhermack
                 </NavDropdown.Item>
@@ -77,15 +79,16 @@ const NavBar = (props) => {
                 </NavDropdown.Item> */}
               </NavDropdown>
 
-              <Nav.Link className="nav-item" href="/contact-us">
+              <Nav.Link className="nav-item nav-item-Blue" href="/contact-us">
                 Contact Us
               </Nav.Link>
             </Nav>
             <div className="auth d-flex">
-              <Button className="login-btn" style={{ marginRight: "10px" }}>
-                Login
-              </Button>
-              <Button className="signup-btn">Signup</Button>
+              <div className="login-btn" >
+                <img src={props.path=='/' || props.path=='/home' ? lock :lock1 } />
+                <p>Login</p>
+              </div>
+              <div className="signup-btn">Signup</div>
             </div>
           </Navbar.Collapse>
         </Container>

@@ -155,7 +155,7 @@ function Home() {
             <p className="homePageTitles12">More</p>
           </div>
           <Swiper
-            spaceBetween={100}
+            spaceBetween={10}
             slidesPerView={3}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
@@ -224,7 +224,7 @@ function Home() {
             <p className="homePageTitles12">News</p>
           </div>
           <Swiper
-            spaceBetween={100}
+            spaceBetween={10}
             slidesPerView={3}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
