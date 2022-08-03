@@ -13,7 +13,12 @@ import photo2 from "../../Assets/Home/Carousel/photo2.png";
 import photo3 from "../../Assets/Home/Carousel/photo3.png";
 import photo4 from "../../Assets/Home/Carousel/photo4.png";
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import SwiperCore, { Keyboard, Mousewheel } from "swiper/core";
 
 import e1 from "../../Assets/DiscoverPics/e1.svg";
 import e2 from "../../Assets/DiscoverPics/e2.svg";
@@ -30,6 +35,7 @@ import s4 from "../../Assets/sponsers/s4.svg";
 import s5 from "../../Assets/sponsers/s5.svg";
 
 import end from "../../Assets/endorser.svg";
+import AddNewModal from "../../Components/Cards/AddNewModal";
 
 function DiscoverMoreCard(props) {
   return (
@@ -48,8 +54,12 @@ function DiscoverMoreCard(props) {
 }
 
 function Home() {
+  SwiperCore.use([Keyboard, Mousewheel]);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+
   return (
     <>
+
       <div className="homePage container-fluid">
         {/* <h1 className="title-txt" style={{ color: "blue", marginTop: "70px" }}>
           The Website is Currently Under Development You can visit the current
@@ -103,20 +113,26 @@ function Home() {
             </Carousel>
 
             <div className="homeOverlay">
-            <h1>
-              International <br /> Association of <br /> Dental Students
-            </h1>
-            <p className="home-txt scale-up-center">
-              The International Association of Dental Students (IADS) was
-              founded in 1951 in <br /> Copenhagen 🇩🇰 in order to serve the
-              educational needs of dental students throughout <br /> the world.
-              Representing the interests of more than 200,000 dental students in
-              around 60 <br /> countries worldwide and having its central office
-              at the FDI World Dental Federation <br /> headquarters in Geneva
-              🇨🇭 the association strives for educational and scientific <br />{" "}
-              excellence throughout the international projects and initiatives
-              it manages.
-            </p>
+              <h1>
+                International <br /> Association of <br /> Dental Students
+              </h1>
+              <p className="home-txt scale-up-center">
+                The International Association of Dental Students (IADS) was
+                founded in 1951 in <br /> Copenhagen 🇩🇰 in order to serve the
+                educational needs of dental students throughout <br /> the
+                world. Representing the interests of more than 200,000 dental
+                students in around 60 <br /> countries worldwide and having its
+                central office at the FDI World Dental Federation <br />{" "}
+                headquarters in Geneva 🇨🇭 the association strives for
+                educational and scientific <br /> excellence throughout the
+                international projects and initiatives it manages.
+              </p>
+
+              <div className="homeOverlayCTAS">
+                <p className="CTA1">Join us</p>
+
+                <p className="CTA2">Learn more</p>
+              </div>
             </div>
           </div>
           <div className="logo">
@@ -155,11 +171,29 @@ function Home() {
             <p className="homePageTitles12">More</p>
           </div>
           <Swiper
-            spaceBetween={10}
-            slidesPerView={3}
+            //  navigation={true} modules={[Navigation, Pagination]}
+            //   pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            // mousewheel={true}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
             className="swiper"
+            breakpoints={{
+              // when window width is >= 640px
+              1200: {
+                spaceBetween: 100,
+                slidesPerView: 3,
+              },
+              // when window width is >= 768px
+              768: {
+                spaceBetween: 10,
+                slidesPerView: 2,
+              },
+              0: {
+                spaceBetween: 10,
+                slidesPerView: 1,
+              },
+            }}
           >
             <SwiperSlide>
               <DiscoverMoreCard
@@ -224,8 +258,25 @@ function Home() {
             <p className="homePageTitles12">News</p>
           </div>
           <Swiper
-            spaceBetween={10}
-            slidesPerView={3}
+            breakpoints={{
+              // when window width is >= 640px
+              1300: {
+                spaceBetween: 50,
+                slidesPerView: 3,
+              },
+
+              1200: {
+                spaceBetween: 50,
+                slidesPerView: 2,
+              },
+              // when window width is >= 768px
+
+              0: {
+                spaceBetween: 10,
+                slidesPerView: 1,
+              },
+            }}
+            // mousewheel={true}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
             className="swiper"
@@ -282,8 +333,7 @@ function Home() {
             <div className="ourCompInner1">
               <p className="ourCompInnerTitle">ORAL HEALTH ORGANIZATIONS</p>
 
-            <div className="line1">
-            </div>
+              <div className="line1"></div>
 
               <div className="ourCompInnerInner">
                 <div className="ourCompInnerInner1">
@@ -291,29 +341,25 @@ function Home() {
                     Professional Organizations
                   </p>
 
-
                   <p className="ourCompInnerInner1body">
-                  🇨🇭 FDI World Dental Federation
+                    🇨🇭 FDI World Dental Federation
                   </p>
 
                   <p className="ourCompInnerInner1body">
-                  🇬🇧 ACFF Alliance for a Cavity-Free Future
+                    🇬🇧 ACFF Alliance for a Cavity-Free Future
                   </p>
 
                   <p className="ourCompInnerInner1body">
-                  🇬🇧 OHF Oral Health Foundation
+                    🇬🇧 OHF Oral Health Foundation
                   </p>
 
                   <p className="ourCompInnerInner1body">
-                  🇸🇪 HSF Humble Smile Foundation
+                    🇸🇪 HSF Humble Smile Foundation
                   </p>
 
                   <p className="ourCompInnerInner1body">
-                  🇩🇪 DTI Dental Tribune International
+                    🇩🇪 DTI Dental Tribune International
                   </p>
-                 
-
-
                 </div>
                 <div className="ourCompInnerInner1">
                   <p className="ourCompInnerInner1Title">
@@ -321,59 +367,50 @@ function Home() {
                   </p>
 
                   <p className="ourCompInnerInner1body">
-                  🇬🇧 EDSA European Dental Students Association
+                    🇬🇧 EDSA European Dental Students Association
                   </p>
 
                   <p className="ourCompInnerInner1body">
-                  🇱🇾 AfroDSA African Dental Students Association
+                    🇱🇾 AfroDSA African Dental Students Association
                   </p>
 
                   <p className="ourCompInnerInner1body">
-                  🇯🇵 APDSA Asia Pacific Dental Students Association
+                    🇯🇵 APDSA Asia Pacific Dental Students Association
                   </p>
-
-
-
                 </div>
               </div>
             </div>
 
-            <div className="line2">
-            </div>
+            <div className="line2"></div>
 
             <div className="ourCompInner1">
               <p className="ourCompInnerTitle">ORAL HEALTH ORGANIZATIONS</p>
-              <div className="line1">
-            </div>
+              <div className="line1"></div>
               <div className="ourCompInnerInner">
                 <div className="ourCompInnerInner1">
                   <p className="ourCompInnerInner1Title">
                     Professional Organizations
                   </p>
 
-
                   <p className="ourCompInnerInner1body">
-                  🇨🇭 FDI World Dental Federation
+                    🇨🇭 FDI World Dental Federation
                   </p>
 
                   <p className="ourCompInnerInner1body">
-                  🇬🇧 ACFF Alliance for a Cavity-Free Future
+                    🇬🇧 ACFF Alliance for a Cavity-Free Future
                   </p>
 
                   <p className="ourCompInnerInner1body">
-                  🇬🇧 OHF Oral Health Foundation
+                    🇬🇧 OHF Oral Health Foundation
                   </p>
 
                   <p className="ourCompInnerInner1body">
-                  🇸🇪 HSF Humble Smile Foundation
+                    🇸🇪 HSF Humble Smile Foundation
                   </p>
 
                   <p className="ourCompInnerInner1body">
-                  🇩🇪 DTI Dental Tribune International
+                    🇩🇪 DTI Dental Tribune International
                   </p>
-                 
-
-
                 </div>
                 <div className="ourCompInnerInner1">
                   <p className="ourCompInnerInner1Title">
@@ -381,28 +418,24 @@ function Home() {
                   </p>
 
                   <p className="ourCompInnerInner1body">
-                  🇬🇧 EDSA European Dental Students Association
+                    🇬🇧 EDSA European Dental Students Association
                   </p>
 
                   <p className="ourCompInnerInner1body">
-                  🇱🇾 AfroDSA African Dental Students Association
+                    🇱🇾 AfroDSA African Dental Students Association
                   </p>
 
                   <p className="ourCompInnerInner1body">
-                  🇯🇵 APDSA Asia Pacific Dental Students Association
+                    🇯🇵 APDSA Asia Pacific Dental Students Association
                   </p>
-
-
-
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-
         <div className="ourComp container">
-        <div className="homePageTitles2">
+          <div className="homePageTitles2">
             <p className="homePageTitles21">Our</p>
             <p className="homePageTitles22">Sponsers</p>
 
@@ -412,30 +445,22 @@ function Home() {
           </div>
 
           <div className="sponsers">
-          <img src={s4} />
-          <img src={s1} />
-          <img src={s2} />
-          <img src={s3} />
-          <img src={s5} />
-
+            <img src={s4} />
+            <img src={s1} />
+            <img src={s2} />
+            <img src={s3} />
+            <img src={s5} />
           </div>
         </div>
 
-
         <div className="ourComp container">
-        <div className="homePageTitles2">
+          <div className="homePageTitles2">
             <p className="homePageTitles21">Our</p>
             <p className="homePageTitles22">Endorsers</p>
-
-         
           </div>
           <div className="sponsers">
-          <img src={end} />
-    
-
+            <img src={end} />
           </div>
-
-
         </div>
       </div>
       {/* </div> */}
