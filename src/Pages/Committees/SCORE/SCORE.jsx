@@ -1,7 +1,7 @@
 import React from "react";
 import "./SCORE.scss";
 import logo from "../../../Assets/Committees/SCORE/logo.svg";
-import WorkforceCard from "../../../Components/Workforce/WorkforceCard";
+
 import { Button } from "react-bootstrap";
 import CardList from "../../../Components/Cards/CardList";
 import WFList from "./WFList";

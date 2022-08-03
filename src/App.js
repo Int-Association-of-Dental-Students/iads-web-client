@@ -18,6 +18,8 @@ import Exchange from "./Pages/Committees/Exchange Board/Exchange";
 import Voluntary from "./Pages/Committees/Voluntary/Voluntary";
 import Editorial from "./Pages/Committees/Editorial/Editorial";
 import Prophylaxis from "./Pages/Committees/Prophylaxis/Prophylaxis";
+import Governance from "./Pages/Governance/Governance";
+import Membership from "./Pages/Membership/Membership";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/governance" element={<Governance />} />
+        <Route path="/membership" element={<Membership />} />
         <Route path="/register" element={<Register />} />
         <Route path="/projects">
           <Route path="/projects/zhermack" element={<Zhermack />} />

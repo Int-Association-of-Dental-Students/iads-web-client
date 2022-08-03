@@ -2,7 +2,6 @@ import React from "react";
 import "./Internal.scss";
 import { useState } from "react";
 import { Button, Tab, Tabs } from "react-bootstrap";
-import WorkforceCard from "../../../Components/Workforce/WorkforceCard";
 
 import delegate from "../../../Assets/Committees/Internal/Lamis.svg";
 import pdfIcon from "../../../Assets/Committees/Internal/Pdf Icon.svg";

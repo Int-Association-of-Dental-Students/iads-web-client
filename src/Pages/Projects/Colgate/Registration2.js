@@ -251,71 +251,95 @@ const Registration2 = () => {
           </select>
         </div>
       </div>
+      <div className="row">
+        <div className="col">
+          <label htmlFor="affiliated">
+            Affiliated IADS Member Association*
+          </label>
+          <input
+            type="text"
+            placeholder="Type..."
+            {...register("Affiliated IADS Member Association*", {
+              required: true,
+            })}
+          />
+        </div>
+        <div className="col">
+          <label htmlFor="delegateEmail">Official Email of the Delegate*</label>
+          <input
+            type="email"
+            placeholder="Type..."
+            {...register("Official Email of the Delegate*", { required: true })}
+          />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <label htmlFor="country">Country</label>
+          <select {...register("Country", { required: true })}>
+            <option label="Choose..."></option>
+            <option value="Croatia">Croatia</option>
+            <option value="Czech republic">Czech republic</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Egypt">Egypt</option>
+            <option value="Finland">Finland</option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="India">India</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Iran">Iran</option>
+            <option value="Iraq">Iraq</option>
+            <option value="Italy">Italy</option>
+            <option value="Japan">Japan</option>
+            <option value="Jordan">Jordan</option>
+            <option value="Kazakhstan">Kazakhstan</option>
+            <option value="Latvia">Latvia</option>
+            <option value="Lithuania">Lithuania</option>
+            <option value="Malaysia">Malaysia</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="North Cyprus">North Cyprus</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Palestine">Palestine</option>
+            <option value="Poland">Poland</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Qatar">Qatar</option>
+            <option value="Romania">Romania</option>
+            <option value="Romania">Romania</option>
+            <option value="Romania">Romania</option>
+            <option value="Rwanda">Rwanda</option>
+            <option value="Slovakia">Slovakia</option>
+            <option value="Slovenia">Slovenia</option>
+            <option value="Sudan">Sudan</option>
+            <option value="Sweden">Sweden</option>
+            <option value="Taiwan">Taiwan</option>
+            <option value="Thailand">Thailand</option>
+            <option value="Tunisia">Tunisia</option>
+            <option value="Turkey">Turkey</option>
+            <option value="Zimbabwe">Zimbabwe</option>
+          </select>
+        </div>
+        <div className="col">
+          <label htmlFor="uni">Name of University*</label>
+          <input
+            type="text"
+            placeholder="Type..."
+            {...register("Name of University*", { required: true })}
+          />
+        </div>
+      </div>
+      <div className="row">
+        <label htmlFor="pTitle">Project Title*</label>
+        <input
+          type="text"
+          placeholder="Type..."
+          {...register("Project Title*", { required: true })}
+        />
+      </div>
 
       {/* ////////////////// */}
 
-      <input
-        type="text"
-        placeholder="Affiliated IADS Member Association*"
-        {...register("Affiliated IADS Member Association*", { required: true })}
-      />
-      <input
-        type="email"
-        placeholder="Official Email of the Delegate*"
-        {...register("Official Email of the Delegate*", { required: true })}
-      />
-      <select {...register("Country", { required: true })}>
-        <option value="Croatia">Croatia</option>
-        <option value="Czech republic">Czech republic</option>
-        <option value="Ecuador">Ecuador</option>
-        <option value="Egypt">Egypt</option>
-        <option value="Finland">Finland</option>
-        <option value="France">France</option>
-        <option value="Germany">Germany</option>
-        <option value="Guatemala">Guatemala</option>
-        <option value="India">India</option>
-        <option value="Indonesia">Indonesia</option>
-        <option value="Iran">Iran</option>
-        <option value="Iraq">Iraq</option>
-        <option value="Italy">Italy</option>
-        <option value="Japan">Japan</option>
-        <option value="Jordan">Jordan</option>
-        <option value="Kazakhstan">Kazakhstan</option>
-        <option value="Latvia">Latvia</option>
-        <option value="Lithuania">Lithuania</option>
-        <option value="Malaysia">Malaysia</option>
-        <option value="Morocco">Morocco</option>
-        <option value="Nigeria">Nigeria</option>
-        <option value="North Cyprus">North Cyprus</option>
-        <option value="Pakistan">Pakistan</option>
-        <option value="Palestine">Palestine</option>
-        <option value="Poland">Poland</option>
-        <option value="Portugal">Portugal</option>
-        <option value="Qatar">Qatar</option>
-        <option value="Romania">Romania</option>
-        <option value="Romania">Romania</option>
-        <option value="Romania">Romania</option>
-        <option value="Rwanda">Rwanda</option>
-        <option value="Slovakia">Slovakia</option>
-        <option value="Slovenia">Slovenia</option>
-        <option value="Sudan">Sudan</option>
-        <option value="Sweden">Sweden</option>
-        <option value="Taiwan">Taiwan</option>
-        <option value="Thailand">Thailand</option>
-        <option value="Tunisia">Tunisia</option>
-        <option value="Turkey">Turkey</option>
-        <option value="Zimbabwe">Zimbabwe</option>
-      </select>
-      <input
-        type="text"
-        placeholder="Name of University*"
-        {...register("Name of University*", { required: true })}
-      />
-      <input
-        type="text"
-        placeholder="Project Title*"
-        {...register("Project Title*", { required: true })}
-      />
       <input
         type="text"
         placeholder="Project Summary*"

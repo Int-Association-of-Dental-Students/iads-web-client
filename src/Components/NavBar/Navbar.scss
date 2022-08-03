@@ -1,14 +1,9 @@
 .navbar {
   z-index: 100;
-  color: white;
   padding: 0;
   padding-left: 40px;
   padding-right: 40px;
-  // background: rgb(27, 80, 166);
-
   margin-top: 0;
-
-  // margin-top: 20px;
 }
 
 .navbarWithBg {
@@ -18,22 +13,69 @@
     rgba(24, 98, 184, 1) 25%,
     rgba(71, 38, 134, 1) 75%
   );
+
+  .nav-item {
+    color: white !important;
+  }
+
+  #navbarScrollingDropdown {
+    color: white;
+  }
+  #navbarScrollingDropdownWhite {
+    color: white;
+  }
+
+  .login-btn {
+    border: 1px solid #55c9f3;
+
+    p {
+      color: #55c9f3;
+    }
+  }
+
+  .signup-btn {
+    background-color: #55c9f3;
+    color: #1d015c;
+  }
 }
 
-.navv {
-  // background-color: #1d015c;
-  // border: 1px solid red;
+.navbarWithOutBg {
+  .nav-item-Blue {
+    color: #3e1893 !important;
+  }
+  .nav-item-White {
+    color: white !important;
+  }
+
+  #navbarScrollingDropdown {
+    color: #3e1893;
+  }
+  #navbarScrollingDropdownWhite {
+    color: white;
+  }
+
+  .login-btn {
+    border: 1px solid #3e1893;
+
+    p {
+    }
+  }
+
+  .signup-btn {
+    background-color: #3e1893;
+    color: white;
+  }
 }
+
+.iads-logo {
+  height: 60px;
+}
+
 .nav-items {
-  color: white;
-  // border: 1px solid red;
-  width: 80%;
-  // margin-left: 100px;
+  width: 75%;
   margin: auto;
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
   line-height: 22px;
   display: flex;
   align-items: center;
@@ -47,39 +89,82 @@
 
 .nav-item {
   padding: 0;
-
   font-family: POPPINS regular;
-  // color: white !important;
-  color: #3e1893 !important;
-  // color: red !important;
+  font-weight: 700;
+  font-size: 12px;
 }
 
-.iads-logo {
-  height: 60px;
-  // margin-left: 50px;
-}
-
-#navbarScrollingDropdown {
-  // color: white !important;
-  color: #3e1893 !important;
-  // color: red !important;
+.auth {
+  gap: 8px;
 }
 
 .signup-btn {
-  width: 100px;
-  border-radius: 100px !important;
-  background-color: #75c3ff4d !important;
-  border: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 93px;
+  height: 32px;
+  border-radius: 100px;
+  margin-block: auto;
+  font-family: POPPINS regular;
+  font-weight: 700;
+  font-size: 12px;
 }
 
 .login-btn {
-  background: none !important;
-  border: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 93px;
+  height: 32px;
+  flex-direction: row;
+
+  border-radius: 100px;
+  margin-block: auto;
+
+  p {
+    margin: 0;
+    font-family: POPPINS regular;
+    font-weight: 700;
+    font-size: 12px;
+  }
 }
 
 @media only screen and (max-width: 1199px) {
   .navbar {
+    background: #1d015c;
   }
+
+  .navbarWithOutBg {
+    .nav-item-Blue {
+      color: white !important;
+    }
+    .nav-item-White {
+      color: white !important;
+    }
+
+    #navbarScrollingDropdown {
+      color: white;
+    }
+    #navbarScrollingDropdownWhite {
+      color: white;
+    }
+
+    .login-btn {
+      border: 1px solid #55c9f3;
+
+      p {
+        color: #55c9f3;
+      }
+    }
+
+    .signup-btn {
+      background-color: #55c9f3;
+      color: #1d015c;
+    }
+  }
+
   .nav-items {
     justify-content: center;
     padding-bottom: 50px !important;
