@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 const AddNewModal = (props) => {
   const [show, setShow] = useState(props.show);
-
+  console.log(show)
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   console.log(show);

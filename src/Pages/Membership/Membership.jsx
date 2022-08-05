@@ -6,7 +6,7 @@ const Membership = () => {
     <div className="membership-page">
       <div className="hero">
         <div className="overlay">
-          <h1 className="header-title">GOVERNANCE</h1>
+          <h1 className="header-title">MEMBERSHIP</h1>
         </div>
       </div>
       <div className="orgMember">

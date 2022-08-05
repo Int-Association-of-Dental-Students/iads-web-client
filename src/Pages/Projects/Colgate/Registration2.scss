@@ -11,4 +11,13 @@
     align-self: flex-start;
     margin-left: 1px;
   }
+
+  .pTitle {
+    text-align: left;
+  }
+
+  .check {
+    display: flex;
+    // flex-direction: column;
+  }
 }

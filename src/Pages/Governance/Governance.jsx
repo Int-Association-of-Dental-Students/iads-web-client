@@ -53,7 +53,7 @@ const Governance = () => {
       <div className="hero">
         <div className="overlay">
           <h1 className="header-title">GOVERNANCE</h1>
-          <p className="desc" style={{ marginTop: "30px" }}>
+          <p className="desc" style={{ marginTop: "30px", color: "white" }}>
             Jump to
           </p>
         </div>

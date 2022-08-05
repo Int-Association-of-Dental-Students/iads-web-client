@@ -330,7 +330,9 @@ const Registration2 = () => {
         </div>
       </div>
       <div className="row">
-        <label htmlFor="pTitle">Project Title*</label>
+        <label className="pTitle" htmlFor="pTitle">
+          Project Title*
+        </label>
         <input
           type="text"
           placeholder="Type..."
@@ -338,30 +340,145 @@ const Registration2 = () => {
         />
       </div>
 
-      {/* ////////////////// */}
+      <div className="row">
+        <div className="col">
+          <label htmlFor="idea">Idea Type*</label>
+          <select {...register("idea", { required: true })}>
+            <option label="Choose..."></option>
+            <option value="Oral care">Oral care</option>
+            <option value="Household care">Household care</option>
+            <option value="Personal Care">Personal Care</option>
+            <option value="Pet Nutrition">Pet Nutrition</option>
+            <option value="Packaging">Packaging</option>
+            <option value="Digital Platforms">Digital Platforms</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Product">Product</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div className="col">
+          <label htmlFor="specifyIdea">
+            Specify Idea (if other was chosen)
+          </label>
+          <input
+            type="text"
+            placeholder="specifyIdea"
+            {...register("specifyIdea", { required: false })}
+          />
+        </div>
+      </div>
 
-      <input
-        type="text"
-        placeholder="Project Summary*"
-        {...register("Project Summary*", { required: true })}
-      />
-      <select
-        {...register("Have you licensed your idea before?*", {
-          required: true,
-        })}
-      >
-        <option value="Yes">Yes</option>
-        <option value="No">No</option>
-      </select>
-      <select {...register("Patent Status*", { required: true })}>
-        <option value="I have a published patent">
-          I have a published patent
-        </option>
-        <option value="Ido not have a published patent">
-          Ido not have a published patent
-        </option>
-        <option value="Patent pending">Patent pending</option>
-      </select>
+      <div className="row">
+        <label className="pTitle" htmlFor="projectSummary">
+          Project Summary*
+        </label>
+        <textarea
+          type="text"
+          style={{ height: "175px" }}
+          placeholder="Please explain the benefit of your proposition and how it is better than other solutions."
+          {...register("projectSummary", { required: true })}
+        />
+      </div>
+
+      <div className="row">
+        <div className="col">
+          <label>Have you licensed your idea?*</label>
+          <select {...register("licensed", { required: true })}>
+            <option label="Choose..."></option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div className="col">
+          <label>Patent Status</label>
+          <select {...register("patentStatus", { required: true })}>
+            <option label="Choose..."></option>
+            <option value="I have a published patent">
+              I have a published patent
+            </option>
+            <option value="I do not have a published patent">
+              I do not have a published patent
+            </option>
+            <option value="Patent pending">Patent pending</option>
+          </select>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col">
+          <label>What is the desired outcome? (check all that applies)*</label>
+          <div className="check">
+            <input
+              type="checkbox"
+              name="chk-research"
+              id="chk-research"
+              placeholder="chk-research"
+              {...register("chk-research", {})}
+              style={{ marginRight: "5px" }}
+            />
+            <label for="chk-research">Research & Development Contract</label>
+          </div>
+          <div className="check">
+            <input
+              type="checkbox"
+              name="chk-supply"
+              id="chk-supply"
+              placeholder="chk-supply"
+              {...register("chk-supply", {})}
+              style={{ marginRight: "5px" }}
+            />
+            <label for="chk-supply">Supply</label>
+          </div>
+          <div className="check">
+            <input
+              type="checkbox"
+              name="chk-license"
+              id="chk-license"
+              placeholder="chk-license"
+              {...register("chk-license", {})}
+              style={{ marginRight: "5px" }}
+            />
+            <label for="chk-license">Licensing</label>
+          </div>
+          <div className="check">
+            <input
+              type="checkbox"
+              name="chk-patent"
+              id="chk-patent"
+              placeholder="chk-patent"
+              {...register("chk-patent", {})}
+              style={{ marginRight: "5px" }}
+            />
+            <label for="chk-patent">Patent Sale</label>
+          </div>
+          <div className="check">
+            <input
+              type="checkbox"
+              name="chk-joint"
+              id="chk-joint"
+              placeholder="chk-joint"
+              {...register("chk-joint", {})}
+              style={{ marginRight: "5px" }}
+            />
+            <label for="chk-joint">Joint Development</label>
+          </div>
+        </div>
+        <div className="col">
+          <label htmlFor="">Paste the link to your motivational video*</label>
+          <input
+            type="text"
+            placeholder="Paste Here..."
+            {...register("motivationalLink", { required: true })}
+          />
+          <label htmlFor="">Paste the link to your pitch presentation*</label>
+          <input
+            type="text"
+            placeholder="Paste Here..."
+            {...register("pitchPresentation", { required: true })}
+          />
+        </div>
+      </div>
+      {/* ////////////////// */}
 
       <input type="submit" />
     </form>

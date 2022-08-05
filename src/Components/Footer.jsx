@@ -62,6 +62,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <p className="PR" style={{ textAlign: "center", marginTop: "75px" }}>
+        Copyright © 1951-2022 IADS. All rights reserved.
+      </p>
+      <p className="PR" style={{ textAlign: "center" }}>
+        Developed by xDev
+      </p>
     </div>
   );
 };

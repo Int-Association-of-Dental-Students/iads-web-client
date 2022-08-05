@@ -13,7 +13,12 @@ import photo2 from "../../Assets/Home/Carousel/photo2.png";
 import photo3 from "../../Assets/Home/Carousel/photo3.png";
 import photo4 from "../../Assets/Home/Carousel/photo4.png";
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import SwiperCore, { Keyboard, Mousewheel } from "swiper/core";
 
 import e1 from "../../Assets/DiscoverPics/e1.svg";
 import e2 from "../../Assets/DiscoverPics/e2.svg";
@@ -30,6 +35,7 @@ import s4 from "../../Assets/sponsers/s4.svg";
 import s5 from "../../Assets/sponsers/s5.svg";
 
 import end from "../../Assets/endorser.svg";
+import AddNewModal from "../../Components/Cards/AddNewModal";
 
 function DiscoverMoreCard(props) {
   return (
@@ -48,6 +54,9 @@ function DiscoverMoreCard(props) {
 }
 
 function Home() {
+  SwiperCore.use([Keyboard, Mousewheel]);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+
   return (
     <>
       <div className="homePage container-fluid">
@@ -117,6 +126,12 @@ function Home() {
                 educational and scientific <br /> excellence throughout the
                 international projects and initiatives it manages.
               </p>
+
+              <div className="homeOverlayCTAS">
+                <p className="CTA1">Join us</p>
+
+                <p className="CTA2">Learn more</p>
+              </div>
             </div>
           </div>
           <div className="logo">
@@ -155,11 +170,29 @@ function Home() {
             <p className="homePageTitles12">More</p>
           </div>
           <Swiper
-            spaceBetween={100}
-            slidesPerView={3}
+            //  navigation={true} modules={[Navigation, Pagination]}
+            //   pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            // mousewheel={true}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
             className="swiper"
+            breakpoints={{
+              // when window width is >= 640px
+              1200: {
+                spaceBetween: 100,
+                slidesPerView: 3,
+              },
+              // when window width is >= 768px
+              768: {
+                spaceBetween: 10,
+                slidesPerView: 2,
+              },
+              0: {
+                spaceBetween: 10,
+                slidesPerView: 1,
+              },
+            }}
           >
             <SwiperSlide>
               <DiscoverMoreCard
@@ -224,8 +257,25 @@ function Home() {
             <p className="homePageTitles12">News</p>
           </div>
           <Swiper
-            spaceBetween={100}
-            slidesPerView={3}
+            breakpoints={{
+              // when window width is >= 640px
+              1300: {
+                spaceBetween: 50,
+                slidesPerView: 3,
+              },
+
+              1200: {
+                spaceBetween: 50,
+                slidesPerView: 2,
+              },
+              // when window width is >= 768px
+
+              0: {
+                spaceBetween: 10,
+                slidesPerView: 1,
+              },
+            }}
+            // mousewheel={true}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
             className="swiper"
