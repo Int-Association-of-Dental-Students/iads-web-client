@@ -242,7 +242,7 @@ function Colgate() {
           Does your country have a unique idea that has the potential to impact
           future smiles?
         </p>
-        <a href="/projects/colgate/registration2">
+        <a href="/projects/colgate/registration">
           <Button className="submit-button" style={{ marginBottom: "60px" }}>
             Submit Here
           </Button>

@@ -11,7 +11,9 @@ import Internal from "./Pages/Committees/Internal Affairs/Internal";
 
 import { Routes, Route } from "react-router-dom";
 import SCORE from "./Pages/Committees/SCORE/SCORE";
-import Register from "./Pages/Auth/Register";
+// import Register from "./Pages/Auth/Register";
+
+import Signup from "./Pages/Signup/Signup";
 
 import Training from "./Pages/Committees/Training/Training";
 import Exchange from "./Pages/Committees/Exchange Board/Exchange";
@@ -30,7 +32,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/governance" element={<Governance />} />
         <Route path="/membership" element={<Membership />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/projects">
           <Route path="/projects/zhermack" element={<Zhermack />} />
           <Route path="/projects/colgate" element={<Colgate />} />
@@ -55,11 +57,6 @@ function App() {
           <Route path="/committees/voluntary" element={<Voluntary />} />
           <Route path="/committees/editorial" element={<Editorial />} />
           <Route path="/committees/prophylaxis" element={<Prophylaxis />} />
-          {/* <Route path="/committees/colgate" element={<Colgate />} />
-          <Route path="/committees/colgate" element={<Colgate />} /> */}
-          {/* <Route path="/committees/colgate" element={<Colgate />} />
-          <Route path="/committees/colgate" element={<Colgate />} />
-          <Route path="/committees/colgate" element={<Colgate />} /> */}
         </Route>
       </Routes>
       <Footer />

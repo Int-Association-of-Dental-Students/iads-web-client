@@ -1,0 +1,13 @@
+.signup-page {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .flexx {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    text-align: left;
+    margin-left: 1px;
+  }
+}

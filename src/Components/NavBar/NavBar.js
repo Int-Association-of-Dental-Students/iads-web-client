@@ -76,7 +76,9 @@ const NavBar = (props) => {
               <NavDropdown.Item href="/committees/training">
                 Training
               </NavDropdown.Item>
-              <NavDropdown.Item href="/voluntary">Voluntary</NavDropdown.Item>
+              <NavDropdown.Item href="/committees/voluntary">
+                Voluntary
+              </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown
               title="Projects"
@@ -105,7 +107,9 @@ const NavBar = (props) => {
               />
               <p>Login</p>
             </div>
-            <div className="signup-btn">Signup</div>
+            <a href="/signup" className="signup-btn">
+              Signup
+            </a>
           </div>
         </Navbar.Collapse>
       </Container>

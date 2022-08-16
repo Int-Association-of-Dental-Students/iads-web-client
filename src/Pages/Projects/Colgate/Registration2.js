@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 import "./Registration2.scss";
@@ -11,6 +12,30 @@ const Registration2 = () => {
   } = useForm();
   const onSubmit = (data) => console.log(data);
   console.log(errors);
+
+  const [members, setMembers] = useState([
+    { name: "", position: "", tasks: "" },
+  ]);
+
+  const handleFormChange = (index, event) => {
+    let data = [...members];
+    data[index][event.target.name] = event.target.value;
+    setMembers(data);
+  };
+
+  const addMember = (e) => {
+    e.preventDefault();
+    if (members.length >= 5) return;
+    let newfield = { name: "", age: "" };
+
+    setMembers([...members, newfield]);
+  };
+
+  const removeMember = (index) => {
+    let data = [...members];
+    data.splice(index, 1);
+    setMembers(data);
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="regs2 container">
@@ -330,14 +355,16 @@ const Registration2 = () => {
         </div>
       </div>
       <div className="row">
-        <label className="pTitle" htmlFor="pTitle">
-          Project Title*
-        </label>
-        <input
-          type="text"
-          placeholder="Type..."
-          {...register("Project Title*", { required: true })}
-        />
+        <div className="col">
+          <label className="pTitle" htmlFor="pTitle">
+            Project Title*
+          </label>
+          <input
+            type="text"
+            placeholder="Type..."
+            {...register("Project Title*", { required: true })}
+          />
+        </div>
       </div>
 
       <div className="row">
@@ -369,15 +396,17 @@ const Registration2 = () => {
       </div>
 
       <div className="row">
-        <label className="pTitle" htmlFor="projectSummary">
-          Project Summary*
-        </label>
-        <textarea
-          type="text"
-          style={{ height: "175px" }}
-          placeholder="Please explain the benefit of your proposition and how it is better than other solutions."
-          {...register("projectSummary", { required: true })}
-        />
+        <div className="col">
+          <label className="pTitle" htmlFor="projectSummary">
+            Project Summary*
+          </label>
+          <textarea
+            type="text"
+            style={{ height: "175px" }}
+            placeholder="Please explain the benefit of your proposition and how it is better than other solutions."
+            {...register("projectSummary", { required: true })}
+          />
+        </div>
       </div>
 
       <div className="row">
@@ -478,7 +507,234 @@ const Registration2 = () => {
           />
         </div>
       </div>
+
+      <div className="row">
+        <div className="col">
+          <label>Number of Members* (max. 5)</label>
+          <input
+            type="number"
+            placeholder="1 - 5"
+            {...register("numMembers", {
+              required: true,
+              max: 5,
+              min: 1,
+              maxLength: 5,
+            })}
+          />
+        </div>
+        <div className="col">
+          <label>Name of Team Leader*</label>
+          <input
+            type="text"
+            placeholder="Type Here..."
+            {...register("teamLeader", { required: true })}
+          />
+        </div>
+      </div>
+
+      <div className="container">
+        {/* <div className="row"> */}
+        {members.map((input, index) => {
+          return (
+            <div className="row" key={index}>
+              <div className="col">
+                <label>Member Full Name</label>
+                <input
+                  key={index}
+                  type="text"
+                  placeholder="memberName"
+                  // value={input.name}
+                  onChange={(event) => handleFormChange(index, event)}
+                  {...register("memberName" + { index }, { required: true })}
+                />
+              </div>
+              <div className="col">
+                <label>Position in Team</label>
+                <input
+                  key={index}
+                  type="text"
+                  placeholder="memberPos"
+                  // value={input.name}
+                  onChange={(event) => handleFormChange(index, event)}
+                  {...register("memberPos" + { index }, { required: true })}
+                />
+              </div>
+              <div className="col">
+                <label>Tasks Assigned</label>
+                <input
+                  key={index}
+                  type="text"
+                  placeholder="memberTasks"
+                  // value={input.name}
+                  onChange={(event) => handleFormChange(index, event)}
+                  {...register("memberTasks" + { index }, { required: true })}
+                />
+              </div>
+              <button className="col-1" onClick={() => removeMember(index)}>
+                Remove
+              </button>
+            </div>
+          );
+        })}
+
+        <button onClick={(e) => addMember(e)}>Add Member</button>
+
+        {/* </div> */}
+      </div>
+
+      <div className="row">
+        <div className="check">
+          <input
+            type="checkbox"
+            placeholder="agreement"
+            {...register("agreement", { required: true })}
+            style={{ marginRight: "10px" }}
+          />
+          <label>
+            I agree to the terms and conditions stated below. (scroll for more)
+          </label>
+        </div>
+      </div>
       {/* ////////////////// */}
+
+      <div
+        className="row terms"
+        style={{
+          background: "#D7D7D7",
+          border: "1px solid #CDB1F2",
+          height: "460px",
+          overflowY: "scroll",
+        }}
+      >
+        <p style={{ textAlign: "left" }}>
+          By submitting Ideas (as defined below) through this idea submission
+          portal ("Portal"), you agree to all terms, conditions, and notices
+          contained or referenced below ("Agreement") and in the Privacy Policy
+          of this Portal (“Privacy Policy”). If you do not agree with the terms,
+          conditions and notices of this Agreement or the Privacy Policy
+          (collectively, "Terms"), please do not submit Ideas through this
+          Portal.
+          <br /> <br />
+          As used in this Agreement, the term "Idea(s)" means an idea,
+          innovation or invention which is owned by you. Your submission of an
+          Idea is subject to the following terms and conditions:
+          <br /> <br />
+          1. CONFIDENTIAL IDEAS: IADS will not consider any Ideas that are
+          confidential or that are subject to any restrictions of or by a third
+          party. We will not accept any Idea in confidence, or on the basis that
+          a confidential relationship is created or exists between you and IADS,
+          or under a guarantee that we shall maintain the Idea in secret, or on
+          the basis that, apart from this Agreement, an agreement exists, either
+          implied or explicit, or that we will compensate you for our evaluation
+          and/or use of your Idea. By submitting an Idea through this Portal,
+          you acknowledge that such Idea is by definition non-confidential and
+          IADS may share such Idea throughout its organization with no
+          obligation to keep it confidential.
+          <br /> <br />
+          2. PATENTED IDEAS: We will consider an Idea that is patented or the
+          subject of a pending published patent application only if you agree to
+          rely exclusively on your rights under relevant patent statutes or
+          laws. You understand that you should file for a patent before
+          disclosing your Idea to anyone (including IADS or any other party) on
+          a non-confidential basis or you may risk losing the ability to protect
+          your Ideas according to applicable patent law. You acknowledge that
+          IADS is is not providing you with any legal advice herein or in
+          relation to an Idea. You may wish to consult with a patent attorney
+          prior to submission of any Idea.
+          <br /> <br />
+          3. NO RETURN OF MATERIALS: By submitting an Idea, you acknowledge that
+          IADS is under no obligation to return any materials to you. Thus, you
+          should not furnish us with anything you expect to be returned. You
+          further agree to allow IADS to maintain and keep a copy of your Idea
+          for its records.
+          <br /> <br />
+          4. IP RIGHTS: By submitting an Idea, you:
+          <br /> <br />
+          4.1. Represent that you own all intellectual property rights,
+          including patents, trademarks and copyrights (collectively “IP
+          Rights”) in or to the Idea.
+          <br /> <br />
+          4.2. Agree to, and hereby do, grant a limited right to your IP Rights
+          in the Idea to IADS for the purpose of allowing IADS to review and
+          evaluate the Idea.
+          <br /> <br />
+          4.3. Agree to waive any claims against IADS in connection with their
+          review and evaluation of the Idea.
+          <br /> <br />
+          5. NO WAIVER OF RIGHTS BY IADS: Acceptance or review of Ideas shall
+          not constitute a waiver by us of any rights we had or may have with
+          respect to ideas, products, inventions or information that are
+          proprietary to us, developed or created by us or owned by us whether
+          such rights arise out of an employment relationship or any other type
+          of relationship, contract or communication. You explicitly acknowledge
+          that IADS may have independently and already developed your Idea or
+          may independently be in the process of developing ideas or concepts
+          similar to your Idea. IADS shall have no liability to you arising out
+          of this Agreement for any such independent creation, regardless of
+          whether such creation is in the past, present or future.
+          <br /> <br />
+          6. IADS IS SOLE JUDGE: We will be the sole judge of our interest in
+          your Idea after evaluation. We, in our sole discretion, may decide
+          whether to (1) contact you regarding the Idea submitted, (2) engage in
+          further discussions regarding the Idea submitted, and/or (3) accept
+          the Idea submitted and to enter into an agreement related thereto.
+          <br /> <br />
+          7. NO OBLIGATION OF CONTACT OR FUTURE AGREEMENT: If we decide not to
+          use your Idea, we are not obligated to contact you and/or give you any
+          reason for this decision. Any discussion we may have with you relating
+          to your Idea or any offers we may make to you shall not bind either of
+          us unless and until both of us enter into a definitive written
+          agreement. Such agreement will define all rights and obligations that
+          either of us may have. No discussion or offer shall be deemed or
+          inferred to be an admission of novelty, priority, or originality of
+          your Idea, or that our discussion will lead to a contract or business
+          relationship between the parties.
+          <br /> <br />
+          8. REPRESENTATIONS: You, the submitter, represent and warrant that:
+          <br /> <br />
+          8.1. Your disclosure of your Idea and any other information you submit
+          to us is not in violation of any commitment or obligation to any
+          former or present employer, or any other third party or organization;
+          <br /> <br />
+          8.2. You own the entire right, title, and interest in and to the
+          Idea(s) and any other information that you are submitting;
+          <br /> <br />
+          8.3. You have the full and unconditional right to disclose your Idea
+          and any other information you submit to us, and you have not entered
+          into an agreement with any other party regarding the Idea that may
+          impede such rights;
+          <br /> <br />
+          8.4. To the best of your knowledge, IADS is not practicing and/or
+          utilizing your Idea nor has it done so in the past;
+          <br /> <br />
+          8.5. Your Idea does not violate any applicable law or the rights of
+          any third party;
+          <br /> <br />
+          8.6. You are at least 18 years old; and
+          <br /> <br />
+          8.7. an IADS member country in good standing
+          <br /> <br />
+          8.8 Your Idea is not confidential or subject to any restrictions,
+          adverse claims or disputes of or by any third party.
+          <br /> <br />
+          9. RELEASE OF LIABILITY: In consideration of IADS evaluating your
+          Idea, you release IADS from any and all liability with respect to your
+          Idea. Of course, you understand that IADS reserves the right to assert
+          any and all defenses with respect to any claims involving your Idea.
+          <br /> <br />
+          10. PERSONAL DATA: You understand that any personal data (such as
+          contact information) is subject to IADS’s Privacy Policy.
+          <br /> <br />
+          11. ENTIRE AGREEMENT: You agree that this this Agreement contains the
+          entire understanding between you and IADS and supersedes any and all
+          prior agreements, understandings and arrangements whether written or
+          oral that may exist between you and IADS with respect to the matters
+          contained in this Agreement. No amendments, changes, modifications or
+          alterations of the terms and conditions of this Agreement shall be
+          binding upon you or IADS, unless in writing and signed by you and
+          IADS.
+        </p>
+      </div>
 
       <input type="submit" />
     </form>
