@@ -37,6 +37,7 @@ import s5 from "../../Assets/sponsers/s5.svg";
 import end from "../../Assets/endorser.svg";
 import AddNewModal from "../../Components/Cards/AddNewModal";
 
+
 function DiscoverMoreCard(props) {
   return (
     <div className="discoverMoreCard">

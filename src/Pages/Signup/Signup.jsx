@@ -1,14 +1,35 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./Signup.scss";
+import { useHttpClient } from "../../Shared/http-hook";
 
 export default function Signup() {
+  const httpClient = useHttpClient();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+  const onSubmit = async (data) => {
+    try {
+      const response = await httpClient.sendRequest(
+        `http://localhost:3001/api/webUsers/signup`,
+        "POST",
+        JSON.stringify({
+          data,
+        }),
+        {
+          "Content-Type": "application/json",
+        }
+      );
+    } catch (err) {
+      console.log(httpClient.error);
+    }
+
+    console.log(data);
+  };
   console.log(errors);
 
   return (
