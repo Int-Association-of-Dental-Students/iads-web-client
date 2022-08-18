@@ -177,7 +177,6 @@ const ColgateForm = () => {
               </label>
               <select id="country" {...register("country", { required: true })}>
                 <option label="Choose..."></option>
-                <option label="Choose..."></option>
                 <option value="Croatia">Croatia</option>
                 <option value=" Czech republic"> Czech republic</option>
                 <option value=" Ecuador"> Ecuador</option>

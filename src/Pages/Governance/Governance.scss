@@ -1,0 +1,128 @@
+.governance-page {
+  .header-title {
+    font-family: LEMON MILK regular;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 68px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    padding-top: 75px;
+  }
+
+  .desc {
+    font-family: Poppins regular;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #3a3a3d;
+  }
+
+  .execCom {
+    background: #1d015c;
+    // height: 200px;
+  }
+
+  .title-1st {
+    font-family: Brittany;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding-top: 72px;
+    color: #55c9f3;
+  }
+
+  .title-2nd {
+    font-family: LEMON MILK regular;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #1d015c;
+  }
+
+  .overlay {
+    background: #03070f;
+    background: radial-gradient(
+      at top left,
+      rgba(24, 132, 216, 0.8) 0%,
+      rgba(29, 1, 92, 0.8) 70%
+    );
+    width: 100vw;
+    height: 286px;
+  }
+
+  .hero {
+    background-image: url("../../Assets/Governance/hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .horiz-cardlist {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .horiz-cardlist {
+      overflow-x: scroll;
+    }
+    .delegates {
+      display: none;
+    }
+  }
+
+  .regAmbass {
+    background: #f5f5f5;
+  }
+
+  .advisory {
+    background: #1d015c;
+  }
+
+  .delegates {
+    background: #f5f5f5;
+  }
+
+  .alumni {
+    .jumpbtns {
+      width: 60%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      .btn {
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 7px 10px;
+        gap: 10px;
+        width: 212px;
+        height: 32px;
+
+        /* #55C9F3 */
+
+        background: #55c9f3;
+        border-radius: 100px;
+
+        font-family: Poppins medium;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: center;
+        /* dark */
+
+        color: #1d015c;
+      }
+    }
+  }
+}

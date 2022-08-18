@@ -1,0 +1,119 @@
+.membership-page {
+  .header-title {
+    font-family: LEMON MILK regular;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 68px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    padding-top: 75px;
+  }
+  .overlay {
+    background: #03070f;
+    background: radial-gradient(
+      at top left,
+      rgba(24, 132, 216, 0.8) 0%,
+      rgba(29, 1, 92, 0.8) 70%
+    );
+    width: 100vw;
+    height: 286px;
+  }
+
+  .hero {
+    background-image: url("../../Assets/Membership/hero.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .orgMember {
+    background: #1d015c;
+    padding-bottom: 90px;
+  }
+
+  .title-2nd {
+    font-family: LEMON MILK regular;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #1d015c;
+  }
+
+  .btn {
+    padding: 7px 25px;
+    width: 350px;
+    height: 46px;
+
+    background: #55c9f3;
+    border-radius: 100px;
+
+    font-family: "Poppins regular";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #1d015c;
+  }
+
+  .desc {
+    font-family: "Poppins regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+
+    /* page color */
+
+    color: #f5f5f5;
+  }
+  .hdr {
+    font-family: "Poppins bold";
+    text-decoration: underline;
+  }
+
+  ul {
+    margin: 0;
+  }
+  ul.dashed {
+    list-style-type: none;
+  }
+  ul.dashed > li {
+    text-indent: -5px;
+  }
+  ul.dashed > li:before {
+    content: "- ";
+    text-indent: -5px;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .orgMember {
+      .title-2nd {
+        width: 80% !important;
+      }
+    }
+  }
+
+  .personalMember {
+    padding-bottom: 90px;
+    .btn {
+      padding: 7px 25px;
+      gap: 10px;
+
+      width: 350px;
+      height: 46px;
+
+      /* #1D015C */
+
+      background: #3e1893;
+      border-radius: 100px;
+      color: white;
+    }
+
+    .desc {
+      color: #3a3a3d;
+    }
+  }
+}

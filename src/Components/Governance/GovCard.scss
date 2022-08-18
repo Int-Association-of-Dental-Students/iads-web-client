@@ -1,0 +1,54 @@
+.govCard {
+  @media only screen and (max-width: 900px) {
+    .govCard {
+      .name {
+        font-size: 10px !important;
+        // font-weight: 200px;
+      }
+    }
+  }
+
+  display: flex;
+  flex-direction: column;
+  width: 191px;
+  height: 410px;
+  justify-content: center;
+  align-items: center;
+
+  .person-img {
+    width: 149px;
+    height: 149px;
+  }
+
+  .flag-img {
+    width: 41px;
+    height: 41px;
+    margin-top: 47px;
+  }
+
+  .name {
+    font-family: LEMON MILK regular;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #1d015c;
+
+    width: 80%;
+    margin: auto;
+
+    margin-top: 25px;
+    margin-bottom: 9px;
+  }
+
+  .role {
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #1d015c;
+  }
+}

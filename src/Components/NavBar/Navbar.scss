@@ -1,7 +1,12 @@
 .navbar {
   z-index: 100;
-  color: white;
-  // background: rgb(27, 80, 166);
+  padding: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 0;
+}
+
+.navbarWithBg {
   background: linear-gradient(
     90deg,
     rgba(27, 80, 166, 1) 0%,
@@ -9,47 +14,73 @@
     rgba(71, 38, 134, 1) 75%
   );
 
-  padding: 0;
-  margin-top: 0;
-  // margin-top: 20px;
+  .nav-item {
+    color: white !important;
+  }
+
+  #navbarScrollingDropdown {
+    color: white;
+  }
+  #navbarScrollingDropdownWhite {
+    color: white;
+  }
+
+  .login-btn {
+  
+    border: 1px solid #55c9f3;
+
+    p {
+      color: #55c9f3;
+    }
+  }
+
+  .signup-btn {
+    background-color: #55c9f3;
+    color: #1d015c;
+  }
 }
 
-@media only screen and (max-width: 600px) {
-  .nav-items {
-    justify-content: center;
+.navbarWithOutBg {
+  .nav-item-Blue {
+    color: #3e1893 !important;
   }
-  .iads-logo {
-    height: 20px;
-    margin-left: 0px !important;
+  .nav-item-White {
+    color: white !important;
   }
-  .navv {
-    background-color: #1d015c;
+
+  #navbarScrollingDropdown {
+    color: #3e1893;
   }
-  .navbar-collapse {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 120px !important;
+  #navbarScrollingDropdownWhite {
+    color: white;
   }
-  .navbar-scroll {
-    padding-bottom: 120px !important;
+
+  .login-btn {
+    border: 1px solid #3e1893;
+
+    p {
+    }
   }
-  .navbar {
-    margin-top: 0px;
+
+  .signup-btn {
+    background-color: #3e1893;
+    color: white;
   }
 }
-.navv {
-  // background-color: #1d015c;
+
+.iads-logo {
+  height: 60px;
 }
+
 .nav-items {
-  color: white;
-  margin-left: 100px;
+  width: 75%;
+  margin: auto;
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
   line-height: 22px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   text-align: center;
   position: sticky;
   position: -webkit-sticky;
@@ -58,33 +89,119 @@
 }
 
 .nav-item {
+  padding: 0;
   font-family: POPPINS regular;
-  color: white !important;
-  // color: red !important;
+  font-weight: 700;
+  font-size: 12px;
 }
 
-a {
-  color: white;
-}
-
-.iads-logo {
-  height: 60px;
-  margin-left: 50px;
-}
-
-#navbarScrollingDropdown {
-  color: white !important;
-  // color: red !important;
+.auth {
+  gap: 8px;
 }
 
 .signup-btn {
-  width: 100px;
-  border-radius: 100px !important;
-  background-color: #75c3ff4d !important;
-  border: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 93px;
+  height: 32px;
+  border-radius: 100px;
+  margin-block: auto;
+  font-family: POPPINS regular;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+
 }
 
 .login-btn {
-  background: none !important;
-  border: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 93px;
+  height: 32px;
+  flex-direction: row;
+  cursor: pointer;
+  border-radius: 100px;
+  margin-block: auto;
+
+  p {
+    margin: 0;
+    font-family: POPPINS regular;
+    font-weight: 700;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .navbar {
+    background: #1d015c;
+  }
+
+  .navbarWithOutBg {
+    .nav-item-Blue {
+      color: white !important;
+    }
+    .nav-item-White {
+      color: white !important;
+    }
+
+    #navbarScrollingDropdown {
+      color: white;
+    }
+    #navbarScrollingDropdownWhite {
+      color: white;
+    }
+
+    .login-btn {
+      border: 1px solid #55c9f3;
+
+      p {
+        color: #55c9f3;
+      }
+    }
+
+    .signup-btn {
+      background-color: #55c9f3;
+      color: #1d015c;
+    }
+  }
+
+  .nav-items {
+    justify-content: center;
+    padding-bottom: 50px !important;
+  }
+  .iads-logo {
+    height: 20px;
+    margin-left: 0px !important;
+  }
+
+  .navbar-collapse {
+    // display: flex;
+    flex-direction: column;
+    padding-bottom: 50px !important;
+
+    // margin-bottom: 50px !important;
+  }
+
+  .auth {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .dropdown-menu {
+    background-color: transparent !important;
+    border: none !important;
+
+    .dropdown-item {
+      color: white;
+    }
+
+    .dropdown-item:active,
+    .dropdown-item:hover {
+      background-color: transparent;
+    }
+  }
 }

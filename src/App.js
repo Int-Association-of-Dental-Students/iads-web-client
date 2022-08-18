@@ -3,32 +3,50 @@ import Footer from "./Components/Footer";
 import NavBar from "./Components/NavBar/NavBar";
 import Colgate from "./Pages/Projects/Colgate/Colgate";
 import ColgateForm from "./Pages/Projects/Colgate/RegistrationForm";
+import Registration2 from "./Pages/Projects/Colgate/Registration2";
 import Zhermack from "./Pages/Projects/Zhermack/Zhermack";
 import Home from "./Pages/Home/Home";
 
 import Internal from "./Pages/Committees/Internal Affairs/Internal";
 
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import SCORE from "./Pages/Committees/SCORE/SCORE";
+// import Register from "./Pages/Auth/Register";
+
+import Signup from "./Pages/Signup/Signup";
+
 import Training from "./Pages/Committees/Training/Training";
 import Exchange from "./Pages/Committees/Exchange Board/Exchange";
 import Voluntary from "./Pages/Committees/Voluntary/Voluntary";
 import Editorial from "./Pages/Committees/Editorial/Editorial";
 import Prophylaxis from "./Pages/Committees/Prophylaxis/Prophylaxis";
+import Governance from "./Pages/Governance/Governance";
+import Membership from "./Pages/Membership/Membership";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <NavBar path={window.location.pathname} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/governance" element={<Governance />} />
+        <Route path="/membership" element={<Membership />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/projects">
           <Route path="/projects/zhermack" element={<Zhermack />} />
           <Route path="/projects/colgate" element={<Colgate />} />
           <Route
             path="/projects/colgate/registration"
             element={<ColgateForm />}
+          ></Route>
+          <Route
+            path="/projects/colgate/registration"
+            element={<ColgateForm />}
+          ></Route>
+          <Route
+            path="/projects/colgate/registration2"
+            element={<Registration2 />}
           ></Route>
         </Route>
         <Route path="/committees">
@@ -39,11 +57,6 @@ function App() {
           <Route path="/committees/voluntary" element={<Voluntary />} />
           <Route path="/committees/editorial" element={<Editorial />} />
           <Route path="/committees/prophylaxis" element={<Prophylaxis />} />
-          {/* <Route path="/committees/colgate" element={<Colgate />} />
-          <Route path="/committees/colgate" element={<Colgate />} /> */}
-          {/* <Route path="/committees/colgate" element={<Colgate />} />
-          <Route path="/committees/colgate" element={<Colgate />} />
-          <Route path="/committees/colgate" element={<Colgate />} /> */}
         </Route>
       </Routes>
       <Footer />

@@ -11,7 +11,7 @@ const CardList = ({ data, textColor }) => {
   return (
     <div>
       <div className="container cardlist">
-        {show && <AddNewModal show={show} />}
+        {/* {show && <AddNewModal show={show} />}
         <button
           onClick={() => {
             setShow(!show);
@@ -21,7 +21,7 @@ const CardList = ({ data, textColor }) => {
         >
           <img className="plus-icon" src={plus} />
           <h5>Add New</h5>
-        </button>
+        </button> */}
         {data.map((data) => (
           <CardComponent
             style={textColor}
