@@ -22,6 +22,7 @@ import Editorial from "./Pages/Committees/Editorial/Editorial";
 import Prophylaxis from "./Pages/Committees/Prophylaxis/Prophylaxis";
 import Governance from "./Pages/Governance/Governance";
 import Membership from "./Pages/Membership/Membership";
+import About from "./Pages/About/About";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/governance" element={<Governance />} />
         <Route path="/membership" element={<Membership />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/about" element={<About />} />
         <Route path="/projects">
           <Route path="/projects/zhermack" element={<Zhermack />} />
           <Route path="/projects/colgate" element={<Colgate />} />

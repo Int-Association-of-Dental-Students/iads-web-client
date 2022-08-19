@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import logo from "../../Assets/IADS Horizontal 1.svg";
 import lock from "../../Assets/lock.svg";
 import lock1 from "../../Assets/lock1.svg";
-import AddNewModal from "../Cards/AddNewModal";
+import LoginModal from "../LoginModal";
 
 const NavBar = (props) => {
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -21,7 +21,7 @@ const NavBar = (props) => {
       bg="none"
       expand="xl"
     >
-      {showLoginModal && <AddNewModal show={showLoginModal} />}
+      {showLoginModal && <LoginModal show={showLoginModal} />}
       <Container fluid>
         <Navbar.Brand href="/home">
           <img className="iads-logo" src={logo} />
@@ -101,7 +101,10 @@ const NavBar = (props) => {
             </Nav.Link>
           </Nav>
           <div className="auth d-flex">
-            <div onClick={() => setShowLoginModal(true)} className="login-btn">
+            <div
+              onClick={() => setShowLoginModal(!showLoginModal)}
+              className="login-btn"
+            >
               <img
                 src={props.path == "/" || props.path == "/home" ? lock : lock1}
               />
