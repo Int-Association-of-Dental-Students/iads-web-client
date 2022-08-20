@@ -219,19 +219,41 @@ const About = () => {
           International Association of Dental Students (IADS).
         </p>
         <div className="launch-flag">LAUNCH</div>
-        <Chrono
-          items={items}
-          cardHeight="27.2rem"
-          mode="VERTICAL_ALTERNATING"
-          fontSizes={{
-            cardSubtitle: "0.85rem",
-            cardText: "0.8rem",
-            cardTitle: "1.25rem",
-            title: "1rem",
-            cardDetailedText: "0.9375rem",
-          }}
-          disableAutoScrollOnClick={true}
-        />
+        <div className="desktop-chrono">
+          <Chrono
+            items={items}
+            cardHeight="27.2rem"
+            mode="VERTICAL_ALTERNATING"
+            fontSizes={{
+              cardSubtitle: "0.85rem",
+              cardText: "0.8rem",
+              cardTitle: "1.25rem",
+              title: "1rem",
+              cardDetailedText: "0.9375rem",
+            }}
+            disableAutoScrollOnClick={true}
+            activeItemIndex="100"
+            hideControls
+          />
+        </div>
+        <div className="mobile-chrono">
+          <Chrono
+            style={{ display: "none" }}
+            items={items}
+            cardHeight="27.2rem"
+            mode="VERTICAL"
+            fontSizes={{
+              cardSubtitle: "0.85rem",
+              cardText: "0.8rem",
+              cardTitle: "1.25rem",
+              title: "1rem",
+              cardDetailedText: "0.9375rem",
+            }}
+            disableAutoScrollOnClick={true}
+            activeItemIndex="100"
+            hideControls
+          />
+        </div>
       </div>
     </div>
   );

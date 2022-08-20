@@ -189,7 +189,20 @@
     align-items: center;
   }
 
+  .story {
+    .mobile-chrono {
+      display: none;
+    }
+  }
+
   @media only screen and (max-width: 900px) {
+    .desktop-chrono {
+      display: none !important;
+    }
+
+    .mobile-chrono {
+      display: block !important;
+    }
     .viz {
       .title-2nd {
         margin-bottom: 40px;
