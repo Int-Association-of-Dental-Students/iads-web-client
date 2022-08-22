@@ -17,7 +17,68 @@ export default function OrgMemberForm() {
         `http://localhost:3001/api/orgmember/create`,
         "POST",
         JSON.stringify({
-          data,
+          fullname: data.fullname,
+          abbreviatedName: data.abbreviatedName,
+          fullnameNat: data.fullnameNat,
+          country: data.country,
+          city: data.city,
+          address: data.address,
+          postalCode: data.postalCode,
+          faxNumber: data.faxNumber,
+          phone: { code: data.phoneCode, number: data.phone },
+
+          website: data.website,
+          dateOfEstablishment: data.dateOfEstablishment,
+
+          numberOfMemberSchools: data.numberOfMemberSchools,
+          numberOfMemberSstudents: data.numberOfMemberSstudents,
+
+          requestedMembershipType: data.requestedMembershipType,
+
+          president: {
+            name: data.presidentName,
+            email: data.presidentEmail,
+          },
+          secretary: {
+            name: data.secretaryName,
+            email: data.secretaryEmail,
+          },
+          treasurer: {
+            name: data.treasurerName,
+            email: data.treasurerEmail,
+          },
+          editor: { name: data.editorName, email: data.editorEmail },
+          exchangeOfficer: {
+            name: data.exchangeOfficerName,
+            email: data.exchangeOfficerEmail,
+          },
+          sceintificOfficer: {
+            name: data.sceintificOfficerName,
+            email: data.sceintificOfficerEmail,
+          },
+          trainingOfficer: {
+            name: data.trainingOfficerName,
+            email: data.trainingOfficerEmail,
+          },
+          voluntaryOfficer: {
+            name: data.voluntaryOfficerName,
+            email: data.voluntaryOfficerEmail,
+          },
+
+          delegate1: {
+            email: data.delegateEmail,
+            phoneNumber: data.delegate1Phone,
+            whatsapp: data.delegate1Whatsapp,
+          },
+
+          delegate2: {
+            name: data.delegate2Name,
+            email: data.delegate2Email,
+            phoneNumber: data.delegate2Phone,
+            whatsapp: data.delegate2Whatsapp,
+          },
+
+          //   data,
         }),
         {
           "Content-Type": "application/json",
@@ -118,13 +179,26 @@ export default function OrgMemberForm() {
 
       <div className="row">
         <div className="col">
-          <label>Phone Number*</label>
-          <input
-            type="tel"
-            placeholder="Type Here..."
-            id="phone"
-            {...register("phone", { required: true })}
-          />
+          <div className="row">
+            <div className="col">
+              <label>Phone Code*</label>
+              <input
+                type="tel"
+                placeholder="Type Here..."
+                id="phoneCode"
+                {...register("phoneCode", { required: true })}
+              />
+            </div>
+            <div className="col">
+              <label>Phone Number*</label>
+              <input
+                type="tel"
+                placeholder="Type Here..."
+                id="phone"
+                {...register("phone", { required: true })}
+              />
+            </div>
+          </div>
         </div>
         <div className="col">
           <label>Fax Number*</label>
@@ -207,8 +281,8 @@ export default function OrgMemberForm() {
           <input
             type="text"
             placeholder="Type Here..."
-            id="president-name"
-            {...register("president-name", { required: true })}
+            id="presidentName"
+            {...register("presidentName", { required: true })}
           />
         </div>
         <div className="col">
@@ -216,8 +290,8 @@ export default function OrgMemberForm() {
           <input
             type="email"
             placeholder="Type Here..."
-            id="president-email"
-            {...register("president-email", { required: true })}
+            id="presidentEmail"
+            {...register("presidentEmail", { required: true })}
           />
         </div>
       </div>
@@ -228,8 +302,8 @@ export default function OrgMemberForm() {
           <input
             type="text"
             placeholder="Type Here..."
-            id="secretary-name"
-            {...register("secretary-name", { required: true })}
+            id="secretaryName"
+            {...register("secretaryName", { required: true })}
           />
         </div>
         <div className="col">
@@ -237,8 +311,8 @@ export default function OrgMemberForm() {
           <input
             type="email"
             placeholder="Type Here..."
-            id="secretary-email"
-            {...register("secretary-email", { required: true })}
+            id="secretaryEmail"
+            {...register("secretaryEmail", { required: true })}
           />
         </div>
       </div>
@@ -249,8 +323,8 @@ export default function OrgMemberForm() {
           <input
             type="text"
             placeholder="Type Here..."
-            id="treasurer-name"
-            {...register("treasurer-name", { required: true })}
+            id="treasurerName"
+            {...register("treasurerName", { required: true })}
           />
         </div>
         <div className="col">
@@ -258,8 +332,8 @@ export default function OrgMemberForm() {
           <input
             type="email"
             placeholder="Type Here..."
-            id="treasurer-email"
-            {...register("treasurer-email", { required: true })}
+            id="treasurerEmail"
+            {...register("treasurerEmail", { required: true })}
           />
         </div>
       </div>
@@ -270,8 +344,8 @@ export default function OrgMemberForm() {
           <input
             type="text"
             placeholder="Type Here..."
-            id="exchange-name"
-            {...register("exchange-name", { required: true })}
+            id="exchangeName"
+            {...register("exchangeName", { required: true })}
           />
         </div>
         <div className="col">
@@ -279,8 +353,8 @@ export default function OrgMemberForm() {
           <input
             type="email"
             placeholder="Type Here..."
-            id="exchange-email"
-            {...register("exchange-email", { required: true })}
+            id="exchangeEmail"
+            {...register("exchangeEmail", { required: true })}
           />
         </div>
       </div>
@@ -291,8 +365,8 @@ export default function OrgMemberForm() {
           <input
             type="text"
             placeholder="Type Here..."
-            id="scientific-name"
-            {...register("scientific-name", { required: true })}
+            id="scientificName"
+            {...register("scientificName", { required: true })}
           />
         </div>
         <div className="col">
@@ -300,8 +374,8 @@ export default function OrgMemberForm() {
           <input
             type="email"
             placeholder="Type Here..."
-            id="scientific-email"
-            {...register("scientific-email", { required: true })}
+            id="scientificEmail"
+            {...register("scientificEmail", { required: true })}
           />
         </div>
       </div>
@@ -312,8 +386,8 @@ export default function OrgMemberForm() {
           <input
             type="text"
             placeholder="Type Here..."
-            id="training-name"
-            {...register("training-name", { required: true })}
+            id="trainingName"
+            {...register("trainingName", { required: true })}
           />
         </div>
         <div className="col">
@@ -321,8 +395,8 @@ export default function OrgMemberForm() {
           <input
             type="email"
             placeholder="Type Here..."
-            id="training-email"
-            {...register("training-email", { required: true })}
+            id="trainingEmail"
+            {...register("trainingEmail", { required: true })}
           />
         </div>
       </div>
@@ -333,8 +407,8 @@ export default function OrgMemberForm() {
           <input
             type="text"
             placeholder="Type Here..."
-            id="voluntary-name"
-            {...register("voluntary-name", { required: true })}
+            id="voluntaryName"
+            {...register("voluntaryName", { required: true })}
           />
         </div>
         <div className="col">
@@ -342,8 +416,8 @@ export default function OrgMemberForm() {
           <input
             type="email"
             placeholder="Type Here..."
-            id="voluntary-email"
-            {...register("voluntary-email", { required: true })}
+            id="voluntaryEmail"
+            {...register("voluntaryEmail", { required: true })}
           />
         </div>
       </div>
@@ -354,8 +428,8 @@ export default function OrgMemberForm() {
           <input
             type="tel"
             placeholder="Type Here..."
-            id="delegate1-phone"
-            {...register("delegate1-phone", { required: true })}
+            id="delegate1Phone"
+            {...register("delegate1Phone", { required: true })}
           />
         </div>
         <div className="col">
@@ -363,8 +437,8 @@ export default function OrgMemberForm() {
           <input
             type="tel"
             placeholder="Type Here..."
-            id="delegate1-whatsapp"
-            {...register("delegate1-whatsapp", { required: true })}
+            id="delegate1Whatsapp"
+            {...register("delegate1Whatsapp", { required: true })}
           />
         </div>
       </div>
@@ -375,8 +449,8 @@ export default function OrgMemberForm() {
           <input
             type="text"
             placeholder="Type Here..."
-            id="delegate2-name"
-            {...register("delegate2-name", {})}
+            id="delegate2Name"
+            {...register("delegate2Name", {})}
           />
         </div>
         <div className="col">
@@ -384,8 +458,8 @@ export default function OrgMemberForm() {
           <input
             type="email"
             placeholder="Type Here..."
-            id="delegate2-email"
-            {...register("delegate2-email", {})}
+            id="delegate2Email"
+            {...register("delegate2Email", {})}
           />
         </div>
       </div>
@@ -397,8 +471,8 @@ export default function OrgMemberForm() {
           <input
             type="tel"
             placeholder="Type Here..."
-            id="delegate2-phone"
-            {...register("delegate2-phone", {})}
+            id="delegate2Phone"
+            {...register("delegate2Phone", {})}
           />
         </div>
         <div className="col">
@@ -406,8 +480,8 @@ export default function OrgMemberForm() {
           <input
             type="tel"
             placeholder="Type Here..."
-            id="delegate2-whatsapp"
-            {...register("delegate2-whatsapp", {})}
+            id="delegate2Whatsapp"
+            {...register("delegate2Whatsapp", {})}
           />
         </div>
       </div>
