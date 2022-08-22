@@ -23,6 +23,7 @@ import Prophylaxis from "./Pages/Committees/Prophylaxis/Prophylaxis";
 import Governance from "./Pages/Governance/Governance";
 import Membership from "./Pages/Membership/Membership";
 import About from "./Pages/About/About";
+import WOHD from "./Pages/Projects/WOHD/WOHD";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects">
+          <Route path="/projects/WOHD" element={<WOHD />} />
           <Route path="/projects/zhermack" element={<Zhermack />} />
           <Route path="/projects/colgate" element={<Colgate />} />
           <Route

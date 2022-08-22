@@ -1,6 +1,12 @@
 import React from "react";
 import "./Prophylaxis.scss";
 
+import { Button } from "react-bootstrap";
+
+import colgate from "../../../Assets/Committees/Prophylaxis/mouthCancer.svg";
+import zhermack from "../../../Assets/Committees/Prophylaxis/oralHealth.svg";
+import research from "../../../Assets/Committees/Prophylaxis/greenDentistry.svg";
+
 import toolkits from "./toolkits";
 import CardList from "../../../Components/Cards/CardList";
 
@@ -11,11 +17,6 @@ const Prophylaxis = () => {
   return (
     <div className="container-fluid prophylaxis-page">
       <img className="logo" src={logo} />
-      <p className="description">
-        As future oral healthcare providers, we are highly concerned to
-        participate in global prevention. This is one of the underlying reasons
-        why the Prophylaxis Committee was established.
-      </p>
 
       <div className="container workforce" style={{ borderRadius: "20px" }}>
         <div className="row">
@@ -87,6 +88,50 @@ const Prophylaxis = () => {
           data={toolkits}
           textColor="#6D3591"
         ></CardList>
+      </div>
+
+      <div className=" container projectsCards">
+        <div className="projectCard colgate">
+          <img src={colgate} />
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "flex-end",
+              marginTop: "10px",
+            }}
+          >
+            <Button
+              style={{ backgroundColor: "#0B4E14" }}
+              href="https://iads-web.com/projects/WOHD"
+              className="btn"
+            >
+              Learn More
+            </Button>
+          </div>
+        </div>
+        <div className="projectCard zhermack">
+          <img src={zhermack} />
+
+          <div style={{ display: "flex", justifyContent: "flex-end" }}>
+            <Button
+              style={{ backgroundColor: "#E41A3B" }}
+              href="https://iads-web.com/projects/zhermack"
+              className="btn"
+            >
+              Learn More
+            </Button>
+          </div>
+        </div>
+        <div className="projectCard research">
+          <img src={research} />
+
+          <div style={{ display: "flex", justifyContent: "flex-end" }}>
+            <Button className="btn" style={{ backgroundColor: "#034F97" }}>
+              Learn More
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   );

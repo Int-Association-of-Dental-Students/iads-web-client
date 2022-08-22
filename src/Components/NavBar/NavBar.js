@@ -68,7 +68,7 @@ const NavBar = (props) => {
               </NavDropdown.Item>
 
               <NavDropdown.Item href="/committees/prophylaxis">
-                Prophylaxis
+                Public Health
               </NavDropdown.Item>
               <NavDropdown.Item href="/committees/SCORE">
                 SCORE
