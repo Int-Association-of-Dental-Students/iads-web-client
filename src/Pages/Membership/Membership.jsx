@@ -21,12 +21,13 @@ const Membership = () => {
         >
           Apply for an organizational membership
         </h1>
-        <div
+        <a
+          href="/organizational-member-form"
           className="btn"
           style={{ marginTop: "40px", marginBottom: "40px" }}
         >
           Submit your Application Here
-        </div>
+        </a>
         <p className="desc" style={{ width: "70%", margin: "auto" }}>
           Upon filling in the online application form above, the applying
           organization shall receive an official reply confirming that the

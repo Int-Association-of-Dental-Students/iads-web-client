@@ -1,0 +1,35 @@
+.orgForm {
+  overflow: hidden;
+  margin-top: 75px;
+
+  label {
+    font-family: POPPINS regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    color: #52535f;
+  }
+  .col {
+    display: flex;
+    flex-direction: column;
+
+    // border: solid red 1px;
+  }
+
+  label {
+    align-self: flex-start;
+    margin-left: 1px;
+  }
+
+  .pTitle {
+    text-align: left;
+  }
+
+  .check {
+    display: flex;
+    // flex-direction: column;
+  }
+}

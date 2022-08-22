@@ -24,6 +24,7 @@ import Governance from "./Pages/Governance/Governance";
 import Membership from "./Pages/Membership/Membership";
 import About from "./Pages/About/About";
 import WOHD from "./Pages/Projects/WOHD/WOHD";
+import OrgMemberForm from "./Pages/Membership/OrgMemberForm/OrgMemberForm";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/governance" element={<Governance />} />
         <Route path="/membership" element={<Membership />} />
+        <Route path="/organizational-member-form" element={<OrgMemberForm />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects">
