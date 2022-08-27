@@ -25,6 +25,8 @@ import Membership from "./Pages/Membership/Membership";
 import About from "./Pages/About/About";
 import WOHD from "./Pages/Projects/WOHD/WOHD";
 import OrgMemberForm from "./Pages/Membership/OrgMemberForm/OrgMemberForm";
+import Workforce from "./Pages/Committees/Workforce/Workforce";
+import Meetings from "./Pages/Meetings/Meetings";
 
 function App() {
   return (
@@ -35,6 +37,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/governance" element={<Governance />} />
         <Route path="/membership" element={<Membership />} />
+        <Route path="/meetings" element={<Meetings />} />
         <Route path="/organizational-member-form" element={<OrgMemberForm />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/about" element={<About />} />
@@ -56,6 +59,7 @@ function App() {
           ></Route>
         </Route>
         <Route path="/committees">
+          <Route path="/committees/workforce" element={<Workforce />} />
           <Route path="/committees/internal" element={<Internal />} />
           <Route path="/committees/SCORE" element={<SCORE />} />
           <Route path="/committees/training" element={<Training />} />

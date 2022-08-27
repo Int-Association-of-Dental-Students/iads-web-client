@@ -237,7 +237,17 @@ const WOHD = () => {
               </li>
               <li>
                 Expressed on a numerical basis this can be translated as 3/20
-                hence March 20″ World Oral Health Day Official Website
+                hence March 20″{" "}
+                <a
+                  href="https://www.worldoralhealthday.org/about"
+                  style={{
+                    textDecoration: "none",
+                    color: "white",
+                    fontFamily: "POPPINS bold",
+                  }}
+                >
+                  World Oral Health Day Official Website
+                </a>
               </li>
             </ul>
           </p>
@@ -269,8 +279,17 @@ const WOHD = () => {
               leadership in the students led prophylaxis actions to improve oral
               health. A larger and greater mobilization of dental students
               organizations awaits to occur in 2014, which would get us one step
-              closer towards the oral health goals we pursue.” said Pavel
-              Scarlat – IADS President 2012/13
+              closer towards the oral health goals we pursue.” said{" "}
+              <a
+                href="https://issuu.com/iads_online/docs/wohd_2013_booklet/4"
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  fontFamily: "POPPINS bold",
+                }}
+              >
+                Pavel Scarlat – IADS President 2012/13
+              </a>
             </p>
           </div>
 

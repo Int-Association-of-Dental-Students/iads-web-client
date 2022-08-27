@@ -37,7 +37,6 @@ import s5 from "../../Assets/sponsers/s5.svg";
 import end from "../../Assets/endorser.svg";
 import AddNewModal from "../../Components/Cards/AddNewModal";
 
-
 function DiscoverMoreCard(props) {
   return (
     <div className="discoverMoreCard">
@@ -113,19 +112,19 @@ function Home() {
             </Carousel>
 
             <div className="homeOverlay">
-              <h1>
+              <h1 className="negative-margin">
                 International <br /> Association of <br /> Dental Students
               </h1>
               <p className="home-txt scale-up-center">
                 The International Association of Dental Students (IADS) was
-                founded in 1951 in <br /> Copenhagen 🇩🇰 in order to serve the
-                educational needs of dental students throughout <br /> the
-                world. Representing the interests of more than 200,000 dental
-                students in around 60 <br /> countries worldwide and having its
-                central office at the FDI World Dental Federation <br />{" "}
-                headquarters in Geneva 🇨🇭 the association strives for
-                educational and scientific <br /> excellence throughout the
-                international projects and initiatives it manages.
+                founded in 1951 in Copenhagen 🇩🇰 in order to serve the
+                educational needs of dental students throughout the world.
+                Representing the interests of more than 200,000 dental students
+                in around 60 countries worldwide and having its central office
+                at the FDI World Dental Federation headquarters in Geneva 🇨🇭 the
+                association strives for educational and scientific excellence
+                throughout the international projects and initiatives it
+                manages.
               </p>
 
               <div className="homeOverlayCTAS">
@@ -283,6 +282,7 @@ function Home() {
           >
             <SwiperSlide>
               <CardComponent
+                i="https://i.ibb.co/N2KnqYx/Image-Place-holder-9.png"
                 t="Exchange program in Equador"
                 date="20/08/2022"
                 d="Arcu sit habitasse aliquet sit. Turpis duis et non nulla eget. In dui vestibulum id tempor at eget. Mi in pulvinar mi felis, scelerisque ac sapien in."
@@ -290,6 +290,7 @@ function Home() {
             </SwiperSlide>
             <SwiperSlide>
               <CardComponent
+                i="https://i.ibb.co/N2KnqYx/Image-Place-holder-9.png"
                 t="Exchange program in Equador"
                 date="20/08/2022"
                 d="Arcu sit habitasse aliquet sit. Turpis duis et non nulla eget. In dui vestibulum id tempor at eget. Mi in pulvinar mi felis, scelerisque ac sapien in."
@@ -297,6 +298,7 @@ function Home() {
             </SwiperSlide>
             <SwiperSlide>
               <CardComponent
+                i="https://i.ibb.co/N2KnqYx/Image-Place-holder-9.png"
                 t="Exchange program in Equador"
                 date="20/08/2022"
                 d="Arcu sit habitasse aliquet sit. Turpis duis et non nulla eget. In dui vestibulum id tempor at eget. Mi in pulvinar mi felis, scelerisque ac sapien in."
@@ -304,6 +306,7 @@ function Home() {
             </SwiperSlide>
             <SwiperSlide>
               <CardComponent
+                i="https://i.ibb.co/N2KnqYx/Image-Place-holder-9.png"
                 t="Exchange program in Equador"
                 date="20/08/2022"
                 d="Arcu sit habitasse aliquet sit. Turpis duis et non nulla eget. In dui vestibulum id tempor at eget. Mi in pulvinar mi felis, scelerisque ac sapien in."
@@ -311,12 +314,14 @@ function Home() {
             </SwiperSlide>
             <SwiperSlide>
               <CardComponent
+                i="https://i.ibb.co/N2KnqYx/Image-Place-holder-9.png"
                 t="Exchange program in Equador"
                 date="20/08/2022"
                 d="Arcu sit habitasse aliquet sit. Turpis duis et non nulla eget. In dui vestibulum id tempor at eget. Mi in pulvinar mi felis, scelerisque ac sapien in."
               />
             </SwiperSlide>
           </Swiper>
+          <p style={{ marginTop: "30px" }}>Swipe right or left for more</p>
         </div>
 
         <div className="ourComp container">
@@ -445,11 +450,24 @@ function Home() {
           </div>
 
           <div className="sponsers">
-            <img src={s4} />
-            <img src={s1} />
-            <img src={s2} />
-            <img src={s3} />
-            <img src={s5} />
+            <a href="https://www.fdiworlddental.org">
+              <img src={s4} />
+            </a>
+            <a href="https://www.zhermack.com/en/">
+              <img src={s1} />
+            </a>
+
+            <a href="https://www.hufriedygroup.com">
+              <img src={s2} />
+            </a>
+
+            <a href="https://www.colgate.com/en-us">
+              <img src={s3} />
+            </a>
+
+            <a href="https://www.zeiss.com/meditec/int/specialties/dentistry.html?utm_source=iads&utm_medium=website&utm_campaign=iads-partnerschaft&utm_term=partnership">
+              <img src={s5} />
+            </a>
           </div>
         </div>
 
@@ -459,7 +477,9 @@ function Home() {
             <p className="homePageTitles22">Endorsers</p>
           </div>
           <div className="sponsers">
-            <img src={end} />
+            <a href="https://www.thed3group.org">
+              <img src={end} />
+            </a>
           </div>
         </div>
       </div>

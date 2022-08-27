@@ -102,6 +102,162 @@ const About = () => {
       cardDetailedText:
         "The Congress of 1979 was set in the beautiful city of Freiburg, West Germany. It was however a conference beset by management problems due partly to failure of the CoCo, to appreciate the importance of sponsorship in a congress of such size. Successive CoCos have realized the necessity of gaining help from commercial sources a daunting and difficult task, but one which has been tackled, is some cases, by hard-nosed business acumen. One of the main areas of difficulty, about which I felt strongly, was that of a constitution which seemed to slow down proceedings and often caused the General Assembly to come to a virtual standstill over a procedural point. Valuable debating time was often lost.",
     },
+    {
+      title: "August 1980",
+      cardTitle: "Constitution Refinement",
+      cardDetailedText:
+        "In 1980, at the Utrecht Congress, a small working party, under the Chairmanship of the IADS President, Wojieck Kowalski, set about reviewing the entire constitution. This proved to be a long and arduous task, and indeed two further attempts were necessary Egypt 1981 and Puerto Rico 1983 -before the constitution we use today was finally accepted.",
+    },
+    {
+      title: "August 1982 ",
+      cardTitle: "Political Manipulation",
+      cardDetailedText:
+        "The period between the congress in Utrecht and the one is Helsinki 1982, was, for the Association, an unsettled time, the effects of which may still be felt today. The Association is a non-political organisation from which nobody can be excluded through reasons of race or creed. However, for a time, the Association was made to face political reality not unnaturally in view of its international composition, but in a way which left some member nations feeling that they had no alternative but to leave. I regret their decision but understand that not every student body is independent of the government and its policies. I hope that in the future these countries will feel able to rejoin the IADS and realise that their views will be respected. I also hope that the Association will always keep its non-political stance.' said Peter V. Dyer (FDI/IADS Liaison Officer)",
+    },
+    {
+      title: "August 1986",
+      cardTitle: "First time in Asia",
+      cardDetailedText:
+        "This was the first time that an IADS Annual Congress coincided with a meeting of the Asian Pacific Dental Students‟ Association in Singapore.",
+    },
+    {
+      title: "August 1987",
+      cardTitle: "Questionable Future",
+      cardDetailedText:
+        "At the annual congress in Turku, Finland many serious issues were raised like “declining membership, an uncertain future of the Central Office, the loss of the Quintessence International account and more long term decisions to make like whether there should be a voluntary work abroad scheme or how the exchange program could be improved? ",
+    },
+    {
+      title: "February 1994",
+      cardTitle: "MYM in Paris",
+      cardDetailedText:
+        "From February 24th to 27th, the 42nd IADS Mid Year Meeting (MYM) was held in Paris. This was the first time for MYM to be held outside London, because it was not fair to keep meeting in the same place year after year since for many delegates London is very far away.",
+    },
+    {
+      title: "August 1995",
+      cardTitle: "Enriched congress",
+      cardDetailedText:
+        "The IADS Congress held in Sao Paulo, Brazil had 500 delegates from 34 countries attending this meeting, which included a 5-day scientific conference with 40 lectures on topics from fluoridation to implants. There were also presentations of research by students and young dentists.",
+    },
+    {
+      title: "January 1996",
+      cardTitle: "AIDS Committee",
+      cardDetailedText:
+        "Formation of the AIDS committee that was to gather information about AIDS and circulate it through the Dental Students. Other tasks of the committee included organising a summer school, producing a booklet that is to be published and distributed by IADS.",
+    },
+    {
+      title: "October 1998",
+      cardTitle: "Emergency Congress",
+      cardDetailedText:
+        "SPECIAL SESSION OF GENERAL ASSEMBLY BARCELONA, SPAIN: A) This was the year when the annual meeting that was planned to take place in August 1998 in Belgrade was cancelled due after a long process of consultation with the organisers, the Executive Committee, the FDI, various foreign ministries, the member associations and the Honorary Life members. The Congress was cancelled because of; - low number of registrations (25), which included 3 NEOs. This would have made it impossible to hold a valid General Assembly. The deadline for registrations had been extended, twice, at the request of the CoCo to allow more time for people to register. However, this had resulted unsuccessful. - lack of sponsorship, which together with the lack of registrations, made the Congress financially enviable. - Political problems in Yugoslavia, which made people not want to attend. This contributed to the low numbers of registrations. And thus a special session was held in Barcelona in October to compensate for the meeting. B) the acceptance if the school in Bergen (Norway) as Full School Members, the two Norwegian schools had formed an International Committee, which would represent both of them as Full Country Members for Norway.",
+    },
+    {
+      title: "January 1999",
+      cardTitle: "More activities",
+      cardDetailedText:
+        "IADS Committee was thanked for their work and after they collected enough information, organised a summer school, made the booklet and presented a seminar, their job was done and the committee was closed. APDSA offered to help organise the 2001 Annual Meeting for IADS in Kuala Lumpur in order to celebrate the IADS 50th anniversary with the FDI.",
+    },
+    {
+      title: "January 2000",
+      cardTitle: "3-Year Plan",
+      cardDetailedText:
+        "A 3 year plan was set with FDI concerning promotion and fund raising for the IADS as well as enhancing the FDI-IADS communication.VCP for IADS in Tanzania and Romania were put into action.IADS as part of the UNESCO collective consultations was invited to all their meetings.",
+    },
+    {
+      title: "October 2001",
+      cardTitle: "IADS 50th anniversary",
+      cardDetailedText:
+        "The 50th anniversary for IADS was celebrated during the joint FDI-IADS meeting taking place in Kuala lampur Malaysia in 2001.Poland, Nigeria and Estonia were accepted for IADS membership.",
+    },
+    {
+      title: "October 2001",
+      cardTitle: "Golden Jubilee",
+      cardDetailedText:
+        "The 50th anniversary for IADS was celebrated during the joint FDI-IADS meeting taking place in Kuala lampur Malaysia in 2001.Poland, Nigeria and Estonia were accepted for IADS membership.",
+    },
+    {
+      title: "January 2002",
+      cardTitle: "Website Launch",
+      cardDetailedText:
+        "Memberships of France, Lithuania, Sweden, Switzerland, Russia, Puerto Rico, Mexico and Iceland were lapsed.Georgia (GSSA) was accepted for membership. Standing Committee On Research and Education –SCORE- was formed.This month also marked the launch of the IADS website domain: www.iads-web.org",
+    },
+    {
+      title: "January 2003",
+      cardTitle: "Seen in UNESCO",
+      cardDetailedText:
+        "IADS president was invited to the 8th UNESCO/ NGO Consultation on Higher Education in January 2003. The Sudanese Association of Dental Students (SADS) was accepted as a full National Member. The Scientific Association of Hellenic Dental Students (EEFOE) was accepted as a National Corresponding, representing the 2 dental schools in Greece. The Maltese Association of Dental Students (MADS) was accepted as a full National Member representing the one and only dental school in Malta. The Italian Association of Dental Students (AISO) was accepted as a National Corresponding Member representing 22 local organisations. ",
+    },
+    {
+      title: "January 2005",
+      cardTitle: "New Members",
+      cardDetailedText:
+        "Haitian Dental Student Association applied for Full Country/National Membership. Students Union of Medical Faculty Novi Sad, Serbian & Montenegro - Full Local Membership- 350 members Georgian Dental Students Association (GeDSA)- Full Membership-300 members. Associazione Italiana Studenti di Odontoiatria (AISO)- Full Membership- 820 members ",
+    },
+    {
+      title: "August 2006 ",
+      cardTitle: "COSPIE and first IVP",
+      cardDetailedText:
+        "COSPIE the committee with an aim to help solve problems often occurring during exchanges was created. The “Insurance Deposit System” was created; to deal with exchanges of students and young dentists, to help NEO to arrange the exchange, to validate points related to accommodation, transportation to set rules of any changes that might be done before the exchange. First time, to connect a voluntary work project with an IADS congress around 4000 patients were treated by the congress participants in combination with the students and doctors from Khartoum University during the trip. ",
+    },
+    {
+      title: "January 2007 ",
+      cardTitle: "ABC of Exchange",
+      cardDetailedText:
+        "HCCM, Russian Federation- application for full country membership, 7000 members, and 12 schools represented. Palestinian Association of Dental Students (PADS) joined as well. The”ABC of Exchange”  document was compiled including:  -General duties of NEO, -Duties of NEO and LEO during exchange, -Student obligations. ",
+    },
+    {
+      title: "August 2008",
+      cardTitle: "SCORE and New Partnerships",
+      cardDetailedText:
+        "Muhammadiyah University of Yogyakarta – Indonesia – Corresponding Membership The League of Students in Dental Medicine Bucharest (LSMDB) - Full Local Membership - 300 members Dental Students' Society of Iasi (Societatea Studentilor Stomatologi Iasi)- Full Local Membership – 240 members More than 40 IADS members participated in the IADS Voluntary project and more than 300 students took part in IADS Exchange Programs. Partnerships were made with the European Dental Students’ Association – EDSA, as well as Dentist Network and SICOBAIR. SCORE achievements: -Reached an agreement with Institute of Dental Research –Washington university USA that the latter will host selected IADS students to conduct their own research in the premises of Washington University. -A database of students’ researches and lectures were made on the IADS website. -A database of post graduate studies in many countries was prepared. -A students' lecture contest was conducted during the 55th Annual Meeting. ",
+    },
+    {
+      title: "January 2009",
+      cardTitle: "ISO became part of ExCo",
+      cardDetailedText:
+        "More new member organisations joined IADS representing students from Slovakia, Armenia, UK, Taiwan, Greece, Nigeria and Kurdistan region (Iraq). The EU GARNT problem was resolved as IADS would pay the debts in 4 instalments to be fully paid by January 2010. International Scientific Officer (ISO) was added as 6th position within the Executive Committee according to the constitutional amendment. ",
+    },
+    {
+      title: "March 2015",
+      cardTitle: "Age of technology in ICEP",
+      cardDetailedText:
+        "The initial idea about creating a Portal to serve the exchanges in IADS goes way back to the year of 2008 but it never came to fruition. In 2015 during the Mid Year Meeting in Jordan, Omar Albairat - currently an honorary member of IADS - presented the initial proposal of the concept and it was released to public use in the first month of the following year.  Same year ICEP Rules & Regulations were introduced to IADS and even today the portal is the only legitimate way of exchanges and is commonly used by the NEOs all around the world! ",
+    },
+    {
+      title: "February 2016",
+      cardTitle: "Rules and Regulations of ICEP",
+      cardDetailedText:
+        "Ever since exchanges were introduced to IADS, exchange officers were dealing with emails and lots of paperwork and there was nothing to guide them but a 'NEO booklet' and word of mouth from older exchange officers. There were no documents stating the rights and the responsibilities of the Exchange Officers. The Rules & Regulations we use today were created by Omar Albairat and later accepted in the MYM of Bratislava in 2016.",
+    },
+    {
+      title: "October 2016",
+      cardTitle: "First task force",
+      cardDetailedText:
+        "First historic public recruitment of a task force for the organisation was initiated by the Editor to appoint an Editorial Board in order to assist different projects and fields of editorial work. After one month of receiving applications, evaluation and objective assessment interviews Mr. Abanob Yosry, decided to accept 20 members for his board out of 39 applicants.  This Editorial Board was the first of its kind to have this large variety of skills and perks from graphic design, videography, photography, video editing, web designing, web developing, mobile app developing, professional writing, content creation, social media marketing and even drawing. 'IADS Magazine '' issuance frequency has been increased from 1-2 copies per year to 4 copies per year. Rebranded content and design of 'IADS Magazine' has been implemented in order to gain further publicity and impact as No.1 publication written and read by dental students worldwide. Workflow of 'IADS Magazine' has been organised to be autopilot produced by Editorial Board members on a regular basis. A Project of a brand new website of IADS has got into action. Engagement and Reach rates of IADS social accounts had been incredibly maximised by 200-600% thanks to employed publishing and marketing strategies. Online exposure of IADS has been enhanced by having pages at Wikipedia, Google Maps, Dental Tribune International and other partner websites. Websites of 'Electoral Platform' and 'WOHD Portal' had been introduced to organise IADS work. Launching 'IADS Museum' initiative in order to preserve the history of IADS. Starting the real archiving and registry work of IADS logs and lists, through the 'IADS Certificate' project. This aims to have track-able, authentic and generic certificates (documents) of the organisation for the first time in history.",
+    },
+    {
+      title: "February 2017",
+      cardTitle: "Critical Issues",
+      cardDetailedText:
+        "Under the patronage of Beirut Arab University (BAU) and its dean Prof. Dr. Essam Osman (who was an active IADS member in 1970s), the 63rd MYM was organised by Lebanese Association of Dental Students (LADS) in the incredible city of Beirut. Despite the relatively small number of participants, the scientific program, social activities, food and historic places of Lebanon altogether managed to make the experience of students unique. General Assembly witnessed some critical issues like; -Report of IVP Mozambique that was organised collaboratively with Humble Smile Foundation (HSF), and claims of participants that underlying commercial purposes were obvious there from the side of the HSF President. -IADS President revealed that the legal registration of IADS requires renewal urgently. -Unpaid dues and capitation fees of exchanges of the last two meetings (MYM Bratislava and AC Poznan) were discussed. ",
+    },
+    {
+      title: "August 2017",
+      cardTitle: "External Relations",
+      cardDetailedText:
+        "64th Annual Congress took place in the Spanish capital, Madrid, alongside the FDI Congress. With participation of 300 delegates, the congress was one of the most attractive in the recent years due to the global fame of its venue city and its renowned soccer club Real Madrid CF. External Relations Committee (ExRelations) was approved by the General Assembly to be added as standing committee with announced scope to enhance and expand the network of IADS global health partners; e.g, IFMSA, WHSA, IPSF, IVSA, WHO, EDSA, APDSA, AfroDSA, ACFF, etc. Due to her outstanding experience and work in this field, Ms. Ave Pold was elected by the GA to be the first External Relations Chairperson of IADS. Burkina Faso (corresponding), League of Bucharest Dental Students (Full Local), Croatia (corresponding) and Argentina (Corresponding) were the newly accepted members. A new agreement had been signed with APDSA. ExCo attended the FDI General Assembly and the President conducted a speech about IADS and its activities in front of delegates of FDI NDAs.",
+    },
+    {
+      title: "October 2017",
+      cardTitle: "Committees Recruited",
+      cardDetailedText:
+        "Public Call was imposed on behalf of the Executive Committee for dental students worldwide to join the different task forces of IADS in order to enhance the quality and outcome of committees. Editor placed the call on October 18th, 2017 while November 18th, 2017 was remarked as the official enrollment day of all new committee members. One month had been lapsed between reviewing CVs, motivation letters and conducting Skype interviews - and the payout was worthy; the workforce of the organisation increased from 58 to 117 students!.",
+    },
+    {
+      title: "March 2019",
+      cardTitle: "New Constitution",
+      cardDetailedText:
+        "The 65th IADS Mid-Year Meeting was held in March 2019 in Strasbourg in France where the constitution was amended in accordance with Swiss Law so that the Executive Committee could proceed with the renewal of registration documents at the FDI Headquarters.",
+    },
     // {
     //   title: "",
     //   cardTitle: "",

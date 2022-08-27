@@ -437,6 +437,8 @@
   letter-spacing: 0em;
   text-align: right;
 
+  width: 40%;
+
   display: flex;
   align-items: center;
   text-align: justify;
@@ -487,6 +489,9 @@
 
 @media only screen and (max-width: 900px) {
   .homePage {
+    .home-txt {
+      width: 100%;
+    }
     h1 {
       font-size: 30px !important;
     }
@@ -594,17 +599,23 @@
 
     .titles {
       width: 100%;
-
+      // border: 2px solid red;
+      margin-top: -100px;
+      padding-bottom: -300px;
       .homeOverlay {
         gap: 15px;
         padding-left: 5vw;
         padding-right: 5vw;
+        .negative-margin {
+          margin-top: -50px;
+          text-align: center;
+        }
       }
 
       .carousel {
         z-index: -1;
         opacity: 7%;
-        height: 100vh;
+        height: 85vh;
       }
 
       h1 {

@@ -53,7 +53,7 @@ const NavBar = (props) => {
               title="Committees"
               id="navbarScrollingDropdownWhite"
             >
-              <NavDropdown.Item className="" href="/workforce">
+              <NavDropdown.Item className="" href="/committees/workforce">
                 Workforce
               </NavDropdown.Item>
               <NavDropdown.Item className="" href="/committees/internal">

@@ -3,9 +3,9 @@ import "./Prophylaxis.scss";
 
 import { Button } from "react-bootstrap";
 
-import colgate from "../../../Assets/Committees/Prophylaxis/mouthCancer.svg";
-import zhermack from "../../../Assets/Committees/Prophylaxis/oralHealth.svg";
-import research from "../../../Assets/Committees/Prophylaxis/greenDentistry.svg";
+import oralHealth from "../../../Assets/Committees/Prophylaxis/oralHealth.svg";
+import mouthCancer from "../../../Assets/Committees/Prophylaxis/mouthCancer.svg";
+import greenDentistry from "../../../Assets/Committees/Prophylaxis/greenDentistry.svg";
 
 import toolkits from "./toolkits";
 import CardList from "../../../Components/Cards/CardList";
@@ -90,9 +90,9 @@ const Prophylaxis = () => {
         ></CardList>
       </div>
 
-      <div className=" container projectsCards">
-        <div className="projectCard colgate">
-          <img src={colgate} />
+      <div className="container projectsCards">
+        <div className="projectCard greenDentistry">
+          <img src={greenDentistry} />
 
           <div
             style={{
@@ -103,6 +103,19 @@ const Prophylaxis = () => {
           >
             <Button
               style={{ backgroundColor: "#0B4E14" }}
+              href=""
+              className="btn"
+            >
+              Learn More
+            </Button>
+          </div>
+        </div>
+        <div className="projectCard WOHD">
+          <img src={oralHealth} />
+
+          <div style={{ display: "flex", justifyContent: "flex-end" }}>
+            <Button
+              style={{ backgroundColor: "#E41A3B" }}
               href="https://iads-web.com/projects/WOHD"
               className="btn"
             >
@@ -110,21 +123,8 @@ const Prophylaxis = () => {
             </Button>
           </div>
         </div>
-        <div className="projectCard zhermack">
-          <img src={zhermack} />
-
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <Button
-              style={{ backgroundColor: "#E41A3B" }}
-              href="https://iads-web.com/projects/zhermack"
-              className="btn"
-            >
-              Learn More
-            </Button>
-          </div>
-        </div>
-        <div className="projectCard research">
-          <img src={research} />
+        <div className="projectCard mouthCancer">
+          <img src={mouthCancer} />
 
           <div style={{ display: "flex", justifyContent: "flex-end" }}>
             <Button className="btn" style={{ backgroundColor: "#034F97" }}>
