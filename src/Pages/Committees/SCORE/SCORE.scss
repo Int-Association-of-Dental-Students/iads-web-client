@@ -2,15 +2,26 @@
   padding-top: 70px;
 
   @media only screen and (max-width: 900px) {
+    .workforce {
+      // width: 90%;
+      padding-left: 0pc !important;
+    }
     .logo {
       width: 80%;
     }
 
+    .IDRP_Logo {
+      width: 80%;
+    }
+
     .projectsCards {
+      .projectCard {
+        width: 350px !important;
+      }
       flex-direction: column;
       padding-left: 0px !important;
-      // width: 80%;
-      margin: auto;
+      // width: 100%;
+      // margin: auto;
     }
   }
 
@@ -49,6 +60,10 @@
     color: #00467c;
   }
 
+  .IDCP {
+    background: #f5f5f5;
+  }
+
   .projectsCards {
     display: flex;
     padding-bottom: 80px;
@@ -56,8 +71,8 @@
     justify-content: space-between;
     //   flex-wrap: wrap;
     .projectCard {
-      width: 389px;
-      height: 300px;
+      width: 380px;
+      height: 320px;
       background-color: #efefef;
       border-radius: 30px;
       padding: 60px 37px 37px 37px;
@@ -113,7 +128,7 @@
 
   .courses {
     padding-top: 70px;
-    padding-bottom: 150px;
+    // padding-bottom: 150px;
     padding-left: 0px !important;
     padding-right: 0px !important;
   }

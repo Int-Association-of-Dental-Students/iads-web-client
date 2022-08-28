@@ -61,6 +61,7 @@
     background-image: url("../../Assets/Governance/hero.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
   }
 
   .horiz-cardlist {
@@ -72,6 +73,7 @@
   @media only screen and (max-width: 900px) {
     .horiz-cardlist {
       overflow-x: scroll;
+      width: 100% !important;
     }
     .delegates {
       display: none;

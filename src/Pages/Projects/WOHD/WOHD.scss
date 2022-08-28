@@ -2,7 +2,7 @@
   @media only screen and (max-width: 900px) {
     width: 100%;
     .title-text {
-      font-size: 28px !important;
+      font-size: 26px !important;
       line-height: 30px !important;
     }
     .overlay {
@@ -52,6 +52,14 @@
         margin-left: 20px !important;
       }
     }
+    .submit {
+      .header-text {
+        font-size: 25px !important;
+      }
+    }
+    .hash {
+      margin-left: 20px !important;
+    }
   }
 
   .bttn {
@@ -82,10 +90,23 @@
   .bullet {
     margin-right: 24px;
   }
+  .hash {
+    font-family: "LEMON MILK regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 26px;
+    /* identical to box height */
+
+    /* WOHD blue */
+
+    color: #044a8f;
+  }
   .hero {
     background-image: url("../../../Assets/Projects/WOHD/bg.png");
     background-repeat: no-repeat;
-    //   background-size: cover;
+    background-size: cover;
+    background-position: center;
     text-align: left;
 
     .logo1 {

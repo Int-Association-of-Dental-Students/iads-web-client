@@ -24,14 +24,14 @@ const Prophylaxis = () => {
             <img style={{ borderRadius: "100%" }} src={delegate} />
             <h3 className="subtitle">Payman Sarmad</h3>
             <p className="position" style={{ marginBottom: "0px" }}>
-              Prophylaxis Officer
+              Public Health Officer
             </p>
             <p className="position">Email: prophylaxis@iads-web.org</p>
             {/* <Button className="photoUpload">Upload Photo</Button>
             <br />
             <Button className="editWorkforce">Edit Workforce</Button> */}
           </div>
-          <div className="members col offset-lg-1 offset-sm-1">
+          <div className="members col offset-lg-1 offset-sm-0">
             <div className="row subtitle">Workforce Members</div>
             <div className="row">
               <div className="col-4 WF_memberList">
@@ -79,9 +79,21 @@ const Prophylaxis = () => {
         </div>
       </div>
 
-      <div className="magazines container-fluid">
+      <div className="IPMB">
+        <h1
+          className="title"
+          style={{ marginBottom: "55px", width: "70%", margin: "auto" }}
+        >
+          Internationa Public health Material BAnk (IPMB) Platform
+        </h1>
+        <h1 className="title-1st" style={{ marginTop: "100px" }}>
+          Coming Soon!
+        </h1>
+      </div>
+
+      <div className="toolkits container-fluid">
         <h1 className="title" style={{ marginBottom: "55px" }}>
-          IADS Magazines
+          Toolkits
         </h1>
         <CardList
           className="card-list"

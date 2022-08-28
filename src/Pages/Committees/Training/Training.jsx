@@ -77,17 +77,6 @@ const Training = () => {
           >
             <div
               className="col-lg-3 col-sm-12 action"
-              id="action1"
-              style={{ marginRight: "90px" }}
-            >
-              <p className="apply">Apply for Training Certificate Renewal</p>
-              <button className="btn">
-                <img src={renew} />
-                Renew Certificate
-              </button>
-            </div>
-            <div
-              className="col-lg-3 col-sm-12 action"
               id="action2"
               style={{ marginLeft: "90px" }}
             >

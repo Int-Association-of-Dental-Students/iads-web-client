@@ -34,7 +34,7 @@ import f24 from "../../Assets/Governance/RegionalAmbass/f4.svg";
 import p25 from "../../Assets/Governance/RegionalAmbass/p5.svg";
 import f25 from "../../Assets/Governance/RegionalAmbass/f5.svg";
 
-import p31 from "../../Assets/Governance/AdvisoryBoard/p1.svg";
+import p31 from "../../Assets/Governance/AdvisoryBoard/p1.png";
 import f31 from "../../Assets/Governance/AdvisoryBoard/f1.svg";
 import p32 from "../../Assets/Governance/AdvisoryBoard/p2.svg";
 import f32 from "../../Assets/Governance/AdvisoryBoard/f2.svg";
@@ -83,42 +83,46 @@ const Governance = () => {
           <GovCard
             personImg={p1}
             flag={f1}
-            name="Dr. Huthaifa Abdul Qader"
+            name="Dr. Lamis 
+            Elsheikh"
             role="President"
             color="white"
           />
           <GovCard
             personImg={p2}
             flag={f2}
-            name="Dr. Lamis Elsheikh"
+            name="Deniz 
+            Devrim Kaya"
             role="Vice President of Internal Affairs"
             color="white"
           />
           <GovCard
             personImg={p3}
             flag={f3}
-            name="Deniz Devrim Kaya"
+            name="Dr. Kristine Romanovska"
             role="Vice President of Public Relations"
             color="white"
           />
           <GovCard
             personImg={p4}
             flag={f4}
-            name="Dr. İrem Türkan"
+            name="Dr. Zhengis Zhamashev"
             role="Vice President of Science & Research"
             color="white"
           />
           <GovCard
             personImg={p5}
             flag={f5}
-            name="Dr. Arsal Sadiq"
+            name="Aneeq 
+            Majid Mian"
             role="Vice President of Exchange"
             color="white"
           />
           <GovCard
             personImg={p6}
             flag={f6}
-            name="Konstantin Schrader"
+            name="Abay
+            Kalymtay"
             role="Vice President of Finances"
             color="white"
           />
@@ -138,13 +142,14 @@ const Governance = () => {
         </p>
         <div
           className="container horiz-cardlist"
-          style={{ justifyContent: "space-around" }}
+          style={{ width: "70%", margin: "auto" }}
         >
           <GovCard
             personImg={p11}
             flag={f11}
-            name="Payman Sarmad"
-            role="Prophylaxis Officer"
+            name="Meryem 
+            Lahlou"
+            role="Public Health Officer"
           />
           <GovCard
             personImg={p12}
@@ -155,7 +160,8 @@ const Governance = () => {
           <GovCard
             personImg={p13}
             flag={f13}
-            name="Nadeen Haj Ahmad"
+            name="Maria 
+            Teresa Matute"
             role="Voluntary Officer"
           />
         </div>
@@ -169,31 +175,34 @@ const Governance = () => {
           <GovCard
             personImg={p21}
             flag={f21}
-            name="Henry Daniel Villavicencio"
+            name="Juan Fernando Morales Recinos"
             role="Regional Ambassador of Americas"
           />
           <GovCard
             personImg={p22}
             flag={f22}
-            name="Jasmin Mansouria"
+            name="Anna
+            Pakhuta"
             role="Regional Ambassador of Europe"
           />
           <GovCard
             personImg={p23}
             flag={f23}
-            name="Aya Sharafeldin"
+            name="Ranya 
+            Oualid"
             role="Regional Ambassador of Africa"
           />
           <GovCard
             personImg={p24}
             flag={f24}
-            name="Rajaa Antar"
+            name="Tasnim 
+            Muhssin"
             role="Regional Ambassador of Middle East "
           />
           <GovCard
             personImg={p25}
             flag={f25}
-            name="Kei Aonuma"
+            name="Viandra Tjokroadiredjo"
             role="Regional Ambassador of Asia-Pacific"
           />
         </div>
@@ -210,7 +219,7 @@ const Governance = () => {
           <GovCard
             personImg={p31}
             flag={f31}
-            name="Dr. Ali Theyab"
+            name="Dr. Huthaifa Abdul Qader"
             role="Immediate Past President"
             color="white"
           />
@@ -238,7 +247,8 @@ const Governance = () => {
           <GovCard
             personImg={p35}
             flag={f35}
-            name="Dr. Mustafa Hacilar"
+            name="Dr. İrem 
+            Türkan"
             role="Advisor"
             color="white"
           />

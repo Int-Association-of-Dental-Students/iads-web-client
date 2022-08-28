@@ -40,7 +40,9 @@ const WOHD = () => {
                 />
               </div>
             </div>
-            <div className="row mt-5">#MouthProud #WOHD22</div>
+            <div className="row hash mt-5" style={{ marginLeft: "200px" }}>
+              #MouthProud #WOHD22
+            </div>
           </div>
         </div>
       </div>
