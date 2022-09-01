@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Navbar, Nav, Container, NavDropdown, Button } from "react-bootstrap";
 import "./Navbar.scss";
 import { Link } from "react-router-dom";
@@ -8,8 +8,13 @@ import lock from "../../Assets/lock.svg";
 import lock1 from "../../Assets/lock1.svg";
 import LoginModal from "../LoginModal";
 
+import { AuthContext } from "../Context/AuthContext";
+
 const NavBar = (props) => {
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const Auth = useContext(AuthContext);
+
+  console.log(Auth);
   console.log(showLoginModal);
   return (
     <Navbar
@@ -56,6 +61,7 @@ const NavBar = (props) => {
               <NavDropdown.Item className="" href="/committees/workforce">
                 Workforce
               </NavDropdown.Item>
+              <NavDropdown.Divider />
               <NavDropdown.Item className="" href="/committees/internal">
                 Internal Affairs
               </NavDropdown.Item>
@@ -91,6 +97,16 @@ const NavBar = (props) => {
               <NavDropdown.Item href="/projects/colgate">
                 Colgate
               </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="/projects/WOHD">
+                World Oral Health Day
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/projects/greendentistry">
+                Green Dentistry
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/projects/mouthcancer">
+                Mouth Cancer Month
+              </NavDropdown.Item>
               {/* <NavDropdown.Item href="#action5">
                   Something else here
                 </NavDropdown.Item> */}
@@ -100,20 +116,37 @@ const NavBar = (props) => {
               Contact Us
             </Nav.Link>
           </Nav>
-          <div className="auth d-flex">
-            <div
-              onClick={() => setShowLoginModal(!showLoginModal)}
-              className="login-btn"
-            >
-              <img
-                src={props.path == "/" || props.path == "/home" ? lock : lock1}
-              />
-              <p>Login</p>
+          {!Auth.isLogged && (
+            <div className="auth d-flex">
+              <div
+                onClick={() => setShowLoginModal(!showLoginModal)}
+                className="login-btn"
+              >
+                <img
+                  src={
+                    props.path == "/" || props.path == "/home" ? lock : lock1
+                  }
+                />
+                <p>Login</p>
+              </div>
+              <a href="/signup" className="signup-btn">
+                Signup
+              </a>
             </div>
-            <a href="/signup" className="signup-btn">
-              Signup
-            </a>
-          </div>
+          )}
+          {Auth.isLogged && (
+            <div className="auth d-flex" style={{ justifyContent: "center" }}>
+              <p>Hello {Auth.name}</p>
+              <div onClick={Auth.logout} className="login-btn">
+                <img
+                  src={
+                    props.path == "/" || props.path == "/home" ? lock : lock1
+                  }
+                />
+                <p>Logout</p>
+              </div>
+            </div>
+          )}
         </Navbar.Collapse>
       </Container>
     </Navbar>

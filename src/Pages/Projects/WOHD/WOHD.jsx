@@ -41,7 +41,21 @@ const WOHD = () => {
               </div>
             </div>
             <div className="row hash mt-5" style={{ marginLeft: "200px" }}>
-              #MouthProud #WOHD22
+              <span>
+                <a
+                  href="https://www.instagram.com/explore/tags/mouthproud/"
+                  style={{ textDecoration: "none", color: "#044A8F" }}
+                >
+                  #MouthProud
+                </a>
+                {"  "}
+                <a
+                  href="https://www.instagram.com/explore/tags/wohd22/"
+                  style={{ textDecoration: "none", color: "#044A8F" }}
+                >
+                  #WOHD22
+                </a>
+              </span>
             </div>
           </div>
         </div>
@@ -152,9 +166,12 @@ const WOHD = () => {
           <img src={bullet3} />
         </h1>
         <div className="flex-horiz" style={{ justifyContent: "center" }}>
-          <button className="bttn" style={{ marginTop: "60px" }}>
+          <a
+            className="bttn"
+            style={{ marginTop: "60px", background: "#706E6E" }}
+          >
             Submit now
-          </button>
+          </a>
         </div>
         <p
           className="sec-txt"

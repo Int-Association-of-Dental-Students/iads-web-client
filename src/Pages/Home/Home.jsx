@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Home.scss";
 import { Image, Button, Carousel, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -37,6 +37,8 @@ import s5 from "../../Assets/sponsers/s5.svg";
 import end from "../../Assets/endorser.svg";
 import AddNewModal from "../../Components/Cards/AddNewModal";
 
+import { AuthContext } from "../../Components/Context/AuthContext";
+
 function DiscoverMoreCard(props) {
   return (
     <div className="discoverMoreCard">
@@ -54,6 +56,9 @@ function DiscoverMoreCard(props) {
 }
 
 function Home() {
+  const Auth = useContext(AuthContext);
+  console.log(Auth);
+
   SwiperCore.use([Keyboard, Mousewheel]);
   const [showLoginModal, setShowLoginModal] = useState(false);
 
@@ -169,6 +174,7 @@ function Home() {
             <p className="homePageTitles11">DISCOVER</p>
             <p className="homePageTitles12">More</p>
           </div>
+
           <Swiper
             //  navigation={true} modules={[Navigation, Pagination]}
             //   pagination={{ clickable: true }}
@@ -256,72 +262,76 @@ function Home() {
             <p className="homePageTitles11">iads Latest</p>
             <p className="homePageTitles12">News</p>
           </div>
-          <Swiper
-            breakpoints={{
-              // when window width is >= 640px
-              1300: {
-                spaceBetween: 50,
-                slidesPerView: 3,
-              },
+          {}
+          {Auth.isLogged && (
+            <Swiper
+              breakpoints={{
+                // when window width is >= 640px
+                1300: {
+                  spaceBetween: 50,
+                  slidesPerView: 3,
+                },
 
-              1200: {
-                spaceBetween: 50,
-                slidesPerView: 2,
-              },
-              // when window width is >= 768px
+                1200: {
+                  spaceBetween: 50,
+                  slidesPerView: 2,
+                },
+                // when window width is >= 768px
 
-              0: {
-                spaceBetween: 10,
-                slidesPerView: 1,
-              },
-            }}
-            // mousewheel={true}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
-            className="swiper"
-          >
-            <SwiperSlide>
-              <CardComponent
-                i="https://i.ibb.co/N2KnqYx/Image-Place-holder-9.png"
-                t="Exchange program in Equador"
-                date="20/08/2022"
-                d="Arcu sit habitasse aliquet sit. Turpis duis et non nulla eget. In dui vestibulum id tempor at eget. Mi in pulvinar mi felis, scelerisque ac sapien in."
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <CardComponent
-                i="https://i.ibb.co/N2KnqYx/Image-Place-holder-9.png"
-                t="Exchange program in Equador"
-                date="20/08/2022"
-                d="Arcu sit habitasse aliquet sit. Turpis duis et non nulla eget. In dui vestibulum id tempor at eget. Mi in pulvinar mi felis, scelerisque ac sapien in."
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <CardComponent
-                i="https://i.ibb.co/N2KnqYx/Image-Place-holder-9.png"
-                t="Exchange program in Equador"
-                date="20/08/2022"
-                d="Arcu sit habitasse aliquet sit. Turpis duis et non nulla eget. In dui vestibulum id tempor at eget. Mi in pulvinar mi felis, scelerisque ac sapien in."
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <CardComponent
-                i="https://i.ibb.co/N2KnqYx/Image-Place-holder-9.png"
-                t="Exchange program in Equador"
-                date="20/08/2022"
-                d="Arcu sit habitasse aliquet sit. Turpis duis et non nulla eget. In dui vestibulum id tempor at eget. Mi in pulvinar mi felis, scelerisque ac sapien in."
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <CardComponent
-                i="https://i.ibb.co/N2KnqYx/Image-Place-holder-9.png"
-                t="Exchange program in Equador"
-                date="20/08/2022"
-                d="Arcu sit habitasse aliquet sit. Turpis duis et non nulla eget. In dui vestibulum id tempor at eget. Mi in pulvinar mi felis, scelerisque ac sapien in."
-              />
-            </SwiperSlide>
-          </Swiper>
-          <p style={{ marginTop: "30px" }}>Swipe right or left for more</p>
+                0: {
+                  spaceBetween: 10,
+                  slidesPerView: 1,
+                },
+              }}
+              // mousewheel={true}
+              onSlideChange={() => console.log("slide change")}
+              onSwiper={(swiper) => console.log(swiper)}
+              className="swiper"
+            >
+              <SwiperSlide>
+                <CardComponent
+                  i="https://i.ibb.co/N2KnqYx/Image-Place-holder-9.png"
+                  t="Exchange program in Equador"
+                  date="20/08/2022"
+                  d="Arcu sit habitasse aliquet sit. Turpis duis et non nulla eget. In dui vestibulum id tempor at eget. Mi in pulvinar mi felis, scelerisque ac sapien in."
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <CardComponent
+                  i="https://i.ibb.co/N2KnqYx/Image-Place-holder-9.png"
+                  t="Exchange program in Equador"
+                  date="20/08/2022"
+                  d="Arcu sit habitasse aliquet sit. Turpis duis et non nulla eget. In dui vestibulum id tempor at eget. Mi in pulvinar mi felis, scelerisque ac sapien in."
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <CardComponent
+                  i="https://i.ibb.co/N2KnqYx/Image-Place-holder-9.png"
+                  t="Exchange program in Equador"
+                  date="20/08/2022"
+                  d="Arcu sit habitasse aliquet sit. Turpis duis et non nulla eget. In dui vestibulum id tempor at eget. Mi in pulvinar mi felis, scelerisque ac sapien in."
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <CardComponent
+                  i="https://i.ibb.co/N2KnqYx/Image-Place-holder-9.png"
+                  t="Exchange program in Equador"
+                  date="20/08/2022"
+                  d="Arcu sit habitasse aliquet sit. Turpis duis et non nulla eget. In dui vestibulum id tempor at eget. Mi in pulvinar mi felis, scelerisque ac sapien in."
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <CardComponent
+                  i="https://i.ibb.co/N2KnqYx/Image-Place-holder-9.png"
+                  t="Exchange program in Equador"
+                  date="20/08/2022"
+                  d="Arcu sit habitasse aliquet sit. Turpis duis et non nulla eget. In dui vestibulum id tempor at eget. Mi in pulvinar mi felis, scelerisque ac sapien in."
+                />
+              </SwiperSlide>
+              <p style={{ marginTop: "30px" }}>Swipe right or left for more</p>
+            </Swiper>
+          )}
+          {!Auth.isLogged && <p>please log in to view </p>}
         </div>
 
         <div className="ourComp container">

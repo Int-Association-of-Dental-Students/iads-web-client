@@ -9,7 +9,11 @@ import pdfIcon from "../../../Assets/Committees/Internal/Pdf Icon.svg";
 import CardList from "../../../Components/Cards/CardList";
 import pressRelease from "./pressRelease";
 
+import { useHttpClient } from "../../../Shared/http-hook";
+
 const Internal = () => {
+  const httpClient = useHttpClient();
+
   const WFList = [
     { name: "Maryam Ayyad Ismail", country: "Iraq" },
     { name: "Maryam Ayyad Ismail", country: "Iraq" },

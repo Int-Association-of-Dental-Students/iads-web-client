@@ -5,23 +5,33 @@ import plus from "./plusIcon.svg";
 import { modal } from "react-bootstrap";
 import AddNewModal from "./AddNewModal";
 
+import { AuthContext } from "../Context/AuthContext";
+import { useContext } from "react";
+
 const CardList = ({ data, textColor }) => {
+  const Auth = useContext(AuthContext);
   const [show, setShow] = useState(false);
+
+  console.log(Auth);
 
   return (
     <div>
       <div className="container cardlist">
-        {/* {show && <AddNewModal show={show} />}
-        <button
-          onClick={() => {
-            setShow(!show);
-          }}
-          className="addNew"
-          style={{ border: `2.5px dashed ${textColor}` }}
-        >
-          <img className="plus-icon" src={plus} />
-          <h5>Add New</h5>
-        </button> */}
+        {Auth.editor && (
+          <div>
+            {show && <AddNewModal show={show} />}
+            <button
+              onClick={() => {
+                setShow(!show);
+              }}
+              className="addNew"
+              style={{ border: `2.5px dashed ${textColor}` }}
+            >
+              <img className="plus-icon" src={plus} />
+              <h5>Add New</h5>
+            </button>
+          </div>
+        )}
         {data.map((data) => (
           <CardComponent
             style={textColor}

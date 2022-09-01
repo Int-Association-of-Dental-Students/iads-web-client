@@ -26,7 +26,6 @@
   }
 
   .login-btn {
-  
     border: 1px solid #55c9f3;
 
     p {
@@ -111,7 +110,6 @@
   font-weight: 700;
   font-size: 12px;
   cursor: pointer;
-
 }
 
 .login-btn {
@@ -192,16 +190,17 @@
   }
 
   .dropdown-menu {
-    background-color: transparent !important;
-    border: none !important;
+    // background-color: transparent !important;
+    // border: none !important;
+    text-align: center !important;
 
     .dropdown-item {
-      color: white;
+      // color: white;
     }
 
     .dropdown-item:active,
     .dropdown-item:hover {
-      background-color: transparent;
+      // background-color: transparent;
     }
   }
 }

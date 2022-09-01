@@ -115,7 +115,7 @@ const Prophylaxis = () => {
           >
             <Button
               style={{ backgroundColor: "#0B4E14" }}
-              href=""
+              href="/projects/greendentistry"
               className="btn"
             >
               Learn More
@@ -128,7 +128,7 @@ const Prophylaxis = () => {
           <div style={{ display: "flex", justifyContent: "flex-end" }}>
             <Button
               style={{ backgroundColor: "#E41A3B" }}
-              href="https://iads-web.com/projects/WOHD"
+              href="/projects/WOHD"
               className="btn"
             >
               Learn More

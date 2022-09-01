@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useForm } from "react-hook-form";
 import "./LoginModal.scss";
+
+import { AuthContext } from "./Context/AuthContext";
 
 import logo from "../Assets/vlogo.svg";
 import eicon from "../Assets/mail-icon.svg";
@@ -10,6 +12,7 @@ import eicon from "../Assets/mail-icon.svg";
 import { useHttpClient } from "../Shared/http-hook";
 
 const LoginModal = (props) => {
+  const auth = useContext(AuthContext);
   const [show, setShow] = useState(props.show);
   console.log(show);
   const handleClose = () => setShow(false);
@@ -35,6 +38,17 @@ const LoginModal = (props) => {
         {
           "Content-Type": "application/json",
         }
+      );
+      console.log(response);
+      auth.login(
+        response.user.id,
+        response.user.username,
+        response.user.name,
+        response.user.validation,
+        response.user.email,
+        response.user.editor,
+        response.user.admin,
+        response.token
       );
     } catch (err) {
       console.log(httpClient.error);
