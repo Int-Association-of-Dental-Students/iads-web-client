@@ -48,7 +48,7 @@ const GreenDentistry = () => {
                 className="bullet"
                 style={{ marginLeft: "-100px" }}
               />
-              About World Oral Health Day
+              About Green Dentistry
             </h1>
             <p className="sec-txt" style={{ width: "80%" }}>
               <b>Green Dentistry</b> is a joint project between the
@@ -59,13 +59,15 @@ const GreenDentistry = () => {
               eco-friendly workflow in order to have an eco-friendly dental
               practice in future.
             </p>
-            <a
-              href="https://drive.google.com/file/d/1s5-mgmnLqjsf_dw4hnRk0xAbIT4V5RYr/view?usp=sharing"
-              className="bttn"
-              style={{ color: "black" }}
-            >
-              Green Dentistry Toolkit
-            </a>
+            <div style={{ display: "flex", justifyContent: "flex-start" }}>
+              <a
+                href="https://drive.google.com/file/d/1s5-mgmnLqjsf_dw4hnRk0xAbIT4V5RYr/view?usp=sharing"
+                className="bttn"
+                style={{ color: "black" }}
+              >
+                Green Dentistry Toolkit
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -215,7 +217,7 @@ const GreenDentistry = () => {
             Final Reports Booklets
           </h1>
 
-          <CardList className="card-list" data={Reports} textColor="#73AC49" />
+          <CardList className="card-list" data={Reports} textColor="#0A4D13" />
         </div>
       </div>
 

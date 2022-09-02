@@ -99,7 +99,11 @@ const WOHD = () => {
         <div className="padding">
           <h1
             className="title-text2"
-            style={{ marginTop: "40px", marginBottom: "30px" }}
+            style={{
+              marginTop: "40px",
+              marginBottom: "30px",
+              textAlign: "left",
+            }}
           >
             <img src={bullet2mini} className="bullet" />
             Most original activity
@@ -128,7 +132,11 @@ const WOHD = () => {
         <div className="padding">
           <h1
             className="title-text2"
-            style={{ marginTop: "40px", marginBottom: "30px" }}
+            style={{
+              marginTop: "40px",
+              marginBottom: "30px",
+              textAlign: "left",
+            }}
           >
             <img src={bullet2mini} className="bullet" />
             Best social media campaign
