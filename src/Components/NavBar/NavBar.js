@@ -104,7 +104,7 @@ const NavBar = (props) => {
               <NavDropdown.Item href="/projects/greendentistry">
                 Green Dentistry
               </NavDropdown.Item>
-              <NavDropdown.Item href="/projects/mouthcancer">
+              <NavDropdown.Item href="/projects/MCAM">
                 Mouth Cancer Month
               </NavDropdown.Item>
               {/* <NavDropdown.Item href="#action5">

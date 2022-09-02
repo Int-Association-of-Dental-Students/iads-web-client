@@ -139,7 +139,11 @@ const Prophylaxis = () => {
           <img src={mouthCancer} />
 
           <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <Button className="btn" style={{ backgroundColor: "#034F97" }}>
+            <Button
+              className="btn"
+              style={{ backgroundColor: "#034F97" }}
+              href="/projects/MCAM"
+            >
               Learn More
             </Button>
           </div>
