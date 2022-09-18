@@ -52,7 +52,13 @@
     line-height: 18px;
   }
 }
-
+.modal-logo {
+  border-radius: 15px;
+}
+.loginModal .modal-body {
+  padding: 0px !important;
+  border-radius: 18px;
+}
 .loginModal {
   .login-hdr {
     font-family: "LEMON MILK regular";
@@ -111,7 +117,7 @@
   }
 
   .modal-logo {
-    clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 80% 0, 95% 100%, 0% 100%);
     background-color: white;
     display: flex;
     justify-content: center;

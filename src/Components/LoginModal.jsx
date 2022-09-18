@@ -74,7 +74,7 @@ const LoginModal = (props) => {
             <h4 className="login-hdr" style={{ marginBottom: "20px" }}>
               Login
             </h4>
-            <p className="desc">Welcome back! Login to your account.</p>
+            <p className="desc">{props.description}</p>
             <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
               {/* <img src={eicon} /> */}
               <input

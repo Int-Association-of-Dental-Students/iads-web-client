@@ -9,7 +9,7 @@ import Home from "./Pages/Home/Home";
 
 import Internal from "./Pages/Committees/Internal Affairs/Internal";
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useRoutes } from "react-router-dom";
 import SCORE from "./Pages/Committees/SCORE/SCORE";
 // import Register from "./Pages/Auth/Register";
 
@@ -35,6 +35,11 @@ import GreenDentistry from "./Pages/Projects/GreenDentistry/GreenDentistry";
 import MCAM from "./Pages/Projects/MCAM/MCAM";
 
 let logoutTimer;
+
+const AppRoutes = () => {
+  let routes = useRoutes([{ path: "/", element: <Home /> }]);
+  return routes;
+};
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);

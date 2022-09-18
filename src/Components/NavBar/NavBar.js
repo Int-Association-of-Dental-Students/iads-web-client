@@ -26,7 +26,12 @@ const NavBar = (props) => {
       bg="none"
       expand="xl"
     >
-      {showLoginModal && <LoginModal show={showLoginModal} />}
+      {showLoginModal && (
+        <LoginModal
+          show={showLoginModal}
+          description="Welcome back! Login to your account."
+        />
+      )}
       <Container fluid>
         <Navbar.Brand href="/home">
           <img className="iads-logo" src={logo} />

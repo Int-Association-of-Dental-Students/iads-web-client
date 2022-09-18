@@ -77,7 +77,16 @@ const Internal = () => {
             <p className="reg-desc">
               Massa ultricies non at id enim tincidunt. Amet viverra aenean sed{" "}
             </p>
-            <h2 className="dload">Download</h2>
+            <h2
+              className="dload"
+              style={{
+                fontFamily: "POPPINS bold",
+                marginLeft: "20px",
+                alignSelf: "center",
+              }}
+            >
+              Download
+            </h2>
           </div>
         </div>
       </div>

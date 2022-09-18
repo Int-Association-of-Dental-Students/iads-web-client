@@ -45,6 +45,13 @@
     // margin-top: auto;
     // margin-bottom: 20px;
     // align-self: right;
+    border: none !important;
+  }
+
+  .card-button:focus,
+  .btn:active {
+    outline: none !important;
+    box-shadow: none;
   }
 
   .card-button:hover {
