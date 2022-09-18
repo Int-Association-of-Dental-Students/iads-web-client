@@ -1,4 +1,23 @@
 .training-page {
+  .css-1e2bxag-MuiDataGrid-root .MuiDataGrid-iconSeparator {
+    display: none;
+  }
+
+  .MuiDataGrid-columnHeaders {
+    // border: 1px solid red;
+    background-color: #0d7b7d;
+    border: none;
+
+    font-family: "Poppins regular";
+    color: white;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
   padding-top: 50px;
   @media only screen and (max-width: 900px) {
     .logo {
@@ -13,6 +32,10 @@
         margin-left: 0px !important;
         margin-top: 40px;
       }
+    }
+
+    .box-table {
+      width: 80%;
     }
   }
 
@@ -77,7 +100,7 @@
       gap: 10px;
       background: #f5f5f5;
       border-radius: 20px;
-      font-family: "Poppins";
+      font-family: "Poppins regular";
       font-style: normal;
       font-weight: 500;
       font-size: 15px;

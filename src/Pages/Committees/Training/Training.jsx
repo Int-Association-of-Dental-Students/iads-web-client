@@ -1,6 +1,8 @@
 import React from "react";
 import "./Training.scss";
 
+import TrainerIdx from "./TrainerIdx";
+
 import logo from "../../../Assets/Committees/Training/logo.svg";
 import delegate from "../../../Assets/Committees/Training/delegate.svg";
 import renew from "../../../Assets/Committees/Training/renew.svg";
@@ -8,6 +10,31 @@ import apply from "../../../Assets/Committees/Training/apply.svg";
 
 import CardList from "../../../Components/Cards/CardList";
 import tnts from "./tnts";
+
+import Box from "@mui/material/Box";
+import { DataGrid } from "@mui/x-data-grid";
+// import { DataGridPremium } from "@mui/x-data-grid-premium";
+
+const columns = [
+  {
+    field: "Trainer Name",
+    headerName: "Trainer Name",
+    width: 250,
+    editable: true,
+  },
+  {
+    field: "Country",
+    headerName: "Country",
+    width: 150,
+    editable: true,
+  },
+  {
+    field: "Class",
+    headerName: "Class",
+    width: 300,
+    editable: true,
+  },
+];
 
 const Training = () => {
   return (
@@ -93,12 +120,33 @@ const Training = () => {
       <div className="trainerIndex">
         <h1
           className="title"
-          style={{ marginTop: "90px", marginBottom: "60px" }}
+          style={{ marginTop: "90px", marginBottom: "30px" }}
         >
           Trainers index
         </h1>
 
-        <div className="container">
+        <Box
+          className="box-table"
+          sx={{ height: 645, width: "50%" }}
+          style={{ margin: "auto" }}
+        >
+          <DataGrid
+            headerHeight={70}
+            stickyHeader
+            rows={TrainerIdx}
+            getRowId={(row) => row["Trainer Name"]}
+            columns={columns}
+            pageSize={10}
+            rowsPerPageOptions={[5]}
+            // checkboxSelection
+            // disableSelectionOnClick
+            experimentalFeatures={{ newEditingApi: true }}
+          />
+        </Box>
+        <br />
+        <br />
+
+        {/* <div className="container">
           <div className="headerRow row">
             <div className="col">
               <h1 className="header">Name</h1>
@@ -132,7 +180,7 @@ const Training = () => {
               <p className="item">2022</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
