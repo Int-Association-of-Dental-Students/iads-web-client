@@ -33,6 +33,7 @@ import { AuthContext } from "./Components/Context/AuthContext";
 import React, { useState, useCallback, useContext, useEffect } from "react";
 import GreenDentistry from "./Pages/Projects/GreenDentistry/GreenDentistry";
 import MCAM from "./Pages/Projects/MCAM/MCAM";
+import Alumni from "./Pages/Alumni/Alumni";
 
 let logoutTimer;
 
@@ -167,6 +168,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/governance" element={<Governance />} />
+          <Route path="/alumni" element={<Alumni />} />
           <Route path="/membership" element={<Membership />} />
           <Route path="/meetings" element={<Meetings />} />
           <Route

@@ -49,9 +49,19 @@ const NavBar = (props) => {
             <Nav.Link className="nav-item nav-item-White" href="/about">
               About
             </Nav.Link>
-            <Nav.Link className="nav-item nav-item-White" href="/governance">
+            <NavDropdown
+              className="nav-item nav-item-White"
+              title="Governance"
+              id="navbarScrollingDropdownWhite"
+            >
+              <NavDropdown.Item className="" href="/governance">
+                IADS Governance
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/alumni">Alumni</NavDropdown.Item>
+            </NavDropdown>
+            {/* <Nav.Link className="nav-item nav-item-White" href="/governance">
               Governance
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link className="nav-item nav-item-White" href="/meetings">
               Meetings
             </Nav.Link>

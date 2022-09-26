@@ -45,7 +45,45 @@ import f34 from "../../Assets/Governance/AdvisoryBoard/f4.svg";
 import p35 from "../../Assets/Governance/AdvisoryBoard/p5.svg";
 import f35 from "../../Assets/Governance/AdvisoryBoard/f5.svg";
 
+import Box from "@mui/material/Box";
+import { DataGrid } from "@mui/x-data-grid";
+
+import delegatesList from "./DelegatesList";
+
 import GovCard from "../../Components/Governance/GovCard";
+
+const delegatesListColumns = [
+  {
+    field: "Country",
+    headerName: "Country",
+    width: 125,
+    editable: true,
+  },
+  {
+    field: "Member Organization",
+    headerName: "Member Organization",
+    width: 450,
+    editable: true,
+  },
+  {
+    field: "Abbreviation",
+    headerName: "Abbreviation",
+    width: 100,
+    editable: true,
+  },
+  {
+    field: "Membership Status",
+    headerName: "Membership Status",
+    width: 200,
+    editable: true,
+  },
+  {
+    field: "Delegate Name",
+    headerName: "Delegate Name",
+    width: 200,
+    editable: true,
+  },
+];
 
 const Governance = () => {
   return (
@@ -207,6 +245,82 @@ const Governance = () => {
           />
         </div>
       </div>
+
+      <div className="delegates">
+        <h1 className="title-1st">Iads</h1>
+        <h1 className="title-2nd">Delegates</h1>
+        <p className="desc">2021/2021</p>
+        <p
+          className="desc"
+          style={{
+            width: "80%",
+            margin: "auto",
+            marginBottom: "70px",
+          }}
+        >
+          Hover over the countries to view the delegates <br />
+          *missing ux prototype*
+        </p>
+        <img src={delegatesWorld} />
+      </div>
+
+      <div className="delegates-list">
+        <h1 className="title-1st">List of</h1>
+        <h1 className="title-2nd">All Delegates</h1>
+
+        <Box
+          className="box-table"
+          sx={{ height: 645, width: "80%" }}
+          style={{ margin: "auto" }}
+        >
+          <DataGrid
+            headerHeight={70}
+            stickyHeader
+            rows={delegatesList}
+            getRowId={(row) => row["Delegate Name"]}
+            columns={delegatesListColumns}
+            pageSize={10}
+            rowsPerPageOptions={[5]}
+            // checkboxSelection
+            // disableSelectionOnClick
+            experimentalFeatures={{ newEditingApi: true }}
+          />
+        </Box>
+      </div>
+
+      {/* <div className="alumni">
+        <h1 className="title-1st">Iads</h1>
+        <h1 className="title-2nd">Alumni</h1>
+        <p className="desc">1951 - present</p>
+        <p
+          className="desc"
+          style={{
+            width: "80%",
+            margin: "auto",
+            marginBottom: "70px",
+          }}
+        >
+          From Paris to the entire globe, from as few as four executive
+          committee members in 1951 to more than 200,000 member students
+          worldwide today and from 6 European founding countries to over 50
+          countries based in all world regions – this is the story of
+          International Association of Dental Students (IADS). An organization
+          that reects the values of interculturalism, sustainable development,
+          oral health advocacy and education equity. Here is its interesting
+          story; how it started, evolved and remained? what kind of challenges
+          it had in past and how it managed to go thorough? valiuym what kind of
+          success stories it had and how they were achieved?
+        </p>
+        <p className="desc" style={{ marginBottom: "10px" }}>
+          Jump to
+        </p>
+        <div className="container jumpbtns">
+          <div className="btn">Previous Executive Committee</div>
+          <div className="btn">Honorary Life Members</div>
+          <div className="btn">Peter Swiss Excellency Award</div>
+        </div>
+      </div> */}
+
       <div className="advisory">
         <h1 className="title-1st">Iads Leadership</h1>
         <h1 className="title-2nd" style={{ color: "white" }}>
@@ -252,57 +366,6 @@ const Governance = () => {
             role="Advisor"
             color="white"
           />
-        </div>
-      </div>
-
-      <div className="delegates">
-        <h1 className="title-1st">Iads</h1>
-        <h1 className="title-2nd">Delegates</h1>
-        <p className="desc">2021/2021</p>
-        <p
-          className="desc"
-          style={{
-            width: "80%",
-            margin: "auto",
-            marginBottom: "70px",
-          }}
-        >
-          Hover over the countries to view the delegates <br />
-          *missing ux prototype*
-        </p>
-        <img src={delegatesWorld} />
-      </div>
-
-      <div className="alumni">
-        <h1 className="title-1st">Iads</h1>
-        <h1 className="title-2nd">Alumni</h1>
-        <p className="desc">1951 - present</p>
-        <p
-          className="desc"
-          style={{
-            width: "80%",
-            margin: "auto",
-            marginBottom: "70px",
-          }}
-        >
-          From Paris to the entire globe, from as few as four executive
-          committee members in 1951 to more than 200,000 member students
-          worldwide today and from 6 European founding countries to over 50
-          countries based in all world regions – this is the story of
-          International Association of Dental Students (IADS). An organization
-          that reects the values of interculturalism, sustainable development,
-          oral health advocacy and education equity. Here is its interesting
-          story; how it started, evolved and remained? what kind of challenges
-          it had in past and how it managed to go thorough? valiuym what kind of
-          success stories it had and how they were achieved?
-        </p>
-        <p className="desc" style={{ marginBottom: "10px" }}>
-          Jump to
-        </p>
-        <div className="container jumpbtns">
-          <div className="btn">Previous Executive Committee</div>
-          <div className="btn">Honorary Life Members</div>
-          <div className="btn">Peter Swiss Excellency Award</div>
         </div>
       </div>
     </div>

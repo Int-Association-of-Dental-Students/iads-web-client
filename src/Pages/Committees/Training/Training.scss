@@ -2,7 +2,10 @@
   .css-1e2bxag-MuiDataGrid-root .MuiDataGrid-iconSeparator {
     display: none;
   }
-
+  .MuiDataGrid-iconSeparator {
+    display: none;
+    color: transparent;
+  }
   .MuiDataGrid-columnHeaders {
     // border: 1px solid red;
     background-color: #0d7b7d;
