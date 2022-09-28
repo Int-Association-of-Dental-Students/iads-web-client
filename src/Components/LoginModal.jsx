@@ -30,7 +30,8 @@ const LoginModal = (props) => {
   const onSubmit = async (data) => {
     try {
       const response = await httpClient.sendRequest(
-        `http://localhost:3001/api/WebUsers/login`,
+        // `https://infinite-wildwood-83288.herokuapp.com/api/WebUsers/login`,
+        `https://infinite-wildwood-83288.herokuapp.com/api/webUsers/login`,
         "POST",
         JSON.stringify({
           data,
@@ -50,6 +51,7 @@ const LoginModal = (props) => {
         response.user.admin,
         response.token
       );
+      setShow(false);
     } catch (err) {
       console.log(httpClient.error);
     }
@@ -89,9 +91,18 @@ const LoginModal = (props) => {
                 id="password"
                 {...register("password", { required: true })}
               />
-              <input id="submit-btn" value="Login" type="submit" />
+              <button
+                id="submit-btn"
+                value="Login"
+                type="submit"
+                // onClick={() => {
+                //   !httpClient.error && setShow(false);
+                // }}
+              >
+                Login
+              </button>
             </form>
-            <p style={{ color: "red", textAlign: "center" }}>
+            <p style={{ color: "red", textAlign: "left", width: "70%" }}>
               {httpClient.error}
             </p>
           </div>

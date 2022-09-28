@@ -42,7 +42,7 @@ const CardComponent = (props) => {
           <Card.Text className="card-date">{data.date}</Card.Text>
           <Card.Text className="card-text">{data.description}</Card.Text>
           {Auth.validation && (
-            <Button
+            <button
               className="card-button"
               href={data.link}
               variant="primary"
@@ -54,10 +54,10 @@ const CardComponent = (props) => {
                 style={{ marginLeft: "10px" }}
                 src={findmore}
               />
-            </Button>
+            </button>
           )}
           {!Auth.validation && (
-            <Button
+            <button
               className="card-button"
               // href={data.link}
               variant="primary"
@@ -70,7 +70,7 @@ const CardComponent = (props) => {
                 style={{ marginLeft: "10px" }}
                 src={findmore}
               />
-            </Button>
+            </button>
           )}
         </Card.Body>
       </Card>

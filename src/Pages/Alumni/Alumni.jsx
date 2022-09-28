@@ -41,43 +41,43 @@ const PrevExecComCol = [
     field: "Term",
     headerName: "Term",
     width: 125,
-    editable: true,
+    editable: false,
   },
   {
     field: "President",
     headerName: "President",
     width: 175,
-    editable: true,
+    editable: false,
   },
   {
     field: "VP of Internal Affairs",
     headerName: "VP of Internal Affairs",
     width: 175,
-    editable: true,
+    editable: false,
   },
   {
     field: "VP of Finances",
     headerName: "VP of Finances",
     width: 175,
-    editable: true,
+    editable: false,
   },
   {
     field: "VP of Public Relations",
     headerName: "VP Public Relations",
     width: 175,
-    editable: true,
+    editable: false,
   },
   {
     field: "VP of Exchanges",
     headerName: "VP of Exchanges",
     width: 175,
-    editable: true,
+    editable: false,
   },
   {
     field: "VP of Science",
     headerName: "VP Science",
     width: 175,
-    editable: true,
+    editable: false,
   },
 ];
 const HonoraryMembersCol = [
@@ -85,19 +85,19 @@ const HonoraryMembersCol = [
     field: "Name",
     headerName: "Name",
     width: 250,
-    editable: true,
+    editable: false,
   },
   {
     field: "Country",
     headerName: "Country",
     width: 300,
-    editable: true,
+    editable: false,
   },
   {
     field: "Year of Nomination",
     headerName: "Year of Nomination",
     width: 300,
-    editable: true,
+    editable: false,
   },
 ];
 

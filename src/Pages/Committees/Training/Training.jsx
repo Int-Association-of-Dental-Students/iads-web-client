@@ -20,19 +20,19 @@ const columns = [
     field: "Trainer Name",
     headerName: "Trainer Name",
     width: 250,
-    editable: true,
+    editable: false,
   },
   {
     field: "Country",
     headerName: "Country",
     width: 150,
-    editable: true,
+    editable: false,
   },
   {
     field: "Class",
     headerName: "Class",
     width: 300,
-    editable: true,
+    editable: false,
   },
 ];
 

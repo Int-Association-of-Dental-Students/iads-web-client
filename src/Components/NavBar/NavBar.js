@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Navbar, Nav, Container, NavDropdown, Button } from "react-bootstrap";
 import "./Navbar.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import logo from "../../Assets/IADS logo horizontal.png";
 import logo from "../../Assets/IADS Horizontal 1.svg";
 import lock from "../../Assets/lock.svg";
@@ -11,6 +11,7 @@ import LoginModal from "../LoginModal";
 import { AuthContext } from "../Context/AuthContext";
 
 const NavBar = (props) => {
+  const navigate = useNavigate();
   const [showLoginModal, setShowLoginModal] = useState(false);
   const Auth = useContext(AuthContext);
 
@@ -20,8 +21,8 @@ const NavBar = (props) => {
     <Navbar
       className={
         props.path == "/" || props.path == "/home"
-          ? "navbar navbarWithOutBg"
-          : "navbar navbarWithBg"
+          ? "navbar navbar-dark navbarWithOutBg"
+          : "navbar navbar-dark navbarWithBg"
       }
       bg="none"
       expand="xl"
@@ -29,6 +30,7 @@ const NavBar = (props) => {
       {showLoginModal && (
         <LoginModal
           show={showLoginModal}
+          setShow={setShowLoginModal}
           description="Welcome back! Login to your account."
         />
       )}
@@ -151,8 +153,16 @@ const NavBar = (props) => {
           )}
           {Auth.isLogged && (
             <div className="auth d-flex" style={{ justifyContent: "center" }}>
-              <p>Hello {Auth.name}</p>
-              <div onClick={Auth.logout} className="login-btn">
+              <p style={{ color: "green", fontFamily: "Poppins medium" }}>
+                Hello {Auth.name.split(" ")[0]}
+              </p>
+              <div
+                onClick={() => {
+                  Auth.logout();
+                  navigate("/");
+                }}
+                className="login-btn"
+              >
                 <img
                   src={
                     props.path == "/" || props.path == "/home" ? lock : lock1

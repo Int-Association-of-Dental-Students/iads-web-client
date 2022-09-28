@@ -1,6 +1,125 @@
 .signup-page {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 0px !important;
+  background-color: #f5f5f5;
+
+  .form {
+    margin-left: 300px !important;
+    padding-left: 115px;
+    padding-right: 147px;
+    padding-top: 62px;
+    padding-bottom: 70px;
+
+    background-color: white;
+    margin: 0px;
+  }
+
+  label {
+    font-family: "Poppins medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    color: #52535f;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  input {
+    background: #ffffff;
+    /* Card subtitle */
+
+    border: 1px solid #8c8c8c;
+    border-radius: 5px;
+    width: 390px;
+    height: 43px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .submit-btn {
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 25px;
+    gap: 10px;
+
+    width: 164px;
+    height: 47px;
+    /* #1D015C */
+
+    background: #3e1893;
+    border-radius: 100px;
+    font-family: "Poppins medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+
+    color: #ffffff;
+  }
+
+  select {
+    background: #ffffff;
+    /* Card subtitle */
+
+    border: 1px solid #8c8c8c;
+    border-radius: 5px;
+    width: 390px;
+    height: 43px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  #delegate {
+    width: 17px;
+    height: 17px;
+
+    /* #C6C6C6 */
+
+    background: #c6c6c6;
+    border-radius: 4px;
+  }
+
+  #iadsEmployed {
+    width: 17px;
+    height: 17px;
+
+    /* #C6C6C6 */
+
+    background: #c6c6c6;
+    border-radius: 4px;
+  }
+
+  #iadsMember {
+    width: 17px;
+    height: 17px;
+
+    /* #C6C6C6 */
+
+    background: #c6c6c6;
+    border-radius: 4px;
+  }
+  .small-check {
+    width: 17px !important;
+    height: 17px !important;
+    margin-top: 3px;
+    margin-right: 12px;
+
+    /* #C6C6C6 */
+
+    background: #c6c6c6;
+    border-radius: 4px;
+  }
+
   .flexx {
     display: flex;
     flex-direction: column;
@@ -9,5 +128,50 @@
   label {
     text-align: left;
     margin-left: 1px;
+    overflow-wrap: normal;
+  }
+
+  .title {
+    font-family: "LEMON MILK regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 41px;
+    /* identical to box height */
+    text-align: left;
+
+    /* dark */
+
+    color: #1d015c;
+  }
+
+  .desc {
+    text-align: left;
+    font-family: "Poppins regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #52535f;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .form {
+      margin-left: 0px !important;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    label {
+      margin-top: 10px;
+    }
+    input {
+      width: 100%;
+      height: 43px;
+    }
+    select {
+      width: 100%;
+      height: 43px;
+    }
   }
 }
