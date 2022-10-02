@@ -10,6 +10,32 @@
     padding-top: 75px;
   }
 
+  .MuiDataGrid-iconSeparator {
+    display: none;
+    color: transparent;
+  }
+  .MuiDataGrid-columnHeaders {
+    // border: 1px solid red;
+    background-color: #55c9f3;
+    border: none;
+
+    font-family: "Poppins bold";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    /* identical to box height */
+
+    /* dark */
+
+    color: #1d015c;
+
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
   .desc {
     font-family: Poppins regular;
     font-size: 18px;

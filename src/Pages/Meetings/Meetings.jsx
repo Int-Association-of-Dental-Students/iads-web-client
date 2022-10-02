@@ -1,11 +1,50 @@
 import React from "react";
 import "./Meetings.scss";
+import PrevMeetings from "./PrevMeetings";
 
 import { Table } from "react-bootstrap";
 
 import logo from "../../Assets/Meetings/logo.svg";
 import Arrow from "../../Assets/About/Arrow.svg";
 import { useState } from "react";
+import { DataGrid } from "@mui/x-data-grid";
+import { Box } from "@mui/system";
+import { Link } from "@mui/material";
+
+const PrevMeetingsCol = [
+  {
+    field: "Term",
+    headerName: "Term",
+    width: 125,
+    editable: false,
+  },
+  {
+    field: "Annual Congress (AC)",
+    headerName: "Annual Congress (AC)",
+    width: 300,
+    editable: false,
+  },
+  {
+    field: "Gallery",
+    headerName: "Gallery",
+    width: 175,
+    editable: false,
+    renderCell: (params) => <a href={`${params.value}`}>{params.value}</a>,
+  },
+  {
+    field: "Mid-Year Meeting (MYM)",
+    headerName: "Mid-Year Meeting (MYM)",
+    width: 300,
+    editable: false,
+  },
+  {
+    field: "MM Gallery",
+    headerName: "MM Gallery",
+    width: 175,
+    editable: true,
+    renderCell: (params) => <a href={`${params.value}`}>{params.value}</a>,
+  },
+];
 
 const Meetings = () => {
   const [headerState, setHeaderState] = useState(1);
@@ -236,19 +275,29 @@ const Meetings = () => {
             IADS Meetings
           </h1>
 
-          <div className="container" style={{ width: "80%", margin: "auto" }}>
-            <Table striped hover responsive>
-              <thead className="tableHead">
-                <tr>
-                  <th>Term</th>
-                  <th>Annual Congress (AC)</th>
-                  <th>Gallery</th>
-                  <th>Midyear Meeting (MYM)</th>
-                  <th>Gallery</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </Table>
+          <div className="container" style={{ margin: "auto" }}>
+            <Box
+              className="box-table"
+              sx={{ height: 645, width: "95%" }}
+              style={{
+                margin: "auto",
+                marginTop: "50px",
+                marginBottom: "50px",
+              }}
+            >
+              <DataGrid
+                headerHeight={40}
+                stickyHeader
+                rows={PrevMeetings}
+                getRowId={(row) => row["Term"]}
+                columns={PrevMeetingsCol}
+                pageSize={10}
+                rowsPerPageOptions={[5]}
+                // checkboxSelection
+                // disableSelectionOnClick
+                experimentalFeatures={{ newEditingApi: true }}
+              />
+            </Box>
           </div>
         </div>
       </div>

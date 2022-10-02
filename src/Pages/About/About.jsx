@@ -354,7 +354,7 @@ const About = () => {
             ByLaws
           </div>
           <a
-            href="https://docs.google.com/document/d/1AHfN2j-ldsQzGFoXJpDrvBg4wCkxvrZLeZ7-pxPXuyI/edit?usp=sharing"
+            href="https://drive.google.com/file/d/1CFA4Evj51Vnp_aWVclG1TdQWkw2CIiXV/view?usp=sharing"
             className="read-btn"
           >
             Read Now

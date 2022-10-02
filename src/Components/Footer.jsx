@@ -35,30 +35,60 @@ const Footer = () => {
             </div>
           </div>
           <div className="col  offset-1">
-            <h2 className="title">PROJECTS</h2>
-            <p className="item">Zhermack</p>
-            <p className="item">Colgate</p>
+            <h2 className="title">
+              <a href="/projects">PROJECTS</a>
+            </h2>
+            <p className="item">
+              <a href="/projects/zhermack">Zhermack</a>
+            </p>
+            <p className="item">
+              <a href="/projects/colgate">Colgate</a>
+            </p>
           </div>
           <div className="col">
-            <h2 className="title">ABOUT</h2>
+            <h2 className="title">
+              <a href="/about">ABOUT</a>
+            </h2>
           </div>
           <div className="col">
-            <h2 className="title">MEETINGS</h2>
-            <p className="item">Annual Congress</p>
+            <h2 className="title">
+              <a href="/meetings">MEETINGS</a>
+            </h2>
+            <p className="item">
+              <a href="https://congress.iads-web.com">Annual Congress</a>
+            </p>
           </div>
           <div className="col">
-            <h2 className="title">MEMBERSHIP</h2>
+            <h2 className="title">
+              <a href="/membership">MEMBERSHIP</a>
+            </h2>
           </div>
           <div className="col">
             <h2 className="title">COMMITTEES</h2>
-            <p className="item">Workforce</p>
-            <p className="item">Internal Affairs</p>
-            <p className="item">Editorial Board</p>
-            <p className="item">Exchange Board</p>
-            <p className="item">Prophylaxis</p>
-            <p className="item">SCORE</p>
-            <p className="item">Training</p>
-            <p className="item">Voluntary</p>
+            <p className="item">
+              <a href="/committees/workforce">Workforce</a>
+            </p>
+            <p className="item">
+              <a href="/committees/internal">Internal Affairs</a>
+            </p>
+            <p className="item">
+              <a href="/committees/editorial">Editorial Board</a>
+            </p>
+            <p className="item">
+              <a href="/committees/exchange">Exchange Board</a>
+            </p>
+            <p className="item">
+              <a href="/committees/prophylaxis">Prophylaxis</a>
+            </p>
+            <p className="item">
+              <a href="/committees/SCORE">SCORE</a>
+            </p>
+            <p className="item">
+              <a href="/committees/training">Training</a>
+            </p>
+            <p className="item">
+              <a href="/committees/voluntary">Voluntary</a>
+            </p>
           </div>
         </div>
       </div>
@@ -66,7 +96,15 @@ const Footer = () => {
         Copyright © 1951-2022 IADS. All rights reserved.
       </p>
       <p className="PR" style={{ textAlign: "center" }}>
-        Developed by xDev
+        Developed by xDev [
+        <a className="title" href="https://khalidxah.tech">
+          Khalid
+        </a>
+        ,{" "}
+        <a className="title" href="https://moelsayed.com">
+          Mohamed
+        </a>
+        ]
       </p>
     </div>
   );

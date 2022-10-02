@@ -1,4 +1,8 @@
 .footer {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
   padding-top: 80px;
   background-color: #1d015c;
   padding-bottom: 20px;
@@ -17,7 +21,7 @@
     line-height: 18px;
     letter-spacing: 0em;
     text-align: left;
-    color: #55c9f3;
+    color: #55c9f3 !important;
   }
   .item {
     font-family: POPPINS regular;

@@ -41,6 +41,17 @@ const AdminPortal = () => {
       });
   };
 
+  const deleteUser = (id) => {
+    console.log("remove by id");
+    axios
+      .post(
+        `https://infinite-wildwood-83288.herokuapp.com/api/webusers/deleteUser/${id}`
+      )
+      .then((res) => {
+        setTemp(!temp);
+      });
+  };
+
   useEffect(() => {
     axios
       .get("https://infinite-wildwood-83288.herokuapp.com/api/webusers")
@@ -61,7 +72,11 @@ const AdminPortal = () => {
           <Table striped bordered hover>
             <thead>
               <tr>
+                {/* <th>Delete</th> */}
+                <th>Validated</th>
+                <th>Editor</th>
                 <th>Full Name</th>
+                <th>username</th>
                 <th>Email</th>
                 {/* <th>Gender</th> */}
                 <th>Country</th>
@@ -75,28 +90,20 @@ const AdminPortal = () => {
                 <th>iads Member</th>
                 <th>iads Position</th>
                 <th>iads Email</th>
-                <th>Validated</th>
-                <th>Editor</th>
               </tr>
             </thead>
             <tbody>
               {webUsers.map((user) => (
                 // <div>{user.fullName}</div>;
                 <tr>
-                  <td>{user.fullName}</td>
-                  <td>{user.email}</td>
-                  {/* <td>{user.gender}</td> */}
-                  <td>{user.country}</td>
-                  <td>{user.phone}</td>
-                  <td>{user.uni}</td>
-                  <td>{user.association}</td>
-                  {/* <td>{user.yearsOfStudy}</td> */}
-                  <td>{user.delegate}</td>
-                  <td>{user.gradYear}</td>
-                  <td>{user.iadsEmployed}</td>
-                  <td>{user.iadsMember}</td>
-                  <td>{user.iadsPosition}</td>
-                  <td>{user.iadsEmail}</td>
+                  {/* <td>
+                    <button
+                      style={{ color: "red" }}
+                      onClick={(e) => deleteUser(user._id)}
+                    >
+                      Delete
+                    </button>
+                  </td> */}
                   <td>
                     <input
                       type="checkbox"
@@ -115,6 +122,21 @@ const AdminPortal = () => {
                       }
                     />
                   </td>
+                  <td>{user.fullName}</td>
+                  <td>{user.username}</td>
+                  <td>{user.email}</td>
+                  {/* <td>{user.gender}</td> */}
+                  <td>{user.country}</td>
+                  <td>{user.phone}</td>
+                  <td>{user.uni}</td>
+                  <td>{user.association}</td>
+                  {/* <td>{user.yearsOfStudy}</td> */}
+                  <td>{user.delegate}</td>
+                  <td>{user.gradYear}</td>
+                  <td>{user.iadsEmployed}</td>
+                  <td>{user.iadsMember}</td>
+                  <td>{user.iadsPosition}</td>
+                  <td>{user.iadsEmail}</td>
                 </tr>
               ))}
             </tbody>

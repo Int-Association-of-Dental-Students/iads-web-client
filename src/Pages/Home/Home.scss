@@ -328,8 +328,12 @@
   }
 }
 
+.calendar {
+  margin-bottom: 60px;
+}
+
 .discoverMore {
-  margin-bottom: 120px;
+  margin-bottom: 60px;
   .swiper {
     margin-top: 70px;
     margin-left: auto;
@@ -487,7 +491,7 @@
 @media (max-width: 1500px) {
   .home-main {
     .logo {
-      width: 35%;
+      width: 37%;
     }
   }
 }

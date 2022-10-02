@@ -35,6 +35,7 @@ import GreenDentistry from "./Pages/Projects/GreenDentistry/GreenDentistry";
 import MCAM from "./Pages/Projects/MCAM/MCAM";
 import Alumni from "./Pages/Alumni/Alumni";
 import AdminPortal from "./Pages/AdminPortal/AdminPortal";
+import ContactUs from "./Pages/ContactUs/ContactUs";
 
 let logoutTimer;
 
@@ -172,6 +173,7 @@ function App() {
           <Route path="/alumni" element={<Alumni />} />
           <Route path="/membership" element={<Membership />} />
           <Route path="/meetings" element={<Meetings />} />
+          <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/admin-portal" element={<AdminPortal />} />
           <Route
             path="/organizational-member-form"

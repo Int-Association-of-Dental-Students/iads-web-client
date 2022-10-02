@@ -153,7 +153,7 @@ const NavBar = (props) => {
           )}
           {Auth.isLogged && (
             <div className="auth d-flex" style={{ justifyContent: "center" }}>
-              <p style={{ color: "green", fontFamily: "Poppins medium" }}>
+              <p style={{ color: "#3EB542", fontFamily: "Poppins medium" }}>
                 Hello {Auth.name.split(" ")[0]}
               </p>
               <div

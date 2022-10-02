@@ -311,7 +311,7 @@ const Alumni = () => {
 
       <div className="awards-main">
         <h1 className="title-2nd" style={{ color: "#3E1893" }}>
-          Year 2014
+          Year 2016
         </h1>
         <div
           className="title-1st"
@@ -371,7 +371,7 @@ const Alumni = () => {
         </div>
         <div>
           <h1 className="title-2nd" style={{ color: "#3E1893" }}>
-            Year 2018
+            Year 2014
           </h1>
           <div
             className="title-1st"
@@ -413,7 +413,7 @@ const Alumni = () => {
             <GovCard
               personImg={p9}
               flag={f9}
-              name="Adham Elshourbagy"
+              name="Petra HORÁKOVÁ"
               role=""
               color="#3A3A3D"
             />
@@ -444,7 +444,7 @@ const Alumni = () => {
             <GovCard
               personImg={p10}
               flag={f10}
-              name="Adham Elshourbagy"
+              name="Esti RIYANDA"
               role=""
               color="#3A3A3D"
             />
@@ -476,7 +476,7 @@ const Alumni = () => {
             <GovCard
               personImg={p11}
               flag={f11}
-              name="Adham Elshourbagy"
+              name="Cosmin POPA"
               role=""
               color="#3A3A3D"
             />

@@ -1,0 +1,121 @@
+.contact-us-page {
+  //   height: 90vh;
+}
+.contact-us-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  input,
+  textarea,
+  select {
+    display: block;
+    width: 308px;
+    height: 35px;
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+    margin: 7.5px 0;
+    border: 0;
+    border-radius: 5px;
+    font-family: "Poppins regular";
+    font-style: italic;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    /* identical to box height */
+
+    color: #838383;
+    // font-size: 20px;
+    background-color: transparent;
+    border: 1px solid #c6c6c6;
+    border-radius: 20px;
+  }
+
+  #submit-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 25px;
+    gap: 10px;
+
+    width: 308px;
+    height: 35px;
+
+    /* #55C9F3 */
+
+    background: #55c9f3;
+    border-radius: 100px;
+
+    /* Inside auto layout */
+
+    color: #1d015c;
+    font-family: "Poppins regular";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+.contact-modal-logo {
+  border-radius: 15px;
+}
+.contact-us-modal .contact-modal-body {
+  padding: 0px !important;
+  border-radius: 18px;
+}
+.contact-us-modal {
+  .login-hdr {
+    font-family: "LEMON MILK regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 34px;
+    /* identical to box height */
+
+    text-align: center;
+
+    /* #55C9F3 */
+
+    color: #55c9f3;
+  }
+  .desc {
+    font-family: "Poppins regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    /* identical to box height */
+
+    text-align: center;
+
+    /* Gray text on blue bg */
+
+    color: #d6d6d6;
+  }
+
+  .contact-modal-body {
+    display: flex;
+    align-items: center;
+
+    background: rgba(29, 1, 92, 1);
+  }
+
+  .contact-modal-logo {
+    clip-path: polygon(0 0, 80% 0, 95% 100%, 0% 100%);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+  }
+  .modal-content {
+    width: 925px !important;
+    height: 588px !important;
+
+    background: #f5f5f5 !important;
+    border: 1px solid #402eae !important;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.35) !important;
+    border-radius: 20px !important;
+  }
+}

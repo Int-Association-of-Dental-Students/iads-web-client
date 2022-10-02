@@ -22,7 +22,7 @@ const Membership = () => {
           Apply for an organizational membership
         </h1>
         <a
-          href="/organizational-member-form"
+          // href="/organizational-member-form"
           className="btn"
           style={{ marginTop: "40px", marginBottom: "40px" }}
         >
@@ -94,12 +94,13 @@ const Membership = () => {
         >
           Apply for a personal membership
         </h1>
-        <div
+        <a
+          // href="/personal-member-form"
           className="btn"
           style={{ marginTop: "40px", marginBottom: "40px" }}
         >
           Submit your Application Here
-        </div>
+        </a>
         <p className="desc" style={{ width: "85%", margin: "auto" }}>
           "Personal Membership" is a type of individual membership which is
           generally offered to every undergraduate dental student who is not

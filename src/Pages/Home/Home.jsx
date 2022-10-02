@@ -264,6 +264,18 @@ function Home() {
           <p style={{ marginTop: "30px" }}>Swipe right or left for more</p>
         </div>
 
+        {/* <div
+          style={{ display: "flex", justifyContent: "center" }}
+          className="calendar"
+        >
+          <iframe
+            src="https://calendar.google.com/calendar/embed?src=c_8813c4csoomfmj2cmiq41lgujg%40group.calendar.google.com&ctz=Europe%2FIstanbul"
+            width="800"
+            height="600"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+        </div> */}
         <div className="iadsLatest container">
           <div className="homePageTitles1">
             <p className="homePageTitles11">iads Latest</p>
@@ -293,7 +305,7 @@ function Home() {
               // when window width is >= 768px
 
               0: {
-                spaceBetween: 10,
+                spaceBetween: 50,
                 slidesPerView: 1,
               },
             }}
@@ -411,7 +423,7 @@ function Home() {
             <div className="line2"></div>
 
             <div className="ourCompInner1">
-              <p className="ourCompInnerTitle">ORAL HEALTH ORGANIZATIONS</p>
+              <p className="ourCompInnerTitle">GENERAL HEALTH ORGANIZATIONS</p>
               <div className="line1"></div>
               <div className="ourCompInnerInner">
                 <div className="ourCompInnerInner1">
