@@ -44,9 +44,7 @@ const AdminPortal = () => {
   const deleteUser = (id) => {
     console.log("remove by id");
     axios
-      .post(
-        `https://infinite-wildwood-83288.herokuapp.com/api/webusers/deleteUser/${id}`
-      )
+      .post(`http://localhost:3001/api/webusers/deleteUser/${id}`)
       .then((res) => {
         setTemp(!temp);
       });
@@ -96,14 +94,14 @@ const AdminPortal = () => {
               {webUsers.map((user) => (
                 // <div>{user.fullName}</div>;
                 <tr>
-                  {/* <td>
+                  <td>
                     <button
                       style={{ color: "red" }}
                       onClick={(e) => deleteUser(user._id)}
                     >
                       Delete
                     </button>
-                  </td> */}
+                  </td>
                   <td>
                     <input
                       type="checkbox"

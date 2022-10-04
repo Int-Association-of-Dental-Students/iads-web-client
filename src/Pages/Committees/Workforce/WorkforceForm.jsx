@@ -1,89 +1,41 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import "./Signup.scss";
-import { useHttpClient } from "../../Shared/http-hook";
-import { useNavigate } from "react-router";
 import emailjs from "emailjs-com";
+import "./WorkforceForm.scss";
 
-export default function Signup() {
-  const navigate = useNavigate();
-  const httpClient = useHttpClient();
-
+const WorkforceForm = () => {
+  const onSubmit = async (data, e) => {
+    emailjs
+      .sendForm(
+        "service_y75hwxc",
+        "template_odzh3nc",
+        e.target,
+        "Blp53EzBsHt7ji3lO"
+      )
+      .then(
+        (result) => {
+          console.log(e.target);
+        },
+        (error) => {
+          console.log(error);
+          return;
+        }
+      );
+    console.log(data);
+  };
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (data, e) => {
-    if (data.iadsMember === "No") {
-      alert(
-        "Please apply as a member through membership page. We will inform you once it's live!"
-      );
-    } else {
-      try {
-        emailjs
-          .sendForm(
-            "service_y75hwxc",
-            "template_wc3azp7",
-            e.target,
-            "Blp53EzBsHt7ji3lO"
-          )
-          .then(
-            (result) => {
-              console.log(e.target);
-            },
-            (error) => {
-              console.log(error);
-              return;
-            }
-          );
-        emailjs
-          .sendForm(
-            "service_y75hwxc",
-            "template_gn7f4vy",
-            e.target,
-            "Blp53EzBsHt7ji3lO"
-          )
-          .then(
-            (result) => {
-              console.log(e.target);
-            },
-            (error) => {
-              console.log(error);
-              return;
-            }
-          );
-
-        const response = await httpClient.sendRequest(
-          `https://infinite-wildwood-83288.herokuapp.com/api/webUsers/signup`,
-          "POST",
-          JSON.stringify({
-            data,
-          }),
-          {
-            "Content-Type": "application/json",
-          }
-        );
-        alert("Successfully signed up, we will validate your account soon!");
-        e.target.reset();
-        navigate("/");
-      } catch (err) {
-        console.log(httpClient.error);
-      }
-    }
-
-    console.log(data);
-  };
-  console.log(errors);
-
   return (
     <form
-      className="container-fluid signup-page"
+      className="container-fluid workforce-form-page"
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="form">
-        <h1 className="title">IADS account registration form</h1>
+        <h1 className="title">Workforce Application form</h1>
         <div className="row">
           <p
             className="desc"
@@ -98,13 +50,16 @@ export default function Signup() {
               membership portal.
             </a>
           </p>
+        </div>
+
+        <div className="row">
           <div className="col-sm-12 col-lg-6 flexx">
-            <label>User Name*</label>
+            <label>Full Name*</label>
             <input
               type="text"
               placeholder="Type Here..."
-              id="username"
-              {...register("username", { required: true })}
+              id="fullName"
+              {...register("fullName", { required: true })}
             />
           </div>
           <div className="col-sm-12 col-lg-6 flexx">
@@ -120,50 +75,14 @@ export default function Signup() {
 
         <div className="row">
           <div className="col-sm-12 col-lg-6 flexx">
-            <label>Password*</label>
-            <input
-              type="password"
-              placeholder="Type Here..."
-              id="password"
-              {...register("password", { required: true })}
-            />
-          </div>
-          <div className="col-sm-12 col-lg-6 flexx">
-            <label>Confirm Password*</label>
-            <input
-              type="password"
-              placeholder="Type Here..."
-              id="password"
-              {...register("password", { required: true })}
-            />
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-sm-12 col-lg-6 flexx">
-            <label>Full Name*</label>
-            <input
-              type="text"
-              placeholder="Type Here..."
-              id="fullName"
-              {...register("fullName", { required: true })}
-            />
-          </div>
-          <div className="col-sm-12 col-lg-6 flexx">
             <label>Gender</label>
-            <select {...register("gender", { required: true })}>
+            <select id="gender" {...register("gender", { required: true })}>
               <option label="Choose..."></option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Other">Other</option>
             </select>
           </div>
-        </div>
-
-        <div
-          className="row"
-          style={{ borderBottom: "1px solid grey", paddingBottom: "20px" }}
-        >
           <div className="col-sm-12 col-lg-6 flexx">
             <label>Country*</label>
             <select id="country" {...register("country", { required: true })}>
@@ -384,6 +303,9 @@ export default function Signup() {
               <option value="Zimbabwe">Zimbabwe</option>
             </select>
           </div>
+        </div>
+
+        <div className="row">
           <div className="col-sm-12 col-lg-6 flexx">
             <label>Phone Number*</label>
             <input
@@ -393,25 +315,99 @@ export default function Signup() {
               {...register("phone", { required: true })}
             />
           </div>
+          <div className="col-sm-12 col-lg-6 flexx">
+            <label>Whatsapp Phone Number*</label>
+            <input
+              type="tel"
+              placeholder="Type Here..."
+              id="whatsapp"
+              {...register("whatsapp", { required: true })}
+            />
+          </div>
         </div>
 
-        <div className="row">
+        <div className="row" style={{ paddingBottom: "25px" }}>
           <div className="col-sm-12 col-lg-6 flexx">
-            <label>Name of University*</label>
+            <label>Instagram Tag</label>
+            <input
+              type="text"
+              placeholder="Type Here..."
+              id="insta"
+              {...register("insta", { required: false })}
+            />
+          </div>
+          <div className="col-sm-12 col-lg-6 flexx">
+            <label>Facebook URL</label>
+            <input
+              type="text"
+              placeholder="Type Here..."
+              id="facebook"
+              {...register("facebook", { required: false })}
+            />
+          </div>
+        </div>
+
+        <div
+          className="row"
+          style={{ paddingTop: "25px", borderTop: "1px solid #C6C6C6" }}
+        >
+          <div className="col-sm-12 col-lg-6 flexx">
+            <label>Name of University</label>
             <input
               type="text"
               placeholder="Type Here..."
               id="uni"
-              {...register("uni", { required: true })}
+              {...register("uni", { required: false })}
             />
           </div>
-
           <div className="col-sm-12 col-lg-6 flexx">
-            <label>IADS member association you’re affiliated to*</label>
+            <label>Country of Studies</label>
+            <input
+              type="text"
+              placeholder="Type Here..."
+              id="studyCountry"
+              {...register("studyCountry", { required: false })}
+            />
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col-sm-12 col-lg-6 flexx">
+            <label>Years of Study*</label>
 
             <select
+              id="yearsOfStudy"
+              {...register("yearsOfStudy", { required: true })}
+            >
+              <option label="Choose..."></option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="Internship">Internship</option>
+              <option value="Graduated">Graduated</option>
+            </select>
+          </div>
+          <div className="col-sm-12 col-lg-6 flexx">
+            <label>Year of Graduation*</label>
+            <input
+              type="number"
+              placeholder="Type Here..."
+              id="gradYear"
+              {...register("gradYear", { required: true })}
+            />
+          </div>
+        </div>
+
+        <div className="row" style={{ paddingBottom: "25px" }}>
+          <div className="col-sm-12 col-lg-6 flexx">
+            <label>IADS member association you’re affiliated to*</label>
+            <select
               id="association"
-              {...register("associations", { required: true })}
+              name="association"
+              {...register("association", { required: true })}
             >
               <option label="Choose..."></option>
               <option value="Association of Dental Students of the University of San Carlos of Guatemala ">
@@ -534,125 +530,6 @@ export default function Signup() {
               </option>
             </select>
           </div>
-        </div>
-
-        <div className="row">
-          <div className="col-sm-12 col-lg-6 flexx">
-            <label>Year of Study*</label>
-
-            <select
-              id="yearsOfStudy"
-              {...register("yearsOfStudy", { required: true })}
-            >
-              <option label="Choose..."></option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="Internship">Internship</option>
-              <option value="Graduated">Graduated</option>
-            </select>
-          </div>
-
-          <div className="col-sm-12 col-lg-6 flexx">
-            <div
-              className="row"
-              style={{
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              <label style={{ marginBottom: "15px" }}>
-                Are you the delegate of your affiliated association?*
-              </label>
-              <input
-                style={{ marginLeft: "15px", marginRight: "10px" }}
-                id="delegate"
-                {...register("delegate", { required: true })}
-                type="radio"
-                value="Yes"
-              />
-              Yes
-              <input
-                style={{ marginLeft: "20px", marginRight: "10px" }}
-                id="delegate"
-                {...register("delegate", { required: true })}
-                type="radio"
-                value="No"
-              />
-              No
-            </div>
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-sm-12 col-lg-6 flexx">
-            <label>Year of Graduation*</label>
-            <input
-              type="number"
-              placeholder="Type Here..."
-              id="gradYear"
-              {...register("gradYear", { required: true })}
-            />
-          </div>
-
-          <div className="col-sm-12 col-lg-6 flexx">
-            <div
-              className="row"
-              style={{
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              <label style={{ marginBottom: "15px" }}>
-                Are you currently employed in IADS?*
-              </label>
-              <input
-                style={{ marginLeft: "15px", marginRight: "10px" }}
-                id="iadsEmployed"
-                {...register("iadsEmployed", { required: true })}
-                type="radio"
-                value="Yes"
-              />
-              Yes
-              <input
-                style={{ marginLeft: "20px", marginRight: "10px" }}
-                id="iadsEmployed"
-                {...register("iadsEmployed", { required: true })}
-                type="radio"
-                value="No"
-              />
-              No
-            </div>
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-sm-12 col-lg-6 flexx align-items-center">
-            <label>Upload your proof of studentship or graduation</label>
-            <input
-              name="proof"
-              type="file"
-              style={{ border: "none", marginTop: "10px" }}
-            />
-          </div>
-          <div className="col-sm-12 col-lg-6 flexx">
-            <label>If Currently Employed, What is your position?</label>
-            <input
-              type="text"
-              placeholder="Type Here..."
-              id="iadsPosition"
-              {...register("iadsPosition", { required: false })}
-            />
-          </div>
-        </div>
-
-        <div
-          className="row"
-          style={{ paddingBottom: "25px", borderBottom: "1px solid #C6C6C6" }}
-        >
           <div className="col-sm-12 col-lg-6 flexx">
             <div
               className="row"
@@ -682,17 +559,129 @@ export default function Signup() {
               No
             </div>
           </div>
+        </div>
+
+        <div
+          className="row"
+          style={{ paddingTop: "25px", borderTop: "1px solid #C6C6C6" }}
+        >
           <div className="col-sm-12 col-lg-6 flexx">
-            <label>If applicable, enter your IADS domain email</label>
-            <input
-              type="email"
-              placeholder="Type Here..."
-              id="iadsEmail"
-              {...register("iadsEmail", { required: false })}
-            />
+            <label>First Workforce Choice*</label>
+            <select {...register("firstChoice", { required: true })}>
+              <option label="Choose..."></option>
+              <option value="Coordinator of International Communications - CIC">
+                Coordinator of International Communications - CIC
+              </option>
+              <option value="Internal Affairs Bureau">
+                Internal Affairs Bureau
+              </option>
+              <option value="Editorial Board">Editorial Board</option>
+              <option value="Exchange Board">Exchange Board</option>
+              <option value="SCORE Committee">SCORE Committee</option>
+              <option value="Training Committee">Training Committee</option>
+              <option value="Prophylaxis Committee">
+                Prophylaxis Committee
+              </option>
+              <option value="Voluntary Committee">Voluntary Committee</option>
+              <option value="Associate Vice President of Finance">
+                Associate Vice President of Finance
+              </option>
+              <option value="Associate Regional Ambassador of Africa">
+                Associate Regional Ambassador of Africa
+              </option>
+              <option value="Associate Regional Ambassador of Asia Pacific">
+                Associate Regional Ambassador of Asia Pacific
+              </option>
+              <option value="Associate Regional Ambassador of Europe">
+                Associate Regional Ambassador of Europe
+              </option>
+              <option value="Associate Regional Ambassador of Middle East">
+                Associate Regional Ambassador of Middle East
+              </option>
+              <option value="Associate Regional Ambassador of Americas">
+                Associate Regional Ambassador of Americas
+              </option>
+            </select>
+          </div>
+          <div className="col-sm-12 col-lg-6 flexx">
+            <label>Second Workforce Choice*</label>
+            <select {...register("secondChoice", { required: true })}>
+              <option label="Choose..."></option>
+              <option value="Coordinator of International Communications - CIC">
+                Coordinator of International Communications - CIC
+              </option>
+              <option value="Internal Affairs Bureau">
+                Internal Affairs Bureau
+              </option>
+              <option value="Editorial Board">Editorial Board</option>
+              <option value="Exchange Board">Exchange Board</option>
+              <option value="SCORE Committee">SCORE Committee</option>
+              <option value="Training Committee">Training Committee</option>
+              <option value="Prophylaxis Committee">
+                Prophylaxis Committee
+              </option>
+              <option value="Voluntary Committee">Voluntary Committee</option>
+              <option value="Associate Vice President of Finance">
+                Associate Vice President of Finance
+              </option>
+              <option value="Associate Regional Ambassador of Africa">
+                Associate Regional Ambassador of Africa
+              </option>
+              <option value="Associate Regional Ambassador of Asia Pacific">
+                Associate Regional Ambassador of Asia Pacific
+              </option>
+              <option value="Associate Regional Ambassador of Europe">
+                Associate Regional Ambassador of Europe
+              </option>
+              <option value="Associate Regional Ambassador of Middle East">
+                Associate Regional Ambassador of Middle East
+              </option>
+              <option value="Associate Regional Ambassador of Americas">
+                Associate Regional Ambassador of Americas
+              </option>
+            </select>
           </div>
         </div>
 
+        <div className="row" style={{ paddingBottom: "25px" }}>
+          <div className="col-sm-12 col-lg-6 flexx">
+            <label>
+              If you are interested in joining the Editorial Board, please
+              specify your best skills?{" "}
+            </label>
+            <select
+              id="editorialSkills"
+              {...register("editorialSkills", { required: false })}
+            >
+              <option label="Choose..."></option>
+              <option value="Graphic Design">Graphic Design</option>
+              <option value="Video Editing">Video Editing</option>
+              <option value="Proofreading">Proofreading</option>
+              <option value="Social Media Marketing & Content Creation">
+                Social Media Marketing & Content Creation
+              </option>
+              <option value="Web Developing & Designing">
+                Web Developing & Designing
+              </option>
+              <option value="Academic Writing">Academic Writing</option>
+              <option value="Creative Writing">Creative Writing</option>
+              <option value="Proofreading & Editing Text">
+                Proofreading & Editing Text
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div
+          className="row"
+          style={{ paddingTop: "25px", borderTop: "1px solid #C6C6C6" }}
+        >
+          <div className="col-sm-12 col-lg-6 flexx"></div>
+          <div className="col-sm-12 col-lg-6 flexx"></div>
+        </div>
+
+        {/* ____________________________________ CONSENT _____________________________________ */}
+        {/* ____________________________________ CONSENT _____________________________________ */}
         <div className="container mt-5">
           <div className="row">
             <div className="col d-flex justify-content-start align-items-start">
@@ -763,9 +752,25 @@ export default function Signup() {
               </p>
             </div>
           </div>
+
+          <div className="row">
+            <div className="col d-flex justify-content-start align-items-start">
+              <input
+                className="small-check"
+                type="checkbox"
+                placeholder="newsletter"
+                {...register("newsletter", { required: true })}
+              />
+              <p style={{ textAlign: "left", margin: "0px" }}>
+                I wish to receive "IADS Weekly" E-Newsletter.
+              </p>
+            </div>
+          </div>
         </div>
         <input type="submit" className="submit-btn" />
       </div>
     </form>
   );
-}
+};
+
+export default WorkforceForm;

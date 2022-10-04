@@ -36,6 +36,7 @@ import MCAM from "./Pages/Projects/MCAM/MCAM";
 import Alumni from "./Pages/Alumni/Alumni";
 import AdminPortal from "./Pages/AdminPortal/AdminPortal";
 import ContactUs from "./Pages/ContactUs/ContactUs";
+import WorkforceForm from "./Pages/Committees/Workforce/WorkforceForm";
 
 let logoutTimer;
 
@@ -205,6 +206,10 @@ function App() {
           </Route>
           <Route path="/committees">
             <Route path="/committees/workforce" element={<Workforce />} />
+            <Route
+              path="/committees/workforceForm"
+              element={<WorkforceForm />}
+            />
             <Route path="/committees/internal" element={<Internal />} />
             <Route path="/committees/SCORE" element={<SCORE />} />
             <Route path="/committees/training" element={<Training />} />
