@@ -72,7 +72,7 @@ const AdminPortal = () => {
           <Table striped bordered hover>
             <thead>
               <tr>
-                {/* <th>Delete</th> */}
+                <th>Delete</th>
                 <th>Validated</th>
                 <th>Editor</th>
                 <th>Full Name</th>

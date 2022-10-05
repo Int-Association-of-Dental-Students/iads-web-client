@@ -295,7 +295,7 @@ const Workforce = () => {
                 <span style={{ fontFamily: "Poppins bold" }}>
                   Application Period:
                 </span>{" "}
-                October 1-10th, 2022 – 23:59 GMT+0
+                October 5-20th, 2022 – 23:59 GMT+0
               </li>
               <br />
               <li>
@@ -306,7 +306,7 @@ const Workforce = () => {
                 as an integral part of the admission process, will take place
                 according to an agreed schedule by the applicants and
                 interviewers. The interviewing period will take place from
-                October 13th - 23rd, 2022
+                October 22nd - 27th, 2022
               </li>
               <br />
               <li>
@@ -322,7 +322,7 @@ const Workforce = () => {
               <br />
               <li>
                 06. By{" "}
-                <span style={{ fontFamily: "Poppins bold" }}>October 30th</span>
+                <span style={{ fontFamily: "Poppins bold" }}>November 1st</span>
                 , the newly recruited positions will be appointed and officially
                 announced through IADS social platforms.
               </li>

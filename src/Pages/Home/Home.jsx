@@ -264,7 +264,7 @@ function Home() {
           <p style={{ marginTop: "30px" }}>Swipe right or left for more</p>
         </div>
 
-        {/* <div
+        <div
           style={{ display: "flex", justifyContent: "center" }}
           className="calendar"
         >
@@ -275,13 +275,19 @@ function Home() {
             frameborder="0"
             scrolling="no"
           ></iframe>
-        </div> */}
+        </div>
         <div className="iadsLatest container">
           <div className="homePageTitles1">
             <p className="homePageTitles11">iads Latest</p>
             <p className="homePageTitles12">News</p>
           </div>
-          <Swiper
+          <h1
+            className="title-1st"
+            style={{ marginTop: "75px", marginBottom: "100px" }}
+          >
+            Coming Soon!
+          </h1>
+          {/* <Swiper
             style={{
               paddingLeft: "60px",
               paddingRight: "60px",
@@ -355,7 +361,7 @@ function Home() {
               />
             </SwiperSlide>
           </Swiper>
-          <p style={{ marginTop: "30px" }}>Swipe right or left for more</p>
+          <p style={{ marginTop: "30px" }}>Swipe right or left for more</p> */}
         </div>
 
         <div className="ourComp container">

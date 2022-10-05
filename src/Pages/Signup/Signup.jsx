@@ -22,38 +22,38 @@ export default function Signup() {
       );
     } else {
       try {
-        emailjs
-          .sendForm(
-            "service_y75hwxc",
-            "template_wc3azp7",
-            e.target,
-            "Blp53EzBsHt7ji3lO"
-          )
-          .then(
-            (result) => {
-              console.log(e.target);
-            },
-            (error) => {
-              console.log(error);
-              return;
-            }
-          );
-        emailjs
-          .sendForm(
-            "service_y75hwxc",
-            "template_gn7f4vy",
-            e.target,
-            "Blp53EzBsHt7ji3lO"
-          )
-          .then(
-            (result) => {
-              console.log(e.target);
-            },
-            (error) => {
-              console.log(error);
-              return;
-            }
-          );
+        // emailjs
+        //   .sendForm(
+        //     "service_y75hwxc",
+        //     "template_wc3azp7",
+        //     e.target,
+        //     "Blp53EzBsHt7ji3lO"
+        //   )
+        //   .then(
+        //     (result) => {
+        //       console.log(e.target);
+        //     },
+        //     (error) => {
+        //       console.log(error);
+        //       return;
+        //     }
+        //   );
+        // emailjs
+        //   .sendForm(
+        //     "service_y75hwxc",
+        //     "template_gn7f4vy",
+        //     e.target,
+        //     "Blp53EzBsHt7ji3lO"
+        //   )
+        //   .then(
+        //     (result) => {
+        //       console.log(e.target);
+        //     },
+        //     (error) => {
+        //       console.log(error);
+        //       return;
+        //     }
+        //   );
 
         const response = await httpClient.sendRequest(
           `https://infinite-wildwood-83288.herokuapp.com/api/webUsers/signup`,
@@ -631,12 +631,15 @@ export default function Signup() {
 
         <div className="row">
           <div className="col-sm-12 col-lg-6 flexx align-items-center">
-            <label>Upload your proof of studentship or graduation</label>
-            <input
+            <label>
+              Please Send your proof of studentship or graduation to{" "}
+              <a href="mailto:vpia@iads-web.org">vpia@iads-web.org</a>
+            </label>
+            {/* <input
               name="proof"
               type="file"
               style={{ border: "none", marginTop: "10px" }}
-            />
+            /> */}
           </div>
           <div className="col-sm-12 col-lg-6 flexx">
             <label>If Currently Employed, What is your position?</label>

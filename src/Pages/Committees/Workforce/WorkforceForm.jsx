@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import "./WorkforceForm.scss";
+import { useNavigate } from "react-router";
 
 const WorkforceForm = () => {
   const onSubmit = async (data, e) => {
@@ -22,6 +23,8 @@ const WorkforceForm = () => {
         }
       );
     console.log(data);
+    alert("Your form has been submitted successfully!");
+    useNavigate("/");
   };
   const {
     register,
@@ -566,7 +569,7 @@ const WorkforceForm = () => {
           style={{ paddingTop: "25px", borderTop: "1px solid #C6C6C6" }}
         >
           <div className="col-sm-12 col-lg-6 flexx">
-            <label>First Workforce Choice*</label>
+            <label>First Workforce Choice</label>
             <select {...register("firstChoice", { required: true })}>
               <option label="Choose..."></option>
               <option value="Coordinator of International Communications - CIC">
@@ -605,7 +608,7 @@ const WorkforceForm = () => {
           </div>
           <div className="col-sm-12 col-lg-6 flexx">
             <label>Second Workforce Choice*</label>
-            <select {...register("secondChoice", { required: true })}>
+            <select {...register("secondChoice", { required: false })}>
               <option label="Choose..."></option>
               <option value="Coordinator of International Communications - CIC">
                 Coordinator of International Communications - CIC

@@ -102,7 +102,9 @@ const Governance = () => {
         <h1 className="title-2nd" style={{ color: "white" }}>
           Executive Committee
         </h1>
-        <p className="desc">2021/2021</p>
+        <p className="desc" style={{ color: "white" }}>
+          2022/2023
+        </p>
         <p
           className="desc"
           style={{
@@ -170,7 +172,7 @@ const Governance = () => {
       <div className="standingCom">
         <h1 className="title-1st">Iads Leadership</h1>
         <h1 className="title-2nd">Standing Committee Officers</h1>
-        <p className="desc">2021/2021</p>
+        <p className="desc">2022/2023</p>
         <p
           className="desc"
           style={{ width: "60%", margin: "auto", marginBottom: "70px" }}
@@ -208,7 +210,7 @@ const Governance = () => {
       <div className="regAmbass">
         <h1 className="title-1st">Iads Leadership</h1>
         <h1 className="title-2nd">Regional Ambassadors</h1>
-        <p className="desc">2021/2021</p>
+        <p className="desc">2022/2023</p>
         <div className="container horiz-cardlist">
           <GovCard
             personImg={p21}
@@ -249,7 +251,7 @@ const Governance = () => {
       <div className="delegates">
         <h1 className="title-1st">Iads</h1>
         <h1 className="title-2nd">Delegates</h1>
-        <p className="desc">2021/2021</p>
+        <p className="desc">2022/2023</p>
         <p
           className="desc"
           style={{
@@ -258,8 +260,7 @@ const Governance = () => {
             marginBottom: "70px",
           }}
         >
-          Hover over the countries to view the delegates <br />
-          *missing ux prototype*
+          Interaction coming soon!
         </p>
         <img src={delegatesWorld} />
       </div>
@@ -327,7 +328,7 @@ const Governance = () => {
           Advisory board
         </h1>
         <p className="desc" style={{ color: "white" }}>
-          2021/2022
+          2022/2023
         </p>
         <div className="container horiz-cardlist">
           <GovCard
