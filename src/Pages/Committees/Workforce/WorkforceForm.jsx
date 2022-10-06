@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import "./WorkforceForm.scss";
 import { useNavigate } from "react-router";
 import axios from "axios";
+import { useHttpClient } from "../../../Shared/http-hook";
 
 const WorkforceForm = () => {
+  const httpClient = useHttpClient();
   const navigate = useNavigate();
   const onSubmit = async (data, e) => {
     emailjs
@@ -40,8 +42,30 @@ const WorkforceForm = () => {
   const {
     register,
     handleSubmit,
+
     formState: { errors },
   } = useForm();
+
+  useEffect(() => {
+    const img = "../../../Assets/About/Mission/Hero.svg";
+    uploadImage(img);
+  }, []);
+
+  const uploadImage = async (img) => {
+    const imgAPIKey = "826fbb1f90dacfa942f721a496d71950";
+    let formData = new FormData();
+    formData.append("image", img);
+    const url = `https://api.imgbb.com/1/upload?key=${imgAPIKey}`;
+    console.log(formData);
+    fetch(url, {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log("imgbb", result);
+      });
+  };
 
   return (
     <form
