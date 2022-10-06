@@ -3,8 +3,10 @@ import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import "./WorkforceForm.scss";
 import { useNavigate } from "react-router";
+import axios from "axios";
 
 const WorkforceForm = () => {
+  const navigate = useNavigate();
   const onSubmit = async (data, e) => {
     emailjs
       .sendForm(
@@ -23,8 +25,17 @@ const WorkforceForm = () => {
         }
       );
     console.log(data);
+
+    await axios
+      .post(
+        "https://sheet.best/api/sheets/06f7fe62-e62a-4762-9ee0-247d5988e866",
+        data
+      )
+      .then((response) => {
+        console.log(response);
+      });
     alert("Your form has been submitted successfully!");
-    useNavigate("/");
+    navigate("/");
   };
   const {
     register,
@@ -56,7 +67,10 @@ const WorkforceForm = () => {
         </div>
 
         <div className="row">
-          <div className="col-sm-12 col-lg-6 flexx">
+          <h1 style={{ fontSize: "20px" }} className="title">
+            Personal Contact Information
+          </h1>
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Full Name*</label>
             <input
               type="text"
@@ -65,7 +79,7 @@ const WorkforceForm = () => {
               {...register("fullName", { required: true })}
             />
           </div>
-          <div className="col-sm-12 col-lg-6 flexx">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Personal Email Address*</label>
             <input
               type="email"
@@ -77,7 +91,7 @@ const WorkforceForm = () => {
         </div>
 
         <div className="row">
-          <div className="col-sm-12 col-lg-6 flexx">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Gender</label>
             <select id="gender" {...register("gender", { required: true })}>
               <option label="Choose..."></option>
@@ -86,7 +100,7 @@ const WorkforceForm = () => {
               <option value="Other">Other</option>
             </select>
           </div>
-          <div className="col-sm-12 col-lg-6 flexx">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Country*</label>
             <select id="country" {...register("country", { required: true })}>
               <option label="Choose..."></option>
@@ -309,7 +323,7 @@ const WorkforceForm = () => {
         </div>
 
         <div className="row">
-          <div className="col-sm-12 col-lg-6 flexx">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Phone Number*</label>
             <input
               type="tel"
@@ -318,7 +332,7 @@ const WorkforceForm = () => {
               {...register("phone", { required: true })}
             />
           </div>
-          <div className="col-sm-12 col-lg-6 flexx">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Whatsapp Phone Number*</label>
             <input
               type="tel"
@@ -330,7 +344,7 @@ const WorkforceForm = () => {
         </div>
 
         <div className="row" style={{ paddingBottom: "25px" }}>
-          <div className="col-sm-12 col-lg-6 flexx">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Instagram Tag</label>
             <input
               type="text"
@@ -339,7 +353,7 @@ const WorkforceForm = () => {
               {...register("insta", { required: false })}
             />
           </div>
-          <div className="col-sm-12 col-lg-6 flexx">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Facebook URL</label>
             <input
               type="text"
@@ -354,7 +368,10 @@ const WorkforceForm = () => {
           className="row"
           style={{ paddingTop: "25px", borderTop: "1px solid #C6C6C6" }}
         >
-          <div className="col-sm-12 col-lg-6 flexx">
+          <h1 style={{ fontSize: "20px" }} className="title">
+            Affiliation
+          </h1>
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Name of University</label>
             <input
               type="text"
@@ -363,7 +380,7 @@ const WorkforceForm = () => {
               {...register("uni", { required: false })}
             />
           </div>
-          <div className="col-sm-12 col-lg-6 flexx">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Country of Studies</label>
             <input
               type="text"
@@ -375,7 +392,7 @@ const WorkforceForm = () => {
         </div>
 
         <div className="row">
-          <div className="col-sm-12 col-lg-6 flexx">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Years of Study*</label>
 
             <select
@@ -393,7 +410,7 @@ const WorkforceForm = () => {
               <option value="Graduated">Graduated</option>
             </select>
           </div>
-          <div className="col-sm-12 col-lg-6 flexx">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Year of Graduation*</label>
             <input
               type="number"
@@ -405,7 +422,7 @@ const WorkforceForm = () => {
         </div>
 
         <div className="row" style={{ paddingBottom: "25px" }}>
-          <div className="col-sm-12 col-lg-6 flexx">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>IADS member association you’re affiliated to*</label>
             <select
               id="association"
@@ -533,7 +550,7 @@ const WorkforceForm = () => {
               </option>
             </select>
           </div>
-          <div className="col-sm-12 col-lg-6 flexx">
+          <div className="col-sm-12 col-xl-6 flexx">
             <div
               className="row"
               style={{
@@ -568,7 +585,10 @@ const WorkforceForm = () => {
           className="row"
           style={{ paddingTop: "25px", borderTop: "1px solid #C6C6C6" }}
         >
-          <div className="col-sm-12 col-lg-6 flexx">
+          <h1 style={{ fontSize: "20px" }} className="title">
+            Application Details
+          </h1>
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>First Workforce Choice</label>
             <select {...register("firstChoice", { required: true })}>
               <option label="Choose..."></option>
@@ -606,8 +626,8 @@ const WorkforceForm = () => {
               </option>
             </select>
           </div>
-          <div className="col-sm-12 col-lg-6 flexx">
-            <label>Second Workforce Choice*</label>
+          <div className="col-sm-12 col-xl-6 flexx">
+            <label>Second Workforce Choice</label>
             <select {...register("secondChoice", { required: false })}>
               <option label="Choose..."></option>
               <option value="Coordinator of International Communications - CIC">
@@ -647,7 +667,7 @@ const WorkforceForm = () => {
         </div>
 
         <div className="row" style={{ paddingBottom: "25px" }}>
-          <div className="col-sm-12 col-lg-6 flexx">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>
               If you are interested in joining the Editorial Board, please
               specify your best skills?{" "}
@@ -679,14 +699,20 @@ const WorkforceForm = () => {
           className="row"
           style={{ paddingTop: "25px", borderTop: "1px solid #C6C6C6" }}
         >
-          <div className="col-sm-12 col-lg-6 flexx"></div>
-          <div className="col-sm-12 col-lg-6 flexx"></div>
+          <h1 style={{ fontSize: "20px" }} className="title">
+            Required Attachments
+          </h1>
+          <div className="col-sm-12 col-xl-6 flexx"></div>
+          <div className="col-sm-12 col-xl-6 flexx"></div>
         </div>
 
         {/* ____________________________________ CONSENT _____________________________________ */}
         {/* ____________________________________ CONSENT _____________________________________ */}
         <div className="container mt-5">
           <div className="row">
+            <h1 style={{ fontSize: "20px" }} className="title">
+              Consent
+            </h1>
             <div className="col d-flex justify-content-start align-items-start">
               <input
                 className="small-check"
