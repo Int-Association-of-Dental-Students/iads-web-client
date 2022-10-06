@@ -155,7 +155,7 @@ function Home() {
             <p className="congTextBody">
               Discover the latest trends in AI and a wide variety of topics and
               hands-on courses in dentistry while embarking on a fun and all-new
-              experience in the beautiful and largest country in central asia,
+              experience in the beautiful and largest country in Central Asia,
               Kazakhstan in our IADS next 69th Annual Congress in August 2022.
             </p>
 
@@ -210,8 +210,8 @@ function Home() {
               <DiscoverMoreCard
                 color="white"
                 bgcolor="#3E1893"
-                title="Clinical Exchnage"
-                body="International Exchange bridges the gap between different countries and allow students to experience a brand new environments and learn various skills. Throughout the whole year, we offer our members opportunities to travel abroad and experience dentistry with a student friendly budget."
+                title="Clinical Exchange"
+                body="International Exchange bridges the gap between different countries and allow students to experience a brand new environments and learn various skills. Throughout the whole year, we offer our members opportunities to travel abroad and experience dentistry with a student-friendly budget."
                 image={e1}
               />
             </SwiperSlide>
@@ -220,7 +220,7 @@ function Home() {
                 color="white"
                 bgcolor="#264CA4"
                 title="Soft skills training"
-                body="The Training Committee aims to build the necessary skills for future healthcare workers through peer-reviewed qualification system for graduating Soft Skills and Human Rights trainers who can conduct wide scope of training sessions in essential topics like Leadership, Capacity Building, Project Management, Fundraising etc.."
+                body="The Training Committee aims to build the necessary skills for future healthcare workers through a peer-reviewed qualification system for graduating Soft Skills and Human Rights trainers who can conduct a wide scope of training sessions in essential topics like Leadership, Capacity Building, Project Management, Fundraising etc.."
                 image={e2}
               />
             </SwiperSlide>

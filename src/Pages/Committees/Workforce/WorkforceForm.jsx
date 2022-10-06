@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import "./WorkforceForm.scss";
@@ -9,7 +9,43 @@ import { useHttpClient } from "../../../Shared/http-hook";
 const WorkforceForm = () => {
   const httpClient = useHttpClient();
   const navigate = useNavigate();
+
+  const testSubmit = () => {
+    const imgData = uploadImage(img1);
+
+    console.log(imgData);
+  };
+
+  const uploadImage = (img) => {
+    let resImg = null;
+    const imgAPIKey = "826fbb1f90dacfa942f721a496d71950";
+    let formData = new FormData();
+    formData.append("image", img);
+    const url = `https://api.imgbb.com/1/upload?key=${imgAPIKey}`;
+    console.log(formData);
+    fetch(url, {
+      method: "POST",
+      body:
+        // JSON.stringify({
+        formData,
+      // })
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        // return result;
+        resImg = result.data.display_url;
+        console.log(resImg);
+        console.log("imgbb", result);
+        setimg1Str(resImg);
+        return resImg;
+      });
+  };
+
   const onSubmit = async (data, e) => {
+    // let imgData = uploadImage(img1);
+    // console.log(imgData);
+
+    // setimg1Str(uploadImage(img1));
     emailjs
       .sendForm(
         "service_y75hwxc",
@@ -27,17 +63,18 @@ const WorkforceForm = () => {
         }
       );
     console.log(data);
+    console.log(e.target);
 
-    await axios
-      .post(
-        "https://sheet.best/api/sheets/06f7fe62-e62a-4762-9ee0-247d5988e866",
-        data
-      )
-      .then((response) => {
-        console.log(response);
-      });
+    // await axios
+    //   .post(
+    //     "https://sheet.best/api/sheets/06f7fe62-e62a-4762-9ee0-247d5988e866",
+    //     data
+    //   )
+    //   .then((response) => {
+    //     console.log(response);
+    //   });
     alert("Your form has been submitted successfully!");
-    navigate("/");
+    // navigate("/");
   };
   const {
     register,
@@ -46,25 +83,24 @@ const WorkforceForm = () => {
     formState: { errors },
   } = useForm();
 
-  useEffect(() => {
-    const img = "../../../Assets/About/Mission/Hero.svg";
-    uploadImage(img);
-  }, []);
+  // useEffect(() => {
+  //   const img = "../../../Assets/About/Mission/Hero.svg";
+  //   uploadImage(img);
+  // }, []);
 
-  const uploadImage = async (img) => {
-    const imgAPIKey = "826fbb1f90dacfa942f721a496d71950";
-    let formData = new FormData();
-    formData.append("image", img);
-    const url = `https://api.imgbb.com/1/upload?key=${imgAPIKey}`;
-    console.log(formData);
-    fetch(url, {
-      method: "POST",
-      body: formData,
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        console.log("imgbb", result);
-      });
+  const [img1, setimg1] = useState();
+  const [img2, setimg2] = useState();
+  const [img3, setimg3] = useState();
+  const [img4, setimg4] = useState();
+
+  const [img1Str, setimg1Str] = useState();
+  const [img2Str, setimg2Str] = useState();
+  const [img3Str, setimg3Str] = useState();
+  const [img4Str, setimg4Str] = useState();
+
+  const onSelectFile = (e) => {
+    if (e.target.files && e.target.files.length > 0) {
+    }
   };
 
   return (
@@ -726,8 +762,83 @@ const WorkforceForm = () => {
           <h1 style={{ fontSize: "20px" }} className="title">
             Required Attachments
           </h1>
-          <div className="col-sm-12 col-xl-6 flexx"></div>
-          <div className="col-sm-12 col-xl-6 flexx"></div>
+          <div className="col-sm-12 col-xl-6 flexx">
+            <input
+              type="file"
+              onChange={(e) => {
+                setimg1(e.target.files[0]);
+                uploadImage(img1);
+                console.log(img1Str);
+                console.log(e.target.files);
+              }}
+            />
+            <input
+              id="img1"
+              name="img1"
+              style={{ display: "none" }}
+              type="text"
+              value={img1Str}
+              // onChange={(e) => setimg1Str(e.target.value)}
+              {...register("img1", { required: false })}
+            />
+            {console.log(img1Str)}
+          </div>
+          <div className="col-sm-12 col-xl-6 flexx">
+            <input
+              type="file"
+              onChange={(e) => {
+                setimg2(e.target.files[0]);
+                uploadImage(img2);
+                console.log(img1Str);
+                console.log(e.target.files);
+              }}
+            />
+            <input
+              id="img2"
+              name="img2"
+              style={{ display: "none" }}
+              type="text"
+              value={img1Str}
+              // onChange={(e) => setimg2Str(e.target.value)}
+              {...register("img2", { required: false })}
+            />
+            {console.log(img1Str)}
+          </div>
+        </div>
+        {/* <div className="row">
+          <div className="col-sm-12 col-xl-6 flexx">
+            <input type="file" onChange={(e) => setimg3(e.target.files[0])} />
+            <input
+              id="img3"
+              name="img3"
+              style={{ display: "none" }}
+              type="text"
+              value={img3}
+            />
+          </div>
+          <div className="col-sm-12 col-xl-6 flexx">
+            <input type="file" onChange={(e) => setimg4(e.target.files[0])} />
+            <input
+              id="img4"
+              name="img4"
+              style={{ display: "none" }}
+              type="text"
+              value={img4}
+            />
+          </div>
+        </div> */}
+        <div className="row">
+          <div className="col-sm-12 col-xl-6 flexx">
+            <div className="col-sm-12 col-xl-6 flexx">
+              <label>Link to Portfolio or previous work (if applicable)</label>
+              <input
+                type="text"
+                placeholder="Type Here..."
+                id="portfolioLink"
+                {...register("portfolioLink", { required: false })}
+              />
+            </div>
+          </div>
         </div>
 
         {/* ____________________________________ CONSENT _____________________________________ */}
@@ -812,7 +923,7 @@ const WorkforceForm = () => {
                 className="small-check"
                 type="checkbox"
                 placeholder="newsletter"
-                {...register("newsletter", { required: true })}
+                {...register("newsletter", { required: false })}
               />
               <p style={{ textAlign: "left", margin: "0px" }}>
                 I wish to receive "IADS Weekly" E-Newsletter.
@@ -821,6 +932,7 @@ const WorkforceForm = () => {
           </div>
         </div>
         <input type="submit" className="submit-btn" />
+        <div onClick={testSubmit}>SUBMIT</div>
       </div>
     </form>
   );

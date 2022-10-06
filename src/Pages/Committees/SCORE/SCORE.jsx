@@ -130,7 +130,7 @@ const SCORE = () => {
       </h1>
 
       <div className="container projectsCards">
-        <div className="projectCard colgate">
+        {/* <div className="projectCard colgate">
           <div className="ellipse">
             <img src={colgate} />
           </div>
@@ -151,7 +151,7 @@ const SCORE = () => {
               Learn More
             </Button>
           </div>
-        </div>
+        </div> */}
         <div className="projectCard zhermack">
           <div className="ellipse">
             <img src={zhermack} />

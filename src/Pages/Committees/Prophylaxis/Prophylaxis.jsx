@@ -17,7 +17,14 @@ const Prophylaxis = () => {
   return (
     <div className="container-fluid prophylaxis-page">
       <img className="logo" src={logo} />
-
+      <p className="description">
+        The Public Health Committee aims to involve dental students in actively
+        participating in the improvement of oral health as part of general
+        health care. Its goal is to ensure that dental students are both
+        equipped and empowered to address their concerns regarding the inclusion
+        of oral health in health care delivery and community program design on a
+        global and local level.
+      </p>
       <div className="container workforce" style={{ borderRadius: "20px" }}>
         <div className="row">
           <div className="delegatee col-lg-3 col-sm-12">

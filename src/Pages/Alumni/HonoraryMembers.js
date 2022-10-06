@@ -1,6 +1,6 @@
 const HonoraryMembers = [
   {
-    Name: "Dr. Abaoub Riad",
+    Name: "Dr. Abanoub Riad",
     Country: "Egypt 🇪🇬",
     "Year of Nomination": "2022",
   },

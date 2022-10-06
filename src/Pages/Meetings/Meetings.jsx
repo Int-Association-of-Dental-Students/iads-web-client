@@ -150,7 +150,7 @@ const Meetings = () => {
               More About
             </h1>
             <h1 className="title-2nd" style={{ marginTop: "-25px" }}>
-              Midyear Meeting
+              Mid-year Meeting
             </h1>
           </div>
         </div>
@@ -209,7 +209,7 @@ const Meetings = () => {
           {!headerState && (
             <div className="mid-section">
               <p className="desc" style={{ fontFamily: "Poppins bold" }}>
-                The Midyear Meeting is usually hosted later winter
+                The Mid-year Meeting is usually hosted later winter
                 (February-March) in the country that wins most votes in the
                 General Assembly held in the year prior.
               </p>

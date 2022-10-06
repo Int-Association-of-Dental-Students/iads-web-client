@@ -158,11 +158,9 @@ const Alumni = () => {
           worldwide today and from 6 European founding countries to over 50
           countries based in all world regions – this is the story of
           International Association of Dental Students (IADS). An organization
-          that reects the values of interculturalism, sustainable development,
-          oral health advocacy and education equity. Here is its interesting
-          story; how it started, evolved and remained? what kind of challenges
-          it had in past and how it managed to go thorough? valiuym what kind of
-          success stories it had and how they were achieved?
+          that reflects the values of interculturalism, sustainable development,
+          oral health advocacy and education equity. Here are the ones who made
+          it happen & maintained it.
         </p>
         <p className="desc" style={{ marginBottom: "10px" }}>
           Jump to
@@ -237,7 +235,7 @@ const Alumni = () => {
       <div className="president flex-horiz">
         <div>
           <img src={President} />
-          <p>Dr. Peter Swiss, LinkedIn</p>
+          <p>Dr. Peter Swiss</p>
         </div>
 
         <p className="desc-2">

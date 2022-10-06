@@ -80,15 +80,7 @@ const PrevExecCom = [
     "VP of Exchanges": "Esti Riyanda 🇮🇩",
     "VP of Science": "Görkem Şengün 🇹🇷",
   },
-  {
-    Term: "2012/2013",
-    President: "Pavel Scarlat 🇷🇴",
-    "VP of Internal Affairs": "Nada Uncianschi 🇷🇴",
-    "VP of Finances": "Artjom Meier 🇩🇪",
-    "VP of Public Relations": "Petra Horakova 🇨🇿",
-    "VP of Exchanges": "Belal Hedaya 🇪🇬",
-    "VP of Science": "Kateřina Miklišová  🇨🇿   Tatiana Vorovchenko 🇷🇺",
-  },
+
   {
     Term: "2011/2012",
     President: "Stefánia Zsuzsanna Radó 🇭🇺",
