@@ -5,11 +5,23 @@ import { AuthContext } from "../../../Components/Context/AuthContext";
 import { useContext } from "react";
 
 import Arrow from "../../../Assets/About/Arrow.svg";
+import LoginModal from "../../../Components/LoginModal";
+
+import { useState } from "react";
+import { Button } from "react-bootstrap";
 
 const Workforce = () => {
   const Auth = useContext(AuthContext);
+  const [loginShow, setLoginShow] = useState(false);
+
   return (
     <div className="workforce-page">
+      {loginShow && (
+        <LoginModal
+          show={loginShow}
+          description="Please Login to access this"
+        />
+      )}
       <div className="hero">
         <div className="overlay">
           <h1 className="header-title">IADS Workforce</h1>
@@ -150,9 +162,35 @@ const Workforce = () => {
           Are you interested in working for a global NGO and boosting your
           leadership and interpersonal skills?{" "}
         </p>
-        <a href="" className="submit" style={{ marginTop: "25px" }}>
-          Submit your Application
-        </a>
+        {/* {!Auth.validation && (
+          <Button
+            className="btn"
+            // href={data.link}
+            // style={{ color: white }}
+            onClick={() => setLoginShow(!loginShow)}
+          >
+            Submit App
+          </Button>
+        )} */}
+
+        {Auth.validation ? (
+          <a
+            href="/committees/workforceform"
+            className="btn"
+            style={{ marginTop: "25px" }}
+          >
+            Submit your Application
+          </a>
+        ) : (
+          <Button
+            onClick={() => setLoginShow(!loginShow)}
+            // href=""
+            className="dis-btn"
+            style={{ marginTop: "25px" }}
+          >
+            Submit your Application
+          </Button>
+        )}
 
         <div className="container" style={{ paddingTop: "72px", width: "85%" }}>
           <div className="row">

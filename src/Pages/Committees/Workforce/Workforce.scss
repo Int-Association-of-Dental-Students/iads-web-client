@@ -181,10 +181,6 @@
   .btn {
     /* Auto layout */
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 7px 5px;
     gap: 10px;
     width: 212px;
@@ -195,9 +191,11 @@
     background: #55c9f3;
     border-radius: 100px;
 
-    font-family: Poppins medium;
-    font-size: 12px;
+    font-family: "Poppins regular";
+    font-style: normal;
     font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
     //   line-height: 18px;
     letter-spacing: 0em;
     text-align: center;
@@ -207,26 +205,48 @@
   }
 
   .dis-btn {
+    padding: 7px 5px;
+    gap: 10px;
+    width: 212px;
+    //   height: 32px;
+
+    /* #55C9F3 */
+
+    background: grey;
+    border-radius: 100px;
+
     font-family: "Poppins regular";
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
     line-height: 22px;
+    //   line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    /* dark */
 
-    color: #3a3a3d !important;
+    color: #1d015c;
 
-    padding: 7px 10px;
-    gap: 10px;
+    // font-family: "Poppins regular";
+    // font-style: normal;
+    // font-weight: 500;
+    // font-size: 15px;
+    // line-height: 22px;
 
-    width: 168px;
-    height: 37px;
+    // color: #3a3a3d !important;
 
-    /* Card subtitle */
-    // display: flex;
+    // padding: 7px 10px;
+    // gap: 10px;
 
-    background: #8c8c8c;
-    border-radius: 100px;
-    text-decoration: none;
+    // width: 168px;
+    // height: 37px;
+
+    // /* Card subtitle */
+    // // display: flex;
+
+    // background: #8c8c8c;
+    // border-radius: 100px;
+    // text-decoration: none;
   }
 
   @media only screen and (max-width: 900px) {

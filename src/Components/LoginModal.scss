@@ -102,6 +102,22 @@
     //   rgba(64, 46, 174, 1) 100%
     // );
   }
+  .nam {
+    text-align: center;
+
+    font-family: "Poppins regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    /* identical to box height */
+
+    text-align: center;
+
+    /* Gray text on blue bg */
+
+    color: #d6d6d6;
+  }
   .modal-body {
     display: flex;
     align-items: center;

@@ -437,24 +437,11 @@ function Home() {
                     Professional Organizations
                   </p>
 
-                  <p className="ourCompInnerInner1body">
-                    🇨🇭 FDI World Dental Federation
-                  </p>
-
-                  <p className="ourCompInnerInner1body">
-                    🇬🇧 ACFF Alliance for a Cavity-Free Future
-                  </p>
-
-                  <p className="ourCompInnerInner1body">
-                    🇬🇧 OHF Oral Health Foundation
-                  </p>
-
-                  <p className="ourCompInnerInner1body">
-                    🇸🇪 HSF Humble Smile Foundation
-                  </p>
-
-                  <p className="ourCompInnerInner1body">
-                    🇩🇪 DTI Dental Tribune International
+                  <p
+                    className="ourCompInnerInner1body"
+                    style={{ width: "100%" }}
+                  >
+                    🇨🇭 WHO World Health Organization
                   </p>
                 </div>
                 <div className="ourCompInnerInner1">
@@ -463,16 +450,24 @@ function Home() {
                   </p>
 
                   <p className="ourCompInnerInner1body">
-                    🇬🇧 EDSA European Dental Students Association
+                    🇳🇱 IFMSA International Federation of Medical Students'
+                    Associations
                   </p>
 
                   <p className="ourCompInnerInner1body">
-                    🇱🇾 AfroDSA African Dental Students Association
+                    🇳🇱 IPSF International Pharmaceutical Students Federation
                   </p>
 
                   <p className="ourCompInnerInner1body">
-                    🇯🇵 APDSA Asia Pacific Dental Students Association
+                    🇧🇪 IVSA International Veterinary Students' Association
                   </p>
+                  <p className="ourCompInnerInner1body">
+                    🇳🇱 WHSA World Health Students' Alliance
+                  </p>
+                  <p className="ourCompInnerInner1body">
+                    🇲🇾 AMSA Asian Medical Students' Association
+                  </p>
+                  <p className="ourCompInnerInner1body"></p>
                 </div>
               </div>
             </div>

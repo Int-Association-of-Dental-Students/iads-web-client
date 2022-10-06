@@ -62,16 +62,16 @@ const WorkforceForm = () => {
     console.log(data);
     console.log(e.target);
 
-    // await axios
-    //   .post(
-    //     "https://sheet.best/api/sheets/06f7fe62-e62a-4762-9ee0-247d5988e866",
-    //     data
-    //   )
-    //   .then((response) => {
-    //     console.log(response);
-    //   });
-    // alert("Your form has been submitted successfully!");
-    // navigate("/");
+    await axios
+      .post(
+        "https://sheet.best/api/sheets/06f7fe62-e62a-4762-9ee0-247d5988e866",
+        data
+      )
+      .then((response) => {
+        console.log(response);
+      });
+    alert("Your form has been submitted successfully!");
+    navigate("/");
   };
   const {
     register,

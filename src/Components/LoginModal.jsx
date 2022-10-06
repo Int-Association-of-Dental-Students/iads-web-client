@@ -105,6 +105,19 @@ const LoginModal = (props) => {
             <p style={{ color: "red", textAlign: "left", width: "70%" }}>
               {httpClient.error}
             </p>
+            <p className="nam">
+              Not a member?{" "}
+              <a
+                style={{
+                  textDecoration: "none",
+                  color: "#55C9F3",
+                  fontFamily: "Poppins bold",
+                }}
+                href="/signup"
+              >
+                Sign up
+              </a>{" "}
+            </p>
           </div>
         </Modal.Body>
       </Modal>
