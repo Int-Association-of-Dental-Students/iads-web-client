@@ -10,13 +10,7 @@ const WorkforceForm = () => {
   const httpClient = useHttpClient();
   const navigate = useNavigate();
 
-  const testSubmit = () => {
-    const imgData = uploadImage(img1);
-
-    console.log(imgData);
-  };
-
-  const uploadImage = (img) => {
+  const uploadImage = (img, idx) => {
     let resImg = null;
     const imgAPIKey = "826fbb1f90dacfa942f721a496d71950";
     let formData = new FormData();
@@ -36,16 +30,19 @@ const WorkforceForm = () => {
         resImg = result.data.display_url;
         console.log(resImg);
         console.log("imgbb", result);
-        setimg1Str(resImg);
+        // setimgStr({resImg});
+
+        let arr = imgStr;
+        arr[idx] = resImg;
+
+        setImgStr(arr);
+        // imgStr[idx] = resImg;
+        console.log(imgStr);
         return resImg;
       });
   };
 
   const onSubmit = async (data, e) => {
-    // let imgData = uploadImage(img1);
-    // console.log(imgData);
-
-    // setimg1Str(uploadImage(img1));
     emailjs
       .sendForm(
         "service_y75hwxc",
@@ -73,7 +70,7 @@ const WorkforceForm = () => {
     //   .then((response) => {
     //     console.log(response);
     //   });
-    alert("Your form has been submitted successfully!");
+    // alert("Your form has been submitted successfully!");
     // navigate("/");
   };
   const {
@@ -92,6 +89,8 @@ const WorkforceForm = () => {
   const [img2, setimg2] = useState();
   const [img3, setimg3] = useState();
   const [img4, setimg4] = useState();
+
+  const [imgStr, setImgStr] = useState([]);
 
   const [img1Str, setimg1Str] = useState();
   const [img2Str, setimg2Str] = useState();
@@ -754,7 +753,6 @@ const WorkforceForm = () => {
             </select>
           </div>
         </div>
-
         <div
           className="row"
           style={{ paddingTop: "25px", borderTop: "1px solid #C6C6C6" }}
@@ -763,81 +761,105 @@ const WorkforceForm = () => {
             Required Attachments
           </h1>
           <div className="col-sm-12 col-xl-6 flexx">
+            <label>Upload your Curriculum Vitae ID*</label>
             <input
+              style={{ border: "none" }}
               type="file"
               onChange={(e) => {
-                setimg1(e.target.files[0]);
-                uploadImage(img1);
-                console.log(img1Str);
-                console.log(e.target.files);
+                uploadImage(e.target.files[0], 0);
+                console.log(imgStr);
               }}
             />
+            {/* {imgStr[0] && ( */}
             <input
               id="img1"
               name="img1"
               style={{ display: "none" }}
               type="text"
-              value={img1Str}
+              value={imgStr[0]}
               // onChange={(e) => setimg1Str(e.target.value)}
               {...register("img1", { required: false })}
             />
-            {console.log(img1Str)}
+            {/* )} */}
+            {/* {console.log(img1Str)} */}
           </div>
           <div className="col-sm-12 col-xl-6 flexx">
+            <label>Upload your Motivational Letter*</label>
             <input
+              style={{ border: "none" }}
               type="file"
               onChange={(e) => {
-                setimg2(e.target.files[0]);
-                uploadImage(img2);
-                console.log(img1Str);
-                console.log(e.target.files);
+                uploadImage(e.target.files[0], 1);
+                console.log(imgStr);
               }}
             />
+            {/* {imgStr && imgStr[1] && ( */}
             <input
               id="img2"
               name="img2"
               style={{ display: "none" }}
               type="text"
-              value={img1Str}
-              // onChange={(e) => setimg2Str(e.target.value)}
+              value={imgStr[1]}
               {...register("img2", { required: false })}
             />
-            {console.log(img1Str)}
+            {/* )} */}
           </div>
         </div>
-        {/* <div className="row">
+        <div className="row">
           <div className="col-sm-12 col-xl-6 flexx">
-            <input type="file" onChange={(e) => setimg3(e.target.files[0])} />
+            <label>Upload a Portfolio / Previous work</label>
+            <input
+              style={{ border: "none" }}
+              type="file"
+              onChange={(e) => {
+                uploadImage(e.target.files[0], 2);
+                console.log(imgStr);
+              }}
+            />
+            {/* {imgStr && imgStr[2] && ( */}
             <input
               id="img3"
               name="img3"
               style={{ display: "none" }}
               type="text"
-              value={img3}
+              value={imgStr[2]}
+              {...register("img3", { required: false })}
             />
+            {/* )} */}
           </div>
           <div className="col-sm-12 col-xl-6 flexx">
-            <input type="file" onChange={(e) => setimg4(e.target.files[0])} />
+            <label>Upload an HD Front-face picture*</label>
+            <input
+              style={{ border: "none" }}
+              type="file"
+              onChange={(e) => {
+                uploadImage(e.target.files[0], 3);
+                console.log(imgStr);
+                console.log(e.target);
+              }}
+            />
+            {/* {imgStr && imgStr[3] && ( */}
             <input
               id="img4"
               name="img4"
               style={{ display: "none" }}
               type="text"
-              value={img4}
+              value={imgStr[3]}
+              {...register("img4", { required: false })}
             />
+            {/* )} */}
           </div>
-        </div> */}
+        </div>
+
         <div className="row">
           <div className="col-sm-12 col-xl-6 flexx">
-            <div className="col-sm-12 col-xl-6 flexx">
-              <label>Link to Portfolio or previous work (if applicable)</label>
-              <input
-                type="text"
-                placeholder="Type Here..."
-                id="portfolioLink"
-                {...register("portfolioLink", { required: false })}
-              />
-            </div>
+            <label>Link to Portfolio or previous work (if applicable)</label>
+            <input
+              type="text"
+              placeholder="Type Here..."
+              id="portfolioLink"
+              {...register("portfolioLink", { required: false })}
+            />
           </div>
         </div>
 
@@ -932,7 +954,7 @@ const WorkforceForm = () => {
           </div>
         </div>
         <input type="submit" className="submit-btn" />
-        <div onClick={testSubmit}>SUBMIT</div>
+        {/* <div onClick={testSubmit}>SUBMIT</div> */}
       </div>
     </form>
   );

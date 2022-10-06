@@ -1,10 +1,13 @@
 import React from "react";
 import "./Workforce.scss";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { AuthContext } from "../../../Components/Context/AuthContext";
+import { useContext } from "react";
 
 import Arrow from "../../../Assets/About/Arrow.svg";
 
 const Workforce = () => {
+  const Auth = useContext(AuthContext);
   return (
     <div className="workforce-page">
       <div className="hero">
@@ -12,8 +15,12 @@ const Workforce = () => {
           <h1 className="header-title">IADS Workforce</h1>
           <div className="flex-horiz hire-btn">
             <AnchorLink
-              className="dis-btn"
-              style={{ marginTop: "30px", color: "white", textAlign: "center" }}
+              className="btn"
+              style={{
+                marginTop: "30px",
+                color: "white",
+                textAlign: "center",
+              }}
               href="#hiring"
             >
               We Are Hiring!

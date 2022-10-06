@@ -178,6 +178,34 @@
     color: #3a3a3d !important;
   }
 
+  .btn {
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 5px;
+    gap: 10px;
+    width: 212px;
+    //   height: 32px;
+
+    /* #55C9F3 */
+
+    background: #55c9f3;
+    border-radius: 100px;
+
+    font-family: Poppins medium;
+    font-size: 12px;
+    font-weight: 500;
+    //   line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    /* dark */
+
+    color: #1d015c;
+  }
+
   .dis-btn {
     font-family: "Poppins regular";
     font-style: normal;
