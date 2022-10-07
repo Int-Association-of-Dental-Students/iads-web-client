@@ -7,6 +7,8 @@ import mainPic from "../../Assets/Main_photo.png";
 import verticalLogo from "../../Assets/logo vertical.svg";
 
 import CongressLogo from "../../Assets/Home/conglogo.svg";
+import NewsBg from "../../Assets/Home/newsbg.png";
+import calIcon from "../../Assets/Home/Icons/cal-icon.svg";
 
 import photo1 from "../../Assets/Home/Carousel/photo1.png";
 import photo2 from "../../Assets/Home/Carousel/photo2.png";
@@ -45,12 +47,17 @@ function DiscoverMoreCard(props) {
       <img className="discoverMoreCardImg" src={props.image} />
       <p className="discoverMoreCardTitle">{props.title}</p>
       <p className="discoverMoreCardBody">{props.body}</p>
-      <p
-        style={{ color: props.color, backgroundColor: props.bgcolor }}
+      <a
+        style={{
+          color: props.color,
+          backgroundColor: props.bgcolor,
+          textDecoration: "none",
+        }}
         className="discoverMoreCardCTA"
+        href={props.link}
       >
         Learn more
-      </p>
+      </a>
     </div>
   );
 }
@@ -213,6 +220,7 @@ function Home() {
                 title="Clinical Exchange"
                 body="International Exchange bridges the gap between different countries and allow students to experience a brand new environments and learn various skills. Throughout the whole year, we offer our members opportunities to travel abroad and experience dentistry with a student-friendly budget."
                 image={e1}
+                link="/committees/exchange"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -222,6 +230,7 @@ function Home() {
                 title="Soft skills training"
                 body="The Training Committee aims to build the necessary skills for future healthcare workers through a peer-reviewed qualification system for graduating Soft Skills and Human Rights trainers who can conduct a wide scope of training sessions in essential topics like Leadership, Capacity Building, Project Management, Fundraising etc.."
                 image={e2}
+                link="/committees/training"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -231,6 +240,7 @@ function Home() {
                 title="Dental Courses"
                 body="IADS’s SCORE committee provides a wide variety of dental clinical and hands-on courses and experiences for IADS members  worldwide and bridges the gap between students and the knowledge and skills necessary for our careers."
                 image={e3}
+                link="/committees/SCORE"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -240,6 +250,7 @@ function Home() {
                 title="Voluntary Programs"
                 body="Voluntary Committee is concerned with creating opportunities for dental students to contribute their time and skills in order to help underprivileged communities in remote areas of the planet who otherwise could not access or afford oral health care."
                 image={e4}
+                link="/committees/voluntary"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -249,6 +260,7 @@ function Home() {
                 title="iBSBF Project"
                 body="By enabling IADS members to produce and execute their innovative ideas, the international BSBF Contest will emanate Colgate's mission to connect underserved communities to oral health education, free dental screenings and treatment referrals. "
                 image={e5}
+                link="/projects/colgate"
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -258,6 +270,7 @@ function Home() {
                 title="Zhermack Webinars"
                 body="Expand your knowledge and skills with a variety of webinars on different topics such as Prosthodontology, Periodontology, Smile Esthetics and more and learn about many tips and tricks for your learning journey and daily practice all the way from Itally provided by Zhermack."
                 image={e6}
+                link="/projects/zhermack"
               />
             </SwiperSlide>
           </Swiper>
@@ -266,15 +279,38 @@ function Home() {
 
         <div
           style={{ display: "flex", justifyContent: "center" }}
-          className="calendar"
+          className="container-fluid calendar"
         >
-          <iframe
-            src="https://calendar.google.com/calendar/embed?src=c_8813c4csoomfmj2cmiq41lgujg%40group.calendar.google.com&ctz=Europe%2FIstanbul"
-            width="800"
-            height="600"
-            frameborder="0"
-            scrolling="no"
-          ></iframe>
+          <div className="titles">
+            <img className="bg" src={NewsBg} />
+            <div className="calOverlay">
+              <p className="homePageTitles12">IADS</p>
+              <p className="congTitles1" style={{ color: "white" }}>
+                Calendar
+              </p>
+
+              <p className="desc">
+                <img
+                  src={calIcon}
+                  alt=""
+                  style={{ marginLeft: "-35px", marginRight: "10px" }}
+                />
+                Save the date for our <br /> upcoming events and never <br />{" "}
+                miss them again!
+              </p>
+              <p className="desc phone">Scroll to view --></p>
+            </div>
+          </div>
+          <div className="googleCal">
+            <iframe
+              src="https://calendar.google.com/calendar/embed?src=c_8813c4csoomfmj2cmiq41lgujg%40group.calendar.google.com&ctz=Europe%2FIstanbul"
+              width="800"
+              height="600"
+              frameborder="0"
+              scrolling="no"
+              bgcolor="red"
+            ></iframe>
+          </div>
         </div>
         <div className="iadsLatest container">
           <div className="homePageTitles1">

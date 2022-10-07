@@ -9,6 +9,23 @@
   overflow: hidden;
 }
 
+.congTitles1 {
+  font-family: LEMON MILK regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+.congTitles2 {
+  font-family: Brittany;
+  text-align: center;
+  margin-top: -50px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  color: #01838c;
+}
+
 .title-txt {
   font-family: "Poppins regular";
   font-style: normal;
@@ -200,36 +217,36 @@
   }
 }
 
-.homePageTitles1 {
-  .homePageTitles11 {
-    font-family: LEMON MILK regular;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 68px;
-    text-align: center;
-    background: linear-gradient(
-      215.13deg,
-      rgba(24, 132, 216, 0.9) -1.35%,
-      rgba(29, 1, 92, 0.9) 39.53%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-  }
-
-  .homePageTitles12 {
-    font-family: "Brittany";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 60px;
-    line-height: 81px;
-    text-align: center;
-    margin-top: -50px;
-    color: #1884d8;
-  }
+// .homePageTitles1 {
+.homePageTitles11 {
+  font-family: LEMON MILK regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 68px;
+  text-align: center;
+  background: linear-gradient(
+    215.13deg,
+    rgba(24, 132, 216, 0.9) -1.35%,
+    rgba(29, 1, 92, 0.9) 39.53%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
+
+.homePageTitles12 {
+  font-family: "Brittany";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 81px;
+  text-align: center;
+  margin-top: -50px;
+  color: #1884d8;
+}
+// }
 
 .homePageTitles2 {
   .homePageTitles21 {
@@ -329,7 +346,66 @@
 }
 
 .calendar {
+  overflow-x: scroll;
   margin-bottom: 60px;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start !important;
+  .phone {
+    display: none;
+  }
+  .congTitles1 {
+    margin-top: -25px;
+    margin-left: -1725px;
+    font-family: LEMON MILK regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+  }
+  .homePageTitles12 {
+    padding-top: 350px;
+    margin-left: -1800px;
+    font-family: "Brittany";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 81px;
+    text-align: center;
+    margin-top: -50px;
+    color: #1884d8;
+  }
+
+  .desc {
+    text-align: left;
+    margin-left: -975px;
+    // width: 70%;
+    font-family: "Poppins regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+
+    color: #c6c6c6;
+  }
+
+  .titles {
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+    background: linear-gradient(225.89deg, #1884d8 -13.71%, #1d015c 56.19%);
+    display: flex;
+    // flex-direction: row;
+  }
+  .googleCal {
+    margin-left: -600px;
+    border: 60px solid #e3e3e3;
+  }
+  iframe {
+    filter: opacity(90%);
+  }
+  // .calOverlay {
+  //   margin-left: -200px;
+  // }
 }
 
 .discoverMore {
@@ -510,6 +586,24 @@
 }
 
 @media only screen and (max-width: 767px) {
+  .calendar {
+    .congTitles1 {
+      margin-left: -1825px;
+    }
+    .homePageTitles12 {
+      margin-left: -1900px;
+    }
+
+    .desc {
+      margin-left: -1040px;
+    }
+    .phone {
+      display: block;
+      margin-top: 30px;
+      font-family: "Poppins bold";
+      color: #55c9f3;
+    }
+  }
   .congress {
     background-repeat: no-repeat;
     background-position: center;
