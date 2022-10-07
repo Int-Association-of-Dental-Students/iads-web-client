@@ -298,7 +298,7 @@ function Home() {
                 Save the date for our <br /> upcoming events and never <br />{" "}
                 miss them again!
               </p>
-              <p className="desc phone">Scroll to view --></p>
+              <p className="desc phone">Scroll to view --&gt;</p>
             </div>
           </div>
           <div className="googleCal">

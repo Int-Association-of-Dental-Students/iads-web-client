@@ -43,6 +43,29 @@ const WorkforceForm = () => {
   };
 
   const onSubmit = async (data, e) => {
+    let arr = data;
+
+    imgStr["img1"] = imgStr["0"];
+    // delete imgStr["0"];
+    imgStr["img2"] = imgStr["1"];
+    // delete imgStr["1"];
+    imgStr["img3"] = imgStr["2"];
+    // delete imgStr["2"];
+    imgStr["img4"] = imgStr["3"];
+    // delete imgStr["3"];
+
+    data = { ...arr, ...imgStr };
+    console.log(data);
+
+    await axios
+      .post(
+        "https://sheet.best/api/sheets/06f7fe62-e62a-4762-9ee0-247d5988e866",
+        data
+      )
+      .then((response) => {
+        console.log(response);
+      });
+
     emailjs
       .sendForm(
         "service_y75hwxc",
@@ -59,18 +82,9 @@ const WorkforceForm = () => {
           return;
         }
       );
-    console.log(data);
-    console.log(e.target);
 
-    await axios
-      .post(
-        "https://sheet.best/api/sheets/06f7fe62-e62a-4762-9ee0-247d5988e866",
-        data
-      )
-      .then((response) => {
-        console.log(response);
-      });
     alert("Your form has been submitted successfully!");
+    e.target.reset();
     navigate("/");
   };
   const {
@@ -771,7 +785,7 @@ const WorkforceForm = () => {
               }}
             />
             {/* {imgStr[0] && ( */}
-            <input
+            {/* <input
               id="img1"
               name="img1"
               style={{ display: "none" }}
@@ -779,7 +793,7 @@ const WorkforceForm = () => {
               value={imgStr[0]}
               // onChange={(e) => setimg1Str(e.target.value)}
               {...register("img1", { required: false })}
-            />
+            /> */}
             {/* )} */}
             {/* {console.log(img1Str)} */}
           </div>
@@ -794,14 +808,14 @@ const WorkforceForm = () => {
               }}
             />
             {/* {imgStr && imgStr[1] && ( */}
-            <input
+            {/* <input
               id="img2"
               name="img2"
               style={{ display: "none" }}
               type="text"
               value={imgStr[1]}
               {...register("img2", { required: false })}
-            />
+            /> */}
             {/* )} */}
           </div>
         </div>
@@ -817,14 +831,14 @@ const WorkforceForm = () => {
               }}
             />
             {/* {imgStr && imgStr[2] && ( */}
-            <input
+            {/* <input
               id="img3"
               name="img3"
               style={{ display: "none" }}
               type="text"
               value={imgStr[2]}
               {...register("img3", { required: false })}
-            />
+            /> */}
             {/* )} */}
           </div>
           <div className="col-sm-12 col-xl-6 flexx">
@@ -839,14 +853,14 @@ const WorkforceForm = () => {
               }}
             />
             {/* {imgStr && imgStr[3] && ( */}
-            <input
+            {/* <input
               id="img4"
               name="img4"
               style={{ display: "none" }}
               type="text"
               value={imgStr[3]}
               {...register("img4", { required: false })}
-            />
+            /> */}
             {/* )} */}
           </div>
         </div>
@@ -944,6 +958,8 @@ const WorkforceForm = () => {
               <input
                 className="small-check"
                 type="checkbox"
+                name="newsletter"
+                id="newsletter"
                 placeholder="newsletter"
                 {...register("newsletter", { required: false })}
               />
