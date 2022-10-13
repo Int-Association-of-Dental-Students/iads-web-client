@@ -22,6 +22,7 @@ const CardComponent = (props) => {
     image: props.i,
     link: props.l,
     date: props.date,
+    apply: props.a,
   });
 
   return (
@@ -35,26 +36,68 @@ const CardComponent = (props) => {
       {/* {console.log(loginShow)} */}
       <Card className="card" id="card" bg="white" style={{ width: "18rem" }}>
         <Card.Img className="card-img" variant="top" src={data.image} />
-        <Card.Body>
+        <Card.Body className="card-body">
           <Card.Title className="card-title" style={{ color: props.style }}>
             {data.title}
           </Card.Title>
           <Card.Text className="card-date">{data.date}</Card.Text>
           <Card.Text className="card-text">{data.description}</Card.Text>
-          {Auth.validation && (
-            <Button
-              className="card-button"
-              href={data.link}
-              variant="primary"
-              style={{ color: props.style }}
+          {Auth.validation && data.apply ? (
+            <div
+              style={{
+                bottom: "10px",
+                display: "flex",
+                justifyContent: "space-between",
+                alignSelf: "flex-end",
+                alignItems: "center",
+              }}
             >
-              Find out more
-              <img
-                classname="findmore"
-                style={{ marginLeft: "10px" }}
-                src={findmore}
-              />
-            </Button>
+              <Button
+                className="apply-button"
+                href={data.apply}
+                variant="primary"
+                style={{ backgroundColor: props.style }}
+              >
+                Apply
+              </Button>
+              <Button
+                className="card-button"
+                href={data.link}
+                variant="primary"
+                style={{ color: props.style }}
+              >
+                Find out more
+                <img
+                  classname="findmore"
+                  style={{ marginLeft: "10px" }}
+                  src={findmore}
+                />
+              </Button>
+            </div>
+          ) : (
+            <div
+              style={{
+                bottom: "10px",
+                // display: "flex",
+                justifyContent: "space-between",
+                alignSelf: "flex-end",
+                alignItems: "center",
+              }}
+            >
+              <Button
+                className="card-button"
+                href={data.link}
+                variant="primary"
+                style={{ color: props.style }}
+              >
+                Find out more
+                <img
+                  classname="findmore"
+                  style={{ marginLeft: "10px" }}
+                  src={findmore}
+                />
+              </Button>
+            </div>
           )}
           {!Auth.validation && (
             <Button

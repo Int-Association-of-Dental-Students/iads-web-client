@@ -313,7 +313,8 @@ export default function Signup() {
               <option value="North Macedonia">North Macedonia</option>
               <option value="Norway">Norway</option>
               <option value="Oman">Oman</option>
-              <option value="PakistanPalestine">PakistanPalestine</option>
+              <option value="Pakistan">Pakistan</option>
+              <option value="Palestine">Palestine</option>
               <option value="Palau">Palau</option>
               <option value="Panama">Panama</option>
               <option value="Papua New Guinea">Papua New Guinea</option>
@@ -410,7 +411,7 @@ export default function Signup() {
             <label>IADS member association you’re affiliated to*</label>
 
             <select
-              id="association"
+              id="associations"
               {...register("associations", { required: true })}
             >
               <option label="Choose..."></option>
@@ -438,6 +439,9 @@ export default function Signup() {
               </option>
               <option value="Egyptian Association of Dental Students">
                 Egyptian Association of Dental Students
+              </option>
+              <option value="Egypt - Dental Students’ Scientific Association of Egypt (DSSR)">
+                Egypt - Dental Students’ Scientific Association of Egypt (DSSR)
               </option>
               <option value="Fiji Dental Students' Association">
                 Fiji Dental Students' Association

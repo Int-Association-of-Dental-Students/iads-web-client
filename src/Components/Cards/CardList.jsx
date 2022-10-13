@@ -40,6 +40,7 @@ const CardList = ({ data, textColor }) => {
             d={data.description}
             i={data.image}
             l={data.link}
+            a={data.apply}
           />
         ))}
       </div>

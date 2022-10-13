@@ -4,6 +4,13 @@
   }
 }
 
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
 .card {
   //   justify-content: left;
   // width: 0px !important;
@@ -17,6 +24,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
   text-align: left;
   position: relative;
 
@@ -37,9 +45,9 @@
     color: #00467c;
     background: none;
     border: none;
-    position: absolute;
-    bottom: 10px;
-    right: 20px;
+    // position: absolute;
+    // bottom: 10px;
+    // right: 20px;
     // display: flex;
     justify-self: flex-end;
     // margin-top: auto;
@@ -62,5 +70,33 @@
     // display: none;
     background-color: transparent;
     color: black;
+  }
+
+  .apply-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 35px;
+    gap: 10px;
+
+    width: 122px;
+    height: 34px;
+
+    background: #0d7b7d;
+    border-radius: 20px;
+    font-family: "Poppins medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    /* identical to box height */
+
+    display: inline;
+    align-items: center;
+    text-align: center;
+
+    border: none;
+    color: #ffffff;
   }
 }

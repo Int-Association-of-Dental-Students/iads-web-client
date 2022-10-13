@@ -93,52 +93,55 @@ const AdminPortal = () => {
               </tr>
             </thead>
             <tbody>
-              {webUsers.map((user) => (
-                // <div>{user.fullName}</div>;
-                <tr>
-                  <td>
-                    <button
-                      style={{ color: "red" }}
-                      onClick={(e) => deleteUser(user._id)}
-                    >
-                      Delete
-                    </button>
-                  </td>
-                  <td>
-                    <input
-                      type="checkbox"
-                      checked={user.validation}
-                      onChange={(e) =>
-                        updateValidated(user._id, e.target.checked)
-                      }
-                    />
-                  </td>
-                  <td>
-                    <input
-                      type="checkbox"
-                      checked={user.editor}
-                      onChange={(e) =>
-                        updateEditting(user._id, e.target.checked)
-                      }
-                    />
-                  </td>
-                  <td>{user.fullName}</td>
-                  <td>{user.username}</td>
-                  <td>{user.email}</td>
-                  {/* <td>{user.gender}</td> */}
-                  <td>{user.country}</td>
-                  <td>{user.phone}</td>
-                  <td>{user.uni}</td>
-                  <td>{user.association}</td>
-                  {/* <td>{user.yearsOfStudy}</td> */}
-                  <td>{user.delegate}</td>
-                  <td>{user.gradYear}</td>
-                  <td>{user.iadsEmployed}</td>
-                  <td>{user.iadsMember}</td>
-                  <td>{user.iadsPosition}</td>
-                  <td>{user.iadsEmail}</td>
-                </tr>
-              ))}
+              {webUsers
+                .slice(0)
+                .reverse()
+                .map((user) => (
+                  // <div>{user.fullName}</div>;
+                  <tr>
+                    <td>
+                      <button
+                        style={{ color: "red" }}
+                        onClick={(e) => deleteUser(user._id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        checked={user.validation}
+                        onChange={(e) =>
+                          updateValidated(user._id, e.target.checked)
+                        }
+                      />
+                    </td>
+                    <td>
+                      <input
+                        type="checkbox"
+                        checked={user.editor}
+                        onChange={(e) =>
+                          updateEditting(user._id, e.target.checked)
+                        }
+                      />
+                    </td>
+                    <td>{user.fullName}</td>
+                    <td>{user.username}</td>
+                    <td>{user.email}</td>
+                    {/* <td>{user.gender}</td> */}
+                    <td>{user.country}</td>
+                    <td>{user.phone}</td>
+                    <td>{user.uni}</td>
+                    <td>{user.association}</td>
+                    {/* <td>{user.yearsOfStudy}</td> */}
+                    <td>{user.delegate}</td>
+                    <td>{user.gradYear}</td>
+                    <td>{user.iadsEmployed}</td>
+                    <td>{user.iadsMember}</td>
+                    <td>{user.iadsPosition}</td>
+                    <td>{user.iadsEmail}</td>
+                  </tr>
+                ))}
             </tbody>
           </Table>
         </div>
