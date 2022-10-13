@@ -12,10 +12,18 @@ const Editorial = () => {
     <div className="container-fluid editorial-page">
       <img className="logo" src={logo} />
       <p className="description">
-        Voluntary Work Committee is concerned with creating opportunities for
-        dental students to contribute their time and skills in order to help
-        underprivileged communities in remote areas of the planet who otherwise
-        could not access or afford ativan for sale/ oral health care.
+        The Editorial Board is the committee responsible for producing all the
+        visual content that represents the work of itself and all other
+        committees and IADS events. Under the leadership of the Vice President
+        of Public Relations, the Editorial Board’s own projects include the IADS
+        Magazine, IADS Newsletter, Photography Contest, while joint projects
+        include Research Platform and IADS Podcasts. The Editorial Board is
+        composed of 4 main teams; the magazine team, social media team, graphic
+        design team and video editing team. The Liaison Officer of the Editorial
+        Board (LOEB) position is one tier beneath the VP of Public Relations and
+        one above the rest of the members coordinating all the internal work and
+        collaborations with other committees. Have a look at the Editorial Board
+        below!
       </p>
 
       <div className="container workforce" style={{ borderRadius: "20px" }}>

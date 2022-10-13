@@ -414,12 +414,16 @@ export default function Signup() {
               {...register("associations", { required: true })}
             >
               <option label="Choose..."></option>
-              <option value="Association of Dental Students of the University of San Carlos of Guatemala ">
-                Association of Dental Students of the University of San Carlos
-                of Guatemala{" "}
+              <option value="Bangladesh - Dhaka Dental College Debating & Quiz Society">
+                Bangladesh - Dhaka Dental College Debating & Quiz Society
               </option>
-              <option value="Bucharest Dental Students’ Association">
-                Bucharest Dental Students’ Association
+              <option value="Burkina Faso - Association des Étudiants en Chirurgie Dentaire du Burkina Faso">
+                Burkina Faso - Association des Étudiants en Chirurgie Dentaire
+                du Burkina Faso
+              </option>
+              <option value="Chile - Asociacion Nacional Científica de Estudiantes de Odontología">
+                Chile - Asociacion Nacional Científica de Estudiantes de
+                Odontología
               </option>
               <option value="Croatian Association of Dental Student for International Activities and Exchange">
                 Croatian Association of Dental Student for International
@@ -428,14 +432,26 @@ export default function Signup() {
               <option value="Czech Association of Dental Students ">
                 Czech Association of Dental Students{" "}
               </option>
-              <option value="Dental Students’ Association of Thailand">
-                Dental Students’ Association of Thailand
+              <option value="Ecuador - School Association of the Faculty of Dentistry - University of Cuenca">
+                Ecuador - School Association of the Faculty of Dentistry -
+                University of Cuenca
               </option>
               <option value="Egyptian Association of Dental Students">
                 Egyptian Association of Dental Students
               </option>
+              <option value="Fiji Dental Students' Association">
+                Fiji Dental Students' Association
+              </option>
               <option value="Finnish Dental Students' Association">
                 Finnish Dental Students' Association
+              </option>
+              <option value="France - UNECD">France - UNECD</option>
+              <option value="Germany - Zahnmedizinischer Austauschdienst">
+                Germany - Zahnmedizinischer Austauschdienst
+              </option>
+              <option value="Guatemala - Association of Dental Students of the University of San Carlos of Guatemala ">
+                Guatemala - Association of Dental Students of the University of
+                San Carlos of Guatemala{" "}
               </option>
               <option value="Indian Association of Dental Students">
                 Indian Association of Dental Students
@@ -443,11 +459,18 @@ export default function Signup() {
               <option value="Indonesian Association of Dental Students">
                 Indonesian Association of Dental Students
               </option>
+              <option value="Iran - Dental Students' Scientific Research Center">
+                Iran - Dental Students' Scientific Research Center
+              </option>
               <option value="Iraqi Dental Students Association ">
                 Iraqi Dental Students Association{" "}
               </option>
               <option value="Italian Dental Student Association">
                 Italian Dental Student Association
+              </option>
+              <option value="Ivory Coast - National Organization of Health Sciences Students' - Odontostomatologie">
+                Ivory Coast - National Organization of Health Sciences Students'
+                - Odontostomatologie
               </option>
               <option value="Japan Dental Students Association">
                 Japan Dental Students Association
@@ -461,14 +484,26 @@ export default function Signup() {
               <option value="Latvian Dental Students’ Association">
                 Latvian Dental Students’ Association
               </option>
+              <option value="Lebanese Association of Dental Students">
+                Lebanese Association of Dental Students
+              </option>
               <option value="Lithuanian Dental Students' association">
                 Lithuanian Dental Students' association
               </option>
               <option value="Malaysian Dental Students’ Association ">
                 Malaysian Dental Students’ Association{" "}
               </option>
-              <option value="Nigeria Association of Dental Students">
-                Nigeria Association of Dental Students
+              <option value="Mexican Organization of Oral Health Students">
+                Mexican Organization of Oral Health Students
+              </option>
+              <option value="Moldovan Dental Students' Association">
+                Moldovan Dental Students' Association
+              </option>
+              <option value="Morocco - UM6smile creators association ">
+                Morocco - UM6smile creators association{" "}
+              </option>
+              <option value="Northern Cyprus Association of Dental Students">
+                Northern Cyprus Association of Dental Students
               </option>
               <option value="Pakistan Association of Dental Students ">
                 Pakistan Association of Dental Students{" "}
@@ -485,12 +520,14 @@ export default function Signup() {
               <option value="Qatar Dental Students’ Association">
                 Qatar Dental Students’ Association
               </option>
+              <option value="Romania - Bucharest Dental Students’ Association (LSMDB)">
+                Romania - Bucharest Dental Students’ Association (LSMDB)
+              </option>
+              <option value="Romania - The Society of Dental Students Iasi">
+                Romania - The Society of Dental Students Iasi
+              </option>
               <option value="Rwanda Dental Students Association">
                 Rwanda Dental Students Association
-              </option>
-              <option value="School Association of the Faculty of Dentistry - University of Cuenca">
-                School Association of the Faculty of Dentistry - University of
-                Cuenca
               </option>
               <option value="Slovak association of dental students">
                 Slovak association of dental students
@@ -507,30 +544,20 @@ export default function Signup() {
               <option value="Taiwan Dental Student Association ">
                 Taiwan Dental Student Association{" "}
               </option>
-              <option value="The Society of Dental Students Iasi">
-                The Society of Dental Students Iasi
+              <option value="Thailand - Dental Students’ Association of Thailand">
+                Thailand - Dental Students’ Association of Thailand
               </option>
               <option value="Tunisian Association of Dental Students">
                 Tunisian Association of Dental Students
               </option>
-              <option value="UM6smile creators association ">
-                UM6smile creators association{" "}
+              <option value="Turkish Dental Students International Committee (TDB)">
+                Turkish Dental Students International Committee (TDB)
               </option>
-              <option value="UNECD">UNECD</option>
-              <option value="Zimbabwe Dental Students Association">
-                Zimbabwe Dental Students Association
+              <option value="Uganda - Makarere University Dental Students' Association">
+                Uganda - Makarere University Dental Students' Association
               </option>
-              <option value="Fiji Dental Students' Association ">
-                Fiji Dental Students' Association{" "}
-              </option>
-              <option value="Mexican Organization of Oral Health Students">
-                Mexican Organization of Oral Health Students
-              </option>
-              <option value="Benin's Odonto-Stomatology Students Association">
-                Benin's Odonto-Stomatology Students Association
-              </option>
-              <option value="Medical Students` Union">
-                Medical Students` Union
+              <option value="Ukraine - Medical Students' Union">
+                Ukraine - Medical Students' Union
               </option>
             </select>
           </div>

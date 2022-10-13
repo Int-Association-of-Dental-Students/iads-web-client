@@ -140,7 +140,9 @@ function Home() {
               </p>
 
               <div className="homeOverlayCTAS">
-                <p className="CTA1">Join us</p>
+                <a href="/membership" className="CTA1">
+                  Join us
+                </a>
 
                 <p className="CTA2">Learn more</p>
               </div>

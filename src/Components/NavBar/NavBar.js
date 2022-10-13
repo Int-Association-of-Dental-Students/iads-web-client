@@ -146,7 +146,11 @@ const NavBar = (props) => {
                 />
                 <p>Login</p>
               </div>
-              <a href="/signup" className="signup-btn">
+              <a
+                style={{ textDecoration: "none" }}
+                href="/signup"
+                className="signup-btn"
+              >
                 Signup
               </a>
             </div>
