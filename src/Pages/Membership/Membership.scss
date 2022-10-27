@@ -27,8 +27,38 @@
     background-position: center;
   }
 
+  .categories {
+    background-color: #1d015c;
+    padding-bottom: 80px;
+
+    .section-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #290973;
+      border-radius: 20px;
+
+      width: 557px;
+      height: 350px;
+      padding-top: 27px;
+    }
+
+    ul {
+      font-family: "Poppins regular";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+
+      /* #C6C6C6 */
+
+      color: #c6c6c6;
+      text-align: left;
+    }
+  }
+
   .orgMember {
-    background: #1d015c;
+    background: #f5f5f5;
     padding-bottom: 90px;
   }
 
@@ -47,7 +77,7 @@
     width: 350px;
     height: 46px;
 
-    background: #55c9f3;
+    background: #1d015c;
     border-radius: 100px;
 
     font-family: "Poppins regular";
@@ -55,7 +85,7 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 30px;
-    color: #1d015c;
+    color: white;
   }
 
   .desc {
@@ -68,7 +98,7 @@
 
     /* page color */
 
-    color: #f5f5f5;
+    color: #3a3a3d;
   }
   .hdr {
     font-family: "Poppins bold";

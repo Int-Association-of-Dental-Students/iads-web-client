@@ -9,11 +9,171 @@ const Membership = () => {
           <h1 className="header-title">MEMBERSHIP</h1>
         </div>
       </div>
+
+      <div className="categories">
+        <div className="container">
+          <h1
+            className="title-2nd"
+            style={{
+              width: "80%",
+              margin: "auto",
+              paddingTop: "80px",
+              marginBottom: "80px",
+              color: "white",
+            }}
+          >
+            membership categories
+          </h1>
+          <div className="row d-flex justify-content-around align-items-center">
+            <div
+              className="col-lg-6 col-sm-12 section-card"
+              style={{ marginBottom: "20px" }}
+            >
+              <h1 className="title-2nd" style={{ color: "#55C9F3" }}>
+                Full
+              </h1>
+              <div
+                style={{
+                  background: "#55C9F3",
+                  padding: "1px 13px",
+                  borderRadius: "20px",
+                  marginBottom: "30px",
+                }}
+              >
+                <p style={{ marginBottom: "0px" }}>
+                  For national or local students organizations
+                </p>
+              </div>
+              <div style={{ display: "flex" }}>
+                <ul>
+                  <li>Attend Meetings</li>
+                  <li>Speak at GA</li>
+                  <li>Propose motions</li>
+                  <li>Vote in GA</li>
+                  <li>Hold ExCo posts</li>
+                </ul>
+                <ul>
+                  <li>Join exchanges</li>
+                  <li>Join IVPs</li>
+                  <li>Recieve Add. Mag</li>
+                  <li>No maximum duration</li>{" "}
+                </ul>
+              </div>
+            </div>
+            <div
+              className="col-lg-6 col-sm-12 section-card"
+              style={{ marginBottom: "20px" }}
+            >
+              <h1 className="title-2nd" style={{ color: "#55C9F3" }}>
+                Corresponding
+              </h1>
+              <div
+                style={{
+                  background: "#55C9F3",
+                  padding: "1px 13px",
+                  borderRadius: "20px",
+                  marginBottom: "30px",
+                }}
+              >
+                <p style={{ marginBottom: "0px" }}>
+                  For national or local students organizations
+                </p>
+              </div>
+              <div style={{ display: "flex" }}>
+                <ul>
+                  <li>Attend Meetings</li>
+                  <li>Speak at GA</li>
+                  <li>Cannot Propose motions</li>
+                  <li>Cannot Vote in GA</li>
+                  <li>Cannot Hold ExCo posts</li>
+                </ul>
+                <ul>
+                  <li>Cannot Join exchanges</li>
+                  <li>Cannot hold</li>
+                  <li>Recieve Add. Mag</li>
+                  <li>Maximum 2 years</li>{" "}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="row d-flex justify-content-around align-items-center">
+            <div
+              className="col-lg-6 col-sm-12 section-card"
+              style={{ marginBottom: "20px" }}
+            >
+              <h1 className="title-2nd" style={{ color: "#55C9F3" }}>
+                Affiliate
+              </h1>
+              <div
+                style={{
+                  background: "#55C9F3",
+                  padding: "1px 13px",
+                  borderRadius: "20px",
+                  marginBottom: "30px",
+                }}
+              >
+                <p style={{ marginBottom: "0px" }}>
+                  For national or local students organizations
+                </p>
+              </div>
+              <div style={{ display: "flex" }}>
+                <ul>
+                  <li>Maximum of 2 delegates</li>
+                  <li>Speak at GA</li>
+                  <li>Cannot propose</li>
+                  <li>Cannot vote in GA</li>
+                  <li>Cannot hold ExCo posts</li>{" "}
+                </ul>
+                <ul>
+                  <li>Cannot join exchanges</li>
+                  <li>Cannot hold</li>
+                  <li>Cannot Recieve Add. Mag</li>
+                  <li>No maximum duration</li>{" "}
+                </ul>
+              </div>
+            </div>
+            <div
+              className="col-lg-6 col-sm-12 section-card"
+              style={{ marginBottom: "20px" }}
+            >
+              <h1 className="title-2nd" style={{ color: "#55C9F3" }}>
+                Personal
+              </h1>
+              <div
+                style={{
+                  background: "#55C9F3",
+                  padding: "1px 13px",
+                  borderRadius: "20px",
+                  marginBottom: "30px",
+                }}
+              >
+                <p style={{ marginBottom: "0px" }}>
+                  For indivdual students not affiliated to any organization
+                </p>
+              </div>
+              <div style={{ display: "flex" }}>
+                <ul>
+                  <li>Attend Meetings</li>
+                  <li>Speak at GA</li>
+                  <li>Propose motions</li>
+                  <li>Cannot vote in GA</li>
+                  <li>Cannot hold ExCo posts</li>{" "}
+                </ul>
+                <ul>
+                  <li>Join exchanges</li>
+                  <li>Join IVPs</li>
+                  <li>Recieve Add. Mag</li>
+                  <li>No maximum duration</li>{" "}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="orgMember">
         <h1
-          className="title-2nd"
           style={{
-            color: "white",
+            color: "#1D015C",
             width: "50%",
             margin: "auto",
             paddingTop: "90px",
@@ -22,7 +182,7 @@ const Membership = () => {
           Apply for an organizational membership
         </h1>
         <a
-          // href="/organizational-member-form"
+          href="/organizational-member-form"
           className="btn"
           style={{ marginTop: "40px", marginBottom: "40px" }}
         >
@@ -95,7 +255,7 @@ const Membership = () => {
           Apply for a personal membership
         </h1>
         <a
-          // href="/personal-member-form"
+          href="/personal-member-form"
           className="btn"
           style={{ marginTop: "40px", marginBottom: "40px" }}
         >

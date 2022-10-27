@@ -65,7 +65,9 @@ export default function Signup() {
             "Content-Type": "application/json",
           }
         );
-        alert("Successfully signed up, we will validate your account soon!");
+        alert(
+          "Successfully signed up, we will validate your account within 2 to 3 days!"
+        );
         e.target.reset();
         navigate("/");
       } catch (err) {
@@ -529,6 +531,9 @@ export default function Signup() {
               </option>
               <option value="Romania - The Society of Dental Students Iasi">
                 Romania - The Society of Dental Students Iasi
+              </option>
+              <option value="Russia - National Medical Students' State">
+                Russia - National Medical Students' State
               </option>
               <option value="Rwanda Dental Students Association">
                 Rwanda Dental Students Association

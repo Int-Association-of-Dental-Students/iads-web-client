@@ -1,20 +1,60 @@
 import "./OrgMemberForm.scss";
 import { useHttpClient } from "../../../Shared/http-hook";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+
+import { Audio } from "react-loader-spinner";
 
 export default function OrgMemberForm() {
   const httpClient = useHttpClient();
+  const [loading, setLoading] = useState(false);
+
+  const uploadImage = (img, idx) => {
+    let resImg = null;
+    const imgAPIKey = "826fbb1f90dacfa942f721a496d71950";
+    let formData = new FormData();
+    formData.append("image", img);
+    const url = `https://api.imgbb.com/1/upload?key=${imgAPIKey}`;
+    console.log(formData);
+    fetch(url, {
+      method: "POST",
+      body:
+        // JSON.stringify({
+        formData,
+      // })
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        resImg = result.data.display_url;
+        console.log(resImg);
+        console.log("imgbb", result);
+        let arr = imgStr;
+        arr[idx] = resImg;
+        setImgStr(arr);
+        console.log(imgStr);
+        return resImg;
+      });
+  };
+  const [imgStr, setImgStr] = useState([]);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = async (data) => {
+  const onSubmit = async (data, e) => {
+    setLoading(true);
+    let arr = data;
+
+    imgStr["letter"] = imgStr["0"];
+    imgStr["logo"] = imgStr["1"];
+    imgStr["flag"] = imgStr["2"];
+
+    data = { ...arr, ...imgStr };
+
     try {
       const response = await httpClient.sendRequest(
-        `http://localhost:3001/api/orgmember/create`,
+        `https://infinite-wildwood-83288.herokuapp.com/api/orgmember/create`,
         "POST",
         JSON.stringify({
           fullname: data.fullname,
@@ -30,8 +70,8 @@ export default function OrgMemberForm() {
           website: data.website,
           dateOfEstablishment: data.dateOfEstablishment,
 
-          numberOfMemberSchools: data.numberOfMemberSchools,
-          numberOfMemberSstudents: data.numberOfMemberSstudents,
+          numOfMemberSchools: data.numOfMemberSchools,
+          numOfMemberStudents: data.numOfMemberStudents,
 
           requestedMembershipType: data.requestedMembershipType,
 
@@ -49,20 +89,20 @@ export default function OrgMemberForm() {
           },
           editor: { name: data.editorName, email: data.editorEmail },
           exchangeOfficer: {
-            name: data.exchangeOfficerName,
-            email: data.exchangeOfficerEmail,
+            name: data.exchangeName,
+            email: data.exchangeEmail,
           },
-          sceintificOfficer: {
-            name: data.sceintificOfficerName,
-            email: data.sceintificOfficerEmail,
+          scientificOfficer: {
+            name: data.scientificName,
+            email: data.scientificEmail,
           },
           trainingOfficer: {
-            name: data.trainingOfficerName,
-            email: data.trainingOfficerEmail,
+            name: data.trainingName,
+            email: data.trainingEmail,
           },
           voluntaryOfficer: {
-            name: data.voluntaryOfficerName,
-            email: data.voluntaryOfficerEmail,
+            name: data.voluntaryName,
+            email: data.voluntaryEmail,
           },
 
           delegate1: {
@@ -78,12 +118,17 @@ export default function OrgMemberForm() {
             whatsapp: data.delegate2Whatsapp,
           },
 
+          letter: data.letter,
+          logo: data.logo,
+          flag: data.flag,
+
           //   data,
         }),
         {
           "Content-Type": "application/json",
         }
       );
+      setLoading(false);
     } catch (err) {
       console.log(httpClient.error);
     }
@@ -93,9 +138,29 @@ export default function OrgMemberForm() {
 
   return (
     <form className="container-fluid orgForm" onSubmit={handleSubmit(onSubmit)}>
+      {loading && (
+        <div className="loading">
+          <Audio
+            height="80"
+            width="80"
+            radius="9"
+            color="green"
+            ariaLabel="loading"
+            wrapperStyle
+            wrapperClass
+          />
+        </div>
+      )}
       <div className="form">
+        <h1 className="title">
+          IADS Organizational Membership Application Form
+        </h1>
+
         <div className="row">
-          <div className="col">
+          <h1 style={{ fontSize: "20px" }} className="title">
+            Personal Contact Information
+          </h1>
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Full name in English*</label>
             <input
               type="text"
@@ -104,7 +169,7 @@ export default function OrgMemberForm() {
               {...register("fullname", { required: true })}
             />
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Abbreviated Name*</label>
             <input
               type="text"
@@ -116,7 +181,7 @@ export default function OrgMemberForm() {
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Full Name in National Language</label>
             <input
               type="text"
@@ -128,7 +193,7 @@ export default function OrgMemberForm() {
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Country*</label>
             <input
               type="text"
@@ -137,7 +202,7 @@ export default function OrgMemberForm() {
               {...register("country", { required: true })}
             />
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>City*</label>
             <input
               type="text"
@@ -149,7 +214,7 @@ export default function OrgMemberForm() {
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Address*</label>
             <input
               type="text"
@@ -158,7 +223,7 @@ export default function OrgMemberForm() {
               {...register("address", { required: true })}
             />
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Postal Code*</label>
             <input
               type="number"
@@ -170,27 +235,28 @@ export default function OrgMemberForm() {
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label></label>
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label></label>
           </div>
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <div className="row">
-              <div className="col">
+              {/* <div className="col flexx">
                 <label>Phone Code*</label>
                 <input
                   type="tel"
                   placeholder="Type Here..."
                   id="phoneCode"
                   {...register("phoneCode", { required: true })}
+                  // style={{ width: "100px" }}
                 />
-              </div>
-              <div className="col">
+              </div> */}
+              <div className="col flexx">
                 <label>Phone Number*</label>
                 <input
                   type="tel"
@@ -201,7 +267,7 @@ export default function OrgMemberForm() {
               </div>
             </div>
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Fax Number*</label>
             <input
               type="tel"
@@ -213,7 +279,7 @@ export default function OrgMemberForm() {
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Email of The Official Delegate</label>
             <input
               type="email"
@@ -222,7 +288,7 @@ export default function OrgMemberForm() {
               {...register("delegateEmail", { required: true })}
             />
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Website*</label>
             <input
               type="text"
@@ -234,7 +300,7 @@ export default function OrgMemberForm() {
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Date of Establishment</label>
             <input
               type="date"
@@ -243,7 +309,7 @@ export default function OrgMemberForm() {
               {...register("dateOfEstablishment", { required: true })}
             />
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Number of Member Schools (Universities)</label>
             <input
               type="number"
@@ -255,19 +321,19 @@ export default function OrgMemberForm() {
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Number of Member Students</label>
             <input
               type="number"
               placeholder="Type Here..."
-              id="numOfMemberSstudents"
-              {...register("numOfMemberSstudents", { required: true })}
+              id="numOfMemberStudents"
+              {...register("numOfMemberStudents", { required: true })}
             />
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Requested Membership Type</label>
             <select
-              {...register(" requestedMembershipType", { required: true })}
+              {...register("requestedMembershipType", { required: true })}
             >
               <option value="Full National">Full National</option>
               <option value="Full Local Corresponding">
@@ -279,7 +345,7 @@ export default function OrgMemberForm() {
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Name of President</label>
             <input
               type="text"
@@ -288,7 +354,7 @@ export default function OrgMemberForm() {
               {...register("presidentName", { required: true })}
             />
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Email of President</label>
             <input
               type="email"
@@ -300,7 +366,7 @@ export default function OrgMemberForm() {
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Name of Secretary</label>
             <input
               type="text"
@@ -309,7 +375,7 @@ export default function OrgMemberForm() {
               {...register("secretaryName", { required: true })}
             />
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Email of Secretary</label>
             <input
               type="email"
@@ -321,7 +387,7 @@ export default function OrgMemberForm() {
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Name of Treasurer</label>
             <input
               type="text"
@@ -330,7 +396,7 @@ export default function OrgMemberForm() {
               {...register("treasurerName", { required: true })}
             />
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Email of Treasurer</label>
             <input
               type="email"
@@ -342,7 +408,27 @@ export default function OrgMemberForm() {
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
+            <label>Name of Editor</label>
+            <input
+              type="text"
+              placeholder="Type Here..."
+              id="editorName"
+              {...register("editorName", { required: true })}
+            />
+          </div>
+          <div className="col-sm-12 col-xl-6 flexx">
+            <label>Email of Editor</label>
+            <input
+              type="email"
+              placeholder="Type Here..."
+              id="editorEmail"
+              {...register("editorEmail", { required: true })}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Name of Exchange Officer</label>
             <input
               type="text"
@@ -351,7 +437,7 @@ export default function OrgMemberForm() {
               {...register("exchangeName", { required: true })}
             />
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Email of Exchange Officer</label>
             <input
               type="email"
@@ -363,7 +449,7 @@ export default function OrgMemberForm() {
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Name of Scientific Officer</label>
             <input
               type="text"
@@ -372,7 +458,7 @@ export default function OrgMemberForm() {
               {...register("scientificName", { required: true })}
             />
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Email of Scientific Officer</label>
             <input
               type="email"
@@ -384,7 +470,7 @@ export default function OrgMemberForm() {
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Name of Training Officer</label>
             <input
               type="text"
@@ -393,7 +479,7 @@ export default function OrgMemberForm() {
               {...register("trainingName", { required: true })}
             />
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Email of Training Officer</label>
             <input
               type="email"
@@ -405,7 +491,7 @@ export default function OrgMemberForm() {
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Name of Voluntary Officer</label>
             <input
               type="text"
@@ -414,7 +500,7 @@ export default function OrgMemberForm() {
               {...register("voluntaryName", { required: true })}
             />
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Email of Voluntary Officer</label>
             <input
               type="email"
@@ -426,7 +512,7 @@ export default function OrgMemberForm() {
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Phone Number of IADS Delegate</label>
             <input
               type="tel"
@@ -435,7 +521,7 @@ export default function OrgMemberForm() {
               {...register("delegate1Phone", { required: true })}
             />
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Whatsapp Phone Number of IADS Delegate</label>
             <input
               type="tel"
@@ -447,7 +533,7 @@ export default function OrgMemberForm() {
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Name of Second IADS Delegate</label>
             <input
               type="text"
@@ -456,7 +542,7 @@ export default function OrgMemberForm() {
               {...register("delegate2Name", {})}
             />
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Email of Second IADS Delegate</label>
             <input
               type="email"
@@ -468,7 +554,7 @@ export default function OrgMemberForm() {
         </div>
 
         <div className="row">
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>Phone Number of Second IADS Delegate</label>
 
             <input
@@ -478,7 +564,7 @@ export default function OrgMemberForm() {
               {...register("delegate2Phone", {})}
             />
           </div>
-          <div className="col">
+          <div className="col-sm-12 col-xl-6 flexx">
             <label>WhatsApp Phone Number of IADS Delegate</label>
             <input
               type="tel"
@@ -489,6 +575,55 @@ export default function OrgMemberForm() {
           </div>
         </div>
 
+        <div className="row">
+          <div className="col flexx">
+            <h1
+              style={{ fontSize: "20px", marginTop: "25px" }}
+              className="title"
+            >
+              Attachments
+            </h1>
+            <label>
+              Upload an official letter with the association's letter head and
+              the President\General Secretary signature and stamps proving this
+              is the official delegate
+            </label>
+            <input
+              style={{ border: "none" }}
+              type="file"
+              onChange={(e) => {
+                uploadImage(e.target.files[0], 0);
+                console.log(imgStr);
+              }}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col flexx">
+            <label>Upload Logo of your Association</label>
+            <input
+              style={{ border: "none" }}
+              type="file"
+              onChange={(e) => {
+                uploadImage(e.target.files[0], 1);
+                console.log(imgStr);
+              }}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col flexx">
+            <label>Upload a Flag of your Association/Country</label>
+            <input
+              style={{ border: "none" }}
+              type="file"
+              onChange={(e) => {
+                uploadImage(e.target.files[0], 2);
+                console.log(imgStr);
+              }}
+            />
+          </div>
+        </div>
         <div className="row">
           <div className="d-flex justify-content-start align-items-start">
             <input

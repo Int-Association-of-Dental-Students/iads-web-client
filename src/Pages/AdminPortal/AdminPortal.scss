@@ -2,4 +2,22 @@
   .member-table {
     overflow-x: scroll;
   }
+
+  .title {
+    font-family: "LEMON MILK regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 41px;
+    /* identical to box height */
+    text-align: left;
+
+    /* dark */
+
+    color: #1d015c;
+  }
+  .header {
+    position: sticky;
+    top: 0;
+  }
 }

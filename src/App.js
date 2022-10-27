@@ -37,6 +37,7 @@ import Alumni from "./Pages/Alumni/Alumni";
 import AdminPortal from "./Pages/AdminPortal/AdminPortal";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import WorkforceForm from "./Pages/Committees/Workforce/WorkforceForm";
+import PersonalMemberForm from "./Pages/Membership/PersonalMemberForm/PersonalMemberForm";
 
 let logoutTimer;
 
@@ -179,6 +180,10 @@ function App() {
           <Route
             path="/organizational-member-form"
             element={<OrgMemberForm />}
+          />
+          <Route
+            path="/personal-member-form"
+            element={<PersonalMemberForm />}
           />
           <Route path="/signup" element={<Signup />} />
           <Route path="/about" element={<About />} />

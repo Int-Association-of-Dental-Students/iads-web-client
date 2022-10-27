@@ -42,7 +42,7 @@ const CardComponent = (props) => {
           </Card.Title>
           <Card.Text className="card-date">{data.date}</Card.Text>
           <Card.Text className="card-text">{data.description}</Card.Text>
-          {Auth.validation && data.apply ? (
+          {Auth.validation && data.apply && (
             <div
               style={{
                 bottom: "10px",
@@ -74,7 +74,8 @@ const CardComponent = (props) => {
                 />
               </Button>
             </div>
-          ) : (
+          )}
+          {Auth.validation && (
             <div
               style={{
                 bottom: "10px",
@@ -100,20 +101,30 @@ const CardComponent = (props) => {
             </div>
           )}
           {!Auth.validation && (
-            <Button
-              className="card-button"
-              // href={data.link}
-              variant="primary"
-              style={{ color: props.style }}
-              onClick={() => setLoginShow(!loginShow)}
+            <div
+              style={{
+                bottom: "10px",
+                // display: "flex",
+                justifyContent: "space-between",
+                alignSelf: "flex-end",
+                alignItems: "center",
+              }}
             >
-              Find out more
-              <img
-                classname="findmore"
-                style={{ marginLeft: "10px" }}
-                src={findmore}
-              />
-            </Button>
+              <Button
+                className="card-button"
+                // href={data.link}
+                variant="primary"
+                style={{ color: props.style }}
+                onClick={() => setLoginShow(!loginShow)}
+              >
+                Find out more
+                <img
+                  classname="findmore"
+                  style={{ marginLeft: "10px" }}
+                  src={findmore}
+                />
+              </Button>
+            </div>
           )}
         </Card.Body>
       </Card>

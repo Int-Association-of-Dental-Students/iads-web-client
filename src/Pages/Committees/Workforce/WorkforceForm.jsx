@@ -617,6 +617,9 @@ const WorkforceForm = () => {
               <option value="Romania - The Society of Dental Students Iasi">
                 Romania - The Society of Dental Students Iasi
               </option>
+              <option value="Russia - National Medical Students' State">
+                Russia - National Medical Students' State
+              </option>
               <option value="Rwanda Dental Students Association">
                 Rwanda Dental Students Association
               </option>
