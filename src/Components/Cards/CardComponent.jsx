@@ -75,7 +75,7 @@ const CardComponent = (props) => {
               </Button>
             </div>
           )}
-          {Auth.validation && (
+          {Auth.validation && !data.apply && (
             <div
               style={{
                 bottom: "10px",

@@ -54,10 +54,10 @@ const WorkforceForm = () => {
     imgStr["img4"] = imgStr["3"];
     // delete imgStr["3"];
 
-    data = { ...arr, ...imgStr };
-    console.log(data);
+    const data2 = { ...arr, ...imgStr };
+    console.log(data2);
 
-    await axios
+    axios
       .post(
         "https://sheet.best/api/sheets/06f7fe62-e62a-4762-9ee0-247d5988e866",
         data

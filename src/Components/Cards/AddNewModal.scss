@@ -1,0 +1,40 @@
+.addNewCard {
+  label {
+    font-family: "Poppins medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    color: #52535f;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  input {
+    background: #ffffff;
+    /* Card subtitle */
+
+    border: 1px solid #8c8c8c;
+    border-radius: 5px;
+    width: 390px;
+    height: 43px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .small-check {
+    width: 17px !important;
+    height: 17px !important;
+    margin-top: 3px;
+    margin-right: 12px;
+
+    /* #C6C6C6 */
+
+    background: #c6c6c6;
+    border-radius: 4px;
+  }
+}

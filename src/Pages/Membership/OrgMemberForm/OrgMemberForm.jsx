@@ -5,10 +5,12 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
 import { Audio } from "react-loader-spinner";
+import { useNavigate } from "react-router";
 
 export default function OrgMemberForm() {
   const httpClient = useHttpClient();
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const uploadImage = (img, idx) => {
     let resImg = null;
@@ -128,7 +130,13 @@ export default function OrgMemberForm() {
           "Content-Type": "application/json",
         }
       );
+
+      alert(
+        "Successfully signed up, we will validate your account within 2 to 3 days!"
+      );
       setLoading(false);
+      e.target.reset();
+      navigate("/");
     } catch (err) {
       console.log(httpClient.error);
     }
@@ -144,11 +152,20 @@ export default function OrgMemberForm() {
             height="80"
             width="80"
             radius="9"
-            color="green"
+            color="red"
             ariaLabel="loading"
             wrapperStyle
             wrapperClass
           />
+          <p
+            style={{
+              fontFamily: "POPPINS bold",
+              color: "white",
+              marginTop: "20px",
+            }}
+          >
+            Please Wait...
+          </p>
         </div>
       )}
       <div className="form">
@@ -180,7 +197,7 @@ export default function OrgMemberForm() {
           </div>
         </div>
 
-        <div className="row">
+        <div className="row" style={{ paddingBottom: "25px" }}>
           <div className="col-sm-12 col-xl-6 flexx">
             <label>Full Name in National Language</label>
             <input
@@ -192,7 +209,13 @@ export default function OrgMemberForm() {
           </div>
         </div>
 
-        <div className="row">
+        <div
+          className="row"
+          style={{ paddingTop: "25px", borderTop: "1px solid #C6C6C6" }}
+        >
+          <h1 style={{ fontSize: "20px" }} className="title">
+            Organization Contacts
+          </h1>
           <div className="col-sm-12 col-xl-6 flexx">
             <label>Country*</label>
             <input
@@ -278,7 +301,7 @@ export default function OrgMemberForm() {
           </div>
         </div>
 
-        <div className="row">
+        <div className="row" style={{ paddingBottom: "25px" }}>
           <div className="col-sm-12 col-xl-6 flexx">
             <label>Email of The Official Delegate</label>
             <input
@@ -299,7 +322,13 @@ export default function OrgMemberForm() {
           </div>
         </div>
 
-        <div className="row">
+        <div
+          className="row"
+          style={{ paddingTop: "25px", borderTop: "1px solid #C6C6C6" }}
+        >
+          <h1 style={{ fontSize: "20px" }} className="title">
+            Organization Representation
+          </h1>
           <div className="col-sm-12 col-xl-6 flexx">
             <label>Date of Establishment</label>
             <input
@@ -320,7 +349,7 @@ export default function OrgMemberForm() {
           </div>
         </div>
 
-        <div className="row">
+        <div className="row" style={{ paddingBottom: "25px" }}>
           <div className="col-sm-12 col-xl-6 flexx">
             <label>Number of Member Students</label>
             <input
@@ -344,7 +373,13 @@ export default function OrgMemberForm() {
           </div>
         </div>
 
-        <div className="row">
+        <div
+          className="row"
+          style={{ paddingTop: "25px", borderTop: "1px solid #C6C6C6" }}
+        >
+          <h1 style={{ fontSize: "20px" }} className="title">
+            Organization Administration
+          </h1>
           <div className="col-sm-12 col-xl-6 flexx">
             <label>Name of President</label>
             <input
@@ -637,6 +672,7 @@ export default function OrgMemberForm() {
             </p>
           </div>
         </div>
+        {httpClient.error && <p style={{ color: "red" }}>{httpClient.error}</p>}
         <input type="submit" className="submit-btn" />
       </div>
     </form>

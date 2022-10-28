@@ -3,11 +3,14 @@ import { useForm } from "react-hook-form";
 import "./Signup.scss";
 import { useHttpClient } from "../../Shared/http-hook";
 import { useNavigate } from "react-router";
+import { useState } from "react";
+import { Audio } from "react-loader-spinner";
 import emailjs from "emailjs-com";
 
 export default function Signup() {
   const navigate = useNavigate();
   const httpClient = useHttpClient();
+  const [loading, setLoading] = useState(false);
 
   const {
     register,
@@ -16,6 +19,7 @@ export default function Signup() {
   } = useForm();
 
   const onSubmit = async (data, e) => {
+    setLoading(true);
     if (data.iadsMember === "No") {
       alert(
         "Please apply as a member through membership page. We will inform you once it's live!"
@@ -68,6 +72,7 @@ export default function Signup() {
         alert(
           "Successfully signed up, we will validate your account within 2 to 3 days!"
         );
+        setLoading(false);
         e.target.reset();
         navigate("/");
       } catch (err) {
@@ -84,6 +89,28 @@ export default function Signup() {
       className="container-fluid signup-page"
       onSubmit={handleSubmit(onSubmit)}
     >
+      {loading && (
+        <div className="loading">
+          <Audio
+            height="80"
+            width="80"
+            radius="9"
+            color="red"
+            ariaLabel="loading"
+            wrapperStyle
+            wrapperClass
+          />
+          <p
+            style={{
+              fontFamily: "POPPINS bold",
+              color: "white",
+              marginTop: "20px",
+            }}
+          >
+            Please Wait...
+          </p>
+        </div>
+      )}
       <div className="form">
         <h1 className="title">IADS account registration form</h1>
         <div className="row">
@@ -803,6 +830,7 @@ export default function Signup() {
             </div>
           </div>
         </div>
+        <p style={{ color: "red" }}>{httpClient.error}</p>
         <input type="submit" className="submit-btn" />
       </div>
     </form>

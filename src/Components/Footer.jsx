@@ -30,8 +30,8 @@ const Footer = () => {
             </div>
             <br />
             <div className="row mb-5 PR">
-              FDI World Dental Federation, 1216 <br />
-              Geneva, Switzerland.
+              FDI World Dental Federation, Av. Louis-Casaï 71, 1216, Geneva,
+              Switzerland.
             </div>
           </div>
           <div className="col  offset-1">
@@ -96,15 +96,10 @@ const Footer = () => {
         Copyright © 1951-2022 IADS. All rights reserved.
       </p>
       <p className="PR" style={{ textAlign: "center" }}>
-        Developed by xDev [
+        Developed by{" "}
         <a className="title" href="https://khalidxah.tech">
-          Khalid
+          xDev
         </a>
-        ,{" "}
-        <a className="title" href="https://moelsayed.com">
-          Mohamed
-        </a>
-        ]
       </p>
     </div>
   );

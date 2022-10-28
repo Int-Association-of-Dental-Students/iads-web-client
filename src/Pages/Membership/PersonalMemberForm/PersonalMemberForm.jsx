@@ -5,9 +5,12 @@ import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
 import { useHttpClient } from "../../../Shared/http-hook";
 import { useNavigate } from "react-router";
+import { Audio } from "react-loader-spinner";
 import axios from "axios";
 
 const PersonalMemberForm = () => {
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -17,6 +20,7 @@ const PersonalMemberForm = () => {
 
   const httpClient = useHttpClient();
   const onSubmit = async (data, e) => {
+    setLoading(true);
     let arr = data;
 
     imgStr["curriculum"] = imgStr["0"];
@@ -38,6 +42,9 @@ const PersonalMemberForm = () => {
     alert(
       "Successfully signed up, we will validate your account within 2 to 3 days!"
     );
+    setLoading(false);
+    e.target.reset();
+    navigate("/");
   };
 
   const uploadImage = (img, idx) => {
@@ -74,6 +81,28 @@ const PersonalMemberForm = () => {
       className="personal-member-form-page"
       onSubmit={handleSubmit(onSubmit)}
     >
+      {loading && (
+        <div className="loading">
+          <Audio
+            height="80"
+            width="80"
+            radius="9"
+            color="red"
+            ariaLabel="loading"
+            wrapperStyle
+            wrapperClass
+          />
+          <p
+            style={{
+              fontFamily: "POPPINS bold",
+              color: "white",
+              marginTop: "20px",
+            }}
+          >
+            Please Wait...
+          </p>
+        </div>
+      )}
       <div className="form">
         <h1 className="title">IADS Personal Membership Application Form</h1>
 

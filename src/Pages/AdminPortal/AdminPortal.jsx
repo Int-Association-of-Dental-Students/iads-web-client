@@ -95,14 +95,6 @@ const AdminPortal = () => {
     <div className="admin-portal-page">
       {Auth.admin ? (
         <>
-          <button
-            onClick={() => {
-              console.log(orgMembers);
-              console.log(orgMembers[0].phone.number);
-            }}
-          >
-            Test
-          </button>
           <h1
             className="title"
             style={{ marginTop: "30px", marginLeft: "30px" }}
@@ -115,9 +107,10 @@ const AdminPortal = () => {
               marginBottom: "0px !important",
               height: "700px",
               overflow: "scroll",
-              width: "90%",
+              width: "85%",
               margin: "auto",
               border: "2px solid #185BB1",
+              borderRadius: "20px",
             }}
           >
             <Table striped bordered hover fixed>
@@ -226,6 +219,7 @@ const AdminPortal = () => {
               width: "85%",
               margin: "auto",
               border: "2px solid #185BB1",
+              borderRadius: "20px",
             }}
           >
             {orgMembers && (
@@ -278,7 +272,7 @@ const AdminPortal = () => {
                     <th className="header">Training Email</th>
                     <th className="header">Voluntary Name</th>
                     <th className="header">Voluntary Email</th>
-                    <th className="header">Delegate 1 Name</th>
+
                     <th className="header">Delegate 1 Email</th>
                     <th className="header">Delegate 2 Name</th>
                     <th className="header">Delegate 2 Email</th>
@@ -348,20 +342,10 @@ const AdminPortal = () => {
                           <td>{member.trainingOfficer.email}</td>
                           <td>{member.voluntaryOfficer.name}</td>
                           <td>{member.voluntaryOfficer.email}</td>
-                          <td>{member.delegate1.name}</td>
+
                           <td>{member.delegate1.email}</td>
                           <td>{member.delegate2.name}</td>
                           <td>{member.delegate2.email}</td>
-                          {/* <td>
-                            {
-                              <button
-                                onClick={() => {
-                                  console.log(member);
-                                }}
-                              ></button>
-                            }
-                          </td> */}
-                          {/* <td>Phone #</td> */}
 
                           <td>
                             {

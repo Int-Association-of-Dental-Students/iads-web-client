@@ -144,7 +144,13 @@ function Home() {
                   Join us
                 </a>
 
-                <p className="CTA2">Learn more</p>
+                <a
+                  href="/about"
+                  style={{ textDecoration: "none" }}
+                  className="CTA2"
+                >
+                  Learn more
+                </a>
               </div>
             </div>
           </div>
