@@ -244,7 +244,53 @@ const Governance = () => {
           />
         </div>
       </div>
-
+      <div className="advisory">
+        <h1 className="title-1st">Iads Leadership</h1>
+        <h1 className="title-2nd" style={{ color: "white" }}>
+          Advisory board
+        </h1>
+        <p className="desc" style={{ color: "white" }}>
+          2022/2023
+        </p>
+        <div className="container horiz-cardlist">
+          <GovCard
+            personImg={p31}
+            flag={f31}
+            name="Dr. Huthaifa Abdul Qader"
+            role="Immediate Past President"
+            color="white"
+          />
+          <GovCard
+            personImg={p32}
+            flag={f32}
+            name="Dr. Abanoub Riad"
+            role="Advisor"
+            color="white"
+          />
+          <GovCard
+            personImg={p33}
+            flag={f33}
+            name="Dr. Silvi Domnori"
+            role="Advisor"
+            color="white"
+          />
+          <GovCard
+            personImg={p34}
+            flag={f34}
+            name="Dr. Mariana Morgado"
+            role="Advisor"
+            color="white"
+          />
+          <GovCard
+            personImg={p35}
+            flag={f35}
+            name="Dr. İrem 
+            Türkan"
+            role="Advisor"
+            color="white"
+          />
+        </div>
+      </div>
       <div className="delegates">
         <h1 className="title-1st">Iads</h1>
         <h1 className="title-2nd">Delegates</h1>
@@ -318,54 +364,6 @@ const Governance = () => {
           <div className="btn">Peter Swiss Excellency Award</div>
         </div>
       </div> */}
-
-      <div className="advisory">
-        <h1 className="title-1st">Iads Leadership</h1>
-        <h1 className="title-2nd" style={{ color: "white" }}>
-          Advisory board
-        </h1>
-        <p className="desc" style={{ color: "white" }}>
-          2022/2023
-        </p>
-        <div className="container horiz-cardlist">
-          <GovCard
-            personImg={p31}
-            flag={f31}
-            name="Dr. Huthaifa Abdul Qader"
-            role="Immediate Past President"
-            color="white"
-          />
-          <GovCard
-            personImg={p32}
-            flag={f32}
-            name="Dr. Abanoub Riad"
-            role="Advisor"
-            color="white"
-          />
-          <GovCard
-            personImg={p33}
-            flag={f33}
-            name="Dr. Silvi Domnori"
-            role="Advisor"
-            color="white"
-          />
-          <GovCard
-            personImg={p34}
-            flag={f34}
-            name="Dr. Mariana Morgado"
-            role="Advisor"
-            color="white"
-          />
-          <GovCard
-            personImg={p35}
-            flag={f35}
-            name="Dr. İrem 
-            Türkan"
-            role="Advisor"
-            color="white"
-          />
-        </div>
-      </div>
     </div>
   );
 };

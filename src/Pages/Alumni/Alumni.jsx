@@ -162,9 +162,6 @@ const Alumni = () => {
           oral health advocacy and education equity. Here are the ones who made
           it happen & maintained it.
         </p>
-        <p className="desc" style={{ marginBottom: "10px" }}>
-          Jump to
-        </p>
       </div>
 
       <div className="title-bg" id="prev">
@@ -321,7 +318,7 @@ const Alumni = () => {
           <GovCard
             personImg={p5}
             flag={f5}
-            name="Abanob YOSRY"
+            name="Abanoub Riad"
             role=""
             color="#3A3A3D"
           />

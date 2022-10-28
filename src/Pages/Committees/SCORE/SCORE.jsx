@@ -125,12 +125,12 @@ const SCORE = () => {
         </div>
       </div>
 
-      <h1 className="title" style={{ marginTop: "50px", marginBottom: "55px" }}>
+      {/* <h1 className="title" style={{ marginTop: "50px", marginBottom: "55px" }}>
         Projects
       </h1>
 
       <div className="container projectsCards">
-        {/* <div className="projectCard colgate">
+        <div className="projectCard colgate">
           <div className="ellipse">
             <img src={colgate} />
           </div>
@@ -151,7 +151,7 @@ const SCORE = () => {
               Learn More
             </Button>
           </div>
-        </div> */}
+        </div>
         <div className="projectCard zhermack">
           <div className="ellipse">
             <img src={zhermack} />
@@ -190,7 +190,7 @@ const SCORE = () => {
             </Button>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="publications container-fluid">
         <h1 className="title" style={{ marginBottom: "55px" }}>

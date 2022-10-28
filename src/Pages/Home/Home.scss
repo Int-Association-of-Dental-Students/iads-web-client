@@ -323,6 +323,9 @@
     text-transform: uppercase;
     color: #3a3a3d;
   }
+  .discoverMoreCardTitle:hover {
+    cursor: pointer;
+  }
 
   .discoverMoreCardBody {
     font-family: POPPINS regular;
@@ -334,6 +337,9 @@
     color: #3a3a3d;
     text-decoration: none;
   }
+  .discoverMoreCardBody:hover {
+    cursor: pointer;
+  }
 
   .discoverMoreCardCTA {
     font-family: POPPINS regular;
@@ -344,6 +350,8 @@
     font-weight: 500;
     font-size: 12px;
     margin-top: auto;
+    position: absolute;
+    bottom: 10px;
   }
 }
 

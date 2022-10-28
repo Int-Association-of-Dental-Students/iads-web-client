@@ -74,7 +74,7 @@ export default function Signup() {
         );
         setLoading(false);
         e.target.reset();
-        navigate("/");
+        navigate("/home");
       } catch (err) {
         console.log(httpClient.error);
       }

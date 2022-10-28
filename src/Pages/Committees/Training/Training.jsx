@@ -19,7 +19,7 @@ const columns = [
   {
     field: "Trainer Name",
     headerName: "Trainer Name",
-    width: 250,
+    width: 300,
     editable: false,
   },
   {
@@ -102,13 +102,9 @@ const Training = () => {
             className="row justify-content-center"
             style={{ margin: "auto" }}
           >
-            <div
-              className="col-lg-3 col-sm-12 action"
-              id="action2"
-              style={{ marginLeft: "90px" }}
-            >
+            <div className="col-lg-3 col-sm-12 action" id="action2">
               <p className="apply">Apply as a Certified IADS Trainer</p>
-              <button className="btn">
+              <button className="btn" style={{ backgroundColor: "grey" }}>
                 <img src={apply} />
                 Apply as a Trainer
               </button>
