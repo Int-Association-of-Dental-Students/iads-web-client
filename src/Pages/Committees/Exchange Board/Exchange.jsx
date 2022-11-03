@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 import "./Exchange.scss";
 
 import logo from "../../../Assets/Committees/Exchange/logo.svg";
@@ -8,6 +10,17 @@ import programs from "./programs";
 import CardList from "../../../Components/Cards/CardList";
 
 const Exchange = () => {
+  const [programs, setPrograms] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/exchange`)
+      .then((res) => {
+        setPrograms(res.data);
+        // console.log(res.data);
+      });
+  }, []);
+
   return (
     <div className="exchange-page">
       <img className="logo" src={logo} />

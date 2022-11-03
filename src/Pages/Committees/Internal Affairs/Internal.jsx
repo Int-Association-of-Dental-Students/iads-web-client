@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Internal.scss";
-import { useState } from "react";
+import axios from "axios";
+
 import { Button, Tab, Tabs } from "react-bootstrap";
 
 import delegate from "../../../Assets/Committees/Internal/Lamis.svg";
@@ -18,6 +19,19 @@ const Internal = () => {
     { name: "Maryam Ayyad Ismail", country: "Iraq" },
     { name: "Maryam Ayyad Ismail", country: "Iraq" },
   ];
+
+
+  const [pressRelease, setPressRelease] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/internal`)
+      .then((res) => {
+        setPressRelease(res.data);
+        // console.log(res.data);
+      });
+  }, []);
+
 
   return (
     <div className="internal-page">
