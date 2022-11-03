@@ -318,6 +318,19 @@ const Membership = () => {
           </div>
         </div>
       </div>
+
+      <div className="orgMemberList">
+        <h1
+          className="title-2nd"
+          style={{
+            width: "80%",
+            margin: "auto",
+            paddingTop: "90px",
+          }}
+        >
+          List of Member Organizations
+        </h1>
+      </div>
     </div>
   );
 };

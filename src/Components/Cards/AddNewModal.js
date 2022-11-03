@@ -87,20 +87,18 @@ const AddNewModal = (props) => {
               />
               <label>Includes Apply Form?</label>
             </div>
-            {apply && (
-              <>
-                <div className="row">
-                  <div className="col">
-                    <label>Apply form link</label>
-                    <br />
-                    <input
-                      type="url"
-                      placeholder="applyURL"
-                      {...register("applyURL")}
-                    />
-                  </div>
+            {apply == true && (
+              <div className="row">
+                <div className="col">
+                  <label>Apply form link</label>
+                  <br />
+                  <input
+                    type="url"
+                    placeholder="applyURL"
+                    {...register("applyURL")}
+                  />
                 </div>
-              </>
+              </div>
             )}
             {/* <input type="submit" /> */}
           </Modal.Body>

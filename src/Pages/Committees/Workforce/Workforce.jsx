@@ -26,17 +26,15 @@ const Workforce = () => {
         <div className="overlay">
           <h1 className="header-title">IADS Workforce</h1>
           <div className="flex-horiz hire-btn">
-            <AnchorLink
-              className="btn"
-              style={{
-                marginTop: "30px",
-                color: "white",
-                textAlign: "center",
-              }}
-              href="#hiring"
-            >
-              We Are Hiring!
-            </AnchorLink>
+            {Auth.validation && (
+              <a
+                href="https://goo.gl/inF3Mi"
+                className="btn"
+                style={{ marginTop: "25px" }}
+              >
+                Regulations of IADS Workforce
+              </a>
+            )}
           </div>
         </div>
       </div>
@@ -156,22 +154,12 @@ const Workforce = () => {
         </h1>
       </div>
 
-      <div className="hiring" id="hiring">
+      {/* <div className="hiring" id="hiring">
         <div className="title-2nd">We Are Hiring!</div>
         <p className="desc" style={{ color: "white", marginTop: "22px" }}>
           Are you interested in working for a global NGO and boosting your
           leadership and interpersonal skills?{" "}
         </p>
-        {/* {!Auth.validation && (
-          <Button
-            className="btn"
-            // href={data.link}
-            // style={{ color: white }}
-            onClick={() => setLoginShow(!loginShow)}
-          >
-            Submit App
-          </Button>
-        )} */}
 
         {Auth.validation ? (
           <a
@@ -388,7 +376,7 @@ const Workforce = () => {
             </ul>
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

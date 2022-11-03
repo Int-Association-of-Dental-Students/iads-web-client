@@ -175,7 +175,7 @@ export default function OrgMemberForm() {
 
         <div className="row">
           <h1 style={{ fontSize: "20px" }} className="title">
-            Personal Contact Information
+            Organization Identity
           </h1>
           <div className="col-sm-12 col-xl-6 flexx">
             <label>Full name in English*</label>
