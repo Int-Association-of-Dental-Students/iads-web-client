@@ -1,7 +1,67 @@
-import React from "react";
 import "./Membership.scss";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+const OrgMemberCard = (props) => {
+  const schoolsArray = props.listOfSchools.split(",");
+  return (
+    <div className="orgMemberCard">
+      <img className="flag" src={props.flag} />
+      <div className="content">
+        <p className="country">{props.country}</p>
+        <p className="orgName">{props.fullName}</p>
+        <p className="descCard">
+          <span style={{ fontFamily: "Poppins bold" }}>
+            Name of official delegate:{" "}
+          </span>
+          {props.firstDelegate}
+        </p>
+        <p className="descCard">
+          <span style={{ fontFamily: "Poppins bold" }}>
+            Number of local schools:{" "}
+          </span>
+          {props.numOfMemberSchools}
+        </p>
+        <p className="descCard">
+          <span style={{ fontFamily: "Poppins bold" }}>
+            List of Local Schools:
+          </span>{" "}
+          <span style={{ fontFamily: "poppins light" }}>
+            (Scroll to view more)
+          </span>
+        </p>
+        <ul
+          className="schoolList"
+          style={{
+            height: "152px",
+            overflow: "scroll",
+            overflowY: "scroll",
+            listStyle: "none",
+            paddingLeft: "0",
+          }}
+        >
+          {schoolsArray.map((school) => (
+            <li className="descCard">{school}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
 
 const Membership = () => {
+  const [orgMembers, setOrgMembers] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get("https://infinite-wildwood-83288.herokuapp.com/api/orgmember")
+      .then((res) => {
+        setOrgMembers(res.data);
+        // console.log(res.data);
+        console.log(orgMembers);
+      });
+  }, []);
+
   return (
     <div className="membership-page">
       <div className="hero">
@@ -325,11 +385,28 @@ const Membership = () => {
           style={{
             width: "80%",
             margin: "auto",
-            paddingTop: "90px",
+            paddingBottom: "50px",
           }}
         >
           List of Member Organizations
         </h1>
+        <div className="orgMemberCards">
+          {orgMembers &&
+            orgMembers.map((member, idx) => (
+              <>
+                {member.validation && (
+                  <OrgMemberCard
+                    flag={member.flag}
+                    country={member.country}
+                    fullName={member.fullname}
+                    numOfMemberSchools={member.numOfMemberSchools}
+                    firstDelegate={member.delegate1.name}
+                    listOfSchools={member.listOfSchools}
+                  />
+                )}
+              </>
+            ))}
+        </div>
       </div>
     </div>
   );

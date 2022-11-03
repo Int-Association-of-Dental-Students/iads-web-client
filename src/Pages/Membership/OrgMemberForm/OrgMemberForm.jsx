@@ -74,6 +74,7 @@ export default function OrgMemberForm() {
 
           numOfMemberSchools: data.numOfMemberSchools,
           numOfMemberStudents: data.numOfMemberStudents,
+          listOfSchools: data.listOfSchools,
 
           requestedMembershipType: data.requestedMembershipType,
 
@@ -108,9 +109,10 @@ export default function OrgMemberForm() {
           },
 
           delegate1: {
+            name: data.delegateName,
             email: data.delegateEmail,
-            phoneNumber: data.delegate1Phone,
-            whatsapp: data.delegate1Whatsapp,
+            phoneNumber: data.delegatePhone,
+            whatsapp: data.delegateWhatsapp,
           },
 
           delegate2: {
@@ -303,15 +305,6 @@ export default function OrgMemberForm() {
 
         <div className="row" style={{ paddingBottom: "25px" }}>
           <div className="col-sm-12 col-xl-6 flexx">
-            <label>Email of The Official Delegate</label>
-            <input
-              type="email"
-              placeholder="Type Here..."
-              id="delegateEmail"
-              {...register("delegateEmail", { required: true })}
-            />
-          </div>
-          <div className="col-sm-12 col-xl-6 flexx">
             <label>Website*</label>
             <input
               type="text"
@@ -345,6 +338,23 @@ export default function OrgMemberForm() {
               placeholder="Type Here..."
               id="numOfMemberSchools"
               {...register("numOfMemberSchools", { required: true })}
+            />
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col flexx">
+            <label>Names of Member Schools (Universities) </label>
+            <p className="desc" style={{ color: "grey" }}>
+              Please enter the list of schools separated by a comma ","
+            </p>
+            <textarea
+              // style={{ height: "100px", wid }}
+              rows="5"
+              type="text"
+              placeholder="Type the list of schools separated by a comma ,"
+              id="listOfSchools"
+              {...register("listOfSchools", { required: true })}
             />
           </div>
         </div>
@@ -548,24 +558,51 @@ export default function OrgMemberForm() {
 
         <div className="row">
           <div className="col-sm-12 col-xl-6 flexx">
-            <label>Phone Number of IADS Delegate</label>
+            <label>Name of IADS Delegate</label>
             <input
-              type="tel"
+              type="text"
               placeholder="Type Here..."
-              id="delegate1Phone"
-              {...register("delegate1Phone", { required: true })}
+              id="delegateName"
+              {...register("delegateName", { required: true })}
             />
           </div>
           <div className="col-sm-12 col-xl-6 flexx">
-            <label>Whatsapp Phone Number of IADS Delegate</label>
+            <label>Email of IADS Delegate</label>
             <input
-              type="tel"
+              type="email"
               placeholder="Type Here..."
-              id="delegate1Whatsapp"
-              {...register("delegate1Whatsapp", { required: true })}
+              id="delegateEmail"
+              {...register("delegateEmail", { required: true })}
             />
           </div>
         </div>
+
+        <div className="row">
+          <div className="col-sm-12 col-xl-6 flexx">
+            <label>Phone Number of IADS Delegate</label>
+
+            <input
+              type="tel"
+              placeholder="Type Here..."
+              id="delegatePhone"
+              {...register("delegatePhone", { required: true })}
+            />
+          </div>
+          <div className="col-sm-12 col-xl-6 flexx">
+            <label>WhatsApp Phone Number of IADS Delegate</label>
+            <input
+              type="tel"
+              placeholder="Type Here..."
+              id="delegateWhatsapp"
+              {...register("delegateWhatsapp", { required: true })}
+            />
+          </div>
+        </div>
+        <br />
+        <p className="desc" style={{ fontFamily: "poppins bold" }}>
+          In case your Association has a second delegate please specify the
+          following:
+        </p>
 
         <div className="row">
           <div className="col-sm-12 col-xl-6 flexx">
