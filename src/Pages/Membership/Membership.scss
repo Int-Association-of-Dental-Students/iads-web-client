@@ -1,4 +1,71 @@
 .membership-page {
+  .orgMemberCards {
+    display: flex;
+    gap: 23px;
+    width: 85%;
+    margin: auto;
+    padding-bottom: 100px;
+    overflow-x: scroll;
+  }
+  .orgMemberCard {
+    width: 383px;
+    height: 610px;
+    background: #ffffff;
+    border: 1px solid #7695ad;
+    box-shadow: 13px 18px 28px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    text-align: left;
+    .flag {
+      object-fit: cover;
+      width: 382px;
+      height: 247px;
+      border-radius: 20px 20px 0px 0px;
+    }
+    .content {
+      width: 90%;
+      margin: auto;
+      .country {
+        font-family: "Poppins regular";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        // line-height: 27px;
+        /* identical to box height */
+
+        /* #3A3A3D */
+
+        color: #3a3a3d;
+        margin-top: 25px;
+        margin-bottom: 9px;
+      }
+
+      .orgName {
+        font-family: "Poppins bold";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        // line-height: 27px;
+
+        /* dark */
+
+        color: #1d015c;
+        margin-bottom: 9px;
+      }
+
+      .descCard {
+        font-family: "Poppins regular";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        // line-height: 20px;
+        /* identical to box height */
+
+        color: #6c6c6c;
+        margin-bottom: 8.5px;
+      }
+    }
+  }
+
   .header-title {
     font-family: LEMON MILK regular;
     font-size: 50px;
