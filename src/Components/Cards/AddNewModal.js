@@ -2,8 +2,38 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 import "./AddNewModal.scss";
 const AddNewModal = (props) => {
+  console.log(props);
+  const [imgStr, setImgStr] = useState([]);
+  const uploadImage = (img, idx) => {
+    let resImg = null;
+    const imgAPIKey = "826fbb1f90dacfa942f721a496d71950";
+    let formData = new FormData();
+    formData.append("image", img);
+    const url = `https://api.imgbb.com/1/upload?key=${imgAPIKey}`;
+    console.log(formData);
+    fetch(url, {
+      method: "POST",
+      body:
+        // JSON.stringify({
+        formData,
+      // })
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        resImg = result.data.display_url;
+        console.log(resImg);
+        console.log("imgbb", result);
+        let arr = imgStr;
+        arr[idx] = resImg;
+        setImgStr(arr);
+        console.log(imgStr);
+        return resImg;
+      });
+  };
+
   const [show, setShow] = useState(props.show);
   console.log(show);
   const handleClose = () => setShow(false);
@@ -17,7 +47,28 @@ const AddNewModal = (props) => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    let arr = data;
+    imgStr["image"] = imgStr["0"];
+    data = { ...arr, ...imgStr };
+
+    try {
+      axios({
+        method: "post",
+        // headers: { "Access-Control-Allow-Origin": "*" },
+        url: "http://localhost:3001/api/card/create",
+        data: {
+          title: data.title,
+          description: data.description,
+          image: data.image,
+          link: data.link,
+          date: data.date,
+          type: props.type,
+        },
+      });
+    } catch (err) {}
+    console.log(data);
+  };
   console.log(errors);
   return (
     <div>
@@ -59,6 +110,25 @@ const AddNewModal = (props) => {
                   type="date"
                   placeholder="date"
                   {...register("date", { required: true })}
+                />
+                {/* <input
+                  type="text"
+                  placeholder="date"
+                  {...register("date", { required: true })}
+                /> */}
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col">
+                <label>Add Image</label>
+                <input
+                  style={{ border: "none" }}
+                  type="file"
+                  onChange={(e) => {
+                    uploadImage(e.target.files[0], 0);
+                    console.log(imgStr);
+                  }}
                 />
               </div>
             </div>

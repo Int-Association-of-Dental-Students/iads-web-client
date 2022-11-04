@@ -10,11 +10,11 @@ import programs from "./programs";
 import CardList from "../../../Components/Cards/CardList";
 
 const Exchange = () => {
-  const [programs, setPrograms] = useState([]);
+  const [programs, setPrograms] = useState(null);
 
   useEffect(() => {
     axios
-      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/exchange`)
+      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/programs`)
       .then((res) => {
         setPrograms(res.data);
         // console.log(res.data);
@@ -104,11 +104,16 @@ const Exchange = () => {
         Exhange Programs
       </h1>
 
-      <CardList
-        className="card-list"
-        data={programs}
-        textColor="#ED8E00"
-      ></CardList>
+      {programs && (
+        <CardList
+          className="card-list"
+          data={programs}
+          textColor="#ED8E00"
+          type="programs"
+        ></CardList>
+      )}
+      <br />
+      <br />
     </div>
   );
 };

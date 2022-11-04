@@ -29,7 +29,10 @@
   position: relative;
 
   .card-img {
-    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+    width: 378px;
+    height: 247px;
+    border-radius: 20px 20px 0px 0px;
   }
 
   .card-title {

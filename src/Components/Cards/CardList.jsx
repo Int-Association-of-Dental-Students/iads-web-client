@@ -8,10 +8,12 @@ import AddNewModal from "./AddNewModal";
 import { AuthContext } from "../Context/AuthContext";
 import { useContext } from "react";
 
-const CardList = ({ data, textColor }) => {
+const CardList = ({ data, textColor, type }) => {
+  console.log(type);
   const Auth = useContext(AuthContext);
   const [show, setShow] = useState(false);
 
+  console.log(data);
   console.log(Auth);
 
   return (
@@ -19,7 +21,7 @@ const CardList = ({ data, textColor }) => {
       <div className="container cardlist">
         {Auth.editor && (
           <div>
-            {show && <AddNewModal show={show} />}
+            {show && <AddNewModal show={show} type={type} />}
             <button
               onClick={() => {
                 setShow(!show);
@@ -32,7 +34,7 @@ const CardList = ({ data, textColor }) => {
             </button>
           </div>
         )}
-        {data.map((data) => (
+        {data.cards.map((data) => (
           <CardComponent
             style={textColor}
             t={data.title}
