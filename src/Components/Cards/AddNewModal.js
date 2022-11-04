@@ -56,7 +56,7 @@ const AddNewModal = (props) => {
       axios({
         method: "post",
         // headers: { "Access-Control-Allow-Origin": "*" },
-        url: "http://localhost:3001/api/card/create",
+        url: "https://infinite-wildwood-83288.herokuapp.com/api/card/create",
         data: {
           title: data.title,
           description: data.description,
