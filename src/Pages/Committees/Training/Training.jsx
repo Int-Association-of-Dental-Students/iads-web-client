@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Training.scss";
 
 import TrainerIdx from "./TrainerIdx";
@@ -13,6 +13,7 @@ import tnts from "./tnts";
 
 import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
+import axios from "axios";
 // import { DataGridPremium } from "@mui/x-data-grid-premium";
 
 const columns = [
@@ -37,6 +38,18 @@ const columns = [
 ];
 
 const Training = () => {
+
+  const [tnts, settnts] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/tnts`)
+      .then((res) => {
+        settnts(res.data);
+        // console.log(res.data);
+      });
+  }, []);
+
   return (
     <div className="training-page">
       <img src={logo} alt="" className="logo" />
@@ -86,11 +99,11 @@ const Training = () => {
         >
           Current TNTs
         </h1>
-        <CardList
+     {   tnts &&  <CardList
           className="card-list"
           data={tnts}
           textColor="#0D7B7D"
-        ></CardList>
+        ></CardList>}
       </div>
 
       <div className="container-fluid trainerApp">

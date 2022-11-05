@@ -117,12 +117,12 @@ const Prophylaxis = () => {
         <h1 className="title" style={{ marginBottom: "55px" }}>
           Toolkits
         </h1>
-        <CardList
+       { toolkits && <CardList
           className="card-list"
           data={toolkits}
           textColor="#6D3591"
           type="toolkits"
-        ></CardList>
+        ></CardList>}
       </div>
 
       <div className="container projectsCards">

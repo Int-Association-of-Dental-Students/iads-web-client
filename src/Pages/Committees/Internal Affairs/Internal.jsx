@@ -21,7 +21,7 @@ const Internal = () => {
   ];
 
 
-  const [pressRelease, setPressRelease] = useState([]);
+  const [pressRelease, setPressRelease] = useState(null);
 
   useEffect(() => {
     axios
@@ -106,12 +106,12 @@ const Internal = () => {
       </div>
       <div className="press">
         <h1 className="title">Press Release</h1>
-        <CardList
+     {   pressRelease &&   <CardList
           className="card-list"
           data={pressRelease}
           textColor="#C60E3C"
           type="pressRelease"
-        ></CardList>
+        ></CardList>}
         <br />
         <br />
       </div>

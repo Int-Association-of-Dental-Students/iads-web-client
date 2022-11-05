@@ -149,8 +149,8 @@ const AddNewModal = (props) => {
                 className="small-check"
                 type="checkbox"
                 // checked={apply}
-                onChange={(e) => {
-                  setApply(true);
+                onClick={(e) => {
+                  setApply(!apply);
                   console.log(apply);
                 }}
                 {...register("apply")}

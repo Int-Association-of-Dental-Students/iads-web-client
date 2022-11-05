@@ -10,7 +10,7 @@ import axios from "axios";
 
 const Voluntary = () => {
 
-  const [events, setevents] = useState([]);
+  const [events, setevents] = useState(null);
 
   useEffect(() => {
     axios
@@ -94,12 +94,12 @@ const Voluntary = () => {
         <h1 className="title" style={{ marginBottom: "55px" }}>
           Events & Activities
         </h1>
-        <CardList
+     {   events && <CardList
           className="card-list"
           data={events}
           type={"events"}
           textColor="#7EAF0D"
-        ></CardList>
+        ></CardList>}
       </div>
     </div>
   );

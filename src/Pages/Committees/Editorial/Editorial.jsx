@@ -9,8 +9,6 @@ import delegate from "../../../Assets/Committees/Editorial/delegate.svg";
 import axios from "axios";
 
 const Editorial = () => {
-
-
   const [magazines, setmagazines] = useState([]);
 
   useEffect(() => {
@@ -21,7 +19,6 @@ const Editorial = () => {
         // console.log(res.data);
       });
   }, []);
-
 
   return (
     <div className="container-fluid editorial-page">
@@ -100,13 +97,14 @@ const Editorial = () => {
         <h1 className="title" style={{ marginBottom: "55px" }}>
           IADS Magazines
         </h1>
-        <CardList
-          className="card-list"
-          data={magazines}
-          textColor="#E85B0D"
-          type="magazines"
-
-        ></CardList>
+        {magazines && (
+          <CardList
+            className="card-list"
+            data={magazines}
+            textColor="#E85B0D"
+            type="magazines"
+          ></CardList>
+        )}
       </div>
     </div>
   );

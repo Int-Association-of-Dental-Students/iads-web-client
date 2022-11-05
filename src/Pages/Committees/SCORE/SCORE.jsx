@@ -38,19 +38,22 @@ const SCORE = () => {
   // useEffect(() => {
   //   getPublications();
   // }, []);
-  const [publications, setpublications] = useState([]);
-  const [courses, setcourses] = useState([]);
-  const [IDCP, setIDCP] = useState([]);
-  const [IJDS, setIJDS] = useState([]);
+  const [publications, setpublications] = useState(null);
+  const [courses, setcourses] = useState(null);
+  const [IDCP, setIDCP] = useState(null);
+  const [IJDS, setIJDS] = useState(null);
 
+  console.log("HIIII");
 
 
   useEffect(() => {
+    console.log("HIIII22222");
+
     axios
       .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/publications`)
       .then((res) => {
         setpublications(res.data);
-        // console.log(res.data);
+        console.log(res.data);
       });
 
 
@@ -237,12 +240,12 @@ const SCORE = () => {
         <h1 className="title" style={{ marginBottom: "55px" }}>
           Publications
         </h1>
-        <CardList
+     {   publications  &&   <CardList
           className="card-list"
           data={publications}
           type={"publications"}
           textColor="#00467c"
-        ></CardList>
+        ></CardList>}
       </div>
 
       <div className="courses container-fluid">
@@ -275,12 +278,12 @@ const SCORE = () => {
           specialists and academicians. This will predominantly enhance the
           quality of education on a global level.
         </p>
-        <CardList
+     {   courses && <CardList
           className="card-list"
           data={courses}
           type={"courses"}
           textColor="#00467c"
-        ></CardList>
+        ></CardList>}
       </div>
       <div className="IDCP container-fluid" style={{ paddingBottom: "75px" }}>
         <img
@@ -298,12 +301,12 @@ const SCORE = () => {
           predominantly reform and reshape a new generation of well-rounded
           dental professionals.
         </p>
-        <CardList
+        {   IDCP &&   <CardList
           className="card-list"
           data={IDCP}
           type={"IDCP"}
           textColor="#00467c"
-        ></CardList>
+        ></CardList> }
       </div>
       <div
         className="IJDS"
@@ -335,12 +338,12 @@ const SCORE = () => {
           depiction of how art and science can work together to produce
           innovative articulacy.
         </p>
-        <CardList
+        {   IJDS &&      <CardList
           className="card-list"
           data={IJDS}
           type={"IJDS"}
           textColor="#00467c"
-        ></CardList>
+        ></CardList> }
       </div>
     </div>
   );
