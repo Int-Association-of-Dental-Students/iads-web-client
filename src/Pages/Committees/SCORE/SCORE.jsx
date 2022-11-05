@@ -38,6 +38,47 @@ const SCORE = () => {
   // useEffect(() => {
   //   getPublications();
   // }, []);
+  const [publications, setpublications] = useState([]);
+  const [courses, setcourses] = useState([]);
+  const [IDCP, setIDCP] = useState([]);
+  const [IJDS, setIJDS] = useState([]);
+
+
+
+  useEffect(() => {
+    axios
+      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/publications`)
+      .then((res) => {
+        setpublications(res.data);
+        // console.log(res.data);
+      });
+
+
+      axios
+      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/courses`)
+      .then((res) => {
+        setcourses(res.data);
+        // console.log(res.data);
+      });
+
+
+      axios
+      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/IDCP`)
+      .then((res) => {
+        setIDCP(res.data);
+        // console.log(res.data);
+      });
+
+
+      axios
+      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/IJDS`)
+      .then((res) => {
+        setIJDS(res.data);
+        // console.log(res.data);
+      });
+
+
+  }, []);
 
   return (
     <div className="container-fluid scorePage">
@@ -199,6 +240,7 @@ const SCORE = () => {
         <CardList
           className="card-list"
           data={publications}
+          type={"publications"}
           textColor="#00467c"
         ></CardList>
       </div>
@@ -236,6 +278,7 @@ const SCORE = () => {
         <CardList
           className="card-list"
           data={courses}
+          type={"courses"}
           textColor="#00467c"
         ></CardList>
       </div>
@@ -258,6 +301,7 @@ const SCORE = () => {
         <CardList
           className="card-list"
           data={IDCP}
+          type={"IDCP"}
           textColor="#00467c"
         ></CardList>
       </div>
@@ -294,6 +338,7 @@ const SCORE = () => {
         <CardList
           className="card-list"
           data={IJDS}
+          type={"IJDS"}
           textColor="#00467c"
         ></CardList>
       </div>

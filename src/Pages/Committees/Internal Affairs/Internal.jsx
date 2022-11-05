@@ -25,7 +25,7 @@ const Internal = () => {
 
   useEffect(() => {
     axios
-      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/internal`)
+      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/pressRelease`)
       .then((res) => {
         setPressRelease(res.data);
         // console.log(res.data);
@@ -110,6 +110,7 @@ const Internal = () => {
           className="card-list"
           data={pressRelease}
           textColor="#C60E3C"
+          type="pressRelease"
         ></CardList>
         <br />
         <br />

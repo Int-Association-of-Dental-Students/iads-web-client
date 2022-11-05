@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Voluntary.scss";
 
 import events from "./events";
@@ -6,8 +6,21 @@ import CardList from "../../../Components/Cards/CardList";
 
 import logo from "../../../Assets/Committees/Voluntary/logo.svg";
 import delegate from "../../../Assets/Committees/Voluntary/delegate.svg";
+import axios from "axios";
 
 const Voluntary = () => {
+
+  const [events, setevents] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/events`)
+      .then((res) => {
+        setevents(res.data);
+        // console.log(res.data);
+      });
+  }, []);
+
   return (
     <div className="container-fluid voluntary-page">
       <img className="logo" src={logo} />
@@ -84,6 +97,7 @@ const Voluntary = () => {
         <CardList
           className="card-list"
           data={events}
+          type={"events"}
           textColor="#7EAF0D"
         ></CardList>
       </div>

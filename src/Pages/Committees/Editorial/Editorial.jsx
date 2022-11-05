@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Editorial.scss";
 
 import magazines from "./magazines";
@@ -6,8 +6,23 @@ import CardList from "../../../Components/Cards/CardList";
 
 import logo from "../../../Assets/Committees/Editorial/logo.svg";
 import delegate from "../../../Assets/Committees/Editorial/delegate.svg";
+import axios from "axios";
 
 const Editorial = () => {
+
+
+  const [magazines, setmagazines] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/magazines`)
+      .then((res) => {
+        setmagazines(res.data);
+        // console.log(res.data);
+      });
+  }, []);
+
+
   return (
     <div className="container-fluid editorial-page">
       <img className="logo" src={logo} />
@@ -89,6 +104,8 @@ const Editorial = () => {
           className="card-list"
           data={magazines}
           textColor="#E85B0D"
+          type="magazines"
+
         ></CardList>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Prophylaxis.scss";
 
 import { Button } from "react-bootstrap";
@@ -12,8 +12,23 @@ import CardList from "../../../Components/Cards/CardList";
 
 import logo from "../../../Assets/Committees/Prophylaxis/logo.svg";
 import delegate from "../../../Assets/Committees/Prophylaxis/delegate.svg";
+import axios from "axios";
 
 const Prophylaxis = () => {
+
+
+  const [toolkits, settoolkits] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/toolkits`)
+      .then((res) => {
+        settoolkits(res.data);
+        // console.log(res.data);
+      });
+  }, []);
+
+
   return (
     <div className="container-fluid prophylaxis-page">
       <img className="logo" src={logo} />
@@ -106,6 +121,7 @@ const Prophylaxis = () => {
           className="card-list"
           data={toolkits}
           textColor="#6D3591"
+          type="toolkits"
         ></CardList>
       </div>
 
