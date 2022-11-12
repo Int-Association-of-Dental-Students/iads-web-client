@@ -15,9 +15,7 @@ import delegate from "../../../Assets/Committees/Prophylaxis/delegate.svg";
 import axios from "axios";
 
 const Prophylaxis = () => {
-
-
-  const [toolkits, settoolkits] = useState([]);
+  const [toolkits, settoolkits] = useState(null);
 
   useEffect(() => {
     axios
@@ -27,7 +25,6 @@ const Prophylaxis = () => {
         // console.log(res.data);
       });
   }, []);
-
 
   return (
     <div className="container-fluid prophylaxis-page">
@@ -117,12 +114,14 @@ const Prophylaxis = () => {
         <h1 className="title" style={{ marginBottom: "55px" }}>
           Toolkits
         </h1>
-       { toolkits && <CardList
-          className="card-list"
-          data={toolkits}
-          textColor="#6D3591"
-          type="toolkits"
-        ></CardList>}
+        {toolkits && (
+          <CardList
+            className="card-list"
+            data={toolkits}
+            textColor="#6D3591"
+            type="toolkits"
+          ></CardList>
+        )}
       </div>
 
       <div className="container projectsCards">

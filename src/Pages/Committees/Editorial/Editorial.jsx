@@ -9,7 +9,7 @@ import delegate from "../../../Assets/Committees/Editorial/delegate.svg";
 import axios from "axios";
 
 const Editorial = () => {
-  const [magazines, setmagazines] = useState([]);
+  const [magazines, setmagazines] = useState(null);
 
   useEffect(() => {
     axios

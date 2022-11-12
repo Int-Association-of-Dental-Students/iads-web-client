@@ -12,6 +12,7 @@ const AdminPortal = () => {
   const Auth = useContext(AuthContext);
   const [webUsers, setWebUsers] = useState(null);
   const [orgMembers, setOrgMembers] = useState(null);
+  const [personalMembers, setPersonalMembers] = useState(null);
 
   const [temp, setTemp] = useState(true);
 
@@ -32,6 +33,18 @@ const AdminPortal = () => {
     axios
       .post(
         `https://infinite-wildwood-83288.herokuapp.com/api/orgmember/updateVerification/${id}/${type}`
+      )
+      .then((res) => {
+        setTemp(!temp);
+      });
+  };
+
+  const updateValidatedPersonalMember = (id, type) => {
+    console.log(id);
+    console.log(type);
+    axios
+      .post(
+        `https://infinite-wildwood-83288.herokuapp.com/api/personalmember/updateVerification/${id}/${type}`
       )
       .then((res) => {
         setTemp(!temp);
@@ -73,6 +86,16 @@ const AdminPortal = () => {
         setTemp(!temp);
       });
   };
+  const deletePersonalMember = async (id) => {
+    console.log("remove by id");
+    await axios
+      .post(
+        `https://infinite-wildwood-83288.herokuapp.com/api/personalmember/deleteMember/${id}`
+      )
+      .then((res) => {
+        setTemp(!temp);
+      });
+  };
 
   useEffect(() => {
     axios
@@ -86,6 +109,13 @@ const AdminPortal = () => {
       .get("https://infinite-wildwood-83288.herokuapp.com/api/orgmember")
       .then((res) => {
         setOrgMembers(res.data);
+        // console.log(res.data);
+      });
+    console.log(orgMembers);
+    axios
+      .get("https://infinite-wildwood-83288.herokuapp.com/api/personalmember")
+      .then((res) => {
+        setPersonalMembers(res.data);
         // console.log(res.data);
       });
     console.log(orgMembers);
@@ -203,6 +233,18 @@ const AdminPortal = () => {
               </tbody>
             </Table>
           </div>
+          <iframe
+            style={{
+              background: "#FFFFFF",
+              border: "none",
+              borderRadius: "2px",
+              marginTop: "25px",
+              boxShadow: "0 2px 10px 0 rgba(70, 76, 79, .2)",
+            }}
+            width="640"
+            height="480"
+            src="https://charts.mongodb.com/charts-iads-web-pnyjk/embed/charts?id=636eb5a3-3d08-4150-8457-2618c9b22811&maxDataAge=3600&theme=light&autoRefresh=true"
+          ></iframe>
 
           <h1
             className="title"
@@ -375,6 +417,112 @@ const AdminPortal = () => {
                 </tbody>
               </Table>
             )}
+          </div>
+
+          <h1
+            className="title"
+            style={{ marginTop: "30px", marginLeft: "30px" }}
+          >
+            Personal Members
+          </h1>
+          <div
+            className="member-table"
+            style={{
+              marginBottom: "0px !important",
+              height: "700px",
+              overflow: "scroll",
+              width: "85%",
+              margin: "auto",
+              border: "2px solid #185BB1",
+              borderRadius: "20px",
+            }}
+          >
+            <Table striped bordered hover fixed>
+              <thead
+                style={{
+                  position: "sticky",
+                  top: "0",
+                  backgroundColor: "#185BB1",
+                  color: "white",
+                  verticalAlign: "middle",
+                }}
+                variant="dark"
+              >
+                <tr>
+                  {/* <th>Idx</th> */}
+                  <th className="header" scope="col">
+                    Delete
+                  </th>
+                  <th className="header">Validated</th>
+                  <th className="header">Full Name</th>
+                  <th className="header">Gender</th>
+                  <th className="header">Country</th>
+                  {/* <th>Gender</th> */}
+                  <th className="header">City</th>
+                  <th className="header">Address</th>
+                  <th className="header">Postal Code</th>
+                  <th className="header">University</th>
+                  {/* <th>Years Of Study</th> */}
+                  <th className="header">Phone</th>
+                  <th className="header">Whatsapp</th>
+                  <th className="header">Facebook</th>
+                  <th className="header">Email</th>
+                  <th className="header">How Heard</th>
+                  <th className="header">Grad. Year</th>
+                  <th className="header">Curriculum</th>
+                  <th className="header">Motivational</th>
+                  <th className="header">Studentship</th>
+                </tr>
+              </thead>
+              <tbody>
+                {personalMembers &&
+                  personalMembers
+                    .slice(0)
+                    .reverse()
+                    .map((member, idx) => (
+                      // <div>{user.fullName}</div>;
+                      <tr>
+                        {/* <td>{idx}</td> */}
+                        <td>
+                          <button
+                            style={{ color: "red" }}
+                            onClick={(e) => deletePersonalMember(member._id)}
+                          >
+                            Delete
+                          </button>
+                        </td>
+                        <td>
+                          <input
+                            type="checkbox"
+                            checked={member.validation}
+                            onChange={(e) =>
+                              updateValidatedPersonalMember(
+                                member._id,
+                                e.target.checked
+                              )
+                            }
+                          />
+                        </td>
+                        <td>{member.fullname}</td>
+                        <td>{member.gender}</td>
+                        <td>{member.country}</td>
+                        <td>{member.city}</td>
+                        <td>{member.address}</td>
+                        <td>{member.postalCode}</td>
+                        <td>{member.university}</td>
+                        <td>{member.phoneNumber}</td>
+                        <td>{member.whatsappNumber}</td>
+                        <td>{member.facebook}</td>
+                        <td>{member.email}</td>
+                        <td>{member.howHeard}</td>
+                        <td>{member.yearOfGraduation}</td>
+                        <td>{member.curriculum}</td>
+                        <td>{member.motivational}</td>
+                        <td>{member.studentship}</td>
+                      </tr>
+                    ))}
+              </tbody>
+            </Table>
           </div>
         </>
       ) : (
