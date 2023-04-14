@@ -194,7 +194,7 @@ function App() {
               element={<GreenDentistry />}
             />
             <Route path="/projects/MCAM" element={<MCAM />} />
-            <Route path="/projects/zhermack" element={<Zhermack />} />
+            {/* <Route path="/projects/zhermack" element={<Zhermack />} /> */}
             <Route path="/projects/colgate" element={<Colgate />} />
             <Route
               path="/projects/colgate/registration"
@@ -221,7 +221,7 @@ function App() {
             <Route path="/committees/exchange" element={<Exchange />} />
             <Route path="/committees/voluntary" element={<Voluntary />} />
             <Route path="/committees/editorial" element={<Editorial />} />
-            <Route path="/committees/prophylaxis" element={<Prophylaxis />} />
+            <Route path="/committees/public-health" element={<Prophylaxis />} />
           </Route>
         </Routes>
         <Footer />

@@ -45,7 +45,7 @@ const Exchange = () => {
         <div className="row">
           <div className="delegatee col-lg-3 col-sm-12">
             <img style={{ borderRadius: "100%" }} src={delegate} />
-            <h3 className="subtitle">Dr. Arsal Sadiq</h3>
+            <h3 className="subtitle">Ksenia Rusakova</h3>
             <p className="position" style={{ marginBottom: "0px" }}>
               Vice President of Exchange
             </p>
@@ -58,42 +58,20 @@ const Exchange = () => {
             <div className="row subtitle">Workforce Members</div>
             <div className="row">
               <div className="col-4 WF_memberList">
-                <h4 className="role">Secretary:</h4>
-                <h4 className="name">Mian Aneeq Majid</h4>
+                <h4 className="name">Wajiha Mazhar</h4>
                 <p className="country">Pakistan</p>
-                <h4 className="role">Content Manager:</h4>
-                <h4 className="name">Fatima Rehman</h4>
-                <p className="country">Pakistan</p>
-                <h4 className="role">Members:</h4>
-                <h4 className="name">Maira Pasha</h4>
-                <p className="country">Pakistan</p>
-                <h4 className="name">Yuina Okazaki</h4>
-                <p className="country">Japan</p>
-              </div>
-
-              <div className="col-4 WF_memberList">
-                <h4 className="name">Raghad Saleh</h4>
-                <p className="country">Palestine</p>
-
-                <h4 className="name">Öykü Naz Turan</h4>
-                <p className="country">Turkey</p>
-
-                <h4 className="name">Anna Pakhuta</h4>
-                <p className="country">Ukraine</p>
-                <h4 className="name">Mana Kitsugi</h4>
-                <p className="country">Japan</p>
-                <h4 className="name">Daria Vladimirovna Savchenko</h4>
-                <p className="country">Russia</p>
                 <h4 className="name">Gaida Yaser</h4>
                 <p className="country">Sudan</p>
-              </div>
-
-              <div className="col-4 WF_memberList">
-                <h4 className="name"> Ruba Mazin</h4>
-                <p className="country">Palestine</p>
-
-                <h4 className="name">Jazila Afifa</h4>
+                <h4 className="name">Inez Marella Dion Saputri</h4>
                 <p className="country">Indonesia</p>
+              </div>
+              <div className="col-4 WF_memberList">
+                <h4 className="name">Ola Abdul Wahab</h4>
+                <p className="country">Sudan</p>
+                <h4 className="name">Yaren Sönmez</h4>
+                <p className="country">Türkiye</p>
+                <h4 className="name">Tasnim Elrashid</h4>
+                <p className="country">Sudan</p>
               </div>
             </div>
           </div>

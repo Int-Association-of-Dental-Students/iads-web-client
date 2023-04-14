@@ -158,7 +158,7 @@ function Home() {
             <img className="vlogo" src={verticalLogo} />
           </div>
         </div>
-        <div className="container-fluid congress">
+        {/* <div className="container-fluid congress">
           <img className="congLogo" src={CongressLogo} />
 
           <div className="congText">
@@ -182,7 +182,7 @@ function Home() {
               Learn More
             </a>
           </div>
-        </div>
+        </div> */}
 
         <div className="discoverMore container">
           <div className="homePageTitles1">
@@ -521,7 +521,7 @@ function Home() {
         <div className="ourComp container">
           <div className="homePageTitles2">
             <p className="homePageTitles21">Our</p>
-            <p className="homePageTitles22">Sponsers</p>
+            <p className="homePageTitles22">Sponsors</p>
 
             <p className="homePageTitles23">
               Here are our partner organizations worldwide

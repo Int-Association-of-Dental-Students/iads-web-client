@@ -38,7 +38,6 @@ const columns = [
 ];
 
 const Training = () => {
-
   const [tnts, settnts] = useState(null);
 
   useEffect(() => {
@@ -77,15 +76,10 @@ const Training = () => {
             <div className="row subtitle">Workforce Members</div>
             <div className="row">
               <div className="col-3 WF_memberList">
-                <h4 className="name">Esraa Alfateh</h4>
+                <h4 className="name">Mortada Ahmed</h4>
                 <p className="country">Sudan</p>
-                <h4 className="name">Leen Dweik</h4>
-                <p className="country">Palestine</p>
-
-                <h4 className="name">Lovre Labura</h4>
-                <p className="country">Croatia</p>
-                <h4 className="name">Mohamed Ilyas</h4>
-                <p className="country">Russia</p>
+                <h4 className="name">Romaysa Galal Ahmed Elsayed</h4>
+                <p className="country">Sudan</p>
               </div>
             </div>
           </div>
@@ -99,11 +93,13 @@ const Training = () => {
         >
           Current TNTs
         </h1>
-     {   tnts &&  <CardList
-          className="card-list"
-          data={tnts}
-          textColor="#0D7B7D"
-        ></CardList>}
+        {tnts && (
+          <CardList
+            className="card-list"
+            data={tnts}
+            textColor="#0D7B7D"
+          ></CardList>
+        )}
       </div>
 
       <div className="container-fluid trainerApp">

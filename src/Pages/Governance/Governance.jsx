@@ -142,16 +142,15 @@ const Governance = () => {
           />
           <GovCard
             personImg={p4}
-            flag={f4}
-            name="Dr. Zhengis Zhamashev"
+            flag={f32}
+            name="Maryam Elahmady"
             role="Vice President of Science & Research"
             color="white"
           />
           <GovCard
             personImg={p5}
             flag={f5}
-            name="Aneeq 
-            Majid Mian"
+            name="Ksenia Rusakova"
             role="Vice President of Exchange"
             color="white"
           />

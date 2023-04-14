@@ -176,7 +176,7 @@ const Alumni = () => {
           headerHeight={40}
           stickyHeader
           rows={PrevExecCom}
-          getRowId={(row) => row["President"]}
+          getRowId={(row) => row["Term"]}
           columns={PrevExecComCol}
           pageSize={10}
           rowsPerPageOptions={[5]}

@@ -2,7 +2,7 @@ const PrevMeetings = [
   {
     Term: 2022,
     "Annual Congress (AC)": "Almaty, KAZAKHSTAN 🇰🇿",
-    Gallery: "URL",
+    Gallery: "https://www.facebook.com/media/set/?set=a.570339488467870&type=3",
     "Mid-Year Meeting (MYM)": "Amman, JORDAN 🇯🇴",
     "MM Gallery":
       "https://www.facebook.com/media/set/?set=a.10159990972932640&type=3",
@@ -29,16 +29,16 @@ const PrevMeetings = [
       "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10157636776362640",
     "Mid-Year Meeting (MYM)": "Strasbourg, FRANCE 🇫🇷",
     "MM Gallery":
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10157201625752640",
+      "https://www.facebook.com/media/set/?set=a.10157201625752640&type=3",
   },
   {
     Term: 2018,
     "Annual Congress (AC)": "Kaohsiung, TAIWAN 🇹🇼",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10156761376012640",
+      "https://www.facebook.com/media/set/?set=a.10156761376012640&type=3",
     "Mid-Year Meeting (MYM)": "Kyrenia, NORTHERN CYPRUS 🇨🇾",
     "MM Gallery":
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10156545502282640",
+      "https://www.facebook.com/media/set/?set=a.10156545502282640&type=3",
   },
   {
     Term: 2017,
@@ -53,7 +53,7 @@ const PrevMeetings = [
     Term: 2016,
     "Annual Congress (AC)": "Poznan, POLAND 🇵🇱",
     Gallery:
-      "https://www.facebook.com/media/set/?set=a.10156157642912640&type=3",
+      "https://www.facebook.com/media/set/?set=a.10154521449847640&type=3",
     "Mid-Year Meeting (MYM)": "Bratislava, SLOVAKIA 🇸🇰",
     "MM Gallery":
       "https://www.facebook.com/media/set/?set=a.10156157642912640&type=3",
@@ -65,13 +65,13 @@ const PrevMeetings = [
       "https://www.facebook.com/media/set/?set=a.10156157642912640&type=3",
     "Mid-Year Meeting (MYM)": "Amman, JORDAN 🇯🇴",
     "MM Gallery":
-      "https://www.facebook.com/media/set/?set=a.10156157642912640&type=3",
+      "https://www.facebook.com/media/set/?set=a.10153226284807640&type=3",
   },
   {
     Term: 2014,
     "Annual Congress (AC)": "Yogyakarta, INDONESIA 🇮🇩",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152740232722640",
+      "https://www.facebook.com/media/set/?set=a.10152740232722640&type=3",
     "Mid-Year Meeting (MYM)": "Tunis, TUNISIA 🇹🇳",
     "MM Gallery":
       "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152740232722640",
@@ -80,52 +80,52 @@ const PrevMeetings = [
     Term: 2013,
     "Annual Congress (AC)": "Istanbul, TURKEY 🇹🇷",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10156545502282640",
+      "https://www.facebook.com/media/set/?set=a.10151912029422640&type=3",
     "Mid-Year Meeting (MYM)": "Lisbon, PORTUGAL 🇵🇹",
     "MM Gallery":
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152122721457640",
+      "https://www.facebook.com/media/set/?set=a.10152122721457640&type=3",
   },
   {
     Term: 2012,
     "Annual Congress (AC)": "Bucharest, ROMANIA 🇷🇴",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152122721457640",
+      "https://www.facebook.com/media/set/?set=a.10152123288487640&type=3",
     "Mid-Year Meeting (MYM)": "Alexandria, EGYPT 🇪🇬",
     "MM Gallery":
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152122721457640",
+      "https://www.facebook.com/media/set/?set=a.10152123665677640&type=3",
   },
   {
     Term: 2011,
     "Annual Congress (AC)": "New Delhi, INDIA 🇮🇳",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152122721457640",
+      "https://www.facebook.com/media/set/?set=a.10152123652047640&type=3",
     "Mid-Year Meeting (MYM)": "Moscow, Russia 🇷🇺",
     "MM Gallery":
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152122721457640",
+      "https://www.facebook.com/media/set/?set=a.10152388925447640&type=3",
   },
   {
     Term: 2010,
     "Annual Congress (AC)": "Brno, Czech Republic 🇨🇿",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152122721457640",
+      "https://www.facebook.com/media/set/?set=a.10152122778187640&type=3",
     "Mid-Year Meeting (MYM)": "Skopje, Macedonia 🇲🇰",
     "MM Gallery":
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152122721457640",
+      "https://www.facebook.com/media/set/?set=a.10152388913477640&type=3",
   },
   {
     Term: 2009,
     "Annual Congress (AC)": "Iasi, ROMANIA 🇷🇴",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152122721457640",
+      "https://www.facebook.com/media/set/?set=a.10152122938042640&type=3",
     "Mid-Year Meeting (MYM)": "Ljubljana, SLOVENIA 🇸🇮",
     "MM Gallery":
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=96247047639",
+      "https://www.facebook.com/media/set/?set=a.96247047639&type=3",
   },
   {
     Term: 2008,
     "Annual Congress (AC)": "Sharm Elsheikh, EGYPT 🇪🇬",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=96247047639",
+      "https://www.facebook.com/media/set/?set=a.10152388838627640&type=3",
     "Mid-Year Meeting (MYM)": "Lublin, POLAND 🇵🇱",
     "MM Gallery":
       "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=96247047639",
@@ -134,24 +134,24 @@ const PrevMeetings = [
     Term: 2007,
     "Annual Congress (AC)": "Lake Balaton, HUNGARY 🇭🇺",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=96247047639",
+      "https://www.facebook.com/media/set/?set=a.10152388825267640&type=3",
     "Mid-Year Meeting (MYM)": "Tbilisi, GEORGIA 🇬🇪",
     "MM Gallery":
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=96247047639",
+      "https://www.facebook.com/media/set/?set=a.10152388883062640&type=3",
   },
   {
     Term: 2006,
     "Annual Congress (AC)": "Khartoum, SUDAN 🇸🇩",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=96247047639",
+      "https://www.facebook.com/media/set/?set=a.10152389531097640&type=3",
     "Mid-Year Meeting (MYM)": "Split, CROATIA 🇭🇷",
-    "MM Gallery": "-",
+    "MM Gallery": "https://flickr.com/photos/36362220@N00/albums",
   },
   {
     Term: 2005,
     "Annual Congress (AC)": "Prague, CZECH REPUBLIC 🇨🇿",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=96247047639",
+      "https://www.facebook.com/media/set/?set=a.10152392793757640&type=3",
     "Mid-Year Meeting (MYM)": "Bergen, NORWAY 🇳🇴",
     "MM Gallery": "-",
   },
@@ -159,7 +159,7 @@ const PrevMeetings = [
     Term: 2004,
     "Annual Congress (AC)": "Berlin, GERMANY 🇩🇪",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152390540147640",
+      "https://www.facebook.com/media/set/?set=a.10152390540147640&type=3",
     "Mid-Year Meeting (MYM)": "Ljubljana, SLOVENIA 🇸🇮",
     "MM Gallery": "-",
   },
@@ -174,7 +174,7 @@ const PrevMeetings = [
     Term: 2002,
     "Annual Congress (AC)": "Sharm Elsheikh, EGYPT 🇪🇬",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152390540147640",
+      "https://www.facebook.com/media/set/?set=a.10152390546557640&type=3",
     "Mid-Year Meeting (MYM)": "Prague, CZECH REPUBLIC 🇨🇿",
     "MM Gallery": "-",
   },
@@ -182,7 +182,7 @@ const PrevMeetings = [
     Term: 2001,
     "Annual Congress (AC)": "Kuala Lumpur, MALAYSIA 🇲🇾",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152390549792640",
+      "https://www.facebook.com/media/set/?set=a.10152390549792640&type=3",
     "Mid-Year Meeting (MYM)": "Istanbul, TURKEY 🇹🇷",
     "MM Gallery":
       "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152391074582640",
@@ -191,7 +191,7 @@ const PrevMeetings = [
     Term: 2000,
     "Annual Congress (AC)": "Bugibba, MALTA 🇲🇹",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152391074582640",
+      "https://www.facebook.com/media/set/?set=a.10152391074582640&type=3",
     "Mid-Year Meeting (MYM)": "Budapest, HUNGARY 🇭🇺",
     "MM Gallery": "-",
   },
@@ -199,7 +199,7 @@ const PrevMeetings = [
     Term: 1999,
     "Annual Congress (AC)": "Istanbul, TURKEY 🇹🇷",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152391074582640",
+      "https://www.facebook.com/media/set/?set=a.10152392799067640&type=3",
     "Mid-Year Meeting (MYM)": "London, UNITED KINGDOM 🇬🇧",
     "MM Gallery": "-",
   },
@@ -256,7 +256,7 @@ const PrevMeetings = [
     Term: 1991,
     "Annual Congress (AC)": "Coimbra, PORTUGAL 🇵🇹",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152391074582640",
+      "https://www.facebook.com/media/set/?set=a.10152647071742640&type=3",
     "Mid-Year Meeting (MYM)": "mostly London, UK 🇬🇧 (Business)",
     "MM Gallery": "-",
   },
@@ -264,7 +264,7 @@ const PrevMeetings = [
     Term: 1990,
     "Annual Congress (AC)": "San Juan, PUERTO RICO 🇵🇷",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152391074582640",
+      "https://www.facebook.com/media/set/?set=a.10152649857032640&type=3",
     "Mid-Year Meeting (MYM)": "mostly London, UK 🇬🇧 (Business)",
     "MM Gallery": "-",
   },
@@ -272,7 +272,7 @@ const PrevMeetings = [
     Term: 1989,
     "Annual Congress (AC)": "Bern, SWITZERLAND 🇨🇭",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152391074582640",
+      "https://www.facebook.com/media/set/?set=a.10152649861067640&type=3",
     "Mid-Year Meeting (MYM)": "mostly London, UK 🇬🇧 (Business)",
     "MM Gallery": "-",
   },
@@ -294,7 +294,7 @@ const PrevMeetings = [
     Term: 1986,
     "Annual Congress (AC)": "SINGAPORE 🇸🇬",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152646080127640",
+      "https://www.facebook.com/media/set/?set=a.10152646080127640&type=3",
     "Mid-Year Meeting (MYM)": "mostly London, UK 🇬🇧 (Business)",
     "MM Gallery": "-",
   },
@@ -302,7 +302,7 @@ const PrevMeetings = [
     Term: 1985,
     "Annual Congress (AC)": "New York, USA 🇺🇸",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152646086257640",
+      "https://www.facebook.com/media/set/?set=a.10152646086257640&type=3",
     "Mid-Year Meeting (MYM)": "mostly London, UK 🇬🇧 (Business)",
     "MM Gallery": "-",
   },
@@ -310,7 +310,7 @@ const PrevMeetings = [
     Term: 1984,
     "Annual Congress (AC)": "Jerusalem, ISRAEL 🇮🇱",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152650838022640",
+      "https://www.facebook.com/media/set/?set=a.10152650838022640&type=3",
     "Mid-Year Meeting (MYM)": "mostly London, UK 🇬🇧 (Business)",
     "MM Gallery": "-",
   },
@@ -318,7 +318,7 @@ const PrevMeetings = [
     Term: 1983,
     "Annual Congress (AC)": "San Juan, PUERTO RICO 🇵🇷",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152650840902640",
+      "https://www.facebook.com/media/set/?set=a.10152650840902640&type=3",
     "Mid-Year Meeting (MYM)": "mostly London, UK 🇬🇧 (Business)",
     "MM Gallery": "-",
   },
@@ -326,7 +326,7 @@ const PrevMeetings = [
     Term: 1982,
     "Annual Congress (AC)": "Helsinki, FINLAND 🇫🇮",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10152650776082640",
+      "https://www.facebook.com/media/set/?set=a.10152650776082640&type=3",
     "Mid-Year Meeting (MYM)": "mostly London, UK 🇬🇧 (Business)",
     "MM Gallery": "-",
   },
@@ -369,7 +369,7 @@ const PrevMeetings = [
     Term: 1976,
     "Annual Congress (AC)": "Bern, SWITZERLAND 🇨🇭",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10154976285702640",
+      "https://www.facebook.com/media/set/?set=a.10154976285702640&type=3",
     "Mid-Year Meeting (MYM)": "mostly London, UK 🇬🇧 (Business)",
     "MM Gallery": "-",
   },
@@ -384,7 +384,7 @@ const PrevMeetings = [
     Term: 1974,
     "Annual Congress (AC)": "Amsterdam, NETHERLANDS 🇳🇱",
     Gallery:
-      "https://www.facebook.com/pg/iadsweborg/photos/?tab=album&album_id=10155053037242640",
+      "https://www.facebook.com/media/set/?set=a.10155053037242640&type=3",
     "Mid-Year Meeting (MYM)": "mostly London, UK 🇬🇧 (Business)",
     "MM Gallery": "-",
   },

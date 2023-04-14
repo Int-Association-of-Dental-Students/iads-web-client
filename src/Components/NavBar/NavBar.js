@@ -86,16 +86,17 @@ const NavBar = (props) => {
                 {/* <Link to="/editorial"></Link> */}
                 Editorial Board
               </NavDropdown.Item>
+              <NavDropdown.Item href="/committees/SCORE">
+                SCORE
+              </NavDropdown.Item>
               <NavDropdown.Item href="/committees/exchange">
                 Exchange Board
               </NavDropdown.Item>
 
-              <NavDropdown.Item href="/committees/prophylaxis">
+              <NavDropdown.Item href="/committees/public-health">
                 Public Health
               </NavDropdown.Item>
-              <NavDropdown.Item href="/committees/SCORE">
-                SCORE
-              </NavDropdown.Item>
+
               <NavDropdown.Item href="/committees/training">
                 Training
               </NavDropdown.Item>
@@ -108,9 +109,9 @@ const NavBar = (props) => {
               className="nav-item-Blue"
               id="navbarScrollingDropdown"
             >
-              <NavDropdown.Item href="/projects/zhermack">
+              {/* <NavDropdown.Item href="/projects/zhermack">
                 Zhermack
-              </NavDropdown.Item>
+              </NavDropdown.Item> */}
               <NavDropdown.Item href="/projects/colgate">
                 Colgate
               </NavDropdown.Item>

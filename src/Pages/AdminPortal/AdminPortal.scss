@@ -1,6 +1,29 @@
+.phone-disabled {
+  display: none !important;
+}
+
 .admin-portal-page {
+  .login-curtain {
+    height: 100vh;
+    width: 100vw;
+    // position: absolute;
+    // margin-top: -100px !important;
+  }
   .member-table {
     overflow-x: scroll;
+  }
+
+  .panel {
+    height: 100vh;
+    width: 300px;
+    background-color: #1858ae;
+    position: fixed;
+    top: 0px;
+    padding-top: 116px;
+  }
+
+  .content {
+    margin-left: 300px;
   }
 
   .title {
@@ -19,5 +42,25 @@
   .header {
     position: sticky;
     top: 0;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .chart {
+    width: 100%;
+  }
+  .phone-disabled {
+    display: block !important;
+  }
+  .admin-portal-page {
+    display: none;
   }
 }

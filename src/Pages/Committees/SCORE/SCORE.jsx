@@ -20,7 +20,7 @@ import colgate from "../../../Assets/Committees/SCORE/projectColgate.svg";
 import zhermack from "../../../Assets/Committees/SCORE/projectZhermack.svg";
 import research from "../../../Assets/Committees/SCORE/research.svg";
 
-import delegate from "../../../Assets/Committees/SCORE/irem.png";
+import delegate from "../../../Assets/Committees/SCORE/delegate.svg";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -45,42 +45,38 @@ const SCORE = () => {
 
   console.log("HIIII");
 
-
   useEffect(() => {
     console.log("HIIII22222");
 
     axios
-      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/publications`)
+      .get(
+        `https://infinite-wildwood-83288.herokuapp.com/api/card/publications`
+      )
       .then((res) => {
         setpublications(res.data);
         console.log(res.data);
       });
 
-
-      axios
+    axios
       .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/courses`)
       .then((res) => {
         setcourses(res.data);
         // console.log(res.data);
       });
 
-
-      axios
+    axios
       .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/IDCP`)
       .then((res) => {
         setIDCP(res.data);
         // console.log(res.data);
       });
 
-
-      axios
+    axios
       .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/IJDS`)
       .then((res) => {
         setIJDS(res.data);
         // console.log(res.data);
       });
-
-
   }, []);
 
   return (
@@ -103,7 +99,7 @@ const SCORE = () => {
         <div className="row">
           <div className="delegatee col-lg-3 col-sm-12">
             <img style={{ borderRadius: "100%" }} src={delegate} />
-            <h3 className="subtitle">Dr. İrem Türkan</h3>
+            <h3 className="subtitle">Maryam Elahmady</h3>
             <p className="position" style={{ marginBottom: "0px" }}>
               Vice President of Science & Research
             </p>
@@ -116,6 +112,9 @@ const SCORE = () => {
             <div className="row subtitle">Workforce Members</div>
             <div className="row">
               <div className="col-3 WF_memberList">
+                <h4 className="role">Secretary:</h4>
+                <h4 className="name">Mohammed Ilyas Errami</h4>
+                <p className="country">Morocco</p>
                 <h4 className="role">Human Resources:</h4>
                 <h4 className="name">Aneeqa Aslam</h4>
                 <p className="country">Pakistan</p>
@@ -145,19 +144,32 @@ const SCORE = () => {
               </div>
               <div className="col-3 WF_memberList">
                 <h4 className="role">Members:</h4>
-                <h4 className="name">Marah Lahlouh</h4>
-                <p className="country">Jordan</p>
-                <h4 className="name">Mayar Danadna</h4>
-                <p className="country">Palestine</p>
-
-                <h4 className="name">Samin Sirous</h4>
-                <p className="country">Iran</p>
-                <h4 className="name">Serra Özdenak</h4>
-                <p className="country">Northen Cyprus</p>
-                <h4 className="name">Salar Chaychi</h4>
-                <p className="country">Iran</p>
+                <h4 className="name">Arub Ahmed</h4>
+                <p className="country">Pakistan</p>
+                <h4 className="name">Asma Ghozzi</h4>
+                <p className="country">Tunisia</p>
+                <h4 className="name">Aurelle Khadeeja Rizany</h4>
+                <p className="country">Indonesia</p>
+                <h4 className="name">Ayesha Khan</h4>
+                <p className="country">Pakistan</p>
+                <h4 className="name">Aysha Azzahra Bachmimsyah</h4>
+                <p className="country">Indonesia</p>
               </div>
+
               <div className="col-3 WF_memberList">
+                <h4 className="name">Oumaima Benhida</h4>
+                <p className="country">Morocco</p>
+                <h4 className="name">Dania Qaituqa</h4>
+                <p className="country">Jordan</p>
+                <h4 className="name">Farih Aminah</h4>
+                <p className="country">Indonesia</p>
+                <h4 className="name">Jana Panochova</h4>
+                <p className="country">Czech Republic</p>
+                <h4 className="name">Mayar Danadneh</h4>
+                <p className="country">Palestine</p>
+                <h4 className="name">Tjaša Miklavčič</h4>
+                <p className="country">Slovenia</p>
+
                 <h4 className="role">Webinar Coordinator:</h4>
                 <h4 className="name">Zhengis Zhamashev</h4>
                 <p className="country">Kazakhstan</p>
@@ -240,12 +252,14 @@ const SCORE = () => {
         <h1 className="title" style={{ marginBottom: "55px" }}>
           Publications
         </h1>
-     {   publications  &&   <CardList
-          className="card-list"
-          data={publications}
-          type={"publications"}
-          textColor="#00467c"
-        ></CardList>}
+        {publications && (
+          <CardList
+            className="card-list"
+            data={publications}
+            type={"publications"}
+            textColor="#00467c"
+          ></CardList>
+        )}
       </div>
 
       <div className="courses container-fluid">
@@ -278,12 +292,14 @@ const SCORE = () => {
           specialists and academicians. This will predominantly enhance the
           quality of education on a global level.
         </p>
-     {   courses && <CardList
-          className="card-list"
-          data={courses}
-          type={"courses"}
-          textColor="#00467c"
-        ></CardList>}
+        {courses && (
+          <CardList
+            className="card-list"
+            data={courses}
+            type={"courses"}
+            textColor="#00467c"
+          ></CardList>
+        )}
       </div>
       <div className="IDCP container-fluid" style={{ paddingBottom: "75px" }}>
         <img
@@ -301,12 +317,14 @@ const SCORE = () => {
           predominantly reform and reshape a new generation of well-rounded
           dental professionals.
         </p>
-        {   IDCP &&   <CardList
-          className="card-list"
-          data={IDCP}
-          type={"IDCP"}
-          textColor="#00467c"
-        ></CardList> }
+        {IDCP && (
+          <CardList
+            className="card-list"
+            data={IDCP}
+            type={"IDCP"}
+            textColor="#00467c"
+          ></CardList>
+        )}
       </div>
       <div
         className="IJDS"
@@ -338,12 +356,14 @@ const SCORE = () => {
           depiction of how art and science can work together to produce
           innovative articulacy.
         </p>
-        {   IJDS &&      <CardList
-          className="card-list"
-          data={IJDS}
-          type={"IJDS"}
-          textColor="#00467c"
-        ></CardList> }
+        {IJDS && (
+          <CardList
+            className="card-list"
+            data={IJDS}
+            type={"IJDS"}
+            textColor="#00467c"
+          ></CardList>
+        )}
       </div>
     </div>
   );

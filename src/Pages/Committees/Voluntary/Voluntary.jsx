@@ -9,7 +9,6 @@ import delegate from "../../../Assets/Committees/Voluntary/delegate.svg";
 import axios from "axios";
 
 const Voluntary = () => {
-
   const [events, setevents] = useState(null);
 
   useEffect(() => {
@@ -35,7 +34,7 @@ const Voluntary = () => {
         <div className="row">
           <div className="delegatee col-lg-3 col-sm-12">
             <img style={{ borderRadius: "100%" }} src={delegate} />
-            <h3 className="subtitle">Nadeen Haj Ahmad</h3>
+            <h3 className="subtitle">Maria Teresa Matute</h3>
             <p className="position" style={{ marginBottom: "0px" }}>
               Voluntary Officer
             </p>
@@ -48,42 +47,33 @@ const Voluntary = () => {
             <div className="row subtitle">Workforce Members</div>
             <div className="row">
               <div className="col-4 WF_memberList">
-                <h4 className="name">Al-Yaman Taha Ahmad</h4>
+                <h4 className="name">Doğa Helin Özbakır</h4>
+                <p className="country">Türkiye</p>
+                <h4 className="name">Simone Clementi</h4>
+                <p className="country">Italy</p>
+                <h4 className="name">Hiba Mohammad Al-Kharraz</h4>
                 <p className="country">Jordan</p>
-                <h4 className="name">Amirreza Baghani</h4>
-                <p className="country">Iran</p>
-
-                <h4 className="name">Dania Ahmad Rifat Qaituqa</h4>
-                <p className="country">Jordan</p>
-
-                <h4 className="name">Deniz Naz Bilgiç</h4>
-                <p className="country">Turkey</p>
-
-                <h4 className="name">Hatice Övgü Nalçacı</h4>
-                <p className="country">Turkey</p>
-                <h4 className="name">Jaser Logman Hammam</h4>
-                <p className="country">Sudan</p>
+                <h4 className="name">Aisha Awan</h4>
+                <p className="country">Thailand</p>
               </div>
 
               <div className="col-4 WF_memberList">
-                <h4 className="name">Kinza Ghauri</h4>
-                <p className="country">Pakistan</p>
                 <h4 className="name">Michelle Mulach</h4>
                 <p className="country">Germany</p>
-
-                <h4 className="name">Muammer Alhan Babat</h4>
-                <p className="country">Turkey</p>
-
-                <h4 className="name">Safira Yusinta Rubiyanti</h4>
-                <p className="country">Indonesia</p>
-                <h4 className="name">Mahmud Salah</h4>
+                <h4 className="name">Jaser Logman Hassan Hammam</h4>
                 <p className="country">Sudan</p>
-                <h4 className="name">Zeynep Tuğçe Tağtekin</h4>
-                <p className="country">Turkey</p>
+                <h4 className="name">Elif Göksu Çelik</h4>
+                <p className="country">Türkiye</p>
+                <h4 className="name">Sara Ared Hamada Ebrahim</h4>
+                <p className="country">Egypt</p>
               </div>
               <div className="col-4 WF_memberList">
-                <h4 className="name">Mohamed Mahjoub Ahmed</h4>
+                <h4 className="name">Sara Abdelmoneim Elamin Kheir</h4>
                 <p className="country">Sudan</p>
+                <h4 className="name">Inés Bouillaud</h4>
+                <p className="country">France</p>
+                <h4 className="name">Talis Örs</h4>
+                <p className="country">Germany</p>
               </div>
             </div>
           </div>
@@ -94,12 +84,14 @@ const Voluntary = () => {
         <h1 className="title" style={{ marginBottom: "55px" }}>
           Events & Activities
         </h1>
-     {   events && <CardList
-          className="card-list"
-          data={events}
-          type={"events"}
-          textColor="#7EAF0D"
-        ></CardList>}
+        {events && (
+          <CardList
+            className="card-list"
+            data={events}
+            type={"events"}
+            textColor="#7EAF0D"
+          ></CardList>
+        )}
       </div>
     </div>
   );

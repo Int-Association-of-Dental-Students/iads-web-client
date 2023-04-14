@@ -258,6 +258,72 @@ const About = () => {
       cardDetailedText:
         "The 65th IADS Mid-Year Meeting was held in March 2019 in Strasbourg in France where the constitution was amended in accordance with Swiss Law so that the Executive Committee could proceed with the renewal of registration documents at the FDI Headquarters.",
     },
+    {
+      title: "August 2019",
+      cardTitle: "External Relations",
+      cardDetailedText:
+        "The 66th Annual Meeting was held in August 2019 in Mahdia, Tunisia. During the General Assembly, reports of ExCo and Leadership work were presented. President Ave Pold and General Secretary Abanoub Riad represented IADS in various international partner meetings such as ADEE-ADEA joint meeting in Brescia, Italy; FDI Annual Congress, E-Learning Forum in San Francisco, USA; World Oral Health Assembly (WHA) as part of IFMSA youth delegation. During the WHA, IADS endorsed 6 policy recommendations alongside IFMSA, IPSF, IVSA and WCCS.",
+    },
+    {
+      title: "February 2020",
+      cardTitle: "New Governance Structure",
+      cardDetailedText:
+        "The 66th Mid-Year Meeting was held in February 2020 in Sarajevo, Bosnia & Herzegovina where amendments were accepted to IADS Vision and Mission and Governing bodies. Leadership positions such was External Relations, CREME, Fundraising were assimilated by ExCo positions of President and Treasurer and Regional Offices were dissolved; to be represented only by one position each. For ExCo positions the concept of Vice Presidents was introduced with General Secretary, Treasurer, Editor, IEO and ISO being Vice Presidents of Internal Affairs, Finances, Public Relations, Exchanges and Science & Research, respectively.",
+    },
+    {
+      title: "June 2020",
+      cardTitle: "From Congress to Quarantine",
+      cardDetailedText:
+        "On the 1st of June 2020, the ExCo and LOC of 67th IADS Annual Congress which was to be held in Saint Petersburg, Russia in August published the press release of their joint decision to cancel the congress; due to the emergent situation with COVID-19 pandemic and travel restrictions. This would mark the beginning of a transitional shift in IADS activity. The upcoming elections in August were held online following the new governance structure.",
+    },
+    {
+      title: "September 2020",
+      cardTitle: "New journal launch",
+      cardDetailedText:
+        "On the 11th of September, SCORE Committee launched the first issue of International Journal of Dental Students (IJDS) published on Dental Tribune International (DTI). This journal was a revival of DSRJ with a new concept of bringing students closer to scientific literature by presenting various topics of interest in an compact and easily comprehensible way.",
+    },
+    {
+      title: "February 2021",
+      cardTitle: "Rebranding",
+      cardDetailedText:
+        "Following several cancelled activities due to COVID-19 pandemic, including 67th IADS Mid-Year Meeting to have been held in Poland, the transition into fully online activities was imminent and thus the need to distinguish activities of each committee. Cohesive logos and color coding were introduced for each committee",
+    },
+    {
+      title: "April 2021",
+      cardTitle: "A Virtual Marathon",
+      cardDetailedText:
+        "With the Face-to-Face Exco meeting held in Istanbul, Turkey; members of the Executive Committee took the opportunity to bring to virtual life the cancelled MYM. The 67th IADS Mid-Year meeting was transformed into an online event unlike any other organized by IADS. Under the scientific leadership of VP of Science & Research, Huthaifa Abdulqader and PR campaign of VP of Public Relations, Silvi Domnori and collective effort of the appointed online organizing committee, IADS Workforce and Delegation, this virtual experience hosted 37 international speakers in a multilingual line-up including English, Spanish, Portuguese, French, Arabic, Turkish, Urdu and Thai; online General Assembly and online training sessions organized by Training Chairperson Lamis Elsheikh and several lucrative giveaways; over the course of 3 days.",
+    },
+    {
+      title: "June 2021",
+      cardTitle: "First published research article",
+      cardDetailedText:
+        'IADS\' first research conducted on a global level was published in an indexed journal: "Global Prevalence and Drivers of Dental Students\' COVID-19 Vaccine Hesitancy". This research aimed at providing valuable scientific data regarding dental students, young professionals and the field of dentistry and it was a joint effort of esteemed professionals Dr. Elham Kateeb, Dr. José João Mendes, Dr. Miroslav Klugar, Dr. Michal Koscik; IADS Alumni Dr. Abanoub Riad, IADS ExCo & Leadership Dr. Huthaifa Abdulqader, Dr. Mariana Morgado, Dr. Silvi Domnori, IADS Workforce and Delegates worldwide. This research was followed by another publication months later using the collected database; "Universal Predictors of Dental Students Attitudes towards COVID-19 Vaccination: Machine Learning-Based Approach".',
+    },
+    {
+      title: "September 2021",
+      cardTitle: "First Hybrid IADS Congress",
+      cardDetailedText:
+        "With the pandemic wave coming to a fall, vaccinations peaking and travel restrictions easing down, came the possibility to host a face-to-face IADS Annual Meeting. The 68th Annual Congress was held in Istanbul, Turkey organized under special vote of IADS delegation by the Executive Committee and ExCo-appointed local organizing committee with the help of IADS Alumni Dr. Sina Saygili. The General Assembly during this congress, including elections was held as a hybrid session; enabling the achievement of quorum by part of delegates attending online.",
+    },
+    {
+      title: "February 2022",
+      cardTitle: "Structural Updates",
+      cardDetailedText:
+        "During the General Assembly held at the 68th Mid-Year Meeting in Amman, Jordan, new positions were proposed and accepted by the delegates among which Regional Associates to aid Regional Ambassadors, Associate Vice President of Finances to aid the VP of Finances and Coordinator of International Cooperations (CIC) as part of Presidential Office. Other important decisions included proposal for a Code of Conduct and pertaining supervising taskforce, Triple Cs (Code of Conduct Committee), President-Elect position to be implemented from the next meeting into the upcoming year.",
+    },
+    {
+      title: "August 2022",
+      cardTitle: "First steps into the post-pandemic era",
+      cardDetailedText:
+        "The 69th Annual Congress was held in Almaty, Kazakhstan where during the General Assembly where elections were held and important decisions were made such as the approval of a strategic 3-year action plan to be further developed and executed by elected President Dr. Lamis Elsheikh with her leadership and governing bodies of following terms, cessation of hybrid meetings as a transition into fully face-to-face IADS congresses, the expansion of Prophylaxis Committee into Public Health Committee and nomination",
+    },
+    {
+      title: "February 2023",
+      cardTitle: "Constitutional Amendment",
+      cardDetailedText:
+        "The 70th Mid-Year Meeting was held in Kyrenia, Cyprus for the first time after the pandemic as a fully face-to-face congress with a rich scientific program. During the General Assembly, an important constitutional amendment was made in respect to Swiss Law; such that Executive Committee shall be composed of individual members of different nationalities each. Also for the first time, in accordance with the previously accepted proposals, elections were held for the President-Elect position and Dr. Lamis Elsheikh was elected for the position; which would translate in the extending of her tenure as President into 2023/2024 term.",
+    },
     // {
     //   title: "",
     //   cardTitle: "",

@@ -7,6 +7,15 @@
 }
 
 .navbarWithBg {
+  .nav-item:hover,
+  .nav-item .navbar-nav:focus,
+  #navbarScrollingDropdown:hover,
+  #navbarScrollingDropdown:focus,
+  #navbarScrollingDropdownWhite:hover,
+  #navbarScrollingDropdownWhite:focus {
+    background-color: white !important;
+    color: rgba(27, 80, 166, 1) !important;
+  }
   background: linear-gradient(
     90deg,
     rgba(27, 80, 166, 1) 0%,
@@ -15,14 +24,20 @@
   );
 
   .nav-item {
-    color: white !important;
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.5s ease-out 100ms;
   }
 
   #navbarScrollingDropdown {
     color: white;
+    border-radius: 8px;
+    transition: background-color 0.5s ease-out 100ms;
   }
   #navbarScrollingDropdownWhite {
     color: white;
+    border-radius: 8px;
+    transition: background-color 0.5s ease-out 100ms;
   }
 
   .login-btn {
@@ -40,18 +55,31 @@
 }
 
 .navbarWithOutBg {
+  .nav-item:hover,
+  .nav-item .navbar-nav:focus,
+  #navbarScrollingDropdown:hover,
+  #navbarScrollingDropdown:focus,
+  #navbarScrollingDropdownWhite:hover,
+  #navbarScrollingDropdownWhite:focus {
+    background-color: white !important;
+    color: rgba(27, 80, 166, 1) !important;
+  }
   .nav-item-Blue {
     color: #3e1893 !important;
+    border-radius: 8px;
   }
   .nav-item-White {
     color: white !important;
+    border-radius: 8px;
   }
 
   #navbarScrollingDropdown {
     color: #3e1893;
+    border-radius: 8px;
   }
   #navbarScrollingDropdownWhite {
     color: white;
+    border-radius: 8px;
   }
 
   .login-btn {
@@ -76,6 +104,8 @@
   margin: auto;
   font-family: "Poppins regular";
   font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
   line-height: 22px;
   display: flex;
   align-items: center;

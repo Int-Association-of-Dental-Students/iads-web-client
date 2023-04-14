@@ -4,7 +4,7 @@ import axios from "axios";
 
 import { Button, Tab, Tabs } from "react-bootstrap";
 
-import delegate from "../../../Assets/Committees/Internal/Lamis.svg";
+import delegate from "../../../Assets/Committees/Internal/Deniz.svg";
 import pdfIcon from "../../../Assets/Committees/Internal/Pdf Icon.svg";
 
 import CardList from "../../../Components/Cards/CardList";
@@ -20,18 +20,18 @@ const Internal = () => {
     { name: "Maryam Ayyad Ismail", country: "Iraq" },
   ];
 
-
   const [pressRelease, setPressRelease] = useState(null);
 
   useEffect(() => {
     axios
-      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/pressRelease`)
+      .get(
+        `https://infinite-wildwood-83288.herokuapp.com/api/card/pressRelease`
+      )
       .then((res) => {
         setPressRelease(res.data);
         // console.log(res.data);
       });
   }, []);
-
 
   return (
     <div className="internal-page">
@@ -63,7 +63,7 @@ const Internal = () => {
             style={{ borderRight: "1px solid #1D015C" }}
           >
             <img style={{ borderRadius: "100%" }} src={delegate} />
-            <h3 className="subtitle">Dr. Lamis Elsheikh</h3>
+            <h3 className="subtitle">Deniz Devrim Kaya</h3>
             <p className="position" style={{ marginBottom: "0px" }}>
               Vice President of Internal Affairs
             </p>
@@ -72,11 +72,29 @@ const Internal = () => {
             <br />
             <Button className="editWorkforce">Edit Workforce</Button> */}
           </div>
-          <div className="col offset-1">
+          <div className="members col offset-lg-1 offset-sm-1">
             <div className="row subtitle">Workforce Members</div>{" "}
-            <div className="row WF_memberList">
-              <h4 className="name">Maryam Ayyad Ismael</h4>
-              <p className="country">Iraq</p>
+            <div className="row">
+              <div className="col-4 WF_memberList">
+                <h4 className="name">Maryam Ayyad Ismael</h4>
+                <p className="country">Iraq</p>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-4 WF_memberList">
+                <h4 className="name">Andrej Bublak – Slovakia</h4>
+                <p className="country">
+                  Internal Bureau Administration Officer (IBAO)
+                </p>
+              </div>
+              <div className="row">
+                <div className="col-4 WF_memberList">
+                  <h4 className="name">Ömer Faruk Dönmez – Türkiye </h4>
+                  <p className="country">
+                    Internal Bureau Evaluation and Monitoring Officer (IBEMO)
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -106,12 +124,14 @@ const Internal = () => {
       </div>
       <div className="press">
         <h1 className="title">Press Release</h1>
-     {   pressRelease &&   <CardList
-          className="card-list"
-          data={pressRelease}
-          textColor="#C60E3C"
-          type="pressRelease"
-        ></CardList>}
+        {pressRelease && (
+          <CardList
+            className="card-list"
+            data={pressRelease}
+            textColor="#C60E3C"
+            type="pressRelease"
+          ></CardList>
+        )}
         <br />
         <br />
       </div>

@@ -190,7 +190,7 @@ const WOHD = () => {
             marginTop: "50px",
           }}
         >
-          Deadline for submission of reports: 30th of April 2022
+          Deadline for submission of reports: 30th of April 2023
         </p>
       </div>
 
@@ -213,7 +213,7 @@ const WOHD = () => {
             FDI Resources
           </h1>
           <a
-            href="https://www.worldoralhealthday.org/resource"
+            href="https://www.worldoralhealthday.org/resources"
             className="bttn"
           >
             Learn More

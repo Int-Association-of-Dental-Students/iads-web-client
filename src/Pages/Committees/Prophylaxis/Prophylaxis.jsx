@@ -41,7 +41,7 @@ const Prophylaxis = () => {
         <div className="row">
           <div className="delegatee col-lg-3 col-sm-12">
             <img style={{ borderRadius: "100%" }} src={delegate} />
-            <h3 className="subtitle">Payman Sarmad</h3>
+            <h3 className="subtitle">Meryem Lahlou</h3>
             <p className="position" style={{ marginBottom: "0px" }}>
               Public Health Officer
             </p>
@@ -54,44 +54,29 @@ const Prophylaxis = () => {
             <div className="row subtitle">Workforce Members</div>
             <div className="row">
               <div className="col-4 WF_memberList">
-                <h4 className="name">Kosar ghazi zahedi</h4>
-                <p className="country">Iran</p>
-                <h4 className="name">Hend Taha Abulatifa</h4>
+                <h4 className="name">Luīze Lote</h4>
+                <p className="country">Latvia</p>
+                <h4 className="name">Hend Abulatifa</h4>
                 <p className="country">Palestine</p>
-                <h4 className="name">Farras Syakira Reiza</h4>
-                <p className="country">Pakistan</p>
-                <h4 className="name">Trianita Diva Nugraheni</h4>
-                <p className="country">Indonesia</p>
-                <h4 className="name">Romaysa Galal Elsayed</h4>
+                <h4 className="name">Othayla Abdelhadi Mohamed Omer</h4>
                 <p className="country">Sudan</p>
-                <h4 className="name">Weam Kamil Elyas</h4>
+              </div>
+
+              <div className="col-4 WF_memberList">
+                <h4 className="name">Monisha Chinthala</h4>
+                <p className="country">India</p>
+                <h4 className="name">Rawan Mahmoud Elrayah Hussein</h4>
+                <p className="country">Sudan</p>
+                <h4 className="name">Reem Osama Omer Ahmed</h4>
                 <p className="country">Sudan</p>
               </div>
               <div className="col-4 WF_memberList">
-                <h4 className="name">Mochammad Syauqi Syafiq</h4>
-                <p className="country">Indonesia</p>
-                <h4 className="name">Aaminah Salman Wasif</h4>
-                <p className="country">Pakistan</p>
-
-                <h4 className="name">Duaa Abdelmoniem Hamid</h4>
+                <h4 className="name">Rayan Osman Bashir Arbab</h4>
                 <p className="country">Sudan</p>
-
-                <h4 className="name">Malaika Roghani</h4>
-                <p className="country">Pakistan</p>
-                <h4 className="name">Hassan Sidahmed</h4>
-                <p className="country">Country</p>
-                <h4 className="name">Malak Ahmed</h4>
-                <p className="country">Iraq</p>
-              </div>
-              <div className="col-4 WF_memberList">
-                <h4 className="name">Pemika Lerttiendamrong</h4>
-                <p className="country">Thailand</p>
-                <h4 className="name">Zainab Omer</h4>
+                <h4 className="name">Romaysa Galal Ahmed Elsayed</h4>
                 <p className="country">Sudan</p>
-                <h4 className="name">Rawan Mahmoud</h4>
-                <p className="country">Sudan</p>
-                <h4 className="name">Francesca Baronchelli</h4>
-                <p className="country">Italy</p>
+                <h4 className="name">Mişel Orduluoğlu</h4>
+                <p className="country">Türkiye</p>
               </div>
             </div>
           </div>
