@@ -5,6 +5,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "tippy.js/dist/tippy.css";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 <link
   rel="stylesheet"

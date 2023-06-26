@@ -38,14 +38,19 @@ const Exchange = () => {
         className="btn2"
         style={{ marginBottom: "80px" }}
       >
-        Exchange Portal
+        <a
+          style={{ textDecoration: "none", color: "black !important" }}
+          href="https://exchange.iads-web.org/"
+        >
+          Exchange Portal
+        </a>
       </button>
 
       <div className="container workforce" style={{ borderRadius: "20px" }}>
         <div className="row">
           <div className="delegatee col-lg-3 col-sm-12">
             <img style={{ borderRadius: "100%" }} src={delegate} />
-            <h3 className="subtitle">Ksenia Rusakova</h3>
+            <h3 className="subtitle">Kseniia Rusakova</h3>
             <p className="position" style={{ marginBottom: "0px" }}>
               Vice President of Exchange
             </p>
@@ -64,6 +69,8 @@ const Exchange = () => {
                 <p className="country">Sudan</p>
                 <h4 className="name">Inez Marella Dion Saputri</h4>
                 <p className="country">Indonesia</p>
+                <h4 className="name">Andrea Fernanda Bernal Alvarez</h4>
+                <p className="country">Ecuador</p>
               </div>
               <div className="col-4 WF_memberList">
                 <h4 className="name">Ola Abdul Wahab</h4>

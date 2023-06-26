@@ -1,6 +1,6 @@
 import React from "react";
 import "./Colgate.scss";
-import { Button, Accordion, Tabs, Tab, Nav } from "react-bootstrap";
+import { Button, Accordion, Tabs, Tab, Nav, Anchor } from "react-bootstrap";
 import { Timeline, TimelineEvent } from "@mailtop/horizontal-timeline";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
@@ -37,8 +37,9 @@ import plus from "../../../Assets/Projects/Colgate/plus.svg";
 import huth from "../../../Assets/Projects/Colgate/huth.png";
 import lamis from "../../../Assets/Projects/Colgate/Lamis.png";
 import silvi from "../../../Assets/Projects/Colgate/silvi.png";
-import konst from "../../../Assets/Projects/Colgate/konst.png";
+import abay from "../../../Assets/Projects/Colgate/abay.png";
 import ouiza from "../../../Assets/Projects/Colgate/Ouiza.png";
+import deniz from "../../../Assets/Projects/Colgate/deniz.png";
 import TeamCard from "./Components/TeamCard";
 import Circle from "./Components/Circle";
 
@@ -55,42 +56,53 @@ function Colgate() {
             <div className="row icons">
               <div className="col">
                 {/* <img className="logo1" src={logo1} /> */}
-                <img className="logo2" src={logo2} />
-                <img className="vlogo" src={vlogo} />
-                <img
-                  className="logo"
-                  src={logo}
-                  style={{ marginTop: "50px" }}
-                />
+                <div className="logos">
+                  <img className="logo2" src={logo2} />
+                  <img className="vlogo" src={vlogo} />
+                  {/* <img
+                    className="logo"
+                    src={logo}
+                    style={{ marginTop: "50px" }}
+                  /> */}
+                </div>
 
-                <div className="row mt-5">
-                  <div className="col offset-1">
+                {/* <div className="row mt-5">
+                  <div className="col">
                     <p className="sec-txt">INTERNATIONAL</p>
                   </div>
-                </div>
-                <div className="row">
-                  <div className="header-txt col offset-1">
-                    <h2>BRIGHT SMILES</h2>
+                </div> */}
+                <div className="row mt-5">
+                  <div className="header-txt col">
+                    <h2 style={{ marginBottom: "0px", fontSize: "68px" }}>
+                      MINT A SMILE
+                    </h2>
                   </div>
                 </div>
                 <div className="row">
-                  <div className="header-txt col offset-1">
-                    <h2>BRIGHT FUTURES®</h2>
+                  <div className="header-txt col">
+                    <h2 style={{ marginBottom: "32px", fontWeight: "300" }}>
+                      INNOVATIONS
+                    </h2>
                   </div>
                 </div>
                 <div className="row">
-                  <div className="header-txt col offset-1 mb-5">
-                    <h2>Contest</h2>
+                  <div className="header-txt col">
+                    <h2 className="ttt">
+                      in partnership with Colgate-Palmolive®
+                    </h2>
                   </div>
                 </div>
 
-                <div className="row">
+                <div
+                  className="row"
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
                   <AnchorLink
-                    className="btn col-1 offset-1"
+                    className="btn col-1 "
                     href="#submit"
                     offset="100"
                   >
-                    APPLY HERE
+                    SUBMIT YOUR IDEA
                   </AnchorLink>
                   <Button
                     href="https://www.colgate.com/en-us/oral-health-education/our-commitment"
@@ -107,24 +119,89 @@ function Colgate() {
       </div>
 
       <div className="about-section container-fluid">
-        <h1 className="about-title title-text">ABOUT THE PROJECT</h1>
+        <h1
+          style={{ marginBottom: "0px", fontSize: "40px" }}
+          className="about-title title-text"
+        >
+          MINT A SMILE...
+        </h1>
+        <h1
+          style={{
+            color: "white",
+            width: "80%",
+            margin: "auto",
+            marginBottom: "70px",
+          }}
+          className="about-title title-text"
+        >
+          AND CREATE BRIGHTER FUTURES FOR THE WORLD’S CHILDREN
+        </h1>
         <p className="row about-details sec-txt">
-          The International BSBF Contest (iBSBF+) is a challenge-based framework
-          which aims to accelerate the progress of Colgate Bright Smiles, Bright
-          Futures® initiative. By enabling IADS members to produce their
-          innovative ideas, this project will emanate Colgate's mission to
-          connect underserved communities to oral health education, free dental
-          screenings and treatment referrals. <br /> The primary objective of
-          this project will be to scout for visionary ideas generated by IADS
-          network in 66 countries located in 5 regions globally. <br /> IADS
-          will assemble 10 international teams, provide complete website and
-          social media publicity and creative graphic designing. IADS will work
-          with Colgate during the screening, team selection, hashtag campaign,
-          follow-ups, evaluation process, results and awards stages.
+          It’s been said that everything begins with an idea.The International
+          Association of Dental Students (IADS) believes that the next grand
+          ideas for improving the oral health and well-being of vulnerable
+          children may well come from its very own members. IADS encourages
+          dental students to think big, creatively, and globally, and with the
+          support of Colgate-Palmolive Company’s Bright Smiles, Bright Futures,
+          we are launching the Mint.a Smile contest, confident that your ideas
+          will help make a positive, lasting impact on the lives of children and
+          their families. So put on your thinking caps and let the ideas flow!
+          You and your team could win a grand prize of $5,000 and complimentary
+          tickets to the IADS Annual Congress.
         </p>
       </div>
+
+      <div className="who-what">
+        <div className="content">
+          <div className="who">
+            <h1 className="title-text">WHO</h1>
+            <p className="sec-txt">
+              The Mint.a Smile Contest is open to members of the IADS through
+              the national associations in their respective countries.
+              Participants must be current students or have graduated within the
+              past two years.
+              <br /> <br />
+              The IADS invites submissions from teams of dental students or new
+              graduates to compete for prizes. Twenty teams will be selected as
+              finalists and only countries holding active IADS memberships may
+              participate.
+              <br /> <br />
+              To find out the status of your national association, contact the
+              VP of Internal Affairs of IADS at vpia@iads-web.org.
+            </p>
+          </div>
+          <div className="what">
+            <h1 className="title-text">WHAT</h1>
+            <p className="sec-txt">
+              Projects should focus on bringing an innovative solution to an
+              oral health-related issue. This scope resonates also with
+              Colgate's mission to connect underserved communities to oral
+              health education, free dental screenings and treatment referrals. 
+              <br />
+              The solutions can incorporate strategies that involve educating
+              children and their families, engaging and working with the
+              non-clinical sectors to improve health, among others. Proposals
+              must be prepared according to submission guidelines and terms
+              prescribed by the Eligibility Criteria and submitted via the
+              Mint.a Smile portal by 10th of August 2023. 
+              <br /> <br />A panel of judges will review the entries utilizing a
+              point system that will reward originality, project maturity and
+              impact. Ten finalists will be selected until 15th August 2023,
+              with the top 5 winners announced on the 1st of October 2023.
+            </p>
+          </div>
+        </div>
+      </div>
       <div className="get2know-section">
-        <h1 className="title-text">GET TO KNOW BSBF®</h1>
+        <h1 className="title-text">OUR SUPPORTING PARTNER</h1>
+        <p
+          style={{ width: "70%", margin: "auto", marginBottom: "32px" }}
+          className="sec-txt about-details"
+        >
+          Our supporting partner, Colgate-Palmolive believes good health is
+          something to smile about. See how the company is reimagining healthy
+          futures for people, our pets, and planet.
+        </p>
         <div className="videowrapper">
           <iframe
             width="560"
@@ -206,28 +283,20 @@ function Colgate() {
                     <p>
                       Full National Member votes will have a score value of 2
                       and Full Local Member votes will have a score value of 1.
-                      Scoring according to attained likes on social media will
-                      be as follows:
+                      Full National Member votes will have a score coefficient
+                      of 2 and Full Local Member votes will have a score
+                      coefficient of 1. Each delegate will rank the competitors
+                      from 1-10, 10 being the highest vote.Scoring according to
+                      attained likes on social media will be such that the top
+                      most liked competitor will get 10 points and so on
+                      distributed until the least liked will get 1 point.
                     </p>
-                    <div
-                      className="likeslist"
-                      style={{ display: "grid", gridAutoFlow: "column" }}
+                    <a
+                      href="https://drive.google.com/file/d/1nwXZZ1bvK59XwFZs5NLhJWHjENlKNNkl/view?usp=share_link"
+                      className="btn"
                     >
-                      <ul style={{ listStyleType: "none" }}>
-                        <li>20-30 likes = 1 point</li>
-                        <li>30-50 likes = 2 points</li>
-                        <li>50-150 likes = 3 points</li>
-                        <li>150 -450 likes = 4 points</li>
-                        <li>450 - 550 likes = 5 points</li>
-                      </ul>
-                      <ul style={{ listStyleType: "none" }}>
-                        <li>550 - 750 = 6 points</li>
-                        <li>750 - 950 = 7 points</li>
-                        <li>950 - 2K = 8 points</li>
-                        <li>2K - 2.5K = 9 points</li>
-                        <li>2.5K - 3.5K = 10 points</li>
-                      </ul>
-                    </div>
+                      Learn More
+                    </a>
                   </div>
                 </div>
               </div>
@@ -242,11 +311,27 @@ function Colgate() {
           Does your country have a unique idea that has the potential to impact
           future smiles?
         </p>
-        <a href="/projects/colgate/registration">
-          <Button className="submit-button" style={{ marginBottom: "60px" }}>
+        <div
+          className="row"
+          style={{ display: "flex", justifyContent: "center" }}
+        >
+          {/* <a href="/projects/colgate/registration"> */}
+          <Button
+            href="/projects/colgate/registration"
+            className="submit-button"
+            style={{ marginBottom: "60px" }}
+          >
             Submit Here
           </Button>
-        </a>
+          {/* </a> */}
+          <Button
+            href="https://drive.google.com/file/d/1jOu1gEUZfzpFhJnumul6MOZoBwXAHTZX/view?usp=drive_link"
+            className="btn2 col-1"
+            style={{ marginLeft: "30px" }}
+          >
+            Guidelines
+          </Button>
+        </div>
         <div className="container flags">
           <div className="flags-row">
             <Circle flag={flag1}></Circle>
@@ -285,14 +370,14 @@ function Colgate() {
         </h1>
         <div className="cardss">
           <TeamCard
-            src={huth}
-            name="Dr. Huthaifa Abdul Qader"
+            src={lamis}
+            name="Dr. Lamis Elsheikh"
             role="Director"
           ></TeamCard>
           <div className="horiz">
             <TeamCard
-              src={lamis}
-              name="Dr. Lamis Elsheikh"
+              src={deniz}
+              name="Deniz Devrim Kaya"
               role="Logistics"
             ></TeamCard>
             <TeamCard
@@ -301,14 +386,21 @@ function Colgate() {
               role="Editorial"
             ></TeamCard>
             <TeamCard
-              src={konst}
-              name="Konstantin Schrader"
+              src={abay}
+              name="Abay Kalymatay"
               role="Finances"
             ></TeamCard>
+          </div>
+          <div className="horiz">
             <TeamCard
               src={ouiza}
               name="Dr. Ouiza Belkadi"
               role="Designer"
+            ></TeamCard>
+            <TeamCard
+              src={huth}
+              name="Dr. Huthaifa Abdul Qader"
+              role="Advisor"
             ></TeamCard>
           </div>
         </div>
@@ -330,8 +422,8 @@ function Colgate() {
               Is there a limit of participating countries per region?
             </Accordion.Header>
             <Accordion.Body className="PR">
-              All countries holding an active full country membership in IADS,
-              from all regions are invited to participate.
+              All countries holding an active membership in IADS, from all
+              regions are invited to participate.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
@@ -349,9 +441,8 @@ function Colgate() {
               I have personal membership in IADS. Can I participate?
             </Accordion.Header>
             <Accordion.Body className="PR">
-              Unfortunately, not. Considering the rewarding system is based per
-              national association, participation can only be through the
-              respective national association.
+              Yes you can. However, you can only participate as a team; hence
+              your team members should also have a membership in IADS.
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3">

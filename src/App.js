@@ -6,6 +6,7 @@ import ColgateForm from "./Pages/Projects/Colgate/RegistrationForm";
 import Registration2 from "./Pages/Projects/Colgate/Registration2";
 import Zhermack from "./Pages/Projects/Zhermack/Zhermack";
 import Home from "./Pages/Home/Home";
+import { Helmet } from "react-helmet";
 
 import Internal from "./Pages/Committees/Internal Affairs/Internal";
 
@@ -27,7 +28,8 @@ import WOHD from "./Pages/Projects/WOHD/WOHD";
 import OrgMemberForm from "./Pages/Membership/OrgMemberForm/OrgMemberForm";
 import Workforce from "./Pages/Committees/Workforce/Workforce";
 import Meetings from "./Pages/Meetings/Meetings";
-
+import Webinars from "./Pages/Projects/Webinars/Webinars";
+import Research from "./Pages/Projects/Research/Research";
 import { AuthContext } from "./Components/Context/AuthContext";
 
 import React, { useState, useCallback, useContext, useEffect } from "react";
@@ -167,6 +169,13 @@ function App() {
       }}
     >
       <div className="App">
+        <Helmet>
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4898463574163953"
+            crossorigin="anonymous"
+          ></script>
+        </Helmet>
         <NavBar path={window.location.pathname} />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -189,6 +198,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects">
             <Route path="/projects/WOHD" element={<WOHD />} />
+            <Route path="/projects/webinars" element={<Webinars />} />
+            <Route path="/projects/research" element={<Research />} />
             <Route
               path="/projects/greendentistry"
               element={<GreenDentistry />}

@@ -21,13 +21,18 @@
     "react-bootstrap": "^2.4.0",
     "react-chrono": "^1.19.1",
     "react-dom": "^18.1.0",
+    "react-helmet": "^6.1.0",
     "react-hook-form": "^7.34.0",
     "react-loader-spinner": "^5.3.4",
     "react-perfect-scrollbar": "^1.5.8",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-simple-maps": "^3.0.0",
+    "react-tippy": "^1.4.0",
+    "react-tooltip": "^5.11.2",
     "swiper": "^8.3.2",
+    "tippy.js": "^6.3.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

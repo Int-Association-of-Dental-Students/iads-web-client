@@ -1,0 +1,147 @@
+.research-page {
+  .hero {
+    background-image: url("../../../Assets/Committees/Workforce/bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .overlay {
+    background: #03070f;
+    background: radial-gradient(
+      at top left,
+      rgba(24, 132, 216, 0.8) 0%,
+      rgba(29, 1, 92, 0.8) 70%
+    );
+    width: 100vw;
+    height: 286px;
+  }
+
+  .header-title {
+    font-family: LEMON MILK regular;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 68px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    padding-top: 75px;
+  }
+
+  .desc {
+    font-family: Poppins regular;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #3a3a3d;
+  }
+
+  .desc-hiring {
+    font-family: "Poppins light";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+
+    /* page color */
+
+    color: #f5f5f5;
+    text-align: left;
+  }
+
+  .about {
+    background-color: #1d015c;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .abt {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+  }
+  .title-1st {
+    font-family: Brittany;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: -20px;
+    color: #1d015c;
+  }
+  .title-2nd {
+    font-family: LEMON MILK regular;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 47px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+  }
+
+  .guidelines {
+    margin-top: 72px;
+    margin-bottom: 96px;
+  }
+  .bttn {
+    padding: 7px 25px;
+
+    width: 224px;
+    height: 45px;
+
+    background: #3e1893;
+    border-radius: 100px;
+
+    font-family: "Poppins regular";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+    margin-bottom: 0px !important;
+  }
+
+  .share {
+    background: #55c9f3;
+    // padding: 42px 72px 0px 0px;
+    padding-top: 42px;
+    padding-bottom: 72px;
+  }
+
+  .articles {
+    padding-top: 42px;
+    padding-bottom: 72px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .hero {
+    //   padding-bottom: 20px;
+  }
+  .hiring {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .overlay {
+    height: 400px;
+  }
+
+  .abt {
+    .title-2nd {
+      margin-right: 0px !important;
+    }
+    // display: flex;
+    flex-direction: column !important;
+    .arw {
+      display: none;
+    }
+  }
+}

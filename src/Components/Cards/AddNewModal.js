@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useForm } from "react-hook-form";
+import { Audio } from "react-loader-spinner";
 import axios from "axios";
 import "./AddNewModal.scss";
 const AddNewModal = (props) => {
+  const [loading, setLoading] = useState(false);
   console.log(props);
   const [imgStr, setImgStr] = useState([]);
   const uploadImage = (img, idx) => {
@@ -47,15 +49,16 @@ const AddNewModal = (props) => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => {
+  const onSubmit = (data, e) => {
     let arr = data;
     imgStr["image"] = imgStr["0"];
     data = { ...arr, ...imgStr };
 
+    setLoading(true);
     try {
       axios({
         method: "post",
-        // headers: { "Access-Control-Allow-Origin": "*" },
+        headers: { "Access-Control-Allow-Origin": "*" },
         url: "https://infinite-wildwood-83288.herokuapp.com/api/card/create",
         data: {
           title: data.title,
@@ -66,6 +69,9 @@ const AddNewModal = (props) => {
           type: props.type,
         },
       });
+      setLoading(false);
+      e.target.reset();
+      // window.location.reload(false);
     } catch (err) {}
     console.log(data);
   };
@@ -80,6 +86,28 @@ const AddNewModal = (props) => {
           className="addNewCard container-fluid"
           onSubmit={handleSubmit(onSubmit)}
         >
+          {loading && (
+            <div className="loading">
+              <Audio
+                height="80"
+                width="80"
+                radius="9"
+                color="red"
+                ariaLabel="loading"
+                wrapperStyle
+                wrapperClass
+              />
+              <p
+                style={{
+                  fontFamily: "POPPINS bold",
+                  color: "white",
+                  marginTop: "20px",
+                }}
+              >
+                Please Wait...
+              </p>
+            </div>
+          )}
           <Modal.Body>
             <div className="row">
               <div className="col">

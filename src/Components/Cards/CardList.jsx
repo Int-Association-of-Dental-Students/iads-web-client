@@ -9,7 +9,7 @@ import { AuthContext } from "../Context/AuthContext";
 import { useContext } from "react";
 
 const CardList = ({ data, textColor, type }) => {
-  console.log(type);
+  console.log(data);
   const Auth = useContext(AuthContext);
   const [show, setShow] = useState(false);
 
@@ -34,17 +34,19 @@ const CardList = ({ data, textColor, type }) => {
             </button>
           </div>
         )}
-        {data.cards.map((data) => (
-          <CardComponent
-            style={textColor}
-            t={data.title}
-            date={data.date}
-            d={data.description}
-            i={data.image}
-            l={data.link}
-            a={data.apply}
-          />
-        ))}
+        {data &&
+          data.cards.map((data) => (
+            <CardComponent
+              id={data._id}
+              style={textColor}
+              t={data.title}
+              date={data.date}
+              d={data.description}
+              i={data.image}
+              l={data.link}
+              a={data.apply}
+            />
+          ))}
       </div>
     </div>
   );

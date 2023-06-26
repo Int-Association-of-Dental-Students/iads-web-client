@@ -13,6 +13,8 @@ import CardList from "../../../Components/Cards/CardList";
 import logo from "../../../Assets/Committees/Prophylaxis/logo.svg";
 import delegate from "../../../Assets/Committees/Prophylaxis/delegate.svg";
 import axios from "axios";
+import delegatesWorld from "../../../Assets/Governance/delegatesWorld.svg";
+import Map from "./Map";
 
 const Prophylaxis = () => {
   const [toolkits, settoolkits] = useState(null);
@@ -86,13 +88,20 @@ const Prophylaxis = () => {
       <div className="IPMB">
         <h1
           className="title"
-          style={{ marginBottom: "55px", width: "70%", margin: "auto" }}
+          style={{
+            marginTop: "24px",
+            marginBottom: "55px",
+            width: "70%",
+            margin: "auto",
+          }}
         >
-          Internationa Public health Material BAnk (IPMB) Platform
+          International Public health Material BAnk (IPMB) Platform
         </h1>
-        <h1 className="title-1st" style={{ marginTop: "100px" }}>
+        {/* <h1 className="title-1st" style={{ marginTop: "100px" }}>
           Coming Soon!
-        </h1>
+        </h1> */}
+        {/* <img style={{ width: "100%" }} src={delegatesWorld} /> */}
+        <Map />
       </div>
 
       <div className="toolkits container-fluid">

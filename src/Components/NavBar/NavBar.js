@@ -116,6 +116,13 @@ const NavBar = (props) => {
                 Colgate
               </NavDropdown.Item>
               <NavDropdown.Divider />
+              <NavDropdown.Item href="/projects/webinars">
+                Webinars
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/projects/research">
+                Research Platform
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
               <NavDropdown.Item href="/projects/WOHD">
                 World Oral Health Day
               </NavDropdown.Item>

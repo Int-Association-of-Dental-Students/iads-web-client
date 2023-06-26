@@ -3,7 +3,7 @@ import { Card, Button } from "react-bootstrap";
 import { useState } from "react";
 import "./Card.scss";
 import findmore from "./findmore.svg";
-
+import axios from "axios";
 import LoginModal from "../LoginModal";
 
 import card from "./card.png";
@@ -13,10 +13,24 @@ import { AuthContext } from "../Context/AuthContext";
 import { useContext } from "react";
 
 const CardComponent = (props) => {
+  const deleteCard = (id) => {
+    console.log("remove by id");
+
+    axios
+      .post(
+        `https://infinite-wildwood-83288.herokuapp.com/api/card/delete/${id}`
+      )
+      .then((res) => {
+        // setTemp(!temp);
+        console.log("card deleted");
+        window.location.reload(false);
+      });
+  };
   const Auth = useContext(AuthContext);
   const [loginShow, setLoginShow] = useState(false);
 
   const [data, setData] = useState({
+    id: props.id,
     title: props.t,
     description: props.d,
     image: props.i,
@@ -41,7 +55,7 @@ const CardComponent = (props) => {
             {data.title}
           </Card.Title>
           <Card.Text className="card-date">{data.date}</Card.Text>
-          <Card.Text className="card-text">{data.description}</Card.Text>
+          <Card.Text className="card-txt">{data.description}</Card.Text>
           {Auth.validation && data.apply && (
             <div
               style={{
@@ -60,6 +74,18 @@ const CardComponent = (props) => {
               >
                 Apply
               </Button>
+              {Auth.editor && (
+                <Button
+                  className="card-button"
+                  onClick={() => {
+                    deleteCard(data.id);
+                  }}
+                  variant="primary"
+                  style={{ color: props.style, alignSelf: "flex-start" }}
+                >
+                  Delete
+                </Button>
+              )}
               <Button
                 className="card-button"
                 href={data.link}
@@ -85,6 +111,19 @@ const CardComponent = (props) => {
                 alignItems: "center",
               }}
             >
+              {Auth.editor && (
+                <Button
+                  className="card-button"
+                  onClick={() => {
+                    deleteCard(data.id);
+                  }}
+                  variant="primary"
+                  style={{ color: props.style, alignSelf: "flex-start" }}
+                >
+                  Delete
+                </Button>
+              )}
+
               <Button
                 className="card-button"
                 href={data.link}

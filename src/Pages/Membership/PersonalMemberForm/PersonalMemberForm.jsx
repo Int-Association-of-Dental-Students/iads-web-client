@@ -46,6 +46,32 @@ const PersonalMemberForm = () => {
     e.target.reset();
     navigate("/");
   };
+  const uploadPdf = (pdf, idx) => {
+    let resImg = null;
+    const imgAPIKey = "826fbb1f90dacfa942f721a496d71950";
+    let formData = new FormData();
+    formData.append("image", pdf);
+    const url = `https://api.imgbb.com/1/upload?key=${imgAPIKey}`;
+    console.log(formData);
+    fetch(url, {
+      method: "POST",
+      body:
+        // JSON.stringify({
+        formData,
+      // })
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        resImg = result.data.display_url;
+        console.log(resImg);
+        console.log("imgbb", result);
+        let arr = imgStr;
+        arr[idx] = resImg;
+        setImgStr(arr);
+        console.log(imgStr);
+        return resImg;
+      });
+  };
 
   const uploadImage = (img, idx) => {
     let resImg = null;
@@ -479,9 +505,10 @@ const PersonalMemberForm = () => {
               style={{ border: "none" }}
               type="file"
               onChange={(e) => {
-                uploadImage(e.target.files[0], 0);
+                uploadPdf(e.target.files[0], 0);
                 console.log(imgStr);
               }}
+              required={true}
             />
           </div>
           <div className="col-sm-12 col-xl-6 flexx">
@@ -490,9 +517,10 @@ const PersonalMemberForm = () => {
               style={{ border: "none" }}
               type="file"
               onChange={(e) => {
-                uploadImage(e.target.files[0], 1);
+                uploadPdf(e.target.files[0], 1);
                 console.log(imgStr);
               }}
+              required={true}
             />
           </div>
         </div>
@@ -507,6 +535,7 @@ const PersonalMemberForm = () => {
                 uploadImage(e.target.files[0], 2);
                 console.log(imgStr);
               }}
+              required={true}
             />
           </div>
         </div>

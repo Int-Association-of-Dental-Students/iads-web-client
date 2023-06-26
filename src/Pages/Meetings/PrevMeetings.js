@@ -1,5 +1,13 @@
 const PrevMeetings = [
   {
+    Term: 2023,
+    "Annual Congress (AC)": " - ",
+    Gallery: " - ",
+    "Mid-Year Meeting (MYM)": "Kyrenia, Cyprus 🇨🇾",
+    "MM Gallery":
+      "https://www.facebook.com/media/set/?vanity=iadsweborg&set=a.612010587634093",
+  },
+  {
     Term: 2022,
     "Annual Congress (AC)": "Almaty, KAZAKHSTAN 🇰🇿",
     Gallery: "https://www.facebook.com/media/set/?set=a.570339488467870&type=3",

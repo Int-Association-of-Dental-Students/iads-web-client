@@ -21,6 +21,7 @@ const Internal = () => {
   ];
 
   const [pressRelease, setPressRelease] = useState(null);
+  const [regulations, setRegulations] = useState(null);
 
   useEffect(() => {
     axios
@@ -29,6 +30,15 @@ const Internal = () => {
       )
       .then((res) => {
         setPressRelease(res.data);
+        // console.log(res.data);
+      });
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/regulations`)
+      .then((res) => {
+        setRegulations(res.data);
         // console.log(res.data);
       });
   }, []);
@@ -102,7 +112,15 @@ const Internal = () => {
 
       <div className="regulations">
         <h1 className="title">Regulations</h1>
-        <div className="cardList container">
+        {regulations && (
+          <CardList
+            className="card-list"
+            data={regulations}
+            textColor="#C60E3C"
+            type="regulations"
+          ></CardList>
+        )}
+        {/* <div className="cardList container">
           <div className="cardd">
             <img src={pdfIcon} />
             <h2 className="regtitle">Regulation file title</h2>
@@ -120,7 +138,7 @@ const Internal = () => {
               Download
             </h2>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="press">
         <h1 className="title">Press Release</h1>

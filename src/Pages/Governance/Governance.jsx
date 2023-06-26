@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Governance.scss";
+
+import tippy from "tippy.js";
+import "tippy.js/dist/tippy.css";
 
 import delegatesWorld from "../../Assets/Governance/delegatesWorld.svg";
 
@@ -52,6 +55,9 @@ import delegatesList from "./DelegatesList";
 
 import GovCard from "../../Components/Governance/GovCard";
 
+import Map from "./Map";
+import { Tooltip } from "react-tooltip";
+
 const delegatesListColumns = [
   {
     field: "Country",
@@ -86,6 +92,7 @@ const delegatesListColumns = [
 ];
 
 const Governance = () => {
+  const [content, setContent] = useState("");
   return (
     <div className="governance-page">
       <div className="hero">
@@ -150,7 +157,7 @@ const Governance = () => {
           <GovCard
             personImg={p5}
             flag={f5}
-            name="Ksenia Rusakova"
+            name="Kseniia Rusakova"
             role="Vice President of Exchange"
             color="white"
           />
@@ -224,8 +231,7 @@ const Governance = () => {
           <GovCard
             personImg={p23}
             flag={f23}
-            name="Ranya 
-            Oualid"
+            name="Youssef Khattab"
             role="Regional Ambassador of Africa"
           />
           <GovCard
@@ -294,17 +300,11 @@ const Governance = () => {
         <h1 className="title-1st">Iads</h1>
         <h1 className="title-2nd">Delegates</h1>
         <p className="desc">2022/2023</p>
-        <p
-          className="desc"
-          style={{
-            width: "80%",
-            margin: "auto",
-            marginBottom: "70px",
-          }}
-        >
-          Interaction coming soon!
-        </p>
-        <img src={delegatesWorld} />
+
+        {/* <img src={delegatesWorld} /> */}
+
+        <Map />
+        {/* <Tooltip>{content}</Tooltip> */}
       </div>
 
       <div className="delegates-list">

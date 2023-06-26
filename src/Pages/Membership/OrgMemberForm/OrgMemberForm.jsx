@@ -12,6 +12,32 @@ export default function OrgMemberForm() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  const uploadPdf = (pdf, idx) => {
+    let resImg = null;
+    const imgAPIKey = "826fbb1f90dacfa942f721a496d71950";
+    let formData = new FormData();
+    formData.append("image", pdf);
+    const url = `https://api.imgbb.com/1/upload?key=${imgAPIKey}`;
+    console.log(formData);
+    fetch(url, {
+      method: "POST",
+      body:
+        // JSON.stringify({
+        formData,
+      // })
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        resImg = result.data.display_url;
+        console.log(resImg);
+        console.log("imgbb", result);
+        let arr = imgStr;
+        arr[idx] = resImg;
+        setImgStr(arr);
+        console.log(imgStr);
+        return resImg;
+      });
+  };
   const uploadImage = (img, idx) => {
     let resImg = null;
     const imgAPIKey = "826fbb1f90dacfa942f721a496d71950";
@@ -95,6 +121,10 @@ export default function OrgMemberForm() {
             name: data.exchangeName,
             email: data.exchangeEmail,
           },
+          publicHealthOfficer: {
+            name: data.publicHealthOfficerName,
+            email: data.publicHealthOfficerEmail,
+          },
           scientificOfficer: {
             name: data.scientificName,
             email: data.scientificEmail,
@@ -141,6 +171,7 @@ export default function OrgMemberForm() {
       navigate("/");
     } catch (err) {
       console.log(httpClient.error);
+      setLoading(false);
     }
   };
 
@@ -505,7 +536,7 @@ export default function OrgMemberForm() {
             </div>
           </div>
           <div className="col-sm-12 col-xl-6 flexx">
-            <label>Fax Number*</label>
+            <label>Fax Number</label>
             <input
               type="tel"
               placeholder="Type Here..."
@@ -517,7 +548,7 @@ export default function OrgMemberForm() {
 
         <div className="row" style={{ paddingBottom: "25px" }}>
           <div className="col-sm-12 col-xl-6 flexx">
-            <label>Website*</label>
+            <label>Website</label>
             <input
               type="text"
               placeholder="Type Here..."
@@ -588,8 +619,12 @@ export default function OrgMemberForm() {
             >
               <option value="Full National">Full National</option>
               <option value="Full Local">Full Local Corresponding</option>
-              <option value="Corresponding">Corresponding</option>
-              <option value="Affiliate">Affiliate</option>
+              <option value="Corresponding National">
+                Corresponding National
+              </option>
+              <option value="Corresponding Local">Corresponding Local</option>
+              <option value="Affiliate National">Affiliate National</option>
+              <option value="Affiliate Local">Affiliate Local</option>
             </select>
           </div>
         </div>
@@ -680,6 +715,26 @@ export default function OrgMemberForm() {
               placeholder="Type Here..."
               id="editorEmail"
               {...register("editorEmail", { required: false })}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-sm-12 col-xl-6 flexx">
+            <label>Name of Public Health Officer</label>
+            <input
+              type="text"
+              placeholder="Type Here..."
+              id="publicHealthOfficerName"
+              {...register("publicHealthOfficerName", { required: false })}
+            />
+          </div>
+          <div className="col-sm-12 col-xl-6 flexx">
+            <label>Email of Public Health Officer</label>
+            <input
+              type="email"
+              placeholder="Type Here..."
+              id="publicHealthOfficerEmail"
+              {...register("publicHealthOfficerEmail", { required: false })}
             />
           </div>
         </div>
@@ -793,7 +848,7 @@ export default function OrgMemberForm() {
             <label>Phone Number of IADS Delegate</label>
 
             <input
-              type="tel"
+              type="number"
               placeholder="Type Here..."
               id="delegatePhone"
               {...register("delegatePhone", { required: true })}
@@ -802,10 +857,10 @@ export default function OrgMemberForm() {
           <div className="col-sm-12 col-xl-6 flexx">
             <label>WhatsApp Phone Number of IADS Delegate</label>
             <input
-              type="tel"
+              type="number"
               placeholder="Type Here..."
               id="delegateWhatsapp"
-              {...register("delegateWhatsapp", { required: false })}
+              {...register("delegateWhatsapp", { required: true })}
             />
           </div>
         </div>
@@ -822,7 +877,7 @@ export default function OrgMemberForm() {
               type="text"
               placeholder="Type Here..."
               id="delegate2Name"
-              {...register("delegate2Name", {})}
+              {...register("delegate2Name", { required: true })}
             />
           </div>
           <div className="col-sm-12 col-xl-6 flexx">
@@ -831,7 +886,7 @@ export default function OrgMemberForm() {
               type="email"
               placeholder="Type Here..."
               id="delegate2Email"
-              {...register("delegate2Email", {})}
+              {...register("delegate2Email", { required: true })}
             />
           </div>
         </div>
@@ -844,7 +899,7 @@ export default function OrgMemberForm() {
               type="tel"
               placeholder="Type Here..."
               id="delegate2Phone"
-              {...register("delegate2Phone", {})}
+              {...register("delegate2Phone", { required: true })}
             />
           </div>
           <div className="col-sm-12 col-xl-6 flexx">
@@ -853,7 +908,7 @@ export default function OrgMemberForm() {
               type="tel"
               placeholder="Type Here..."
               id="delegate2Whatsapp"
-              {...register("delegate2Whatsapp", {})}
+              {...register("delegate2Whatsapp", { required: false })}
             />
           </div>
         </div>
@@ -875,7 +930,7 @@ export default function OrgMemberForm() {
               style={{ border: "none" }}
               type="file"
               onChange={(e) => {
-                uploadImage(e.target.files[0], 0);
+                uploadPdf(e.target.files[0], 0);
                 console.log(imgStr);
               }}
             />

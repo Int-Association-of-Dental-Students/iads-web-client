@@ -1,4 +1,6 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
+import axios from "axios";
+import CardList from "../../Components/Cards/CardList";
 import "./Home.scss";
 import { Image, Button, Carousel, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -21,6 +23,7 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import SwiperCore, { Keyboard, Mousewheel } from "swiper/core";
+import { Helmet } from "react-helmet";
 
 import e1 from "../../Assets/DiscoverPics/e1.svg";
 import e2 from "../../Assets/DiscoverPics/e2.svg";
@@ -40,6 +43,8 @@ import end from "../../Assets/endorser.svg";
 import AddNewModal from "../../Components/Cards/AddNewModal";
 
 import { AuthContext } from "../../Components/Context/AuthContext";
+
+import news from "./news";
 
 function DiscoverMoreCard(props) {
   return (
@@ -62,12 +67,44 @@ function DiscoverMoreCard(props) {
   );
 }
 
+const AdSense = () => (
+  <div>
+    <Helmet>
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4898463574163953"
+        crossorigin="anonymous"
+      ></script>
+    </Helmet>
+
+    <ins
+      className="adsbygoogle"
+      style={{ display: "block", height: "50px" }}
+      data-ad-client="ca-pub-4898463574163953"
+      data-ad-slot="3869987230"
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    ></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+);
+
 function Home() {
   const Auth = useContext(AuthContext);
   console.log(Auth);
 
   SwiperCore.use([Keyboard, Mousewheel]);
   const [showLoginModal, setShowLoginModal] = useState(false);
+  // const [news, setnews] = useState(News);
+
+  // useEffect(() => {
+  //   axios
+  //     .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/news`)
+  //     .then((res) => {
+  //       setnews(res.data);
+  //       // console.log(res.data);
+  //     });
+  // }, []);
 
   return (
     <>
@@ -98,6 +135,14 @@ function Home() {
         </div> */}
 
         {/* <div className="dev"> */}
+        <Helmet>
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4898463574163953"
+            crossorigin="anonymous"
+          ></script>
+        </Helmet>
+
         <div className="home-main">
           <div className="titles">
             <Carousel className="carousel" fade interval={2000}>
@@ -158,20 +203,22 @@ function Home() {
             <img className="vlogo" src={verticalLogo} />
           </div>
         </div>
-        {/* <div className="container-fluid congress">
+        <div className="container-fluid congress">
           <img className="congLogo" src={CongressLogo} />
 
           <div className="congText">
             <div className="congTitles">
               <p className="congTitles1">Upcoming</p>
-              <p className="congTitles2">Meeting</p>
+              <p className="congTitles2" style={{ color: "#fdbe3d" }}>
+                Meeting
+              </p>
             </div>
 
             <p className="congTextBody">
-              Discover the latest trends in AI and a wide variety of topics and
-              hands-on courses in dentistry while embarking on a fun and all-new
-              experience in the beautiful and largest country in Central Asia,
-              Kazakhstan in our IADS next 69th Annual Congress in August 2022.
+              Discover the latest trends in Green Dentistry and a wide variety
+              of topics and hands-on courses while embarking on a fun and
+              all-new experience in the beautiful and ancient country of Egypt
+              in our IADS next 70th Annual Congress in September 2023.
             </p>
 
             <a
@@ -182,7 +229,9 @@ function Home() {
               Learn More
             </a>
           </div>
-        </div> */}
+        </div>
+
+        <AdSense />
 
         <div className="discoverMore container">
           <div className="homePageTitles1">
@@ -265,7 +314,7 @@ function Home() {
               <DiscoverMoreCard
                 color="white"
                 bgcolor="#F5010B"
-                title="iBSBF Project"
+                title="Mint a Smile Project"
                 body="By enabling IADS members to produce and execute their innovative ideas, the international BSBF Contest will emanate Colgate's mission to connect underserved communities to oral health education, free dental screenings and treatment referrals. "
                 image={e5}
                 link="/projects/colgate"
@@ -321,16 +370,24 @@ function Home() {
           </div>
         </div>
         <div className="iadsLatest container">
-          <div className="homePageTitles1">
+          <div style={{ marginBottom: "48px" }} className="homePageTitles1">
             <p className="homePageTitles11">iads Latest</p>
             <p className="homePageTitles12">News</p>
           </div>
-          <h1
+          {/* <h1
             className="title-1st"
             style={{ marginTop: "75px", marginBottom: "100px" }}
           >
             Coming Soon!
-          </h1>
+          </h1> */}
+          {news && (
+            <CardList
+              className="card-list"
+              data={news}
+              textColor="#E85B0D"
+              type="news"
+            ></CardList>
+          )}
           {/* <Swiper
             style={{
               paddingLeft: "60px",
