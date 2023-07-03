@@ -281,18 +281,30 @@ function Colgate() {
                   <div className="col">
                     <h5>IADS People's Choice Contest:</h5>
                     <p>
-                      Full National Member votes will have a score value of 2
-                      and Full Local Member votes will have a score value of 1.
-                      Full National Member votes will have a score coefficient
-                      of 2 and Full Local Member votes will have a score
-                      coefficient of 1. Each delegate will rank the competitors
-                      from 1-10, 10 being the highest vote.Scoring according to
-                      attained likes on social media will be such that the top
-                      most liked competitor will get 10 points and so on
-                      distributed until the least liked will get 1 point.
+                      Scoring according to attained likes on social media will
+                      be as follows:
                     </p>
+                    <div
+                      className="flex-horiz"
+                      style={{ display: "flex", flexDirection: "horizontal" }}
+                    >
+                      <ul style={{ listStyleType: "none" }}>
+                        <li>20-30 likes = 1 point</li>
+                        <li>30-50 likes = 2 points</li>
+                        <li>50-150 likes = 3 points</li>
+                        <li>150 -450 likes = 4 points</li>
+                        <li>450 - 550 likes = 5 points</li>
+                      </ul>
+                      <ul style={{ listStyleType: "none" }}>
+                        <li>550 - 750 likes = 6 points</li>
+                        <li>750 - 950 likes = 7 points</li>
+                        <li>950 - 2K likes = 8 points</li>
+                        <li>2K - 2.5K likes = 9 points</li>
+                        <li>2.5K - 3.5K likes = 10 points</li>
+                      </ul>
+                    </div>
                     <a
-                      href="https://drive.google.com/file/d/1nwXZZ1bvK59XwFZs5NLhJWHjENlKNNkl/view?usp=share_link"
+                      href="https://drive.google.com/file/d/1jOu1gEUZfzpFhJnumul6MOZoBwXAHTZX/view?usp=drive_link"
                       className="btn"
                     >
                       Learn More

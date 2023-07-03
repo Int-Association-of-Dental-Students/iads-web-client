@@ -6,6 +6,7 @@ import axios from "axios";
 import Compressor from "compressorjs";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
+import { Audio } from "react-loader-spinner";
 
 import fileUpload from "../../../Assets/Projects/Colgate/fileUpload.svg";
 
@@ -23,6 +24,8 @@ const ColgateForm = () => {
   //       },
   //     });
   //   };
+
+  const [loading, setLoading] = useState(false);
 
   const {
     register,
@@ -60,14 +63,24 @@ const ColgateForm = () => {
   //
 
   const onSubmit = async (data, e) => {
+    setLoading(true);
     console.log("data");
     console.log(data);
 
     e.preventDefault();
 
+    await axios
+      .post(
+        "https://sheet.best/api/sheets/8f77e7cc-d735-4fe4-8c65-a7986df38cd2",
+        data
+      )
+      .then((response) => {
+        console.log(response);
+      });
+
     emailjs
       .sendForm(
-        "service_qd6c2wx",
+        "service_zhe1pvp",
         "template_hvozy8t",
         e.target,
         "Blp53EzBsHt7ji3lO"
@@ -91,159 +104,179 @@ const ColgateForm = () => {
         }
       );
 
-    await axios
-      .post(
-        "https://sheet.best/api/sheets/113d9cbd-5982-40df-89f7-131f30653ec5",
-        data
-      )
-      .then((response) => {
-        console.log(response);
-      });
-
     // console.log(data);
     alert(
       "Your EOI submission has been successfully completed. Kindly check your email inbox for confirmation mail."
     );
+
+    setLoading(false);
   };
   //   console.log(error);
 
   return (
     <>
-      <form
-        className="form container py-5 poppins"
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <div className="row">
-          {/* ////////////////////////////////////////////////////////////////////////////////////////// */}
-          <div className="col coll">
-            <div className="row">
-              <label className="flexx" htmlFor="name">
-                Full Name of Liaison Officer
-              </label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Type..."
-                {...register("name", {
-                  required: true,
-                  maxLength: 80,
-                })}
-              />
-            </div>
-            <div className="row">
-              <label className="flexx" htmlFor="gender">
-                Gender
-              </label>
-              <select
-                {...register("gender", { required: true })}
-                id="gender"
-                placeholder="Choose..."
-              >
-                <option label="Choose..."></option>
-                <option value="Male">Male</option>
-                <option value=" Female"> Female</option>
-                <option value=" Other"> Other</option>
-              </select>
-            </div>
-            <div className="row">
-              <label className="flexx" htmlFor="whatsapp">
-                Whatsapp Number
-              </label>
-              <input
-                id="whatsapp"
-                type="tel"
-                placeholder="Type Here..."
-                {...register("whatsapp", { required: true })}
-              />
-            </div>
-            <div className="row">
-              <label className="flexx" htmlFor="affiliation">
-                Affiliated IADS member association
-              </label>
-              <input
-                name="affiliation"
-                id="affiliation"
-                type="text"
-                placeholder="Type Here..."
-                {...register("affiliation", {
-                  required: true,
-                })}
-              />
-            </div>
-            <div className="row">
-              <label className="flexx" htmlFor="country">
-                Country
-              </label>
-              <select id="country" {...register("country", { required: true })}>
-                <option label="Choose..."></option>
-                <option value="Croatia">Croatia</option>
-                <option value=" Czech republic"> Czech republic</option>
-                <option value=" Ecuador"> Ecuador</option>
-                <option value=" Egypt"> Egypt</option>
-                <option value=" Finland"> Finland</option>
-                <option value=" France"> France</option>
-                <option value=" Germany"> Germany</option>
-                <option value=" Guatemala"> Guatemala</option>
-                <option value=" India"> India</option>
-                <option value=" Indonesia"> Indonesia</option>
-                <option value=" Iran"> Iran</option>
-                <option value=" Iraq"> Iraq</option>
-                <option value=" Italy"> Italy</option>
-                <option value=" Japan"> Japan</option>
-                <option value=" Jordan"> Jordan</option>
-                <option value=" Kazakhstan"> Kazakhstan</option>
-                <option value=" Latvia"> Latvia</option>
-                <option value=" Lithuania"> Lithuania</option>
-                <option value=" Malaysia"> Malaysia</option>
-                <option value=" Morocco"> Morocco</option>
-                <option value=" Nigeria"> Nigeria</option>
-                <option value=" North Cyprus"> North Cyprus</option>
-                <option value=" Pakistan"> Pakistan</option>
-                <option value=" Palestine"> Palestine</option>
-                <option value=" Poland"> Poland</option>
-                <option value=" Portugal"> Portugal</option>
-                <option value=" Qatar"> Qatar</option>
-                <option value=" Romania"> Romania</option>
-                <option value=" Romania"> Romania</option>
-                <option value=" Romania"> Romania</option>
-                <option value=" Rwanda"> Rwanda</option>
-                <option value=" Slovakia"> Slovakia</option>
-                <option value=" Slovenia"> Slovenia</option>
-                <option value=" Sudan"> Sudan</option>
-                <option value=" Sweden"> Sweden</option>
-                <option value=" Taiwan"> Taiwan</option>
-                <option value=" Thailand"> Thailand</option>
-                <option value=" Tunisia"> Tunisia</option>
-                <option value=" Turkey"> Turkey</option>
-                <option value=" Zimbabwe"> Zimbabwe</option>
-              </select>
-            </div>
+      {loading ? (
+        <div className="loading">
+          <Audio
+            height="80"
+            width="80"
+            radius="9"
+            color="red"
+            ariaLabel="loading"
+            wrapperStyle
+            wrapperClass
+          />
+          <p
+            style={{
+              fontFamily: "POPPINS bold",
+              color: "white",
+              marginTop: "20px",
+            }}
+          >
+            Please Wait...
+          </p>
+        </div>
+      ) : (
+        <form
+          className="form container py-5 poppins"
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <div className="row">
+            {/* ////////////////////////////////////////////////////////////////////////////////////////// */}
+            <div className="col coll">
+              <div className="row">
+                <label className="flexx" htmlFor="name">
+                  Full Name
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Type..."
+                  {...register("name", {
+                    required: true,
+                    maxLength: 80,
+                  })}
+                />
+              </div>
+              <div className="row">
+                <label className="flexx" htmlFor="gender">
+                  Gender
+                </label>
+                <select
+                  {...register("gender", { required: true })}
+                  id="gender"
+                  placeholder="Choose..."
+                >
+                  <option label="Choose..."></option>
+                  <option value="Male">Male</option>
+                  <option value=" Female"> Female</option>
+                  <option value=" Other"> Other</option>
+                </select>
+              </div>
+              <div className="row">
+                <label className="flexx" htmlFor="whatsapp">
+                  Whatsapp Number
+                </label>
+                <input
+                  id="whatsapp"
+                  type="tel"
+                  placeholder="Type Here..."
+                  {...register("whatsapp", { required: true })}
+                />
+              </div>
+              <div className="row">
+                <label className="flexx" htmlFor="affiliation">
+                  Affiliated IADS member association
+                </label>
+                <input
+                  name="affiliation"
+                  id="affiliation"
+                  type="text"
+                  placeholder="Type Here..."
+                  {...register("affiliation", {
+                    required: true,
+                  })}
+                />
+              </div>
+              <div className="row">
+                <label className="flexx" htmlFor="country">
+                  Country
+                </label>
+                <select
+                  id="country"
+                  {...register("country", { required: true })}
+                >
+                  <option label="Choose..."></option>
+                  <option value="Croatia">Croatia</option>
+                  <option value=" Czech republic"> Czech republic</option>
+                  <option value=" Ecuador"> Ecuador</option>
+                  <option value=" Egypt"> Egypt</option>
+                  <option value=" Finland"> Finland</option>
+                  <option value=" France"> France</option>
+                  <option value=" Germany"> Germany</option>
+                  <option value=" Guatemala"> Guatemala</option>
+                  <option value=" India"> India</option>
+                  <option value=" Indonesia"> Indonesia</option>
+                  <option value=" Iran"> Iran</option>
+                  <option value=" Iraq"> Iraq</option>
+                  <option value=" Italy"> Italy</option>
+                  <option value=" Japan"> Japan</option>
+                  <option value=" Jordan"> Jordan</option>
+                  <option value=" Kazakhstan"> Kazakhstan</option>
+                  <option value=" Latvia"> Latvia</option>
+                  <option value=" Lithuania"> Lithuania</option>
+                  <option value=" Malaysia"> Malaysia</option>
+                  <option value=" Morocco"> Morocco</option>
+                  <option value=" Nigeria"> Nigeria</option>
+                  <option value=" North Cyprus"> North Cyprus</option>
+                  <option value=" Pakistan"> Pakistan</option>
+                  <option value=" Palestine"> Palestine</option>
+                  <option value=" Poland"> Poland</option>
+                  <option value=" Portugal"> Portugal</option>
+                  <option value=" Qatar"> Qatar</option>
+                  <option value=" Romania"> Romania</option>
+                  <option value=" Romania"> Romania</option>
+                  <option value=" Romania"> Romania</option>
+                  <option value=" Rwanda"> Rwanda</option>
+                  <option value=" Slovakia"> Slovakia</option>
+                  <option value=" Slovenia"> Slovenia</option>
+                  <option value=" Sudan"> Sudan</option>
+                  <option value=" Sweden"> Sweden</option>
+                  <option value=" Taiwan"> Taiwan</option>
+                  <option value=" Thailand"> Thailand</option>
+                  <option value=" Tunisia"> Tunisia</option>
+                  <option value=" Turkey"> Turkey</option>
+                  <option value=" Zimbabwe"> Zimbabwe</option>
+                </select>
+              </div>
 
-            <div className="row">
-              <label className="flexx" htmlFor="twitter">
-                Twitter Account
-              </label>
-              <input
-                type="text"
-                placeholder="Type Here..."
-                {...register("twitter", { required: true })}
-              />
-            </div>
+              <div className="row">
+                <label className="flexx" htmlFor="twitter">
+                  Twitter Account
+                </label>
+                <input
+                  type="text"
+                  placeholder="Type Here..."
+                  {...register("twitter", { required: true })}
+                />
+              </div>
 
-            <div className="row">
-              <label className="flexx" htmlFor="hear">
-                How did you hear about this competition?
-              </label>
-              <select id="hear" {...register("howDidYouHear")}>
-                <option label="Choose..."></option>
-                <option value="Orientation Session">Orientation Session</option>
-                <option value=" IADS Social Media"> IADS Social Media</option>
-                <option value=" Peer Referral"> Peer Referral</option>
-              </select>
-            </div>
+              <div className="row">
+                <label className="flexx" htmlFor="hear">
+                  How did you hear about this competition?
+                </label>
+                <select id="hear" {...register("howDidYouHear")}>
+                  <option label="Choose..."></option>
+                  <option value="Orientation Session">
+                    Orientation Session
+                  </option>
+                  <option value=" IADS Social Media"> IADS Social Media</option>
+                  <option value=" Peer Referral"> Peer Referral</option>
+                </select>
+              </div>
 
-            <div className="file-upload flexx" style={{ alignItems: "center" }}>
+              {/* <div className="file-upload flexx" style={{ alignItems: "center" }}>
               <label
                 className="flexx"
                 style={{ flexDirection: "column", alignItems: "center" }}
@@ -262,16 +295,16 @@ const ColgateForm = () => {
               name="logoFile"
               type="file"
               ref={hiddenFileInput}
-            />
+            /> */}
 
-            {/* <div className="file-upload">
+              {/* <div className="file-upload">
               <label className="flexx">Upload your Association Logo</label>
               <input
                 name="file-logo"
                 onChange={(event) => this.handleCompressedUpload(event)}
                 type="file"
-              />
-            </div> */}
+              />*/}
+            </div>
           </div>
           {/* ////////////////////////////////////////////////////////////////////////////////////////// */}
           <div className="col coll">
@@ -651,7 +684,7 @@ const ColgateForm = () => {
               </select>
             </div>
             <div className="row">
-              <div className="flexx">
+              {/* <div className="flexx">
                 <label htmlFor="standing" style={{ marginRight: "20px" }}>
                   Are you in good standing for the year 2022?
                 </label>
@@ -674,19 +707,19 @@ const ColgateForm = () => {
                 />
                 No
               </div>
-            </div>
-            <div className="row">
-              <label className="flexx" htmlFor="insta">
-                Instagram Account
-              </label>
-              <input
-                id="insta"
-                type="text"
-                placeholder="Type Here..."
-                {...register("instagram", { required: true })}
-              />
-            </div>
-            <div className="row">
+            </div> */}
+              <div className="row">
+                <label className="flexx" htmlFor="insta">
+                  Instagram Account
+                </label>
+                <input
+                  id="insta"
+                  type="text"
+                  placeholder="Type Here..."
+                  {...register("instagram", { required: true })}
+                />
+              </div>
+              {/* <div className="row">
               <div className="flexx">
                 <label className="flexx" htmlFor="delegateBoolean">
                   Are you the delegate of your affiliated association?
@@ -722,68 +755,69 @@ const ColgateForm = () => {
                 placeholder="Type Here..."
                 {...register("branchPosition", {})}
               />
+            </div> */}
             </div>
-          </div>
-          <div className="row">
-            <div className="flexx" style={{ marginTop: "50px" }}>
-              <input
-                style={{ marginRight: "10px" }}
-                id="disclosure"
-                type="checkbox"
-                placeholder="Type Here..."
-                {...register("disclosure", { required: true })}
-              />
-              <label htmlFor="disclosure" style={{ marginLeft: "0px" }}>
-                I shall not disclose any confidential information related to
-                this project until further notice.
-              </label>
+            <div className="row">
+              <div className="flexx" style={{ marginTop: "50px" }}>
+                <input
+                  style={{ marginRight: "10px" }}
+                  id="disclosure"
+                  type="checkbox"
+                  placeholder="Type Here..."
+                  {...register("disclosure", { required: true })}
+                />
+                <label htmlFor="disclosure" style={{ marginLeft: "0px" }}>
+                  I shall not disclose any confidential information related to
+                  this project until further notice.
+                </label>
+              </div>
             </div>
-          </div>
-          <div className="row" style={{}}>
-            <div className="flexx">
-              <input
-                style={{ marginRight: "10px" }}
-                id="permission"
-                type="checkbox"
-                placeholder="Type Here..."
-                {...register("permission", { required: true })}
-              />
-              <label
-                style={{ marginLeft: "0px", textAlign: "left" }}
-                htmlFor="permission"
-              >
-                I understand that it is not permissible to use Logos or Elements
-                pertaining to this project elsewhere unless a prior permission
-                is granted.
-              </label>
+            <div className="row" style={{}}>
+              <div className="flexx">
+                <input
+                  style={{ marginRight: "10px" }}
+                  id="permission"
+                  type="checkbox"
+                  placeholder="Type Here..."
+                  {...register("permission", { required: true })}
+                />
+                <label
+                  style={{ marginLeft: "0px", textAlign: "left" }}
+                  htmlFor="permission"
+                >
+                  I understand that it is not permissible to use Logos or
+                  Elements pertaining to this project elsewhere unless a prior
+                  permission is granted.
+                </label>
+              </div>
             </div>
-          </div>
-          <div className="row">
-            <div className="flexx">
-              <input
-                style={{ marginRight: "10px" }}
-                id="expOfInterest"
-                type="checkbox"
-                placeholder="Type Here..."
-                {...register("expOfInterest", { required: true })}
-              />
-              <label
-                htmlFor="expOfInterest"
-                style={{ marginLeft: "0px", textAlign: "left" }}
-              >
-                I declare my association’s expression of interest to officially
-                participate in IADS international grand idea competition in
-                partnership with Colgate-Palmolive®.
-              </label>
+            <div className="row">
+              <div className="flexx">
+                <input
+                  style={{ marginRight: "10px" }}
+                  id="expOfInterest"
+                  type="checkbox"
+                  placeholder="Type Here..."
+                  {...register("expOfInterest", { required: true })}
+                />
+                <label
+                  htmlFor="expOfInterest"
+                  style={{ marginLeft: "0px", textAlign: "left" }}
+                >
+                  I declare my expression of interest to officially participate
+                  in IADS international grand idea competition in partnership
+                  with Colgate-Palmolive®.
+                </label>
+              </div>
             </div>
-          </div>
 
-          {/*<input type="checkbox" placeholder="I understand that it is not permissible to use Logos or Elements pertaining to this project elsewhere unless a prior permission is granted." {...register("I understand that it is not permissible to use Logos or Elements pertaining to this project elsewhere unless a prior permission is granted.", {required: true})} />
+            {/*<input type="checkbox" placeholder="I understand that it is not permissible to use Logos or Elements pertaining to this project elsewhere unless a prior permission is granted." {...register("I understand that it is not permissible to use Logos or Elements pertaining to this project elsewhere unless a prior permission is granted.", {required: true})} />
       <input type="checkbox" placeholder="In accordance with the above, freely, priorly, expressly and voluntarily AUTHORIZE to Internation Association of Dental Students (IADS) to process my personal data, and for the purposes related to its social purpose and in particular for the legal, contractual and commercial purposes described in the Associaiton’s General Data Protection Regulation. The information obtained for the Processing of my personal data has been provided voluntarily and is true." {...register("In accordance with the above, freely, priorly, expressly and voluntarily AUTHORIZE to Internation Association of Dental Students (IADS) to process my personal data, and for the purposes related to its social purpose and in particular for the legal, contractual and commercial purposes described in the Associaiton’s General Data Protection Regulation. The information obtained for the Processing of my personal data has been provided voluntarily and is true.", {required: true})} />
       <input type="checkbox" placeholder="I declare my association’s expression of interest to officially participate in IADS international grand idea competition in partnership with Colgate-Palmolive®.  " {...register("I declare my association’s expression of interest to officially participate in IADS international grand idea competition in partnership with Colgate-Palmolive®.  ", {required: true})} /> */}
-        </div>
-        <input type="submit" />
-      </form>
+          </div>
+          <input type="submit" />
+        </form>
+      )}
     </>
   );
 };

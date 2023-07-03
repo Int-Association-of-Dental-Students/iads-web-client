@@ -9,7 +9,7 @@ const WinnerCard = (props) => {
       </div>
       <p className="title">place winner</p>
       <p className="price">{props.price}</p>
-      <p className="body-txt">and complementary Congress Package seats</p>
+      <p className="body-txt">and complementary Congress Package seat</p>
     </div>
   );
 };
