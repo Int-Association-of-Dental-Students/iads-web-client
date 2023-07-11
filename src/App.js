@@ -209,7 +209,7 @@ function App() {
             <Route path="/projects/colgate" element={<Colgate />} />
             <Route
               path="/projects/colgate/registration"
-              element={<ColgateForm />}
+              element={<Registration2 />}
             ></Route>
             {/* <Route
               path="/projects/colgate/registration2"
