@@ -161,85 +161,96 @@ function App() {
   const auth = useContext(AuthContext);
   const [isLoginMode, setIsLoginMode] = useState(true);
 
-  return;
-  // !loading ? (
-  <AuthContext.Provider
-    value={{
-      isLogged: !!token,
-      userId: userId,
-      username: userName,
-      name: name,
-      validation: validation,
-      email: email,
-      editor: editor,
-      admin: admin,
-      login: login,
-      logout: logout,
-      token: token,
-    }}
-  >
-    <div className="App">
-      <Helmet>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4898463574163953"
-          crossorigin="anonymous"
-        ></script>
-      </Helmet>
-      <NavBar path={window.location.pathname} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/governance" element={<Governance />} />
-        <Route path="/alumni" element={<Alumni />} />
-        <Route path="/membership" element={<Membership />} />
-        <Route path="/meetings" element={<Meetings />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/admin-portal" element={<AdminPortal />} />
-        <Route path="/organizational-member-form" element={<OrgMemberForm />} />
-        <Route path="/personal-member-form" element={<PersonalMemberForm />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects">
-          <Route path="/projects/WOHD" element={<WOHD />} />
-          <Route path="/projects/webinars" element={<Webinars />} />
-          <Route path="/projects/research" element={<Research />} />
-          <Route path="/projects/greendentistry" element={<GreenDentistry />} />
-          <Route path="/projects/MCAM" element={<MCAM />} />
-          {/* <Route path="/projects/zhermack" element={<Zhermack />} /> */}
-          <Route path="/projects/colgate" element={<Colgate />} />
+  // !loading ?
+
+  return (
+    <AuthContext.Provider
+      value={{
+        isLogged: !!token,
+        userId: userId,
+        username: userName,
+        name: name,
+        validation: validation,
+        email: email,
+        editor: editor,
+        admin: admin,
+        login: login,
+        logout: logout,
+        token: token,
+      }}
+    >
+      <div className="App">
+        <Helmet>
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4898463574163953"
+            crossorigin="anonymous"
+          ></script>
+        </Helmet>
+        <NavBar path={window.location.pathname} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/governance" element={<Governance />} />
+          <Route path="/alumni" element={<Alumni />} />
+          <Route path="/membership" element={<Membership />} />
+          <Route path="/meetings" element={<Meetings />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/admin-portal" element={<AdminPortal />} />
           <Route
-            path="/projects/colgate/registration"
-            element={<Registration2 />}
-          ></Route>
-          {/* <Route
+            path="/organizational-member-form"
+            element={<OrgMemberForm />}
+          />
+          <Route
+            path="/personal-member-form"
+            element={<PersonalMemberForm />}
+          />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects">
+            <Route path="/projects/WOHD" element={<WOHD />} />
+            <Route path="/projects/webinars" element={<Webinars />} />
+            <Route path="/projects/research" element={<Research />} />
+            <Route
+              path="/projects/greendentistry"
+              element={<GreenDentistry />}
+            />
+            <Route path="/projects/MCAM" element={<MCAM />} />
+            {/* <Route path="/projects/zhermack" element={<Zhermack />} /> */}
+            <Route path="/projects/colgate" element={<Colgate />} />
+            <Route
+              path="/projects/colgate/registration"
+              element={<Registration2 />}
+            ></Route>
+            {/* <Route
               path="/projects/colgate/registration2"
               element={<ColgateForm />}
             ></Route> */}
-          <Route
-            path="/projects/colgate/registration2"
-            element={<Registration2 />}
-          ></Route>
-        </Route>
-        <Route path="/committees">
-          <Route path="/committees/workforce" element={<Workforce />} />
-          {/* <Route
+            <Route
+              path="/projects/colgate/registration2"
+              element={<Registration2 />}
+            ></Route>
+          </Route>
+          <Route path="/committees">
+            <Route path="/committees/workforce" element={<Workforce />} />
+            {/* <Route
               path="/committees/workforceForm"
               element={<WorkforceForm />}
             /> */}
-          <Route path="/committees/internal" element={<Internal />} />
-          <Route path="/committees/SCORE" element={<SCORE />} />
-          <Route path="/committees/training" element={<Training />} />
-          <Route path="/committees/exchange" element={<Exchange />} />
-          <Route path="/committees/voluntary" element={<Voluntary />} />
-          <Route path="/committees/editorial" element={<Editorial />} />
-          <Route path="/committees/public-health" element={<Prophylaxis />} />
-        </Route>
-      </Routes>
-      <Footer />
-    </div>
-  </AuthContext.Provider>;
-  // ) : (
+            <Route path="/committees/internal" element={<Internal />} />
+            <Route path="/committees/SCORE" element={<SCORE />} />
+            <Route path="/committees/training" element={<Training />} />
+            <Route path="/committees/exchange" element={<Exchange />} />
+            <Route path="/committees/voluntary" element={<Voluntary />} />
+            <Route path="/committees/editorial" element={<Editorial />} />
+            <Route path="/committees/public-health" element={<Prophylaxis />} />
+          </Route>
+        </Routes>
+        <Footer />
+      </div>
+    </AuthContext.Provider>
+  );
+  // : (
   //   <>
   //     <div className="audio-loader">
   //       <Audio
