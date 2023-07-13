@@ -1,7 +1,7 @@
 import React from "react";
 import "./Colgate.scss";
 import { Button, Accordion, Tabs, Tab, Nav, Anchor } from "react-bootstrap";
-import { Timeline, TimelineEvent } from "@mailtop/horizontal-timeline";
+// import { Timeline, TimelineEvent } from "@mailtop/horizontal-timeline";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import { Link } from "react-router-dom";
