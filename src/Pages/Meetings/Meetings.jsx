@@ -4,6 +4,8 @@ import PrevMeetings from "./PrevMeetings";
 
 import { Table } from "react-bootstrap";
 
+import apply from "../../Assets/Committees/Training/apply.svg";
+
 import logo from "../../Assets/Meetings/logo.svg";
 import Arrow from "../../Assets/About/Arrow.svg";
 import { useState } from "react";
@@ -255,6 +257,34 @@ const Meetings = () => {
               </p>
             </div>
           )}
+        </div>
+
+        <div className="container-fluid trainerApp">
+          <h1 className="title" style={{ color: "white" }}>
+            HOST COUNTRY APPLICATIONS
+          </h1>
+          <div className="container mt-5">
+            <div
+              className="row justify-content-center"
+              style={{ margin: "auto" }}
+            >
+              <div className="col-lg-3 col-sm-12 action" id="action2">
+                <p className="apply">
+                  Don't miss the chance to host the next IADS annual congress in
+                  your country.
+                </p>
+                <a
+                  href="https://forms.gle/QU2ANPJ6wDyCeDYVA"
+                  style={{ textDecoration: "none" }}
+                >
+                  <button className="btn" style={{ backgroundColor: "white" }}>
+                    <img src={apply} />
+                    Apply as a Host Country
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="previous-meetings">

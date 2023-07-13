@@ -94,7 +94,7 @@ const Registration2 = () => {
 
   const addMember = (e) => {
     e.preventDefault();
-    if (members.length >= 5) return;
+    if (members.length >= 3) return;
     let newfield = { name: "", age: "" };
 
     setMembers([...members, newfield]);
@@ -688,15 +688,15 @@ const Registration2 = () => {
                 }}
               >
                 <div className="col">
-                  <label>Number of Members* (max. 5)</label>
+                  <label>Number of Members* (max. 3)</label>
                   <input
                     type="number"
-                    placeholder="1 - 5"
+                    placeholder="1 - 3"
                     {...register("numMembers", {
                       required: true,
-                      max: 5,
+                      max: 3,
                       min: 1,
-                      maxLength: 5,
+                      maxLength: 3,
                     })}
                   />
                 </div>
