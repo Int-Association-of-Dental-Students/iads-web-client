@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  scroll-behavior: smooth;
 }
 
 .App-logo {
@@ -11,6 +12,17 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.header-title {
+  font-family: "LEMON MILK regular";
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 68px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: white;
+  padding-top: 75px;
 }
 
 .audio-loader {

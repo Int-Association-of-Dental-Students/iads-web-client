@@ -4,8 +4,9 @@ import Modal from "react-bootstrap/Modal";
 import { useForm } from "react-hook-form";
 import { Audio } from "react-loader-spinner";
 import axios from "axios";
-import "./AddNewModal.scss";
-const AddNewModal = (props) => {
+import "./WebinarAddNewModal.scss";
+
+const WebinarAddNewModal = (props) => {
   const [loading, setLoading] = useState(false);
   console.log(props);
   const [imgStr, setImgStr] = useState([]);
@@ -77,7 +78,7 @@ const AddNewModal = (props) => {
   };
   console.log(errors);
   return (
-    <div>
+    <div className="webinar-modal">
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Add New Card</Modal.Title>
@@ -215,4 +216,4 @@ const AddNewModal = (props) => {
   );
 };
 
-export default AddNewModal;
+export default WebinarAddNewModal;

@@ -131,7 +131,7 @@ function App() {
     //
     const delay = setTimeout(() => {
       setLoading(false);
-    }, 7500);
+    }, 300);
 
     return () => clearTimeout(delay);
     //
@@ -163,7 +163,7 @@ function App() {
 
   // !loading ?
 
-  return (
+  return !loading ? (
     <AuthContext.Provider
       value={{
         isLogged: !!token,
@@ -249,22 +249,21 @@ function App() {
         <Footer />
       </div>
     </AuthContext.Provider>
+  ) : (
+    <>
+      <div className="audio-loader">
+        <Audio
+          height="80"
+          width="80"
+          radius="9"
+          color="blue"
+          ariaLabel="loading"
+          wrapperStyle
+          wrapperClass
+        />
+      </div>
+    </>
   );
-  // : (
-  //   <>
-  //     <div className="audio-loader">
-  //       <Audio
-  //         height="80"
-  //         width="80"
-  //         radius="9"
-  //         color="blue"
-  //         ariaLabel="loading"
-  //         wrapperStyle
-  //         wrapperClass
-  //       />
-  //     </div>
-  //   </>
-  // );
 }
 
 export default App;
