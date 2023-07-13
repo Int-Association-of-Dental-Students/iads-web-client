@@ -131,7 +131,7 @@ function App() {
     //
     const delay = setTimeout(() => {
       setLoading(false);
-    }, 300);
+    }, 6500);
 
     return () => clearTimeout(delay);
     //
