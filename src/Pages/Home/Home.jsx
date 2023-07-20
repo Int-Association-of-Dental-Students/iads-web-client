@@ -149,20 +149,8 @@ function Home() {
             crossorigin="anonymous"
           ></script>
         </Helmet>
-        <script type="text/javascript">
-          {`
-            atOptions = {
-              'key': '4af9644a7f007fed454300478ce1e650',
-              'format': 'iframe',
-              'height': 50,
-              'width': 320,
-              'params': {}
-            };
-            var script = document.createElement('script');
-            script.src = 'http' + (location.protocol === 'https:' ? 's' : '') + '://persistarcticthese.com/4af9644a7f007fed454300478ce1e650/invoke.js';
-            document.head.appendChild(script);
-          `}
-        </script>
+        <div id="container-ed27f781b8741972e2f09bb427cbb5a7"></div>
+
         <div className="container-4af9644a7f007fed454300478ce1e650"></div>
         <div className="home-main">
           <div className="titles">
