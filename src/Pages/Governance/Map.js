@@ -4,6 +4,8 @@ import axios from "axios";
 import tippy from "tippy.js";
 import "tippy.js/dist/tippy.css";
 
+import "./Map.scss";
+
 function Map() {
   const [hoveredCountry, setHoveredCountry] = useState(null);
   const [orgMembers, setOrgMembers] = useState(null);
@@ -42,8 +44,12 @@ function Map() {
       (item) => item.name === countryName
     );
     if (countryData != null) {
-      setHoveredCountry(countryData.text);
-      tooltipInstance.current.setContent(countryData.text);
+      setHoveredCountry(
+        `Country: ${countryName} \n| Delegate: ${countryData.text}`
+      );
+      tooltipInstance.current.setContent(
+        `Country: ${countryName} \n| Delegate: ${countryData.text}`
+      );
       tooltipInstance.current.show();
     } else {
       setHoveredCountry(null);
@@ -84,7 +90,14 @@ function Map() {
           }
         </Geographies>
       </ComposableMap>
-      {hoveredCountry}
+      {hoveredCountry && (
+        <>
+          <div className="contentt">
+            <p>{hoveredCountry}</p>
+          </div>
+          <div className="temp" style={{ height: "700px" }}></div>
+        </>
+      )}
     </div>
   );
 }

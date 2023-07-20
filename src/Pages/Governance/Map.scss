@@ -1,0 +1,35 @@
+.tooltip {
+  // transform: translate(-50%, -300%);
+}
+
+.contentt {
+  margin-top: -700px;
+  // width: 472px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 26px;
+  // height: 550px;
+
+  background: linear-gradient(
+    152.97deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(21px);
+
+  border-radius: 40px !important;
+  pointer-events: none;
+
+  p {
+    font-size: 30px;
+    font-family: POPPINS semibold;
+    color: #3e1893;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .temp {
+    display: none;
+  }
+}
