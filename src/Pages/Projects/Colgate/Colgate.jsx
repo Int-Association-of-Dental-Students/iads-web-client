@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Colgate.scss";
 import { Button, Accordion, Tabs, Tab, Nav, Anchor } from "react-bootstrap";
 // import { Timeline, TimelineEvent } from "@mailtop/horizontal-timeline";
@@ -44,6 +44,12 @@ import TeamCard from "./Components/TeamCard";
 import Circle from "./Components/Circle";
 
 function Colgate() {
+  useEffect(() => {
+    const adScript = document.createElement("script");
+    adScript.src = `${window.location.protocol}//www.profitabledisplaynetwork.com/4af9644a7f007fed454300478ce1e650/invoke.js`;
+    adScript.async = true;
+    document.body.appendChild(adScript);
+  }, []);
   return (
     <div className="colgate-page">
       <style>
@@ -192,6 +198,11 @@ function Colgate() {
           </div>
         </div>
       </div>
+
+      <div
+        // style={{ visibility: "hidden" }}
+        id="container-ed27f781b8741972e2f09bb427cbb5a7"
+      ></div>
       <div className="get2know-section">
         <h1 className="title-text">OUR SUPPORTING PARTNER</h1>
         <p

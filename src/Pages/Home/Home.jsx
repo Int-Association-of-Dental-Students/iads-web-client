@@ -106,6 +106,13 @@ function Home() {
   //     });
   // }, []);
 
+  useEffect(() => {
+    const adScript = document.createElement("script");
+    adScript.src = `${window.location.protocol}//www.profitabledisplaynetwork.com/4af9644a7f007fed454300478ce1e650/invoke.js`;
+    adScript.async = true;
+    document.body.appendChild(adScript);
+  }, []);
+
   return (
     <>
       <div className="homePage container-fluid">
@@ -142,7 +149,20 @@ function Home() {
             crossorigin="anonymous"
           ></script>
         </Helmet>
-
+        <script type="text/javascript">
+          {`
+            atOptions = {
+              'key': '4af9644a7f007fed454300478ce1e650',
+              'format': 'iframe',
+              'height': 50,
+              'width': 320,
+              'params': {}
+            };
+            var script = document.createElement('script');
+            script.src = 'http' + (location.protocol === 'https:' ? 's' : '') + '://persistarcticthese.com/4af9644a7f007fed454300478ce1e650/invoke.js';
+            document.head.appendChild(script);
+          `}
+        </script>
         <div className="home-main">
           <div className="titles">
             <Carousel className="carousel" fade interval={2000}>
@@ -230,8 +250,8 @@ function Home() {
             </a>
           </div>
         </div>
-
         <AdSense />
+        <div id="adsterra-container"></div>
 
         <div className="discoverMore container">
           <div className="homePageTitles1">
@@ -333,7 +353,7 @@ function Home() {
           </Swiper>
           <p style={{ marginTop: "30px" }}>Swipe right or left for more</p>
         </div>
-
+        <div id="container-ed27f781b8741972e2f09bb427cbb5a7"></div>
         <div
           style={{ display: "flex", justifyContent: "center" }}
           className="container-fluid calendar"
@@ -618,6 +638,7 @@ function Home() {
             </a>
           </div>
         </div>
+        {/* <div id="container-ed27f781b8741972e2f09bb427cbb5a7"></div> */}
       </div>
       {/* </div> */}
     </>

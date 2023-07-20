@@ -3,6 +3,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const OrgMemberCard = (props) => {
+  useEffect(() => {
+    const adScript = document.createElement("script");
+    adScript.src = `${window.location.protocol}//www.profitabledisplaynetwork.com/4af9644a7f007fed454300478ce1e650/invoke.js`;
+    adScript.async = true;
+    document.body.appendChild(adScript);
+  }, []);
+
   const schoolsArray = props.listOfSchools.split(",");
   return (
     <div className="orgMemberCard">
@@ -380,6 +387,7 @@ const Membership = () => {
       </div>
 
       <div className="orgMemberList">
+        <div id="container-ed27f781b8741972e2f09bb427cbb5a7"></div>
         <h1
           className="title-2nd"
           style={{

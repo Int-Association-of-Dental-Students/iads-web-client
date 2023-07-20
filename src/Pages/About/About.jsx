@@ -9,8 +9,16 @@ import m3 from "../../Assets/About/Mission/m3.svg";
 import m4 from "../../Assets/About/Mission/m4.svg";
 import m5 from "../../Assets/About/Mission/m5.svg";
 import m6 from "../../Assets/About/Mission/m6.svg";
+import { useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    const adScript = document.createElement("script");
+    adScript.src = `${window.location.protocol}//www.profitabledisplaynetwork.com/4af9644a7f007fed454300478ce1e650/invoke.js`;
+    adScript.async = true;
+    document.body.appendChild(adScript);
+  }, []);
+
   const items = [
     {
       title: "February 1951",
@@ -402,6 +410,8 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      <div id="container-ed27f781b8741972e2f09bb427cbb5a7"></div>
 
       <div className="constBylaws container">
         <div className="const">

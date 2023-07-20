@@ -49,6 +49,9 @@ const Footer = () => {
             <h2 className="title">
               <a href="/about">ABOUT</a>
             </h2>
+            <p className="item">
+              <a href="https://iads-web.com/privacy-policy">Privacy Policy</a>
+            </p>
           </div>
           <div className="col">
             <h2 className="title">

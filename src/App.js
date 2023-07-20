@@ -41,6 +41,7 @@ import AdminPortal from "./Pages/AdminPortal/AdminPortal";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import WorkforceForm from "./Pages/Committees/Workforce/WorkforceForm";
 import PersonalMemberForm from "./Pages/Membership/PersonalMemberForm/PersonalMemberForm";
+import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 
 let logoutTimer;
 
@@ -190,6 +191,7 @@ function App() {
         <NavBar path={window.location.pathname} />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/home" element={<Home />} />
           <Route path="/governance" element={<Governance />} />
           <Route path="/alumni" element={<Alumni />} />
@@ -231,6 +233,7 @@ function App() {
               element={<Registration2 />}
             ></Route>
           </Route>
+
           <Route path="/committees">
             <Route path="/committees/workforce" element={<Workforce />} />
             {/* <Route
