@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Webinars.scss";
 import WebinarCardList from "../../../Components/Cards/Webinar/WebinarCardList";
+import PodcastCardList from "../../../Components/Cards/Podcast/PodcastCardList";
 
 const Webinars = () => {
   const [webinars, setWebinars] = useState(null);
+  const [podcasts, setPodcasts] = useState(null);
 
   useEffect(() => {
     axios
@@ -14,6 +16,16 @@ const Webinars = () => {
         // console.log(res.data);
       });
   }, []);
+
+  useEffect(() => {
+    axios
+      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/podcasts`)
+      .then((res) => {
+        setWebinars(res.data);
+        // console.log(res.data);
+      });
+  }, []);
+
   return (
     <div className="webinars-page">
       <div className="hero">
@@ -42,6 +54,15 @@ const Webinars = () => {
         <p className="homePageTitles11">Dental times podcasts</p>
         <p className="desc">Coming Soon!</p>
       </div>
+      <PodcastCardList
+        className="podcast-card-list"
+        data={podcasts}
+        textColor="#ED8E00"
+        type="webinars"
+      ></PodcastCardList>
+      <br />
+      <br />
+      <br />
     </div>
   );
 };

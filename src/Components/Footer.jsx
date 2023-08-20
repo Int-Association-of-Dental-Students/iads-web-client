@@ -104,6 +104,23 @@ const Footer = () => {
           xDev
         </a>
       </p>
+      <script type="text/javascript">
+        atOptions =
+        {`
+      'key': '576cd1c807cb9c6949103e5a22145fea',
+      'format': 'iframe',
+      'height': 60,
+      'width': 468,
+      'params': {}
+    `}
+        ; document.write(`
+        {"<scr" +
+          'ipt type="text/javascript" src="http' +
+          (window.location.protocol === "https:" ? "s" : "") +
+          '://persistarcticthese.com/576cd1c807cb9c6949103e5a22145fea/invoke.js"></scr' +
+          "ipt>"}
+        `);
+      </script>
     </div>
   );
 };

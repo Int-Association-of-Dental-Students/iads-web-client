@@ -411,7 +411,7 @@ const About = () => {
         </div>
       </div>
 
-      <div id="container-ed27f781b8741972e2f09bb427cbb5a7"></div>
+      {/* <div id="container-ed27f781b8741972e2f09bb427cbb5a7"></div> */}
 
       <div className="constBylaws container">
         <div className="const">

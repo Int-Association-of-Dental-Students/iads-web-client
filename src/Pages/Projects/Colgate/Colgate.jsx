@@ -199,10 +199,10 @@ function Colgate() {
         </div>
       </div>
 
-      <div
+      {/* <div
         // style={{ visibility: "hidden" }}
         id="container-ed27f781b8741972e2f09bb427cbb5a7"
-      ></div>
+      ></div> */}
       <div className="get2know-section">
         <h1 className="title-text">OUR SUPPORTING PARTNER</h1>
         <p

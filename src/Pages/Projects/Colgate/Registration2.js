@@ -27,50 +27,51 @@ const Registration2 = () => {
   const onSubmit = async (data, e) => {
     setLoading(true);
     console.log(data);
+    data = { ...data, ...imgStr };
     e.preventDefault();
 
-    try {
-      await axios
-        .post(
-          "https://sheet.best/api/sheets/f9231cdc-76f3-43ee-a9c0-159ed2649351",
-          data
-        )
-        .then((response) => {
-          console.log(response);
-        });
-    } catch (err) {
-      console.log(err);
-    }
+    // try {
+    //   await axios
+    //     .post(
+    //       "https://sheet.best/api/sheets/f9231cdc-76f3-43ee-a9c0-159ed2649351",
+    //       data
+    //     )
+    //     .then((response) => {
+    //       console.log(response);
+    //     });
+    // } catch (err) {
+    //   console.log(err);
+    // }
 
-    emailjs
-      .sendForm(
-        "service_zhe1pvp",
-        "template_gedxh1p",
-        e.target,
-        "Blp53EzBsHt7ji3lO"
-      )
-      .then(
-        (result) => {
-          console.log(e.target);
-          //   setloading(false);
-          //   setModalTitle("Congratulations");
-          //   setRefresh(true);
-          //   setError(
-          //     "Your results has been sent, check your email for payment instructions"
-          //   );
-        },
-        (error) => {
-          //   setloading(false);
-          //   setModalTitle("Error");
-          //   setError(error.text);
-          console.log(error);
-          return;
-        }
-      );
+    // emailjs
+    //   .sendForm(
+    //     "service_zhe1pvp",
+    //     "template_gedxh1p",
+    //     e.target,
+    //     "Blp53EzBsHt7ji3lO"
+    //   )
+    //   .then(
+    //     (result) => {
+    //       console.log(e.target);
+    //       //   setloading(false);
+    //       //   setModalTitle("Congratulations");
+    //       //   setRefresh(true);
+    //       //   setError(
+    //       //     "Your results has been sent, check your email for payment instructions"
+    //       //   );
+    //     },
+    //     (error) => {
+    //       //   setloading(false);
+    //       //   setModalTitle("Error");
+    //       //   setError(error.text);
+    //       console.log(error);
+    //       return;
+    //     }
+    //   );
 
-    alert(
-      "Your Idea submission has been successfully completed. Kindly check your email inbox for confirmation mail."
-    );
+    // alert(
+    //   "Your Idea submission has been successfully completed. Kindly check your email inbox for confirmation mail."
+    // );
 
     setLoading(false);
   };
@@ -80,6 +81,35 @@ const Registration2 = () => {
   const [members, setMembers] = useState([
     { name: "", position: "", tasks: "" },
   ]);
+
+  const uploadImage = (img, idx) => {
+    let resImg = null;
+    const imgAPIKey = "826fbb1f90dacfa942f721a496d71950";
+    let formData = new FormData();
+    formData.append("image", img);
+    const url = `https://api.imgbb.com/1/upload?key=${imgAPIKey}`;
+    console.log(formData);
+    fetch(url, {
+      method: "POST",
+      body:
+        // JSON.stringify({
+        formData,
+      // })
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        resImg = result.data.display_url;
+        console.log(resImg);
+        console.log("imgbb", result);
+        let arr = imgStr;
+        arr[idx] = resImg;
+        setImgStr(arr);
+        console.log(imgStr);
+        return resImg;
+      });
+  };
+
+  const [imgStr, setImgStr] = useState([]);
 
   const handleFormChange = (index, event) => {
     let data = [...members];
@@ -143,7 +173,7 @@ const Registration2 = () => {
               <img className="step-img" src={step1} alt="" />
               <div className="row">
                 <div className="col">
-                  <label htmlFor="name">Full Name of Liaison Officer</label>
+                  <label htmlFor="name">Full Name*</label>
                   <input
                     type="text"
                     placeholder="Type..."
@@ -321,6 +351,7 @@ const Registration2 = () => {
                     <option value="Norway">Norway</option>
                     <option value="Oman">Oman</option>
                     <option value="Pakistan">Pakistan</option>
+                    <option value="Palestine">Palestine</option>
                     <option value="Palau">Palau</option>
                     <option value="Panama">Panama</option>
                     <option value="Papua New Guinea">Papua New Guinea</option>
@@ -809,6 +840,10 @@ const Registration2 = () => {
                   style={{ marginBottom: "20px" }}
                   id="custom-file"
                   name="logoFile"
+                  onChange={(e) => {
+                    uploadImage(e.target.files[0], 0);
+                    console.log(imgStr);
+                  }}
                   type="file"
                   ref={hiddenFileInput}
                 />

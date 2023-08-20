@@ -149,7 +149,7 @@ function Home() {
             crossorigin="anonymous"
           ></script>
         </Helmet>
-        <div id="container-ed27f781b8741972e2f09bb427cbb5a7"></div>
+        {/* <div id="container-ed27f781b8741972e2f09bb427cbb5a7"></div> */}
 
         <div className="container-4af9644a7f007fed454300478ce1e650"></div>
         <div className="home-main">
@@ -240,7 +240,7 @@ function Home() {
           </div>
         </div>
         <AdSense />
-        <div id="adsterra-container"></div>
+        {/* <div id="adsterra-container"></div> */}
 
         <div className="discoverMore container">
           <div className="homePageTitles1">
@@ -342,7 +342,7 @@ function Home() {
           </Swiper>
           <p style={{ marginTop: "30px" }}>Swipe right or left for more</p>
         </div>
-        <div id="container-ed27f781b8741972e2f09bb427cbb5a7"></div>
+        {/* <div id="container-ed27f781b8741972e2f09bb427cbb5a7"></div> */}
         <div
           style={{ display: "flex", justifyContent: "center" }}
           className="container-fluid calendar"
