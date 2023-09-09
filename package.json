@@ -30,7 +30,7 @@
     "react-simple-maps": "^3.0.0",
     "react-tippy": "^1.4.0",
     "react-tooltip": "^5.11.2",
-    "swiper": "^8.3.2",
+    "swiper": "^8.4.7",
     "tippy.js": "^6.3.7",
     "web-vitals": "^2.1.4"
   },

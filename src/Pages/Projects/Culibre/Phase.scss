@@ -1,0 +1,112 @@
+.phase-section {
+  @media only screen and (max-width: 1200px) {
+    .all-content {
+      gap: 64px !important;
+      align-items: flex-start;
+      // padding: 50px 16px !important;
+    }
+    .btns {
+      align-self: flex-start;
+    }
+  }
+  height: 600px;
+  padding: 50px;
+  background-image: url("../../../Assets/Projects/Culibre/phase-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .all-content {
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .active {
+    opacity: 1 !important;
+    transition: opacity 0.5s ease-in-out;
+    scroll-behavior: smooth;
+  }
+
+  .styled-letter {
+    text-decoration: underline;
+    color: #415c51;
+  }
+
+  .right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 96px;
+
+    .tl {
+      align-self: flex-start;
+    }
+  }
+
+  .btns {
+    display: flex;
+    gap: 8px;
+    .left,
+    .right {
+      display: flex;
+      padding: 12px;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      border-radius: 50px;
+      background: var(--Primary-G, #415c51);
+      color: #fff;
+      font-weight: 800;
+      border: none;
+    }
+  }
+
+  .content {
+    display: flex;
+    width: 386px;
+    align-items: flex-start;
+    gap: 16px;
+
+    .text-content {
+      text-align: left;
+      display: flex;
+      width: 308px;
+      padding-top: 8px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      flex-shrink: 0;
+
+      h1 {
+        color: #fff;
+        font-family: Galins;
+        font-size: 52px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      h2 {
+        color: #fff;
+        font-family: Galins;
+        font-size: 52px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      p {
+        color: #fff;
+        font-family: Poppins regular;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+      }
+    }
+  }
+}

@@ -1,11 +1,18 @@
 .zhermackPage {
+  background-image: url("../../../Assets/Projects/Zhermack/zmesh.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-top: -130px;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
   font-family: "LEMON MILK regular";
   .header {
     display: flex;
     justify-content: space-between;
-    padding: 0 100px;
+    flex-direction: column;
+    // padding: 0 100px;
+    img {
+      width: 100%;
+    }
   }
 
   @media only screen and (max-width: 840px) {
@@ -145,11 +152,28 @@
       text-align: left;
       color: #d20512;
     }
+  }
+  .register-btn {
+    // display: flex;
+    width: 160px;
+    padding: 7px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 100px;
+    background: #d20512;
 
-    .register-btn {
-      border-radius: 20px;
-      margin-top: 20px;
-    }
+    margin-top: 62px;
+    margin-bottom: 46px;
+
+    color: #fff;
+    text-align: center;
+    font-family: Poppins regular;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
   }
 }
 
@@ -158,6 +182,23 @@
     .hero {
       background-color: black;
       width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .navbar {
+    background: linear-gradient(
+      90deg,
+      rgba(27, 80, 166, 1) 0%,
+      rgba(24, 98, 184, 1) 25%,
+      rgba(71, 38, 134, 1) 75%
+    ) !important;
+  }
+  .zhermackPage {
+    .program {
+      img {
+        width: 90%;
+      }
     }
   }
 }

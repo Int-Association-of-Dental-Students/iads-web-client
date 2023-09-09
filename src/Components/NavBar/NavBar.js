@@ -4,6 +4,7 @@ import "./Navbar.scss";
 import { Link, useNavigate } from "react-router-dom";
 // import logo from "../../Assets/IADS logo horizontal.png";
 import logo from "../../Assets/IADS Horizontal 1.svg";
+import logoAlt from "../../Assets/logo-alt.svg";
 import lock from "../../Assets/lock.svg";
 import lock1 from "../../Assets/lock1.svg";
 import LoginModal from "../LoginModal";
@@ -35,9 +36,16 @@ const NavBar = (props) => {
         />
       )}
       <Container fluid>
-        <Navbar.Brand href="/home">
-          <img className="iads-logo" src={logo} />
-        </Navbar.Brand>
+        {window.location.pathname != "/projects/zhermack" ? (
+          <Navbar.Brand href="/home">
+            <img className="iads-logo" src={logo} />
+          </Navbar.Brand>
+        ) : (
+          <Navbar.Brand href="/home">
+            <img className="iads-logo" src={logoAlt} />
+          </Navbar.Brand>
+        )}
+
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -109,9 +117,12 @@ const NavBar = (props) => {
               className="nav-item-Blue"
               id="navbarScrollingDropdown"
             >
-              {/* <NavDropdown.Item href="/projects/zhermack">
+              <NavDropdown.Item href="/projects/culibre">
+                Culibre
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/projects/zhermack">
                 Zhermack
-              </NavDropdown.Item> */}
+              </NavDropdown.Item>
               <NavDropdown.Item href="/projects/colgate">
                 Colgate
               </NavDropdown.Item>

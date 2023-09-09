@@ -7,6 +7,8 @@ import bag from "../../../Assets/Projects/Zhermack/icons/bag.svg";
 import time from "../../../Assets/Projects/Zhermack/icons/time.svg";
 import profile from "../../../Assets/Projects/Zhermack/icons/profile.svg";
 import bg from "../../../Assets/Projects/Zhermack/bg.png";
+import header from "../../../Assets/Projects/Zhermack/header.png";
+import program from "../../../Assets/Projects/Zhermack/program.png";
 import zevnt from "../../../Assets/Projects/Zhermack/zevnt 1.svg";
 import { Button } from "react-bootstrap";
 
@@ -15,13 +17,37 @@ const Zhermack = () => {
     <div className="zhermackPage">
       <style>
         {`
-          .navbar {background: transparent;}`}
+          .navbar {background: transparent;
+            .nav-item, .nav-link {
+              color: #1D015C !important; 
+            }
+          }`}
       </style>
-      {/* <div className="header">
-        <img src={logo} alt="Zhermack Logo" />
-        <img src={webinar} alt="Webinar Logo" />
-      </div> */}
-      <div className="hero">
+      <div className="header">
+        <img src={header} alt="Zhermack Logo" />
+      </div>
+
+      <Button
+        href="https://web.cvent.com/event/8a461058-1660-4a32-b792-9e3dd19090b6/regProcessStep1"
+        variant="danger"
+        className="register-btn"
+      >
+        REGISTER NOW
+      </Button>
+
+      <div className="program">
+        <img src={program} alt="" />
+      </div>
+
+      <Button
+        href="https://web.cvent.com/event/8a461058-1660-4a32-b792-9e3dd19090b6/regProcessStep1"
+        variant="danger"
+        className="register-btn"
+      >
+        REGISTER NOW
+      </Button>
+
+      {/* <div className="hero">
         <div className="overlay">
           <div className="container home">
             <div className="homeLeft">
@@ -128,7 +154,7 @@ const Zhermack = () => {
         >
           REGISTER NOW
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 };

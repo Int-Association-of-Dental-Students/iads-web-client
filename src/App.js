@@ -42,6 +42,7 @@ import ContactUs from "./Pages/ContactUs/ContactUs";
 import WorkforceForm from "./Pages/Committees/Workforce/WorkforceForm";
 import PersonalMemberForm from "./Pages/Membership/PersonalMemberForm/PersonalMemberForm";
 import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
+import Culibre from "./Pages/Projects/Culibre/Culibre";
 
 let logoutTimer;
 
@@ -213,13 +214,14 @@ function App() {
             <Route path="/projects/WOHD" element={<WOHD />} />
             <Route path="/projects/webinars" element={<Webinars />} />
             <Route path="/projects/research" element={<Research />} />
+            <Route path="/projects/culibre" element={<Culibre />} />
             <Route
               path="/projects/greendentistry"
               element={<GreenDentistry />}
             />
             <Route path="/projects/MCAM" element={<MCAM />} />
-            {/* <Route path="/projects/zhermack" element={<Zhermack />} /> */}
             <Route path="/projects/colgate" element={<Colgate />} />
+            <Route path="/projects/zhermack" element={<Zhermack />} />
             <Route
               path="/projects/colgate/registration"
               element={<Registration2 />}
