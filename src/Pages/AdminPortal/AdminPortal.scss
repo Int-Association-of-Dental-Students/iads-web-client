@@ -24,6 +24,8 @@
 
   .content {
     margin-left: 300px;
+    padding-bottom: 40px;
+    padding: 40px 30px;
   }
 
   .title {
@@ -34,10 +36,14 @@
     line-height: 41px;
     /* identical to box height */
     text-align: left;
+    margin-bottom: 20px;
 
     /* dark */
 
     color: #1d015c;
+  }
+  p {
+    text-align: left;
   }
   .header {
     position: sticky;
@@ -47,9 +53,17 @@
   .button-group {
     display: flex;
     flex-direction: column;
+    height: 100%;
     gap: 16px;
     padding-left: 16px;
     padding-right: 16px;
+    Button {
+      text-align: left;
+      height: 48px;
+      display: flex;
+      gap: 8px !important;
+      align-items: center;
+    }
   }
 }
 

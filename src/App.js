@@ -133,7 +133,7 @@ function App() {
     //
     const delay = setTimeout(() => {
       setLoading(false);
-    }, 3500);
+    }, 100);
 
     return () => clearTimeout(delay);
     //
@@ -238,10 +238,10 @@ function App() {
 
           <Route path="/committees">
             <Route path="/committees/workforce" element={<Workforce />} />
-            {/* <Route
+            <Route
               path="/committees/workforceForm"
               element={<WorkforceForm />}
-            /> */}
+            />
             <Route path="/committees/internal" element={<Internal />} />
             <Route path="/committees/SCORE" element={<SCORE />} />
             <Route path="/committees/training" element={<Training />} />

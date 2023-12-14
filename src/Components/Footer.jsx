@@ -100,11 +100,11 @@ const Footer = () => {
       </p>
       <p className="PR" style={{ textAlign: "center" }}>
         Developed by{" "}
-        <a className="title" href="https://khalidxah.tech">
-          xDev
+        <a className="title" href="https://codecanvas.org">
+          CodeCanvas
         </a>
       </p>
-      <script type="text/javascript">
+      {/* <script type="text/javascript">
         atOptions =
         {`
       'key': '576cd1c807cb9c6949103e5a22145fea',
@@ -120,7 +120,7 @@ const Footer = () => {
           '://persistarcticthese.com/576cd1c807cb9c6949103e5a22145fea/invoke.js"></scr' +
           "ipt>"}
         `);
-      </script>
+      </script> */}
     </div>
   );
 };

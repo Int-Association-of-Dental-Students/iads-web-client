@@ -154,7 +154,7 @@ const Workforce = () => {
         </h1>
       </div>
 
-      {/* <div className="hiring" id="hiring">
+      <div className="hiring" id="hiring">
         <div className="title-2nd">We Are Hiring!</div>
         <p className="desc" style={{ color: "white", marginTop: "22px" }}>
           Are you interested in working for a global NGO and boosting your
@@ -313,7 +313,7 @@ const Workforce = () => {
                   Regulations of IADS Workforce
                 </a>
                 , which is produced by the Executive Committee 2020/2021 and
-                reviewed by the Executive Committee 2021/22 to define the
+                reviewed by the Executive Committee 2023/24 to define the
                 strategic and administrative framework of the emerging task
                 forces of IADS.
               </li>
@@ -328,7 +328,7 @@ const Workforce = () => {
                 <span style={{ fontFamily: "Poppins bold" }}>
                   Application Period:
                 </span>{" "}
-                October 7-22th, 2022 – 23:59 GMT+0
+                October 8th - 21st 23:59 GMT +3
               </li>
               <br />
               <li>
@@ -339,7 +339,7 @@ const Workforce = () => {
                 as an integral part of the admission process, will take place
                 according to an agreed schedule by the applicants and
                 interviewers. The interviewing period will take place from
-                October 24th - November 4th, 2022
+                October 22nd - October 28th, 2023
               </li>
               <br />
               <li>
@@ -355,9 +355,7 @@ const Workforce = () => {
               <br />
               <li>
                 06. By{" "}
-                <span style={{ fontFamily: "Poppins bold" }}>
-                  November 15th
-                </span>
+                <span style={{ fontFamily: "Poppins bold" }}>November 4th</span>
                 , the newly recruited positions will be appointed and officially
                 announced through IADS social platforms.
               </li>
@@ -376,7 +374,7 @@ const Workforce = () => {
             </ul>
           </p>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

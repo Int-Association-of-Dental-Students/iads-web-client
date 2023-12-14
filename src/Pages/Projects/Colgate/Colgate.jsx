@@ -44,12 +44,12 @@ import TeamCard from "./Components/TeamCard";
 import Circle from "./Components/Circle";
 
 function Colgate() {
-  useEffect(() => {
-    const adScript = document.createElement("script");
-    adScript.src = `${window.location.protocol}//www.profitabledisplaynetwork.com/4af9644a7f007fed454300478ce1e650/invoke.js`;
-    adScript.async = true;
-    document.body.appendChild(adScript);
-  }, []);
+  // useEffect(() => {
+  //   const adScript = document.createElement("script");
+  //   adScript.src = `${window.location.protocol}//www.profitabledisplaynetwork.com/4af9644a7f007fed454300478ce1e650/invoke.js`;
+  //   adScript.async = true;
+  //   document.body.appendChild(adScript);
+  // }, []);
   return (
     <div className="colgate-page">
       <style>

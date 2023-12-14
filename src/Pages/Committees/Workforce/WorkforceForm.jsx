@@ -57,35 +57,43 @@ const WorkforceForm = () => {
     const data2 = { ...arr, ...imgStr };
     console.log(data2);
 
-    axios
-      .post(
-        "https://sheet.best/api/sheets/06f7fe62-e62a-4762-9ee0-247d5988e866",
-        data
-      )
-      .then((response) => {
-        console.log(response);
-      });
+    try {
+      axios
+        .post(
+          "https://sheet.best/api/sheets/a0cbd69d-c337-4b6e-aed6-c711bfce5f72",
+          data2
+        )
+        .then((response) => {
+          console.log(response);
+        });
+    } catch (err) {
+      console.log(err);
+    }
 
-    emailjs
-      .sendForm(
-        "service_y75hwxc",
-        "template_odzh3nc",
-        e.target,
-        "Blp53EzBsHt7ji3lO"
-      )
-      .then(
-        (result) => {
-          console.log(e.target);
-        },
-        (error) => {
-          console.log(error);
-          return;
-        }
-      );
+    try {
+      emailjs
+        .sendForm(
+          "service_y75hwxc",
+          "template_odzh3nc",
+          e.target,
+          "Blp53EzBsHt7ji3lO"
+        )
+        .then(
+          (result) => {
+            console.log(data2);
+          },
+          (error) => {
+            console.log(error);
+            return;
+          }
+        );
 
-    alert("Your form has been submitted successfully!");
-    e.target.reset();
-    navigate("/");
+      alert("Your form has been submitted successfully!");
+      e.target.reset();
+      navigate("/");
+    } catch (err) {
+      console.log(err);
+    }
   };
   const {
     register,
@@ -399,7 +407,7 @@ const WorkforceForm = () => {
           <div className="col-sm-12 col-xl-6 flexx">
             <label>Phone Number*</label>
             <input
-              type="tel"
+              type="number"
               placeholder="Type Here..."
               id="phone"
               {...register("phone", { required: true })}
@@ -408,7 +416,7 @@ const WorkforceForm = () => {
           <div className="col-sm-12 col-xl-6 flexx">
             <label>Whatsapp Phone Number*</label>
             <input
-              type="tel"
+              type="number"
               placeholder="Type Here..."
               id="whatsapp"
               {...register("whatsapp", { required: true })}

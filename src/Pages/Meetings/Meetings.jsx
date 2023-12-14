@@ -65,7 +65,7 @@ const Meetings = () => {
           className="title-1st"
           style={{ paddingTop: "80px", color: "#FDBE3D" }}
         >
-          Upcoming
+          Previous
         </h1>
         <h1 className="title-2nd">IADS Meeting</h1>
         <img src={logo} style={{ marginBottom: "30px" }} />

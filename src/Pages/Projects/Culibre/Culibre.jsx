@@ -602,8 +602,8 @@ const Culibre = () => {
 
         <div className="team-cards">
           <div className="swiper-button-container">
-            <div className="swiper-button-next">a</div>{" "}
-            <div className="swiper-button-prev">b</div>
+            <div className="swiper-button-next"></div>{" "}
+            <div className="swiper-button-prev"></div>
           </div>
           <br />
           <br />

@@ -212,7 +212,7 @@ function Home() {
             <img className="vlogo" src={verticalLogo} />
           </div>
         </div>
-        <div className="container-fluid congress">
+        {/* <div className="container-fluid congress">
           <img className="congLogo" src={CongressLogo} />
 
           <div className="congText">
@@ -238,7 +238,7 @@ function Home() {
               Learn More
             </a>
           </div>
-        </div>
+        </div> */}
         <AdSense />
         {/* <div id="adsterra-container"></div> */}
 

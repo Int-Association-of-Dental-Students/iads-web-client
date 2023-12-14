@@ -6,6 +6,15 @@ import { Button } from "react-bootstrap";
 import { AuthContext } from "../../Components/Context/AuthContext";
 import { useContext } from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUser,
+  faUsers,
+  faUserFriends,
+  faChartBar,
+  faCode,
+} from "@fortawesome/free-solid-svg-icons";
+
 import { Table } from "react-bootstrap";
 
 import axios from "axios";
@@ -128,6 +137,10 @@ const AdminPortal = () => {
   return (
     <>
       <div className="admin-portal-page">
+        <style>
+          {`
+          .footer {display: none;}`}
+        </style>
         {Auth.admin ? (
           <>
             <div className="panel">
@@ -137,40 +150,43 @@ const AdminPortal = () => {
                     setActiveTab(0);
                   }}
                 >
-                  Web Users
+                  <FontAwesomeIcon icon={faUser} /> Web Users
                 </Button>
                 <Button
                   onClick={() => {
                     setActiveTab(1);
                   }}
                 >
-                  Organizational Members
+                  <FontAwesomeIcon icon={faUsers} /> Organizational Members
                 </Button>
                 <Button
                   onClick={() => {
                     setActiveTab(2);
                   }}
                 >
-                  Personal Members
+                  <FontAwesomeIcon icon={faUserFriends} /> Personal Members
                 </Button>
                 <Button
                   onClick={() => {
                     setActiveTab(3);
                   }}
                 >
-                  Infographics
+                  <FontAwesomeIcon icon={faChartBar} /> Infographics
+                </Button>
+                <Button
+                  style={{ marginTop: "30vh" }}
+                  onClick={() => {
+                    setActiveTab(4);
+                  }}
+                >
+                  <FontAwesomeIcon icon={faCode} /> Development Updates
                 </Button>
               </div>
             </div>
             <div className="content">
               {activeTab == 0 && (
                 <>
-                  <h1
-                    className="title"
-                    style={{ marginTop: "30px", marginLeft: "30px" }}
-                  >
-                    Web Users
-                  </h1>
+                  <h1 className="title">Web Users</h1>
                   <div
                     className="member-table"
                     style={{
@@ -280,12 +296,7 @@ const AdminPortal = () => {
               )}
               {activeTab == 1 && (
                 <>
-                  <h1
-                    className="title"
-                    style={{ marginTop: "30px", marginLeft: "30px" }}
-                  >
-                    Organizational Members
-                  </h1>
+                  <h1 className="title">Organizational Members</h1>
                   <div
                     className="member-table"
                     style={{
@@ -459,12 +470,7 @@ const AdminPortal = () => {
 
               {activeTab == 2 && (
                 <>
-                  <h1
-                    className="title"
-                    style={{ marginTop: "30px", marginLeft: "30px" }}
-                  >
-                    Personal Members
-                  </h1>
+                  <h1 className="title">Personal Members</h1>
                   <div
                     className="member-table"
                     style={{
@@ -621,6 +627,17 @@ const AdminPortal = () => {
                     height="480"
                     src="https://charts.mongodb.com/charts-iads-web-pnyjk/embed/charts?id=636eb5a3-3d08-4150-8457-2618c9b22811&maxDataAge=3600&theme=light&attribution=false&autoRefresh=true"
                   ></iframe>
+                </>
+              )}
+              {activeTab == 4 && (
+                <>
+                  <h1 className="title">
+                    Hello From CodeCanvas Development Team
+                  </h1>
+                  <p>
+                    In this page, we will be sharing live updates about
+                    development issues and updates.
+                  </p>
                 </>
               )}
             </div>
