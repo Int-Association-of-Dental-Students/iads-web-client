@@ -638,6 +638,32 @@ const AdminPortal = () => {
                     In this page, we will be sharing live updates about
                     development issues and updates.
                   </p>
+                  <div
+                    className="seperator"
+                    style={{
+                      width: "100%",
+                      borderBottom: "1px solid grey",
+                      marginBottom: "12px",
+                    }}
+                  ></div>
+                  <h5
+                    style={{
+                      textAlign: "left",
+                      marginBottom: "0px",
+                      color: "#1d015c",
+                    }}
+                  >
+                    API Documentations Published
+                  </h5>
+                  <p>
+                    29/12/2023 - In this{" "}
+                    <a href="https://documenter.getpostman.com/view/17300405/2s9YsDiuD2">
+                      Link
+                    </a>
+                    , all the backend accessible APIs are listed for further
+                    development updates. The ones related to private and/or
+                    sensitive data are hidden.
+                  </p>
                 </>
               )}
             </div>
