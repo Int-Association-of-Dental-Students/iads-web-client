@@ -7,7 +7,7 @@ Welcome to the **IADS Web Application FrontEnd** GitHub repository! This reposit
 - 🌱 **Development**: The development branch where new features and improvements are developed.
 
 ## CI/CD - Continuous Integration, Continuous Deployment
-- The main branch is set up with AWS Amplify service for continuous builds and deployment. Access IADS AWS project to monitor deployments. The deployments are automatically triggered by AWS once there are any changes in the main branch.
+- The main branch is set up with an AWS service for continuous builds and deployment. Access IADS AWS project to monitor deployments. The deployments are automatically triggered by AWS once there are any changes in the main branch.
 
 ## 🚨 Workflow
 Our workflow is designed to ensure a stable and reliable release process. Here's how it works:
