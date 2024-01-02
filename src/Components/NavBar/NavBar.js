@@ -117,8 +117,12 @@ const NavBar = (props) => {
               className="nav-item-Blue"
               id="navbarScrollingDropdown"
             >
-              <NavDropdown.Item href="/projects/culibre">
-                Culibre
+              <NavDropdown.Item
+                // href="/projects/culibre"
+                style={{ color: "grey" }}
+                disabled
+              >
+                Culibre (Coming Soon)
               </NavDropdown.Item>
               <NavDropdown.Item href="/projects/zhermack">
                 Zhermack
