@@ -21,5 +21,34 @@ Our workflow is designed to ensure a stable and reliable release process. Here's
 
 <br />
 
+## Technical Worlflow (beginner friendly)
+# Ensure you have the latest changes from the remote repository
+git checkout development
+git pull origin development
+
+# Create a new branch for your feature/change
+git checkout -b feature-branch-name
+
+# Make your changes, commit them, and push to the remote repository
+git add .
+git commit -m "Your commit message"
+git push origin feature-branch-name
+
+# Switch back to the development branch
+git checkout development
+
+# Merge your changes into the development branch and test
+git merge feature-branch-name
+
+# After successful testing on the development branch, create a pull request
+# from development to main using the GitHub interface
+
+# After the pull request is merged, switch back to the development branch
+git checkout development
+
+# Update the development branch to be like the main branch
+git pull origin main
+Make sure to replace "feature-branch-name" with a meaningful name that corresponds to the feature or change you are working on. Additionally, provide descriptive commit messages to explain the purpose of each commit.
+
 Feel free to reach out if you have any questions or need assistance. Happy coding! 🚀👩‍💻👨‍💻
 
