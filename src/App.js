@@ -214,7 +214,7 @@ function App() {
             <Route path="/projects/WOHD" element={<WOHD />} />
             <Route path="/projects/webinars" element={<Webinars />} />
             <Route path="/projects/research" element={<Research />} />
-            {/* <Route path="/projects/culibre" element={<Culibre />} /> */}
+            <Route path="/projects/culibre" element={<Culibre />} />
             <Route
               path="/projects/greendentistry"
               element={<GreenDentistry />}
