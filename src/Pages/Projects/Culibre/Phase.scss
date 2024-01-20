@@ -33,7 +33,7 @@
 
   .styled-letter {
     text-decoration: underline;
-    color: #415c51;
+    color: #1d6af9;
   }
 
   .right-content {
@@ -59,8 +59,8 @@
       align-items: center;
       gap: 12px;
       border-radius: 50px;
-      background: var(--Primary-G, #415c51);
-      color: #fff;
+      background: var(--Primary-G, #000);
+      color: #000;
       font-weight: 800;
       border: none;
     }
@@ -93,7 +93,8 @@
       h2 {
         color: #fff;
         font-family: Galins;
-        font-size: 52px;
+        // font-size: 52px;
+        font-size: 30px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;

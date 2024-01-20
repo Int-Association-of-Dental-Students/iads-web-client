@@ -55,31 +55,32 @@ const TeamContent = [
     position: "Founder and Ideator",
     name: "Huthaifa AbdulQader",
   },
-  {
-    img: t9,
-    position: "RA of Africa",
-    name: "Youssef Khattab",
-  },
-  {
-    img: t10,
-    position: "RA of Asia Pacific",
-    name: "Viandra Tjokroadiredjo",
-  },
-  {
-    img: t11,
-    position: "RA of Americas",
-    name: "Juan Fernando Morales Recinos",
-  },
-  {
-    img: t12,
-    position: "RA of Europe",
-    name: "Anna Pakhuta",
-  },
-  {
-    img: t13,
-    position: "RA of Middle East",
-    name: "Tasneem Muhssin ",
-  },
+  // ,
+  // {
+  //   img: t9,
+  //   position: "RA of Africa",
+  //   name: "Youssef Khattab",
+  // },
+  // {
+  //   img: t10,
+  //   position: "RA of Asia Pacific",
+  //   name: "Viandra Tjokroadiredjo",
+  // },
+  // {
+  //   img: t11,
+  //   position: "RA of Americas",
+  //   name: "Juan Fernando Morales Recinos",
+  // },
+  // {
+  //   img: t12,
+  //   position: "RA of Europe",
+  //   name: "Anna Pakhuta",
+  // },
+  // {
+  //   img: t13,
+  //   position: "RA of Middle East",
+  //   name: "Tasneem Muhssin ",
+  // },
 ];
 
 export default TeamContent;

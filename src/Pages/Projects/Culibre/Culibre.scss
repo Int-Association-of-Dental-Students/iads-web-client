@@ -1,5 +1,9 @@
 .culibre-page {
   // overflow: hidden;
+  // button > .left,
+  // button > .right {
+  //   background-color: #fff !important;
+  // }
   @media only screen and (max-width: 900px) {
     width: 100vw;
 
@@ -38,7 +42,7 @@
         width: 240px !important;
         font-size: 20px;
         svg {
-          display: none;
+          // display: none;
         }
       }
 
@@ -271,8 +275,8 @@
       align-items: center;
       gap: 18px;
       border-radius: 77px;
-      background: #cca94f;
-      color: var(--alias-grayscale-background, #fcfcfc);
+      background: #fff;
+      color: var(--alias-grayscale-background, #202c35);
       text-align: center;
       font-feature-settings: "clig" off, "liga" off;
       font-family: Poppins semibold;
@@ -380,8 +384,8 @@
         align-items: center;
         gap: 18px;
         border-radius: 77px;
-        background: #cca94f;
-        color: var(--alias-grayscale-background, #fcfcfc);
+        background: #fff;
+        color: var(--alias-grayscale-background, #202c35);
         text-align: center;
         font-feature-settings: "clig" off, "liga" off;
         font-family: Poppins semibold;
@@ -393,18 +397,21 @@
       }
       .closed {
         opacity: 0.5;
-        background: #cca94f;
+        background: #fff;
       }
     }
   }
 
+  .btns {
+    gap: 16px;
+  }
   .ww {
     display: flex;
     padding: 113px 69px;
     align-items: flex-start;
     gap: 48px;
     align-self: stretch;
-    background: var(--primary-g, #415c51);
+    background: var(--primary-g, #0f62fe);
     justify-content: center;
     Button {
       display: flex;
@@ -413,8 +420,8 @@
       align-items: center;
       gap: 18px;
       border-radius: 77px;
-      background: #cca94f;
-      color: var(--alias-grayscale-background, #fcfcfc);
+      background: #fff;
+      color: var(--alias-grayscale-background, #202c35);
       text-align: center;
       font-feature-settings: "clig" off, "liga" off;
       font-family: Poppins semibold;
@@ -468,9 +475,10 @@
   .whysus {
     background-image: url("../../../Assets/Projects/Culibre/whysus.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: fill;
     background-position: center;
-    height: 262px;
+    width: 1060px;
+    height: 315px;
     margin-top: -124px !important;
     z-index: 1;
     position: relative;
@@ -479,7 +487,7 @@
     //
     border-radius: 32px;
     display: flex;
-    width: 1104px;
+    // width: 1104px;
     margin: 0px auto;
     padding: 56px 53px;
     justify-content: center;
@@ -508,7 +516,7 @@
       line-height: 24px; /* 150% */
     }
     .accent {
-      color: #a7f16d;
+      color: #00f6f4;
       font-family: Poppins bold;
       font-size: 16px;
       font-style: italic;
@@ -582,6 +590,7 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      max-width: 300px;
     }
     p {
       text-align: left;
@@ -592,6 +601,7 @@
       font-style: normal;
       font-weight: 300;
       line-height: normal;
+      max-width: 300px;
     }
   }
   .competitor-card {
@@ -698,8 +708,8 @@
         align-items: center;
         gap: 18px;
         border-radius: 77px;
-        background: #fff;
-        color: #14142b;
+        background: #0f62fe;
+        color: #f5f5f5;
         text-align: center;
         font-feature-settings: "clig" off, "liga" off;
         /* Desktop/Link Medium */
@@ -723,7 +733,7 @@
       gap: 40px 75px;
       flex-wrap: wrap;
       border-radius: 32px;
-      background: var(--secondary-y, #c19a36);
+      background: var(--secondary-y, #f5f5f5);
       box-shadow: 10px 60px 50px 0px rgba(0, 0, 0, 0.15);
 
       .content {
@@ -731,9 +741,10 @@
         text-align: left;
         align-items: flex-start;
         gap: 48px;
+        color: #202c35;
 
         p {
-          color: #fff;
+          color: #202c35;
           font-family: Poppins regular;
           font-size: 12px;
           font-style: normal;
@@ -750,7 +761,7 @@
             flex-direction: column;
           }
           h2 {
-            color: #fff;
+            color: #202c35;
             font-family: Galins;
             font-size: 52px;
             font-style: normal;
@@ -760,7 +771,7 @@
 
           h4 {
             align-self: stretch;
-            color: #fff;
+            color: #202c35;
             font-family: Poppins medium;
             font-size: 20px;
             font-style: normal;
@@ -771,7 +782,7 @@
         .right {
           margin-right: -76px;
           h3 {
-            color: #fff;
+            color: #202c35;
             font-family: Galins;
             font-size: 24px;
             font-style: normal;
@@ -779,7 +790,7 @@
             line-height: normal;
           }
           li {
-            color: #fff;
+            color: #202c35;
             font-family: Poppins regular;
             font-size: 12px;
             font-style: normal;
@@ -802,7 +813,7 @@
   .competitor-section {
     // REMOVE COMPETITOR SECTION
     display: none !important;
-    background-color: #415c51;
+    background-color: #0f62fe;
     // width: 90%;
     padding-left: 5vw;
     padding-right: 5vw;
@@ -951,7 +962,7 @@
       border-radius: 16px;
       border: 1px solid #fff;
 
-      // color: var(--alias-grayscale-background, #fcfcfc);
+      // color: var(--alias-grayscale-background, #202C35);
       font-feature-settings: "clig" off, "liga" off;
       font-family: Poppins regular;
       font-size: 20px;
@@ -980,11 +991,14 @@
   }
 
   .culibre-footer {
-    background-color: #c19a36;
+    background-color: #00b1af;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-right: 81px;
+    Button {
+      background-color: #ffffff;
+    }
     .touch,
     .press {
       display: flex;

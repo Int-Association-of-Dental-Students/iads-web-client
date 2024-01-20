@@ -97,9 +97,9 @@ const Culibre = () => {
                   src={logo}
                 />
                 <p className="subtitle">An Initiative by Dentsply Sirona</p>
-                <h1 className="title">Cultivate, Deliberate, Inspire...</h1>
+                <h1 className="title">Become, Tryout, Ascend...</h1>
                 <div className="btns">
-                  <Button>
+                  <Button style={{ backgroundColor: "#0F62FE", color: "#fff" }}>
                     Register Now{" "}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +117,9 @@ const Culibre = () => {
                       />
                     </svg>
                   </Button>
-                  <Button className="bttn2">Learn More</Button>
+                  <Button style={{ color: "white" }} className="bttn2">
+                    Learn More
+                  </Button>
                 </div>
               </div>
             </div>
@@ -132,9 +134,8 @@ const Culibre = () => {
           dentistry and connect them with sustainability principles and action
           tools. By enabling IADS members to produce and debate their innovative
           ideas, the aim is not only to empower dental students and young
-          professionals but to also to inspire a shift towards a dental
-          community that finds sustainability in all aspects of their day-to-day
-          lives.
+          professionals but to also inspire a shift within the dental community
+          that finds sustainability in all aspects of their day-to-day lives.
         </p>
       </div>
       <div className="ww">
@@ -173,19 +174,19 @@ const Culibre = () => {
           <div className="content">
             <h1>Who</h1>
             <p>
-              Culibre is a challenge that targets creative and outspoken
-              individuals who - just like the Culibra succulent that inspired
-              the name of this challenge - haven't had a fertile environment to
-              thrive in, yet they still harness their talents, and think
-              independently. Participation in The Culibre Challenge is widely
-              extended to all IADS members through their respective
-              associations. While all our dental community is invited to the
-              Sustainability curricula, participants in the competition must be
-              dental students or young professionals of no more than two years
-              after graduation.
+              Beyond is a challenge that targets creative and outspoken
+              individuals who want to expand their engagement with dentistry,
+              harness their talents, and think independently.
+              <br />
+              <br />
+              Participation in The Beyond Challenge is widely extended to all
+              IADS members through their respective associations. While all our
+              dental community is invited to the Sustainability curricula,
+              participants in the competition must be dental students or young
+              professionals of no more than two years after graduation.
               <br />
               Planting the seeds for change is a process and that is exactly
-              what The Culibre Challenge is about - as we plant our first seed
+              what The Beyond Challenge is about - as we plant our first seed
               for these engaging conversations in Prague, Czech Republic and one
               seed at a time we bring the competition to each region.
               <br />
@@ -205,8 +206,8 @@ const Culibre = () => {
       <div
         className="filler-green"
         style={{
-          height: "161px",
-          backgroundColor: "#415c51",
+          height: "214px",
+          backgroundColor: "#0F62FE",
           marginTop: "-1px",
         }}
       ></div>
@@ -218,6 +219,25 @@ const Culibre = () => {
           Dentistry
         </h1>
         <p>
+          There’s an urgent need to integrate sustainability concepts into the
+          undergraduate curricula as{" "}
+          <span className="accent">
+            the first step towards empowering dental students
+          </span>{" "}
+          with sustainable practices they can implement not only towards the
+          environment but also towards a more fulfilling and lasting career as
+          dental professionals. <br />
+          Once we lay the foundation and provide the means for students to
+          realize that their individual actions, however small, act as a seed
+          and catalyst for engagement, we can achieve an{" "}
+          <span className="accent">
+            {" "}
+            impactful mindset shift towards disseminating the concept of
+            sustainability
+          </span>{" "}
+          into their surrounding communities.
+        </p>
+        {/* <p>
           There’s an urgent need to integrate sustainability concepts into
           educational models at the formative stage of education as{" "}
           <span className="accent"> the first step towards change </span> before
@@ -226,14 +246,14 @@ const Culibre = () => {
           however small, act as a seed and catalyst for engagement, we can
           achieve a{" "}
           <span className="accent"> net positive environmental impact.</span>
-        </p>
+        </p> */}
       </div>
       <div
         className="filler-yellow"
         style={{
           height: "188px",
-          backgroundColor: "#C19A36",
-          marginTop: "-140px",
+          backgroundColor: "#323A3D",
+          marginTop: "-241px",
           zIndex: "-1",
         }}
       ></div>
@@ -307,7 +327,7 @@ const Culibre = () => {
 
           <AwardCard
             img={a2}
-            title="CE CreditationGolden Ticket"
+            title="Golden Ticket"
             desc="Certified? … for a free pass (flight and accommodation expenses covered) to the rooftop of Europe, Prague where you get to engage with peers and compete in a debate challenge for the next award."
           />
 
@@ -396,7 +416,7 @@ const Culibre = () => {
             >
               <path
                 d="M14.2829 5L20.9999 12L14.2829 19M19.7331 12.0317H4"
-                stroke="#14142B"
+                stroke="#F5F5F5"
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -421,11 +441,13 @@ const Culibre = () => {
           global IADS community.
           <br />
           <br />
-          Our first stop for the debate competition will be within the European
-          region, in Prague, Czech Republic where after a rigorous selection, 4
-          teams will be competing for two lucky team passes to the FDI
-          Headquarters for an exclusive training on Advocacy & Sustainability
-          Campaigning.
+          <span style={{ fontFamily: "Poppins bold" }}>
+            Our first stop for the debate competition will be within the
+            European region, in Prague, Czech Republic
+          </span>{" "}
+          where after a rigorous selection, 4 teams will be competing for two
+          lucky team passes to the FDI Headquarters for an exclusive training on
+          Advocacy & Sustainability Campaigning.
           <div className="btns">
             <Button>
               Learn more{" "}
@@ -646,14 +668,21 @@ const Culibre = () => {
         <div className="acc">
           <Accordion className="accordion" defaultActiveKey="0">
             <Accordion.Item eventKey="0">
-              <Accordion.Header>Why Culibre?</Accordion.Header>
+              <Accordion.Header>Why Beyond?</Accordion.Header>
               <Accordion.Body>
-                Culibre  is an acrostic of the three main phases of this
-                project: Cultivate - Deliberate - Inspire which is inspired by
-                ‘Culibra’ - a type of Echeveria succulent; known for their
-                striking appearance bringing drama to where they are placed
-                while being forgiving in their ability to thrive independently
-                in different planting arrangements. 
+                BEYOND [BE] + [YOND] is inspired by the three main phases of
+                this project; <br />
+                Phase I - BEcome <br />
+                Phase II - trYOut <br />
+                Phase III - asceND <br />
+                BEYOND is a challenge that targets creative and outspoken
+                individuals who haven't had a fertile environment to thrive in,
+                though they still harness their talents, adapt to their status
+                quo, and think independently. <br />
+                BEYOND aims to attract those who posses a high sense of social
+                and ethical responsibility but have rarely had the support or
+                the platform to bubble forth and incite a positive attitude
+                towards the environmental impact of dentistry. <br />
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="1">

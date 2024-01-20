@@ -14,32 +14,32 @@ const Phase = () => {
   const [opacity, setOpacity] = useState(1);
   const phases = [
     {
-      title: "Culibre",
-      subtitle: "Phase I: Awareness",
+      title: "Beyond",
+      subtitle: `Phase I: Become "Certification"`,
       description:
-        "Cultivate: This phase consists of cultivating prospect students on the principles of sustainability through DS Curriculum which will serve as a pre-read and a frame of reference.",
+        "Online - DS Website This phase consists of cultivating prospect students on the principles of sustainability through DS Curriculum which will serve as a pre-read and a frame of reference.",
       tl: tl1,
       clr: "#FFF",
     },
     {
-      title: "Culibre",
-      subtitle: "Phase II: Deliberate",
+      title: "Beyond",
+      subtitle: "Phase II: Tryout “Debating” -Mindset shift",
       description:
-        "Deliberate: This phase is complementary to phase one. Educated students will be eligible to compete in IADS regional summits debating topics that relate to sustainability in dentistry. This is to breed pledge signings, concept & green papers, panel discussions, & advocacy inspirations.",
+        "Offline - Regional Summits This phase is complementary to phase one. Educated students will be eligible to compete in IADS regional summits debating topics that relate to sustainability in dentistry. This is to breed pledge signings, concept & green papers, panel discussions, & advocacy inspirations.",
       tl: tl2,
     },
     {
-      title: "Culibre",
-      subtitle: "Phase III Stage 1: Inspire",
+      title: "Beyond",
+      subtitle: "Phase III Stage 1: Ascend “Advancement”  ",
       description:
-        "Advancement: The first stage of phase three is a certification program for the winning teams. Fully funded scholarships will be granted to establish a training model for FDI Toolkit to make dentistry more sustainable.",
+        "Offline - Geneva The first stage of phase three is a certification program for the winning teams. Fully funded scholarships will be granted to establish a training model for FDI Toolkit to make dentistry more sustainable.",
       tl: tl3,
     },
     {
-      title: "Culibre",
-      subtitle: "Phase III Stage 2: Inspire",
+      title: "Beyond",
+      subtitle: "Phase III Stage 2: Ascend “Advocacy”",
       description:
-        "Advocacy: The second stage will be in a form of a competition. IADS members will compete in a social media campaign run by IADS-DS to raise awareness and drive more traffic towards DS Curriculum. This is to amplify the reach to a larger audience and keep the wheel turning.",
+        "Online - Social Media The second stage will be in a form of a competition. IADS members will compete in a social media campaign run by IADS-DS to raise awareness and drive more traffic towards DS Curriculum. This is to amplify the reach to a larger audience and keep the wheel turning.",
       tl: tl4,
     },
 
@@ -83,14 +83,14 @@ const Phase = () => {
           </h1>
         );
       case 1:
-        // Apply style to the second 3 letters
+        // Apply style to the second 2 letters
         return (
           <h1>
             {title.slice(0, 2)}
             <span className="styled-letter">{title[2]}</span>
             <span className="styled-letter">{title[3]}</span>
-            <span className="styled-letter">{title[4]}</span>
-            {title.slice(5)}
+            {/* <span className="styled-letter">{title[4]}</span> */}
+            {title.slice(4)}
           </h1>
         );
       case 2:
