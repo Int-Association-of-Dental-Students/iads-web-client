@@ -382,7 +382,7 @@ const Culibre = () => {
               </div>
             </div>
             <div className="right">
-              <img src={DecoCourse} alt="" style={{ marginRight: "26px" }} />
+              <img src={DecoCourse} alt="" />
               <div className="inner">
                 <h3>Course Outcomes</h3>
                 <ul>
@@ -806,7 +806,12 @@ const Culibre = () => {
             for all your concerns regarding your project submission, the
             competition process and any other inquiries.
           </p>
-          <Button>Email The VPIA</Button>
+          <a
+            style={{ textDecoration: "none" }}
+            href="mailto: vpia@iads-web.org"
+          >
+            <Button>Email The VPIA</Button>
+          </a>
         </div>
         <div className="press">
           <h1>Press</h1>
@@ -816,7 +821,12 @@ const Culibre = () => {
             social media inquiries, concerns regarding any visuals or any
             necessary media resources.
           </p>
-          <Button>Email The VPPR</Button>
+          <a
+            style={{ textDecoration: "none" }}
+            href="mailto: vppr@iads-web.org"
+          >
+            <Button>Email The VPPR</Button>
+          </a>
         </div>
       </div>
     </div>
