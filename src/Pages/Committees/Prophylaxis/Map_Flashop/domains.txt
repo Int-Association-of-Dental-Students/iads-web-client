@@ -1,0 +1,4 @@
+iads-web.com
+*.iads-web.com
+localhost
+127.0.0.1

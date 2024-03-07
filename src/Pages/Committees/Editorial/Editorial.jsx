@@ -42,7 +42,7 @@ const Editorial = () => {
         <div className="row">
           <div className="delegatee col-lg-3 col-sm-12">
             <img style={{ borderRadius: "100%" }} src={delegate} />
-            <h3 className="subtitle">Kristine Romanovska</h3>
+            <h3 className="subtitle">Abdullah Munqith Alzubaidi</h3>
             <p className="position" style={{ marginBottom: "0px" }}>
               Vice President of Public Relations
             </p>
@@ -56,53 +56,30 @@ const Editorial = () => {
             <div className="row">
               <div className="col-4 WF_memberList">
                 <h4 className="role">Liaison Officer:</h4>
-                <h4 className="name">Salem Shurrab</h4>
-                <p className="country">Palestine</p>
-                <h4 className="role">Members:</h4>
-                <h4 className="name">Pedro Ivo</h4>
-                <p className="country">Brazil</p>
-                <h4 className="name">Qudsia Khan</h4>
-                <p className="country">India</p>
-                <h4 className="name">Dilara Kılıç</h4>
-                <p className="country">Türkiye</p>
-                <h4 className="name">Fatima Anwar Elsiddig</h4>
-                <p className="country">Sudan</p>
-                <h4 className="name">Omar Magdy</h4>
+                <h4 className="name">Mayar Ahmed Abdelaziz Elsayed</h4>
                 <p className="country">Egypt</p>
-              </div>
-              <div className="col-4 WF_memberList">
-                <h4 className="name">Unaiza Malik</h4>
-                <p className="country">Pakistan</p>
-                <h4 className="name">Mahmud Salah</h4>
-                <p className="country">Sudan</p>
-
-                <h4 className="name">Mariam Salman</h4>
-                <p className="country">Jordan</p>
-
-                <h4 className="name">Abdullah Munqith AlZubaidi</h4>
+                <h4 className="role">Members:</h4>
+                <h4 className="name">Ahmed Hayder Al-Kawaz</h4>
                 <p className="country">Iraq</p>
-
-                <h4 className="name">Laura Correia</h4>
-                <p className="country">Türkiye</p>
-                <h4 className="name">İpek Çelenlioğlu</h4>
-                <p className="country">Portugal</p>
+                <h4 className="name">Abdulrahman Zeyad</h4>
+                <p className="country">Iraq</p>
                 <h4 className="name">İlayda Sürücü</h4>
                 <p className="country">Türkiye</p>
+                <h4 className="name">Deren Dinç</h4>
+                <p className="country">Turkey</p>
+                <h4 className="name">Stella Sotošek Kuhar</h4>
+                <p className="country">Slovenia</p>
               </div>
               <div className="col-4 WF_memberList">
+                <h4 className="name">Mariam salman</h4>
+                <p className="country">Jordan</p>
+                <h4 className="name">DİLA SUDE</h4>
+                <p className="country">Turkey</p>
+
+                <h4 className="name">Dilara ALTINTAŞ</h4>
+                <p className="country">Turkey</p>
+
                 <h4 className="name">Alamir Nouraldeen Elgizouli</h4>
-                <p className="country">Sudan</p>
-                <h4 className="name">Shubhan Gandhi</h4>
-                <p className="country">India</p>
-                <h4 className="name">Qudsia Khan</h4>
-                <p className="country">India</p>
-                <h4 className="name">Wajiha Mazhar</h4>
-                <p className="country">Pakistan</p>
-                <h4 className="name">Çisenur Kasapoğlu</h4>
-                <p className="country">Türkiye</p>
-                <h4 className="name">May Firoozmand</h4>
-                <p className="country">Bulgaria</p>
-                <h4 className="name">Mayar El-Sayed</h4>
                 <p className="country">Egypt</p>
               </div>
             </div>

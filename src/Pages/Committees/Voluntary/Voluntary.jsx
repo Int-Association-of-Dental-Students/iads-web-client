@@ -34,7 +34,7 @@ const Voluntary = () => {
         <div className="row">
           <div className="delegatee col-lg-3 col-sm-12">
             <img style={{ borderRadius: "100%" }} src={delegate} />
-            <h3 className="subtitle">Maria Teresa Matute</h3>
+            <h3 className="subtitle">Hiba Al-Kharraz</h3>
             <p className="position" style={{ marginBottom: "0px" }}>
               Voluntary Officer
             </p>
@@ -47,33 +47,31 @@ const Voluntary = () => {
             <div className="row subtitle">Workforce Members</div>
             <div className="row">
               <div className="col-4 WF_memberList">
-                <h4 className="name">Doğa Helin Özbakır</h4>
-                <p className="country">Türkiye</p>
-                <h4 className="name">Simone Clementi</h4>
-                <p className="country">Italy</p>
-                <h4 className="name">Hiba Mohammad Al-Kharraz</h4>
-                <p className="country">Jordan</p>
-                <h4 className="name">Aisha Awan</h4>
-                <p className="country">Thailand</p>
+                <h4 className="name">Jonathan Ricardo Diaz Masaya</h4>
+                <p className="country">Guatemala</p>
+                <h4 className="name">Sofia Katherina Zoto</h4>
+                <p className="country">Germany</p>
+                <h4 className="name">Thew Yu Tong</h4>
+                <p className="country">Malaysia</p>
+                <h4 className="name">LIAW MIN XI </h4>
+                <p className="country">Malaysia</p>
               </div>
 
               <div className="col-4 WF_memberList">
-                <h4 className="name">Michelle Mulach</h4>
-                <p className="country">Germany</p>
-                <h4 className="name">Jaser Logman Hassan Hammam</h4>
-                <p className="country">Sudan</p>
-                <h4 className="name">Elif Göksu Çelik</h4>
-                <p className="country">Türkiye</p>
-                <h4 className="name">Sara Ared Hamada Ebrahim</h4>
-                <p className="country">Egypt</p>
+                <h4 className="name">Said Abdelnabi</h4>
+                <p className="country">Jordan</p>
+                <h4 className="name">HuiEn Chang</h4>
+                <p className="country">Taiwan</p>
+                <h4 className="name">Inês Marques Silva Pirraco</h4>
+                <p className="country">Portugal</p>
+                <h4 className="name">Mişel Orduluoğlu</h4>
+                <p className="country">Turkey</p>
               </div>
               <div className="col-4 WF_memberList">
-                <h4 className="name">Sara Abdelmoneim Elamin Kheir</h4>
-                <p className="country">Sudan</p>
-                <h4 className="name">Inés Bouillaud</h4>
-                <p className="country">France</p>
-                <h4 className="name">Talis Örs</h4>
-                <p className="country">Germany</p>
+                <h4 className="name">Yağız Efe Engin </h4>
+                <p className="country">Turkey</p>
+                <h4 className="name">Çisenur Kasapoğlu </h4>
+                <p className="country">Turkey</p>
               </div>
             </div>
           </div>

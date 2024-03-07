@@ -73,7 +73,7 @@ const Internal = () => {
             style={{ borderRight: "1px solid #1D015C" }}
           >
             <img style={{ borderRadius: "100%" }} src={delegate} />
-            <h3 className="subtitle">Deniz Devrim Kaya</h3>
+            <h3 className="subtitle">Abdelrahman Toufic Soubra</h3>
             <p className="position" style={{ marginBottom: "0px" }}>
               Vice President of Internal Affairs
             </p>
@@ -86,23 +86,19 @@ const Internal = () => {
             <div className="row subtitle">Workforce Members</div>{" "}
             <div className="row">
               <div className="col-4 WF_memberList">
-                <h4 className="name">Maryam Ayyad Ismael</h4>
-                <p className="country">Iraq</p>
+                <h4 className="name">Okereke Promise Udohchukwu</h4>
+                <p className="country">Nigeria</p>
               </div>
             </div>
             <div className="row">
               <div className="col-4 WF_memberList">
-                <h4 className="name">Andrej Bublak – Slovakia</h4>
-                <p className="country">
-                  Internal Bureau Administration Officer (IBAO)
-                </p>
+                <h4 className="name">Chafik Kaaki</h4>
+                <p className="country">Lebanon</p>
               </div>
               <div className="row">
                 <div className="col-4 WF_memberList">
-                  <h4 className="name">Ömer Faruk Dönmez – Türkiye </h4>
-                  <p className="country">
-                    Internal Bureau Evaluation and Monitoring Officer (IBEMO)
-                  </p>
+                  <h4 className="name">Noor Fatima</h4>
+                  <p className="country">Pakistan</p>
                 </div>
               </div>
             </div>

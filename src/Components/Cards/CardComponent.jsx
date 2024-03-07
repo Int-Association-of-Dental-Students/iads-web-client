@@ -54,7 +54,9 @@ const CardComponent = (props) => {
           <Card.Title className="card-title" style={{ color: props.style }}>
             {data.title}
           </Card.Title>
-          <Card.Text className="card-date">{data.date}</Card.Text>
+          <Card.Text className="card-date">
+            {new Date(data.date).toLocaleDateString("en-GB")}
+          </Card.Text>
           <Card.Text className="card-txt">{data.description}</Card.Text>
           {Auth.validation && data.apply && (
             <div

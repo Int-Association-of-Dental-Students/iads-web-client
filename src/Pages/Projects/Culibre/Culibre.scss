@@ -401,6 +401,37 @@
       }
     }
   }
+  .desc-section {
+    .btns {
+      margin-top: 32px;
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      Button {
+        display: flex;
+        padding: 20px 32px;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        border-radius: 77px;
+        // background: #fff;
+        color: var(--alias-grayscale-background, #202c35);
+        text-align: center;
+        font-feature-settings: "clig" off, "liga" off;
+        font-family: Poppins semibold;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        border: none;
+      }
+      .closed {
+        opacity: 0.5;
+        // background: #fff;
+        background: transparent;
+      }
+    }
+  }
 
   .btns {
     gap: 16px;
@@ -680,6 +711,10 @@
   @media screen and (min-width: 640px) {
     .swiper-container {
       width: 640px;
+    }
+
+    .temp-resp {
+      width: 90vw !important;
     }
   }
 
@@ -1041,5 +1076,11 @@
         color: #14142b;
       }
     }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .temp-resp {
+    width: 90vw !important;
   }
 }

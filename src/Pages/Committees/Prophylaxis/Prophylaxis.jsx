@@ -14,10 +14,22 @@ import logo from "../../../Assets/Committees/Prophylaxis/logo.svg";
 import delegate from "../../../Assets/Committees/Prophylaxis/delegate.svg";
 import axios from "axios";
 import delegatesWorld from "../../../Assets/Governance/delegatesWorld.svg";
-import Map from "./Map";
 
 const Prophylaxis = () => {
   const [toolkits, settoolkits] = useState(null);
+
+  const mapHTML = `
+    <div id="map-container"></div>
+    <link href="/Map_Flashop/map.css" rel="stylesheet">
+    <script src="/Map_Flashop/raphael.min.js"></script>
+    <script src="/Map_Flashop/settings.js"></script>
+    <script src="/Map_Flashop/paths.js"></script>
+    <script src="/Map_Flashop/map.js"></script>
+    <script>
+      var map = new FlaMap(map_cfg);
+      map.drawOnDomReady('map-container');
+    </script>
+  `;
 
   useEffect(() => {
     axios
@@ -56,29 +68,19 @@ const Prophylaxis = () => {
             <div className="row subtitle">Workforce Members</div>
             <div className="row">
               <div className="col-4 WF_memberList">
-                <h4 className="name">Luīze Lote</h4>
-                <p className="country">Latvia</p>
-                <h4 className="name">Hend Abulatifa</h4>
+                <h4 className="name">Zainab Noor</h4>
+                <p className="country">Pakistan</p>
+                <h4 className="name">Mayyasah Ramadan</h4>
                 <p className="country">Palestine</p>
-                <h4 className="name">Othayla Abdelhadi Mohamed Omer</h4>
-                <p className="country">Sudan</p>
               </div>
 
               <div className="col-4 WF_memberList">
                 <h4 className="name">Monisha Chinthala</h4>
                 <p className="country">India</p>
-                <h4 className="name">Rawan Mahmoud Elrayah Hussein</h4>
-                <p className="country">Sudan</p>
-                <h4 className="name">Reem Osama Omer Ahmed</h4>
-                <p className="country">Sudan</p>
               </div>
               <div className="col-4 WF_memberList">
-                <h4 className="name">Rayan Osman Bashir Arbab</h4>
-                <p className="country">Sudan</p>
-                <h4 className="name">Romaysa Galal Ahmed Elsayed</h4>
-                <p className="country">Sudan</p>
-                <h4 className="name">Mişel Orduluoğlu</h4>
-                <p className="country">Türkiye</p>
+                <h4 className="name">Simla Oksouz </h4>
+                <p className="country">Turkey</p>
               </div>
             </div>
           </div>
@@ -97,11 +99,9 @@ const Prophylaxis = () => {
         >
           International Public health Material BAnk (IPMB) Platform
         </h1>
-        {/* <h1 className="title-1st" style={{ marginTop: "100px" }}>
-          Coming Soon!
-        </h1> */}
-        {/* <img style={{ width: "100%" }} src={delegatesWorld} /> */}
-        <Map />
+
+        {/* <MapComponent /> */}
+        <div dangerouslySetInnerHTML={{ __html: mapHTML }} />
       </div>
 
       <div className="toolkits container-fluid">

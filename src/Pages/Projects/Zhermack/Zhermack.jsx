@@ -28,7 +28,7 @@ const Zhermack = () => {
       </div>
 
       <Button
-        href="https://web.cvent.com/event/8a461058-1660-4a32-b792-9e3dd19090b6/regProcessStep1"
+        href="https://forms.gle/kmBNvpcj2pEZEt126"
         variant="danger"
         className="register-btn"
       >
@@ -36,11 +36,13 @@ const Zhermack = () => {
       </Button>
 
       <div className="program">
-        <img src={program} alt="" />
+        <a href="https://forms.gle/kmBNvpcj2pEZEt126">
+          <img src={program} alt="" />
+        </a>
       </div>
 
       <Button
-        href="https://web.cvent.com/event/8a461058-1660-4a32-b792-9e3dd19090b6/regProcessStep1"
+        href="https://forms.gle/kmBNvpcj2pEZEt126"
         variant="danger"
         className="register-btn"
       >

@@ -63,7 +63,7 @@ const Training = () => {
         <div className="row">
           <div className="delegatee col-lg-3 col-sm-12">
             <img style={{ borderRadius: "100%" }} src={delegate} />
-            <h3 className="subtitle">Zeinab Hussein </h3>
+            <h3 className="subtitle">Ahmed Hatem</h3>
             <p className="position" style={{ marginBottom: "0px" }}>
               Training Officer
             </p>
@@ -76,10 +76,8 @@ const Training = () => {
             <div className="row subtitle">Workforce Members</div>
             <div className="row">
               <div className="col-3 WF_memberList">
-                <h4 className="name">Mortada Ahmed</h4>
-                <p className="country">Sudan</p>
-                <h4 className="name">Romaysa Galal Ahmed Elsayed</h4>
-                <p className="country">Sudan</p>
+                <h4 className="name">Ecem Zöhre ALAKABAK</h4>
+                <p className="country">Turkey</p>
               </div>
             </div>
           </div>

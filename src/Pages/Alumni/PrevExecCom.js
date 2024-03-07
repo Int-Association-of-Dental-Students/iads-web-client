@@ -1,5 +1,14 @@
 const PrevExecCom = [
   {
+    Term: "2022/2023",
+    President: "Lamis Elsheikh 🇸🇩",
+    "VP of Internal Affairs": "Deniz Devrim Kaya 🇹🇷",
+    "VP of Finances": "Abay Kalymtay 🇰🇿",
+    "VP of Public Relations": "Kristine Romanovska 🇱🇻",
+    "VP of Exchanges": "Kseniia Rusakova 🇷🇺",
+    "VP of Science": "Maryam ElAhmady 🇪🇬",
+  },
+  {
     Term: "2021/2022",
     President: "Huthaifa Abdul Qader 🇯🇴",
     "VP of Internal Affairs": "Lamis Elsheikh 🇸🇩",

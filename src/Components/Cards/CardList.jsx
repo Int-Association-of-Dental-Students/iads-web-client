@@ -35,18 +35,20 @@ const CardList = ({ data, textColor, type }) => {
           </div>
         )}
         {data &&
-          data.cards.map((data) => (
-            <CardComponent
-              id={data._id}
-              style={textColor}
-              t={data.title}
-              date={data.date}
-              d={data.description}
-              i={data.image}
-              l={data.link}
-              a={data.apply}
-            />
-          ))}
+          data.cards
+            .sort((a, b) => new Date(b.date) - new Date(a.date)) // Sort by date descending
+            .map((data) => (
+              <CardComponent
+                key={data._id} // Ensure each item has a unique key
+                style={textColor}
+                t={data.title}
+                date={data.date}
+                d={data.description}
+                i={data.image}
+                l={data.link}
+                a={data.apply}
+              />
+            ))}
       </div>
     </div>
   );

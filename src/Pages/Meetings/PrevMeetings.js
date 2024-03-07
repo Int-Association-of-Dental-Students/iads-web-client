@@ -1,7 +1,7 @@
 const PrevMeetings = [
   {
     Term: 2023,
-    "Annual Congress (AC)": " - ",
+    "Annual Congress (AC)": " Sharm El Sheikh, Egypt 🇪🇬 ",
     Gallery: " - ",
     "Mid-Year Meeting (MYM)": "Kyrenia, Cyprus 🇨🇾",
     "MM Gallery":

@@ -63,22 +63,20 @@ const Exchange = () => {
             <div className="row subtitle">Workforce Members</div>
             <div className="row">
               <div className="col-4 WF_memberList">
-                <h4 className="name">Wajiha Mazhar</h4>
-                <p className="country">Pakistan</p>
-                <h4 className="name">Gaida Yaser</h4>
-                <p className="country">Sudan</p>
-                <h4 className="name">Inez Marella Dion Saputri</h4>
-                <p className="country">Indonesia</p>
-                <h4 className="name">Andrea Fernanda Bernal Alvarez</h4>
-                <p className="country">Ecuador</p>
+                <h4 className="name">Donia Mohamed AbdElsamie</h4>
+                <p className="country">Egypt</p>
+                <h4 className="name">Shubhan Gandhi</h4>
+                <p className="country">India</p>
+                <h4 className="name">Kseniia Dashevskaia</h4>
+                <p className="country">Russian Federation</p>
               </div>
-              <div className="col-4 WF_memberList">
-                <h4 className="name">Ola Abdul Wahab</h4>
-                <p className="country">Sudan</p>
-                <h4 className="name">Yaren Sönmez</h4>
-                <p className="country">Türkiye</p>
-                <h4 className="name">Tasnim Elrashid</h4>
-                <p className="country">Sudan</p>
+              <div className="col-4 offset-lg-1">
+                <h4 className="name">Muhammad Ibrahim Usman Rabb</h4>
+                <p className="country">Pakistan</p>
+                <h4 className="name">Mert Özbaş</h4>
+                <p className="country">Turkey</p>
+                <h4 className="name">Nazli Erenay</h4>
+                <p className="country">Turkey</p>
               </div>
             </div>
           </div>

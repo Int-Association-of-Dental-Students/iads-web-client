@@ -99,24 +99,28 @@ const Culibre = () => {
                 <p className="subtitle">An Initiative by Dentsply Sirona</p>
                 <h1 className="title">Become, Tryout, Ascend...</h1>
                 <div className="btns">
-                  <Button style={{ backgroundColor: "#0F62FE", color: "#fff" }}>
-                    Register Now{" "}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
+                  <a href="https://events-na6.adobeconnect.com/content/connect/c1/882837640/en/events/event/private/1396899325/2096853831/event_registration.html?sco-id=3513242202&_charset_=utf-8">
+                    <Button
+                      style={{ backgroundColor: "#0F62FE", color: "#fff" }}
                     >
-                      <path
-                        d="M14.2829 5L20.9999 12L14.2829 19M19.7331 12.0317H4"
-                        stroke="#FCFCFC"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </Button>
+                      Register Now{" "}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M14.2829 5L20.9999 12L14.2829 19M19.7331 12.0317H4"
+                          stroke="#FCFCFC"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </Button>
+                  </a>
                   <Button style={{ color: "white" }} className="bttn2">
                     Learn More
                   </Button>
@@ -127,7 +131,7 @@ const Culibre = () => {
         </div>
       </div>
       <div className="desc-section">
-        <img src={logo2} alt="" />
+        <img className="temp-resp" src={logo2} alt="" />
         <p className="sec-desc">
           IADS and Dentsply Sirona have joined forces in this unique
           challenge-based project which aims to engage with the youth in
@@ -137,6 +141,40 @@ const Culibre = () => {
           professionals but to also inspire a shift within the dental community
           that finds sustainability in all aspects of their day-to-day lives.
         </p>
+
+        <div className="btns" style={{ marginBottom: "40px" }}>
+          <a
+            style={{ textDecoration: "none" }}
+            href="https://events-na6.adobeconnect.com/content/connect/c1/882837640/en/events/event/private/1396899325/2096853831/event_registration.html?sco-id=3513242202&_charset_=utf-8"
+          >
+            <Button
+              style={{
+                backgroundColor: "#fff",
+                color: "#202C35",
+              }}
+            >
+              Register Now{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M14.2829 5L20.9999 12L14.2829 19M19.7331 12.0317H4"
+                  stroke="#202C35"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </Button>
+          </a>
+          <Button style={{ color: "white" }} className="bttn2">
+            Learn More
+          </Button>
+        </div>
       </div>
       <div className="ww">
         <div className="what">
@@ -197,7 +235,7 @@ const Culibre = () => {
               <br />
               <div className="btns">
                 <Button>Get in Touch</Button>
-                <Button>Culibre Challenge Roadmap</Button>
+                <Button>Beyond Challenge Roadmap</Button>
               </div>
             </p>
           </div>
@@ -405,29 +443,31 @@ const Culibre = () => {
             </div>
             <img className="epic" src={epic} alt="" />
           </div>
-          <Button>
-            Register Now{" "}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-            >
-              <path
-                d="M14.2829 5L20.9999 12L14.2829 19M19.7331 12.0317H4"
-                stroke="#F5F5F5"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </Button>
+          <a href="https://events-na6.adobeconnect.com/content/connect/c1/882837640/en/events/event/private/1396899325/2096853831/event_registration.html?sco-id=3513242202&_charset_=utf-8">
+            <Button>
+              Register Now{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M14.2829 5L20.9999 12L14.2829 19M19.7331 12.0317H4"
+                  stroke="#F5F5F5"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </Button>
+          </a>
         </div>
       </div>
 
       <div className="comp-section">
-        <img src={logo2} alt="" />
+        <img className="temp-resp" src={logo2} alt="" />
         <p className="sec-desc">
           This competition seeks to foster profound conversations that empower
           dental students to drive transformative change within their field. By

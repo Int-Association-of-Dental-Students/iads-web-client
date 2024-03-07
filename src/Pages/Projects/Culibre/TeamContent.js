@@ -22,13 +22,13 @@ const TeamContent = [
   },
   {
     img: t2,
-    position: "Project Manager",
-    name: "Deniz Devrim Kaya",
+    position: "Project Lead",
+    name: "Abdel Rahman Soubra",
   },
   {
     img: t3,
-    position: "PR & Marketing Manager",
-    name: "Kristine Romanovska",
+    position: "Managing Editor",
+    name: "Abdullah Alzubaidi",
   },
   {
     img: t4,

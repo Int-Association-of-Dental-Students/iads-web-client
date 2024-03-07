@@ -113,73 +113,73 @@ const SCORE = () => {
             <div className="row">
               <div className="col-3 WF_memberList">
                 <h4 className="role">Secretary:</h4>
-                <h4 className="name">Mohammed Ilyas Errami</h4>
-                <p className="country">Morocco</p>
+                <h4 className="name">Jana Panochová</h4>
+                <p className="country">Czech Republic</p>
                 <h4 className="role">Human Resources:</h4>
                 <h4 className="name">Aneeqa Aslam</h4>
                 <p className="country">Pakistan</p>
                 <h4 className="name">Monisha Chintala</h4>
                 <p className="country">India</p>
 
-                <h4 className="role">IDRP:</h4>
-                <h4 className="name">Ataberk Kayhan</h4>
-                <p className="country">Turkey</p>
-                <h4 className="name">İrem Erdoğdu</h4>
-                <p className="country">Turkey</p>
+                <h4 className="role">IDRP Coordinator:</h4>
+                <h4 className="name">Dania Qaituqa</h4>
+                <p className="country">Lebanon</p>
+                <h4 className="role">IDCP Coordinator:</h4>
+                <h4 className="name">Ng Yook Shiang</h4>
+                <p className="country">Malaysia</p>
               </div>
               <div className="col-3 WF_memberList">
-                <h4 className="role">IDRP:</h4>
-                <h4 className="name">Farih Aminah</h4>
-                <p className="country">Indonesia</p>
-                <h4 className="name">Dilara Kılıç </h4>
+                <h4 className="role">IDCP & IDRP:</h4>
+                <h4 className="name">Enes Karabulut</h4>
                 <p className="country">Turkey</p>
+                <h4 className="name">Khaleel Ibrahim Mohammad Alqaq</h4>
+                <p className="country">Jordan</p>
 
-                <h4 className="role">Content Manegement:</h4>
-                <h4 className="name">Jana Alalami</h4>
-                <p className="country">Northen Cyprus</p>
-                <h4 className="name">Tarteel Barakat</h4>
-                <p className="country">Sudan</p>
-                <h4 className="name">Efe Töre</h4>
-                <p className="country">Turkey</p>
+                <h4 className="name">Jana Mohamed Mogahed </h4>
+                <p className="country">Egypt</p>
+                <h4 className="name">Rishabh Mistry</h4>
+                <p className="country">India</p>
               </div>
               <div className="col-3 WF_memberList">
                 <h4 className="role">Members:</h4>
-                <h4 className="name">Arub Ahmed</h4>
-                <p className="country">Pakistan</p>
-                <h4 className="name">Asma Ghozzi</h4>
-                <p className="country">Tunisia</p>
-                <h4 className="name">Aurelle Khadeeja Rizany</h4>
-                <p className="country">Indonesia</p>
+                <h4 className="role">DRC Director</h4>
+                <h4 className="name">Amani Hammoudeh Qaddoura</h4>
+                <p className="country">Palestine</p>
+                <h4 className="role">DRC Moderator</h4>
                 <h4 className="name">Ayesha Khan</h4>
                 <p className="country">Pakistan</p>
-                <h4 className="name">Aysha Azzahra Bachmimsyah</h4>
-                <p className="country">Indonesia</p>
+                <h4 className="role">IJDS Coordinator</h4>
+                <h4 className="name">Qudsia Khan</h4>
+                <p className="country">India</p>
+
+                <h4 className="role">Content Team</h4>
+                <h4 className="name">Mira Orabin</h4>
+                <p className="country">Lebanon</p>
+                <h4 className="name">Javeria Salman</h4>
+                <p className="country">Pakistan</p>
               </div>
 
               <div className="col-3 WF_memberList">
-                <h4 className="name">Oumaima Benhida</h4>
-                <p className="country">Morocco</p>
-                <h4 className="name">Dania Qaituqa</h4>
-                <p className="country">Jordan</p>
-                <h4 className="name">Farih Aminah</h4>
-                <p className="country">Indonesia</p>
-                <h4 className="name">Jana Panochova</h4>
-                <p className="country">Czech Republic</p>
-                <h4 className="name">Mayar Danadneh</h4>
-                <p className="country">Palestine</p>
-                <h4 className="name">Tjaša Miklavčič</h4>
-                <p className="country">Slovenia</p>
-
-                <h4 className="role">Webinar Coordinator:</h4>
-                <h4 className="name">Zhengis Zhamashev</h4>
-                <p className="country">Kazakhstan</p>
-                <h4 className="name">Yaren Sönmez</h4>
+                <h4 className="role">Clinical Attachment Program Team</h4>
+                <h4 className="name">İpek Seda Çelenlioğlu</h4>
                 <p className="country">Turkey</p>
+                <h4 className="name">Basima Abu Libdeh</h4>
+                <p className="country">Palestine</p>
+                <h4 className="role">Webinar Coordinator:</h4>
+                <h4 className="name">Mahenar Gadalla</h4>
+                <p className="country">Egypt</p>
+                <h4 className="name">Juan Fernando Morales Recinos</h4>
+                <p className="country">Guatemala</p>
+                <h4 className="name">Giuseppia Karam</h4>
+                <p className="country">Lebanon</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <br />
+      <br />
 
       {/* <h1 className="title" style={{ marginTop: "50px", marginBottom: "55px" }}>
         Projects

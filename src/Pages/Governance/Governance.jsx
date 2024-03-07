@@ -135,15 +135,14 @@ const Governance = () => {
           <GovCard
             personImg={p2}
             flag={f2}
-            name="Deniz 
-            Devrim Kaya"
+            name="Abdelrahman Toufic Soubra"
             role="Vice President of Internal Affairs"
             color="white"
           />
           <GovCard
             personImg={p3}
             flag={f3}
-            name="Dr. Kristine Romanovska"
+            name="Abdullah Munqith Alzubaidi"
             role="Vice President of Public Relations"
             color="white"
           />
@@ -164,8 +163,7 @@ const Governance = () => {
           <GovCard
             personImg={p6}
             flag={f6}
-            name="Abay
-            Kalymtay"
+            name="Jasmin Mansournia"
             role="Vice President of Finances"
             color="white"
           />
@@ -190,21 +188,19 @@ const Governance = () => {
           <GovCard
             personImg={p11}
             flag={f11}
-            name="Meryem 
-            Lahlou"
+            name="Meryem Lahlou"
             role="Public Health Officer"
           />
           <GovCard
             personImg={p12}
             flag={f12}
-            name="Zeinab Hussein"
+            name="Ahmed Hatem"
             role="Training Officer"
           />
           <GovCard
             personImg={p13}
             flag={f13}
-            name="Maria 
-            Teresa Matute"
+            name="Hiba Al-Kharraz"
             role="Voluntary Officer"
           />
         </div>
@@ -218,33 +214,31 @@ const Governance = () => {
           <GovCard
             personImg={p21}
             flag={f21}
-            name="Juan Fernando Morales Recinos"
+            name="Andrea Martinez Gonzales"
             role="Regional Ambassador of Americas"
           />
           <GovCard
             personImg={p22}
             flag={f22}
-            name="Anna
-            Pakhuta"
+            name="Tjaša Miklavčič"
             role="Regional Ambassador of Europe"
           />
           <GovCard
             personImg={p23}
             flag={f23}
-            name="Youssef Khattab"
+            name="Nour Aboushadi"
             role="Regional Ambassador of Africa"
           />
           <GovCard
             personImg={p24}
             flag={f24}
-            name="Tasnim 
-            Muhssin"
+            name="Ramez Sharayha"
             role="Regional Ambassador of Middle East "
           />
           <GovCard
             personImg={p25}
             flag={f25}
-            name="Viandra Tjokroadiredjo"
+            name="Ying Hui See"
             role="Regional Ambassador of Asia-Pacific"
           />
         </div>
@@ -268,7 +262,7 @@ const Governance = () => {
           <GovCard
             personImg={p32}
             flag={f32}
-            name="Dr. Abanoub Riad"
+            name="Dr. Ave Põld"
             role="Advisor"
             color="white"
           />
@@ -282,15 +276,14 @@ const Governance = () => {
           <GovCard
             personImg={p34}
             flag={f34}
-            name="Dr. Mariana Morgado"
+            name="Dr. Deniz Devrim Kaya"
             role="Advisor"
             color="white"
           />
           <GovCard
             personImg={p35}
             flag={f35}
-            name="Dr. İrem 
-            Türkan"
+            name="Dr. Kristīne Romanovska"
             role="Advisor"
             color="white"
           />
@@ -303,7 +296,9 @@ const Governance = () => {
 
         {/* <img src={delegatesWorld} /> */}
 
-        <Map />
+        {/* <Map /> */}
+        <br />
+        <br />
         {/* <Tooltip>{content}</Tooltip> */}
       </div>
 
