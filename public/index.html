@@ -3,12 +3,6 @@
 
 <head>
 
-  <!-- start Fla-shop.com HTML5 Map header section -->
-  <link href="/Map_Flashop/map.css" rel="stylesheet">
-  <script src="/Map_Flashop/raphael.min.js" type="text/javascript"></script>
-  <script src="/Map_Flashop/settings.js" type="text/javascript"></script>
-  <script src="/Map_Flashop/map.js" type="text/javascript"></script>
-  <!-- end HTML5 Map header section -->
 
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -48,48 +42,18 @@
 <body data-tippy-root>
   <noscript>You need to enable JavaScript to run this app.</noscript>
 
+  <link href="/IPMB_Map/map.css" rel="stylesheet">
+  <script src="/IPMB_Map/raphael.min.js"></script>
+  <script src="/IPMB_Map/settings.js"></script>
+  <script src="/IPMB_Map/paths.js"></script>
+  <script src="/IPMB_Map/map.js"></script>
   <div id="root"></div>
-  <!-- <script type="text/javascript">
-    atOptions = {
-      'key': '4af9644a7f007fed454300478ce1e650',
-      'format': 'iframe',
-      'height': 50,
-      'width': 320,
-      'params': {}
-    };
-    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplaynetwork.com/4af9644a7f007fed454300478ce1e650/invoke.js"></scr' + 'ipt>');
-  </script>
-  <script type="text/javascript">
-    atOptions = {
-      'key': 'f11c3cec0a43bb774691798528a42f20',
-      'format': 'iframe',
-      'height': 90,
-      'width': 728,
-      'params': {}
-    };
-    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://persistarcticthese.com/f11c3cec0a43bb774691798528a42f20/invoke.js"></scr' + 'ipt>');
-  </script>
-  <script type="text/javascript">
-    atOptions = {
-      'key': '576cd1c807cb9c6949103e5a22145fea',
-      'format': 'iframe',
-      'height': 60,
-      'width': 468,
-      'params': {}
-    };
-    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://persistarcticthese.com/576cd1c807cb9c6949103e5a22145fea/invoke.js"></scr' + 'ipt>');
-  </script> -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
-  <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <script src="/IPMB_Map/MapComponent.js"></script>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
 </body>
 
 </html>

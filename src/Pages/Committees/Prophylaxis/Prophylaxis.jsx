@@ -15,21 +15,23 @@ import delegate from "../../../Assets/Committees/Prophylaxis/delegate.svg";
 import axios from "axios";
 import delegatesWorld from "../../../Assets/Governance/delegatesWorld.svg";
 
+import MapComponent from "./MapComponent";
+
 const Prophylaxis = () => {
   const [toolkits, settoolkits] = useState(null);
 
-  const mapHTML = `
-    <div id="map-container"></div>
-    <link href="/Map_Flashop/map.css" rel="stylesheet">
-    <script src="/Map_Flashop/raphael.min.js"></script>
-    <script src="/Map_Flashop/settings.js"></script>
-    <script src="/Map_Flashop/paths.js"></script>
-    <script src="/Map_Flashop/map.js"></script>
-    <script>
-      var map = new FlaMap(map_cfg);
-      map.drawOnDomReady('map-container');
-    </script>
-  `;
+  // const mapHTML = `
+  //   <div id="map-container"></div>
+  //   <link href="/Map_Flashop/map.css" rel="stylesheet">
+  //   <script src="/Map_Flashop/raphael.min.js"></script>
+  //   <script src="/Map_Flashop/settings.js"></script>
+  //   <script src="/Map_Flashop/paths.js"></script>
+  //   <script src="/Map_Flashop/map.js"></script>
+  //   <script>
+  //     var map = new FlaMap(map_cfg);
+  //     map.drawOnDomReady('map-container');
+  //   </script>
+  // `;
 
   useEffect(() => {
     axios
@@ -100,8 +102,10 @@ const Prophylaxis = () => {
           International Public health Material BAnk (IPMB) Platform
         </h1>
 
-        {/* <MapComponent /> */}
-        <div dangerouslySetInnerHTML={{ __html: mapHTML }} />
+        <MapComponent />
+
+        <script src="./MapComponent.js"></script>
+        {/* <div dangerouslySetInnerHTML={{ __html: mapHTML }} /> */}
       </div>
 
       <div className="toolkits container-fluid">
