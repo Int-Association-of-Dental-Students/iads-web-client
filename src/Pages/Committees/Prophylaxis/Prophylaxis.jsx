@@ -7,6 +7,7 @@ import oralHealth from "../../../Assets/Committees/Prophylaxis/oralHealth.svg";
 import mouthCancer from "../../../Assets/Committees/Prophylaxis/mouthCancer.svg";
 import greenDentistry from "../../../Assets/Committees/Prophylaxis/greenDentistry.svg";
 
+import backend from "../../../utils/backend";
 import toolkits from "./toolkits";
 import CardList from "../../../Components/Cards/CardList";
 
@@ -34,12 +35,10 @@ const Prophylaxis = () => {
   // `;
 
   useEffect(() => {
-    axios
-      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/toolkits`)
-      .then((res) => {
-        settoolkits(res.data);
-        // console.log(res.data);
-      });
+    axios.get(`${backend}api/card/toolkits`).then((res) => {
+      settoolkits(res.data);
+      // console.log(res.data);
+    });
   }, []);
 
   return (

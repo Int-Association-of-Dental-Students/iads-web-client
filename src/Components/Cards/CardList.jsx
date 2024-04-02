@@ -39,6 +39,7 @@ const CardList = ({ data, textColor, type }) => {
             .sort((a, b) => new Date(b.date) - new Date(a.date)) // Sort by date descending
             .map((data) => (
               <CardComponent
+                id={data._id}
                 key={data._id} // Ensure each item has a unique key
                 style={textColor}
                 t={data.title}

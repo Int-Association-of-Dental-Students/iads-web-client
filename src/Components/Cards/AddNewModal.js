@@ -5,6 +5,8 @@ import { useForm } from "react-hook-form";
 import { Audio } from "react-loader-spinner";
 import axios from "axios";
 import "./AddNewModal.scss";
+import backend from "../../utils/backend";
+
 const AddNewModal = (props) => {
   const [loading, setLoading] = useState(false);
   console.log(props);
@@ -59,7 +61,7 @@ const AddNewModal = (props) => {
       await axios({
         method: "post",
         headers: { "Access-Control-Allow-Origin": "*" },
-        url: "https://infinite-wildwood-83288.herokuapp.com/api/card/create",
+        url: `${backend}api/card/create`,
         data: {
           title: data.title,
           description: data.description,

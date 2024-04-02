@@ -7,6 +7,7 @@ import { useHttpClient } from "../../../Shared/http-hook";
 import { useNavigate } from "react-router";
 import { Audio } from "react-loader-spinner";
 import axios from "axios";
+import backend from "../../../utils/backend";
 
 const PersonalMemberForm = () => {
   const [loading, setLoading] = useState(false);
@@ -30,7 +31,7 @@ const PersonalMemberForm = () => {
     data = { ...arr, ...imgStr };
     console.log(data);
     const response = await httpClient.sendRequest(
-      `https://infinite-wildwood-83288.herokuapp.com/api/personalmember/create`,
+      `${backend}api/personalmember/create`,
       "POST",
       JSON.stringify({
         data,

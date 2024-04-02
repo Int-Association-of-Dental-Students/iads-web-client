@@ -3,6 +3,7 @@ import "./Internal.scss";
 import axios from "axios";
 
 import { Button, Tab, Tabs } from "react-bootstrap";
+import backend from "../../../utils/backend";
 
 import delegate from "../../../Assets/Committees/Internal/Deniz.svg";
 import pdfIcon from "../../../Assets/Committees/Internal/Pdf Icon.svg";
@@ -24,23 +25,17 @@ const Internal = () => {
   const [regulations, setRegulations] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(
-        `https://infinite-wildwood-83288.herokuapp.com/api/card/pressRelease`
-      )
-      .then((res) => {
-        setPressRelease(res.data);
-        // console.log(res.data);
-      });
+    axios.get(`${backend}api/card/pressRelease`).then((res) => {
+      setPressRelease(res.data);
+      // console.log(res.data);
+    });
   }, []);
 
   useEffect(() => {
-    axios
-      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/regulations`)
-      .then((res) => {
-        setRegulations(res.data);
-        // console.log(res.data);
-      });
+    axios.get(`${backend}api/card/regulations`).then((res) => {
+      setRegulations(res.data);
+      // console.log(res.data);
+    });
   }, []);
 
   return (

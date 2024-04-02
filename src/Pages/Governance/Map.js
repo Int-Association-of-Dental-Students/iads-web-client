@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import axios from "axios";
+import backend from "../../utils/backend";
 import "./Map.scss";
 
 function Map() {
@@ -13,7 +14,7 @@ function Map() {
 
   useEffect(() => {
     axios
-      .get("https://infinite-wildwood-83288.herokuapp.com/api/orgmember")
+      .get(`${backend}api/orgmember`)
       .then((res) => {
         const data = res.data.reduce((acc, member) => {
           acc[member.country] = member.delegate1.name;

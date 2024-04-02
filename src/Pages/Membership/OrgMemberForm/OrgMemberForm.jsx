@@ -3,6 +3,7 @@ import { useHttpClient } from "../../../Shared/http-hook";
 
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import backend from "../../../utils/backend";
 
 import { Audio } from "react-loader-spinner";
 import { useNavigate } from "react-router";
@@ -82,7 +83,7 @@ export default function OrgMemberForm() {
 
     try {
       const response = await httpClient.sendRequest(
-        `https://infinite-wildwood-83288.herokuapp.com/api/orgmember/create`,
+        `${backend}api/orgmember/create`,
         "POST",
         JSON.stringify({
           fullname: data.fullname,

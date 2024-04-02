@@ -3,27 +3,24 @@ import axios from "axios";
 import "./Webinars.scss";
 import WebinarCardList from "../../../Components/Cards/Webinar/WebinarCardList";
 import PodcastCardList from "../../../Components/Cards/Podcast/PodcastCardList";
+import backend from "../../../utils/backend";
 
 const Webinars = () => {
   const [webinars, setWebinars] = useState(null);
   const [podcasts, setPodcasts] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/webinars`)
-      .then((res) => {
-        setWebinars(res.data);
-        // console.log(res.data);
-      });
+    axios.get(`${backend}api/card/webinars`).then((res) => {
+      setWebinars(res.data);
+      // console.log(res.data);
+    });
   }, []);
 
   useEffect(() => {
-    axios
-      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/podcasts`)
-      .then((res) => {
-        setWebinars(res.data);
-        // console.log(res.data);
-      });
+    axios.get(`${backend}api/card/podcasts`).then((res) => {
+      setWebinars(res.data);
+      // console.log(res.data);
+    });
   }, []);
 
   return (

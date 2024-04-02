@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Editorial.scss";
+import backend from "../../../utils/backend";
 
 import magazines from "./magazines";
 import CardList from "../../../Components/Cards/CardList";
@@ -12,12 +13,10 @@ const Editorial = () => {
   const [magazines, setmagazines] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/magazines`)
-      .then((res) => {
-        setmagazines(res.data);
-        // console.log(res.data);
-      });
+    axios.get(`${backend}api/card/magazines`).then((res) => {
+      setmagazines(res.data);
+      // console.log(res.data);
+    });
   }, []);
 
   return (

@@ -43,8 +43,9 @@ import end from "../../Assets/endorser.svg";
 import AddNewModal from "../../Components/Cards/AddNewModal";
 
 import { AuthContext } from "../../Components/Context/AuthContext";
+import backend from "../../utils/backend";
 
-import news from "./news";
+// import news from "./news";
 
 function DiscoverMoreCard(props) {
   return (
@@ -89,28 +90,26 @@ const AdSense = () => (
   </div>
 );
 
-function Home() {
+const Home = () => {
   const Auth = useContext(AuthContext);
   console.log(Auth);
 
   SwiperCore.use([Keyboard, Mousewheel]);
   const [showLoginModal, setShowLoginModal] = useState(false);
-  // const [news, setnews] = useState(News);
-
-  // useEffect(() => {
-  //   axios
-  //     .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/news`)
-  //     .then((res) => {
-  //       setnews(res.data);
-  //       // console.log(res.data);
-  //     });
-  // }, []);
+  const [news, setNews] = useState(null);
 
   useEffect(() => {
     const adScript = document.createElement("script");
     adScript.src = `${window.location.protocol}//www.profitabledisplaynetwork.com/4af9644a7f007fed454300478ce1e650/invoke.js`;
     adScript.async = true;
     document.body.appendChild(adScript);
+  }, []);
+
+  useEffect(async () => {
+    await axios.get(`${backend}api/card/news`).then((res) => {
+      setNews(res.data);
+      console.log(res.data);
+    });
   }, []);
 
   return (
@@ -383,12 +382,7 @@ function Home() {
             <p className="homePageTitles11">iads Latest</p>
             <p className="homePageTitles12">News</p>
           </div>
-          {/* <h1
-            className="title-1st"
-            style={{ marginTop: "75px", marginBottom: "100px" }}
-          >
-            Coming Soon!
-          </h1> */}
+
           {news && (
             <CardList
               className="card-list"
@@ -632,6 +626,6 @@ function Home() {
       {/* </div> */}
     </>
   );
-}
+};
 
 export default Home;

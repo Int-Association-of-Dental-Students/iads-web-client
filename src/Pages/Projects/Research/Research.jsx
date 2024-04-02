@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Research.scss";
 import Arrow from "../../../Assets/About/Arrow.svg";
+import backend from "../../../utils/backend";
 
 import CardList from "../../../Components/Cards/CardList";
 import axios from "axios";
@@ -9,12 +10,10 @@ const Research = () => {
   const [articles, setArticles] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/articles`)
-      .then((res) => {
-        setArticles(res.data);
-        // console.log(res.data);
-      });
+    axios.get(`${backend}api/card/articles`).then((res) => {
+      setArticles(res.data);
+      // console.log(res.data);
+    });
   }, []);
   return (
     <div className="research-page">

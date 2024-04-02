@@ -5,6 +5,7 @@ import "./Card.scss";
 import findmore from "./findmore.svg";
 import axios from "axios";
 import LoginModal from "../LoginModal";
+import backend from "../../utils/backend";
 
 import card from "./card.png";
 import AddNewModal from "./AddNewModal";
@@ -13,22 +14,6 @@ import { AuthContext } from "../Context/AuthContext";
 import { useContext } from "react";
 
 const CardComponent = (props) => {
-  const deleteCard = (id) => {
-    console.log("remove by id");
-
-    axios
-      .post(
-        `https://infinite-wildwood-83288.herokuapp.com/api/card/delete/${id}`
-      )
-      .then((res) => {
-        // setTemp(!temp);
-        console.log("card deleted");
-        window.location.reload(false);
-      });
-  };
-  const Auth = useContext(AuthContext);
-  const [loginShow, setLoginShow] = useState(false);
-
   const [data, setData] = useState({
     id: props.id,
     title: props.t,
@@ -38,6 +23,19 @@ const CardComponent = (props) => {
     date: props.date,
     apply: props.a,
   });
+
+  const deleteCard = async (id) => {
+    console.log(`remove by id ${id}`);
+    console.log(props);
+
+    await axios.post(`${backend}api/card/delete/${id}`).then((res) => {
+      // setTemp(!temp);
+      console.log("card deleted");
+      window.location.reload(false);
+    });
+  };
+  const Auth = useContext(AuthContext);
+  const [loginShow, setLoginShow] = useState(false);
 
   return (
     <div>

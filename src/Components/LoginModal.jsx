@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useForm } from "react-hook-form";
 import "./LoginModal.scss";
+import backend from "../utils/backend";
 
 import { AuthContext } from "./Context/AuthContext";
 
@@ -31,7 +32,7 @@ const LoginModal = (props) => {
     try {
       const response = await httpClient.sendRequest(
         // `https://infinite-wildwood-83288.herokuapp.com/api/WebUsers/login`,
-        `https://infinite-wildwood-83288.herokuapp.com/api/webUsers/login`,
+        `${backend}api/webUsers/login`,
         "POST",
         JSON.stringify({
           data,

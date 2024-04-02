@@ -1,6 +1,7 @@
 import "./Membership.scss";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import backend from "../../utils/backend";
 
 const OrgMemberCard = (props) => {
   useEffect(() => {
@@ -60,13 +61,11 @@ const Membership = () => {
   const [orgMembers, setOrgMembers] = useState(null);
 
   useEffect(() => {
-    axios
-      .get("https://infinite-wildwood-83288.herokuapp.com/api/orgmember")
-      .then((res) => {
-        setOrgMembers(res.data);
-        // console.log(res.data);
-        console.log(orgMembers);
-      });
+    axios.get(`${backend}api/orgmember`).then((res) => {
+      setOrgMembers(res.data);
+      // console.log(res.data);
+      console.log(orgMembers);
+    });
   }, []);
 
   return (

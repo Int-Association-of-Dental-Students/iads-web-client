@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Training.scss";
 
 import TrainerIdx from "./TrainerIdx";
+import backend from "../../../utils/backend";
 
 import logo from "../../../Assets/Committees/Training/logo.svg";
 import delegate from "../../../Assets/Committees/Training/delegate.svg";
@@ -41,12 +42,10 @@ const Training = () => {
   const [tnts, settnts] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/tnts`)
-      .then((res) => {
-        settnts(res.data);
-        // console.log(res.data);
-      });
+    axios.get(`${backend}api/card/tnts`).then((res) => {
+      settnts(res.data);
+      // console.log(res.data);
+    });
   }, []);
 
   return (

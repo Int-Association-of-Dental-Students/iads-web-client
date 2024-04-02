@@ -6,6 +6,8 @@ import { Audio } from "react-loader-spinner";
 import axios from "axios";
 import "./PodcastAddNewModal.scss";
 
+import backend from "../../../utils/backend";
+
 const PodcastAddNewModal = (props) => {
   const [loading, setLoading] = useState(false);
   console.log(props);
@@ -60,7 +62,7 @@ const PodcastAddNewModal = (props) => {
       await axios({
         method: "post",
         headers: { "Access-Control-Allow-Origin": "*" },
-        url: "https://infinite-wildwood-83288.herokuapp.com/api/card/create",
+        url: `${backend}api/card/create`,
         data: {
           title: data.title,
           description: data.description,

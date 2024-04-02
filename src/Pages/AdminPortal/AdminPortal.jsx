@@ -6,6 +6,8 @@ import { Button } from "react-bootstrap";
 import { AuthContext } from "../../Components/Context/AuthContext";
 import { useContext } from "react";
 
+import backend from "../../utils/backend";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faUser,
@@ -33,9 +35,7 @@ const AdminPortal = () => {
     console.log(id);
     console.log(type);
     axios
-      .post(
-        `https://infinite-wildwood-83288.herokuapp.com/api/webusers/updateVerification/${id}/${type}`
-      )
+      .post(`${backend}api/webusers/updateVerification/${id}/${type}`)
       .then((res) => {
         setTemp(!temp);
       });
@@ -44,9 +44,7 @@ const AdminPortal = () => {
     console.log(id);
     console.log(type);
     axios
-      .post(
-        `https://infinite-wildwood-83288.herokuapp.com/api/orgmember/updateVerification/${id}/${type}`
-      )
+      .post(`${backend}api/orgmember/updateVerification/${id}/${type}`)
       .then((res) => {
         setTemp(!temp);
       });
@@ -56,9 +54,7 @@ const AdminPortal = () => {
     console.log(id);
     console.log(type);
     axios
-      .post(
-        `https://infinite-wildwood-83288.herokuapp.com/api/personalmember/updateVerification/${id}/${type}`
-      )
+      .post(`${backend}api/personalmember/updateVerification/${id}/${type}`)
       .then((res) => {
         setTemp(!temp);
       });
@@ -68,9 +64,7 @@ const AdminPortal = () => {
     console.log(id);
     console.log(type);
     axios
-      .post(
-        `https://infinite-wildwood-83288.herokuapp.com/api/webusers/updateEditting/${id}/${type}`
-      )
+      .post(`${backend}api/webusers/updateEditting/${id}/${type}`)
       .then((res) => {
         // console.log(id);
         // console.log(type);
@@ -80,21 +74,15 @@ const AdminPortal = () => {
 
   const deleteUser = (id) => {
     console.log("remove by id");
-    axios
-      .post(
-        `https://infinite-wildwood-83288.herokuapp.com/api/webusers/deleteUser/${id}`
-      )
-      .then((res) => {
-        setTemp(!temp);
-      });
+    axios.post(`${backend}api/webusers/deleteUser/${id}`).then((res) => {
+      setTemp(!temp);
+    });
   };
 
   const deleteOrgMember = async (id) => {
     console.log("remove by id");
     await axios
-      .post(
-        `https://infinite-wildwood-83288.herokuapp.com/api/orgmember/deleteMember/${id}`
-      )
+      .post(`${backend}api/orgmember/deleteMember/${id}`)
       .then((res) => {
         setTemp(!temp);
       });
@@ -102,35 +90,27 @@ const AdminPortal = () => {
   const deletePersonalMember = async (id) => {
     console.log("remove by id");
     await axios
-      .post(
-        `https://infinite-wildwood-83288.herokuapp.com/api/personalmember/deleteMember/${id}`
-      )
+      .post(`${backend}api/personalmember/deleteMember/${id}`)
       .then((res) => {
         setTemp(!temp);
       });
   };
 
   useEffect(() => {
-    axios
-      .get("https://infinite-wildwood-83288.herokuapp.com/api/webusers")
-      .then((res) => {
-        setWebUsers(res.data);
-        // console.log(res.data);
-      });
+    axios.get("${backend}api/webusers").then((res) => {
+      setWebUsers(res.data);
+      // console.log(res.data);
+    });
     console.log(webUsers);
-    axios
-      .get("https://infinite-wildwood-83288.herokuapp.com/api/orgmember")
-      .then((res) => {
-        setOrgMembers(res.data);
-        // console.log(res.data);
-      });
+    axios.get("${backend}api/orgmember").then((res) => {
+      setOrgMembers(res.data);
+      // console.log(res.data);
+    });
     console.log(orgMembers);
-    axios
-      .get("https://infinite-wildwood-83288.herokuapp.com/api/personalmember")
-      .then((res) => {
-        setPersonalMembers(res.data);
-        // console.log(res.data);
-      });
+    axios.get("${backend}api/personalmember").then((res) => {
+      setPersonalMembers(res.data);
+      // console.log(res.data);
+    });
     console.log(orgMembers);
   }, [temp]);
 

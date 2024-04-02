@@ -6,6 +6,7 @@ import { useNavigate } from "react-router";
 import { useState } from "react";
 import { Audio } from "react-loader-spinner";
 import emailjs from "emailjs-com";
+import backend from "../../utils/backend";
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -60,7 +61,7 @@ export default function Signup() {
         //   );
 
         const response = await httpClient.sendRequest(
-          `https://infinite-wildwood-83288.herokuapp.com/api/webUsers/signup`,
+          `${backend}api/webUsers/signup`,
           "POST",
           JSON.stringify({
             data,

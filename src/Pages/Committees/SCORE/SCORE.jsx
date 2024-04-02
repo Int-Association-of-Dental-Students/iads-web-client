@@ -6,6 +6,7 @@ import { Button } from "react-bootstrap";
 import CardList from "../../../Components/Cards/CardList";
 import WFList from "./WFList";
 import axios from "axios";
+import backend from "../../../utils/backend";
 
 import publications from "./publications";
 import courses from "./courses";
@@ -48,35 +49,25 @@ const SCORE = () => {
   useEffect(() => {
     console.log("HIIII22222");
 
-    axios
-      .get(
-        `https://infinite-wildwood-83288.herokuapp.com/api/card/publications`
-      )
-      .then((res) => {
-        setpublications(res.data);
-        console.log(res.data);
-      });
+    axios.get(`${backend}api/card/publications`).then((res) => {
+      setpublications(res.data);
+      console.log(res.data);
+    });
 
-    axios
-      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/courses`)
-      .then((res) => {
-        setcourses(res.data);
-        // console.log(res.data);
-      });
+    axios.get(`${backend}api/card/courses`).then((res) => {
+      setcourses(res.data);
+      // console.log(res.data);
+    });
 
-    axios
-      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/IDCP`)
-      .then((res) => {
-        setIDCP(res.data);
-        // console.log(res.data);
-      });
+    axios.get(`${backend}api/card/IDCP`).then((res) => {
+      setIDCP(res.data);
+      // console.log(res.data);
+    });
 
-    axios
-      .get(`https://infinite-wildwood-83288.herokuapp.com/api/card/IJDS`)
-      .then((res) => {
-        setIJDS(res.data);
-        // console.log(res.data);
-      });
+    axios.get(`${backend}api/card/IJDS`).then((res) => {
+      setIJDS(res.data);
+      // console.log(res.data);
+    });
   }, []);
 
   return (
