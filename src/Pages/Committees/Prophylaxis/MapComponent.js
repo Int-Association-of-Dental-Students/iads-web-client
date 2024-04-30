@@ -10,7 +10,7 @@ class MapComponent extends React.Component {
   componentDidMount() {
     if (!window.FlaMap) {
       const script = document.createElement("script");
-      script.src = "/IPMB_Map/map.js"; // Specify the URL to the script
+      script.src = "/IPMB_Map/MapComponent.js"; // Specify the URL to the script
       script.onload = () => {
         this.initializeMap();
       };
