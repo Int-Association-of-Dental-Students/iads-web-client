@@ -21,23 +21,9 @@ import MapComponent from "./MapComponent";
 const Prophylaxis = () => {
   const [toolkits, settoolkits] = useState(null);
 
-  // const mapHTML = `
-  //   <div id="map-container"></div>
-  //   <link href="/Map_Flashop/map.css" rel="stylesheet">
-  //   <script src="/Map_Flashop/raphael.min.js"></script>
-  //   <script src="/Map_Flashop/settings.js"></script>
-  //   <script src="/Map_Flashop/paths.js"></script>
-  //   <script src="/Map_Flashop/map.js"></script>
-  //   <script>
-  //     var map = new FlaMap(map_cfg);
-  //     map.drawOnDomReady('map-container');
-  //   </script>
-  // `;
-
   useEffect(() => {
     axios.get(`${backend}api/card/toolkits`).then((res) => {
       settoolkits(res.data);
-      // console.log(res.data);
     });
   }, []);
 
