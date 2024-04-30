@@ -52,7 +52,9 @@ const Prophylaxis = () => {
             <Button className="editWorkforce">Edit Workforce</Button> */}
           </div>
           <div className="members col offset-lg-1 offset-sm-0">
-            <div className="row subtitle">Workforce Members</div>
+            <div className="row subtitle" style={{ marginLeft: "10px" }}>
+              Workforce Members
+            </div>
             <div className="row">
               <div className="col-4 WF_memberList">
                 <h4 className="name">Zainab Noor</h4>
